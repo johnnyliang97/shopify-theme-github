@@ -20,7 +20,8 @@ if (!customElements.get("m-custom-card-carousel")) {
 
       if (typeof MinimogLibs !== 'undefined' && MinimogLibs.Swiper) {
         this.swiper = new MinimogLibs.Swiper(slideContainer, {
-          slidesPerView: 1.2,
+          slidesPerView: 1.3,
+          centeredSlides: true,
           spaceBetween: 16,
           autoplay: autoplay ? { delay: autoplaySpeed } : false,
           navigation: showNavigation ? {
@@ -34,14 +35,17 @@ if (!customElements.get("m-custom-card-carousel")) {
           breakpoints: {
             640: {
               slidesPerView: 2.2,
+              centeredSlides: false,
               spaceBetween: 20,
             },
             768: {
               slidesPerView: 3,
+              centeredSlides: false,
               spaceBetween: 24,
             },
             1024: {
               slidesPerView: items + 0.2,
+              centeredSlides: false,
               spaceBetween: 30,
             },
           },
