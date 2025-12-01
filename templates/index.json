@@ -209,8 +209,21 @@
           "type": "card",
           "name": "Small Leather Goods",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-mens-tshirt-shorts.png",
+            "image": "shopify://shop_images/lestyle-christmas-wallets.jpg",
             "header_text": "Small Leather Goods",
+            "subheader_text": "",
+            "link": "shopify://collections/wallets-cardholders",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_BfVQWe": {
+          "type": "card",
+          "name": "Small Leather Goods",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-womens-bathrobe.webp",
+            "header_text": "Bathrobes",
             "subheader_text": "",
             "link": "shopify://collections/wallets-cardholders",
             "label_text": "",
@@ -222,10 +235,10 @@
           "type": "card",
           "name": "Gifts for Her",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-philipp-plein-mens-hoodie-2.png",
+            "image": "shopify://shop_images/lestyle-model-balmain-womens-christmas-sweater.jpg",
             "header_text": "Gifts for Her",
             "subheader_text": "",
-            "link": "shopify://collections/philipp-plein",
+            "link": "shopify://collections/womens",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -235,10 +248,10 @@
           "type": "card",
           "name": "Gifts for Him",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-fendi-top.png",
+            "image": "shopify://shop_images/lestyle-model-marcelo-mens-tshirt.jpg",
             "header_text": "Gifts for Him",
             "subheader_text": "",
-            "link": "shopify://collections/fendi",
+            "link": "shopify://collections/mens",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -248,11 +261,11 @@
           "type": "card",
           "name": "Lestyle Outlet",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-fendi-top.png",
+            "image": "shopify://shop_images/lestyle-christmas-outlet.jpg",
             "header_text": "Lestyle Outlet",
             "subheader_text": "",
             "link": "shopify://collections/fendi",
-            "label_text": "70% OFF",
+            "label_text": "UP TO 70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -261,6 +274,7 @@
       "block_order": [
         "card_KJmxxY",
         "card_Qc7zEM",
+        "card_BfVQWe",
         "card_dtFdem",
         "card_6YENz3",
         "card_jVynpa"
