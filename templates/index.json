@@ -21,7 +21,8 @@
             "subheader_text": "",
             "link": "shopify://collections/versace",
             "label_text": "NEW",
-            "label_color": "#c19967"
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
           }
         },
         "card_Qc7zEM": {
@@ -33,7 +34,8 @@
             "subheader_text": "",
             "link": "shopify://collections/versace-jeans-couture",
             "label_text": "",
-            "label_color": "#c19967"
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
           }
         },
         "card_dtFdem": {
@@ -45,7 +47,8 @@
             "subheader_text": "",
             "link": "shopify://collections/philipp-plein",
             "label_text": "",
-            "label_color": "#b30505"
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
           }
         },
         "card_6YENz3": {
@@ -57,7 +60,8 @@
             "subheader_text": "",
             "link": "shopify://collections/fendi",
             "label_text": "",
-            "label_color": "#b30505"
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
           }
         },
         "card_Lm4fyL": {
@@ -69,7 +73,8 @@
             "subheader_text": "",
             "link": "shopify://collections/dolce-gabbana",
             "label_text": "",
-            "label_color": "#b30505"
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
           }
         },
         "card_EpagUf": {
@@ -81,7 +86,8 @@
             "subheader_text": "",
             "link": "shopify://collections/palm-angels",
             "label_text": "",
-            "label_color": "#b30505"
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
           }
         },
         "card_jBETf9": {
@@ -93,7 +99,8 @@
             "subheader_text": "",
             "link": "shopify://collections/amiri",
             "label_text": "",
-            "label_color": "#b30505"
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
           }
         }
       },
@@ -125,6 +132,198 @@
         "show_pagination": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "scrolling_promotion_jjrFyf": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "image_HiyPPp": {
+          "type": "image",
+          "name": "Amiri",
+          "settings": {
+            "image": "shopify://shop_images/logo_amiri.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/amiri"
+          }
+        },
+        "image_YkTdm3": {
+          "type": "image",
+          "name": "Balmain",
+          "settings": {
+            "image": "shopify://shop_images/logo_balmain.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/balmain"
+          }
+        },
+        "image_xHhFpn": {
+          "type": "image",
+          "name": "Boss",
+          "settings": {
+            "image": "shopify://shop_images/logo_boss.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/boss"
+          }
+        },
+        "image_8P3BmD": {
+          "type": "image",
+          "name": "Casablanca",
+          "settings": {
+            "image": "shopify://shop_images/logo_casablanca.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/casablanca"
+          }
+        },
+        "image_ffLFVr": {
+          "type": "image",
+          "name": "Dolce Gabbana",
+          "settings": {
+            "image": "shopify://shop_images/logo_dolcegabbana.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/dolce-gabbana"
+          }
+        },
+        "image_e6C4zF": {
+          "type": "image",
+          "name": "Dsquared2",
+          "settings": {
+            "image": "shopify://shop_images/logo_dsquared2.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/dsquared2"
+          }
+        },
+        "image_KEW4WU": {
+          "type": "image",
+          "name": "Fendi",
+          "settings": {
+            "image": "shopify://shop_images/logo_fendi.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/fendi"
+          }
+        },
+        "image_Hn4NBB": {
+          "type": "image",
+          "name": "Givenchy",
+          "settings": {
+            "image": "shopify://shop_images/logo_givenchy.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/givenchy"
+          }
+        },
+        "image_fCpTmj": {
+          "type": "image",
+          "name": "Karl Lagerfeld",
+          "settings": {
+            "image": "shopify://shop_images/logo_karllagerfeld.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/karl-lagerfeld"
+          }
+        },
+        "image_GrqcgR": {
+          "type": "image",
+          "name": "Kenzo",
+          "settings": {
+            "image": "shopify://shop_images/logo_kenzo.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/kenzo"
+          }
+        },
+        "image_RghEhT": {
+          "type": "image",
+          "name": "Marcelo Burlon",
+          "settings": {
+            "image": "shopify://shop_images/logo_marcelo_burlon.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/marcelo-burlon"
+          }
+        },
+        "image_XfDhfb": {
+          "type": "image",
+          "name": "Moschino",
+          "settings": {
+            "image": "shopify://shop_images/logo_moschino.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/moschino"
+          }
+        },
+        "image_DG3rPP": {
+          "type": "image",
+          "name": "Palm Angels",
+          "settings": {
+            "image": "shopify://shop_images/logo_palm_angels.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/palm-angels"
+          }
+        },
+        "image_LqzGfW": {
+          "type": "image",
+          "name": "Philipp Plein",
+          "settings": {
+            "image": "shopify://shop_images/logo_philipp_plein.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/philipp-plein"
+          }
+        },
+        "image_Qb69Nw": {
+          "type": "image",
+          "name": "Roberto Cavalli",
+          "settings": {
+            "image": "shopify://shop_images/logo_roberto_cavalli.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/roberto-cavalli"
+          }
+        },
+        "image_QA33RX": {
+          "type": "image",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/logo_versace.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/versace"
+          }
+        },
+        "image_tNYrjp": {
+          "type": "image",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/logo_versace_jeans_couture.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/versace-jeans-couture"
+          }
+        }
+      },
+      "block_order": [
+        "image_HiyPPp",
+        "image_YkTdm3",
+        "image_xHhFpn",
+        "image_8P3BmD",
+        "image_ffLFVr",
+        "image_e6C4zF",
+        "image_KEW4WU",
+        "image_Hn4NBB",
+        "image_fCpTmj",
+        "image_GrqcgR",
+        "image_RghEhT",
+        "image_XfDhfb",
+        "image_DG3rPP",
+        "image_LqzGfW",
+        "image_Qb69Nw",
+        "image_QA33RX",
+        "image_tNYrjp"
+      ],
+      "custom_css": [
+        "@media (max-width: 767px) {.m-promotion__text {font-size: 30px; } .m-promotion__item img {--image-height: 70px; } .m-section-py {padding-top: 15px; padding-bottom: 15px; }}"
+      ],
+      "name": "Scrolling Brands",
+      "settings": {
+        "container": "w-full",
+        "direction": "left",
+        "speed": 30,
+        "item_gap": 40,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom_class": ""
       }
     },
     "1621243260e1af0c20": {
@@ -494,198 +693,6 @@
         "padding_bottom": 0,
         "enable_preload_image": false,
         "custom_class": "sf-custom--collection-banner"
-      }
-    },
-    "scrolling_promotion_jjrFyf": {
-      "type": "scrolling-promotion",
-      "blocks": {
-        "image_HiyPPp": {
-          "type": "image",
-          "name": "Amiri",
-          "settings": {
-            "image": "shopify://shop_images/logo_amiri.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/amiri"
-          }
-        },
-        "image_YkTdm3": {
-          "type": "image",
-          "name": "Balmain",
-          "settings": {
-            "image": "shopify://shop_images/logo_balmain.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/balmain"
-          }
-        },
-        "image_xHhFpn": {
-          "type": "image",
-          "name": "Boss",
-          "settings": {
-            "image": "shopify://shop_images/logo_boss.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/boss"
-          }
-        },
-        "image_8P3BmD": {
-          "type": "image",
-          "name": "Casablanca",
-          "settings": {
-            "image": "shopify://shop_images/logo_casablanca.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/casablanca"
-          }
-        },
-        "image_ffLFVr": {
-          "type": "image",
-          "name": "Dolce Gabbana",
-          "settings": {
-            "image": "shopify://shop_images/logo_dolcegabbana.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/dolce-gabbana"
-          }
-        },
-        "image_e6C4zF": {
-          "type": "image",
-          "name": "Dsquared2",
-          "settings": {
-            "image": "shopify://shop_images/logo_dsquared2.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/dsquared2"
-          }
-        },
-        "image_KEW4WU": {
-          "type": "image",
-          "name": "Fendi",
-          "settings": {
-            "image": "shopify://shop_images/logo_fendi.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/fendi"
-          }
-        },
-        "image_Hn4NBB": {
-          "type": "image",
-          "name": "Givenchy",
-          "settings": {
-            "image": "shopify://shop_images/logo_givenchy.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/givenchy"
-          }
-        },
-        "image_fCpTmj": {
-          "type": "image",
-          "name": "Karl Lagerfeld",
-          "settings": {
-            "image": "shopify://shop_images/logo_karllagerfeld.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/karl-lagerfeld"
-          }
-        },
-        "image_GrqcgR": {
-          "type": "image",
-          "name": "Kenzo",
-          "settings": {
-            "image": "shopify://shop_images/logo_kenzo.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/kenzo"
-          }
-        },
-        "image_RghEhT": {
-          "type": "image",
-          "name": "Marcelo Burlon",
-          "settings": {
-            "image": "shopify://shop_images/logo_marcelo_burlon.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/marcelo-burlon"
-          }
-        },
-        "image_XfDhfb": {
-          "type": "image",
-          "name": "Moschino",
-          "settings": {
-            "image": "shopify://shop_images/logo_moschino.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/moschino"
-          }
-        },
-        "image_DG3rPP": {
-          "type": "image",
-          "name": "Palm Angels",
-          "settings": {
-            "image": "shopify://shop_images/logo_palm_angels.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/palm-angels"
-          }
-        },
-        "image_LqzGfW": {
-          "type": "image",
-          "name": "Philipp Plein",
-          "settings": {
-            "image": "shopify://shop_images/logo_philipp_plein.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/philipp-plein"
-          }
-        },
-        "image_Qb69Nw": {
-          "type": "image",
-          "name": "Roberto Cavalli",
-          "settings": {
-            "image": "shopify://shop_images/logo_roberto_cavalli.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/roberto-cavalli"
-          }
-        },
-        "image_QA33RX": {
-          "type": "image",
-          "name": "Versace",
-          "settings": {
-            "image": "shopify://shop_images/logo_versace.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/versace"
-          }
-        },
-        "image_tNYrjp": {
-          "type": "image",
-          "name": "Versace Jeans Couture",
-          "settings": {
-            "image": "shopify://shop_images/logo_versace_jeans_couture.png",
-            "image_height": 80,
-            "image_link": "shopify://collections/versace-jeans-couture"
-          }
-        }
-      },
-      "block_order": [
-        "image_HiyPPp",
-        "image_YkTdm3",
-        "image_xHhFpn",
-        "image_8P3BmD",
-        "image_ffLFVr",
-        "image_e6C4zF",
-        "image_KEW4WU",
-        "image_Hn4NBB",
-        "image_fCpTmj",
-        "image_GrqcgR",
-        "image_RghEhT",
-        "image_XfDhfb",
-        "image_DG3rPP",
-        "image_LqzGfW",
-        "image_Qb69Nw",
-        "image_QA33RX",
-        "image_tNYrjp"
-      ],
-      "custom_css": [
-        "@media (max-width: 767px) {.m-promotion__text {font-size: 30px; } .m-promotion__item img {--image-height: 70px; } .m-section-py {padding-top: 15px; padding-bottom: 15px; }}"
-      ],
-      "name": "Scrolling logos",
-      "settings": {
-        "container": "w-full",
-        "direction": "left",
-        "speed": 30,
-        "item_gap": 40,
-        "item_gap_mobile": 20,
-        "color_scheme": "",
-        "padding_top": 52,
-        "padding_bottom": 52,
-        "custom_class": ""
       }
     },
     "image_with_text_7t8xii": {
@@ -1328,6 +1335,7 @@
   },
   "order": [
     "custom_card_carousel_HeykPg",
+    "scrolling_promotion_jjrFyf",
     "1621243260e1af0c20",
     "empty_space_HWbjTK",
     "17535283352e75a626",
@@ -1335,7 +1343,6 @@
     "empty_space_bdqtVc",
     "image_with_text_2_pxr8Fb",
     "7ea56e8d-5794-4708-8812-8ee9604a3a21",
-    "scrolling_promotion_jjrFyf",
     "image_with_text_7t8xii",
     "blog_posts_ayEFnz",
     "162251092958fcda7c",
