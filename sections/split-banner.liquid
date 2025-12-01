@@ -32,6 +32,12 @@
       height: 100%;
       display: block;
   }
+
+  .split-banner-image-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+  }
   
   .split-banner-buttons {
       margin-top: 2rem;
@@ -97,6 +103,9 @@
   <div class="{{ container_class }} split-banner-container">
     <div class="split-banner-wrapper">
       <div class="split-banner-half split-banner-image-container">
+        {%- if section.settings.image_link != blank -%}
+          <a href="{{ section.settings.image_link }}" class="split-banner-image-link">
+        {%- endif -%}
         {%- if section.settings.image != blank -%}
           {{ section.settings.image | image_url: width: 1500 | image_tag:
             loading: 'lazy',
@@ -105,6 +114,9 @@
           }}
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg split-banner-image' }}
+        {%- endif -%}
+        {%- if section.settings.image_link != blank -%}
+          </a>
         {%- endif -%}
       </div>
       <div class="split-banner-half split-banner-content">
@@ -169,6 +181,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Banner Image"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "Banner Link"
     },
     {
       "type": "select",
