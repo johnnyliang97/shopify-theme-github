@@ -15,9 +15,10 @@
         "card_KJmxxY": {
           "type": "card",
           "settings": {
-            "header_text": "25% OFF",
-            "subheader_text": "All styles",
-            "link": ""
+            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.jpg",
+            "header_text": "VERSACE",
+            "subheader_text": "",
+            "link": "shopify://collections/versace"
           }
         },
         "card_Qc7zEM": {
@@ -72,7 +73,7 @@
       "name": "Custom Card Carousel",
       "settings": {
         "container_type": "container-fluid",
-        "heading": "BRANDS IN LESTYLE",
+        "heading": "FEATURED BRANDS",
         "heading_size": 24,
         "heading_weight": "500",
         "card_header_size": 16,
@@ -83,7 +84,7 @@
         "autoplay": false,
         "autoplay_speed": 5,
         "show_navigation": true,
-        "show_pagination": true,
+        "show_pagination": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
