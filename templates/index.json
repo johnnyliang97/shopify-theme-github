@@ -62,7 +62,7 @@
       ],
       "name": "Custom Card Carousel",
       "settings": {
-        "container_type": "custom",
+        "container_type": "full_width",
         "heading": "BRANDS IN LESTYLE",
         "heading_size": 24,
         "heading_weight": "500",
