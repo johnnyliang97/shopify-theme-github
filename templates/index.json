@@ -15,36 +15,41 @@
         "card_Fhzt7n": {
           "type": "card",
           "settings": {
-            "text_bold": "25% OFF",
-            "text_regular": "All styles"
+            "header_text": "Versace",
+            "subheader_text": "New Collection",
+            "link": ""
           }
         },
         "card_dtFdem": {
           "type": "card",
           "settings": {
-            "text_bold": "25% OFF",
-            "text_regular": "All styles"
+            "header_text": "25% OFF",
+            "subheader_text": "All styles",
+            "link": ""
           }
         },
         "card_6YENz3": {
           "type": "card",
           "settings": {
-            "text_bold": "25% OFF",
-            "text_regular": "All styles"
+            "header_text": "25% OFF",
+            "subheader_text": "All styles",
+            "link": ""
           }
         },
         "card_Lm4fyL": {
           "type": "card",
           "settings": {
-            "text_bold": "25% OFF",
-            "text_regular": "All styles"
+            "header_text": "25% OFF",
+            "subheader_text": "All styles",
+            "link": ""
           }
         },
         "card_EpagUf": {
           "type": "card",
           "settings": {
-            "text_bold": "25% OFF",
-            "text_regular": "All styles"
+            "header_text": "25% OFF",
+            "subheader_text": "All styles",
+            "link": ""
           }
         }
       },
@@ -57,7 +62,14 @@
       ],
       "name": "Custom Card Carousel",
       "settings": {
-        "heading": "Best Brands, Unbeatable Savings!",
+        "container_type": "container",
+        "heading": "BRANDS IN LESTYLE",
+        "heading_size": 24,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "700",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
         "items_per_row": 4,
         "autoplay": false,
         "autoplay_speed": 5,
