@@ -77,42 +77,51 @@
   }
 {%- endstyle -%}
 
+{%- assign container_class = 'container-fluid' -%}
+{%- if section.settings.container == 'container' -%}
+  {%- assign container_class = 'container' -%}
+{%- elsif section.settings.container == 'w-full' -%}
+  {%- assign container_class = 'w-full' -%}
+{%- endif -%}
+
 <div class="split-banner-{{ section.id }} section-{{ section.id }}-padding">
-  <div class="split-banner-wrapper">
-    <div class="split-banner-half split-banner-image-container">
-      {%- if section.settings.image != blank -%}
-        {{ section.settings.image | image_url: width: 1500 | image_tag:
-          loading: 'lazy',
-          class: 'split-banner-image',
-          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-        }}
-      {%- else -%}
-        {{ 'image' | placeholder_svg_tag: 'placeholder-svg split-banner-image' }}
-      {%- endif -%}
-    </div>
-    <div class="split-banner-half split-banner-content">
-      {%- if section.settings.title_type == 'text' -%}
-        <h2 class="{{ section.settings.title_size }}" style="color: {{ section.settings.text_color }}; margin: 0;">
-          {{ section.settings.title_text }}
-        </h2>
-      {%- else -%}
-        {%- if section.settings.title_image != blank -%}
-          {{ section.settings.title_image | image_url: width: section.settings.title_image_width | image_tag: loading: 'lazy', style: 'max-width: 100%; height: auto;' }}
+  <div class="{{ container_class }}">
+    <div class="split-banner-wrapper">
+      <div class="split-banner-half split-banner-image-container">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1500 | image_tag:
+            loading: 'lazy',
+            class: 'split-banner-image',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+          }}
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg split-banner-image' }}
         {%- endif -%}
-      {%- endif -%}
-
-      <div class="{{ section.settings.subheader_size }}" style="color: {{ section.settings.text_color }}; margin-top: 1rem;">
-        {{ section.settings.subheader_text }}
       </div>
-
-      <div class="split-banner-buttons">
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'button' -%}
-            <a href="{{ block.settings.link }}" class="m-button {{ block.settings.button_style }}">
-              {{ block.settings.label }}
-            </a>
+      <div class="split-banner-half split-banner-content">
+        {%- if section.settings.title_type == 'text' -%}
+          <h2 class="{{ section.settings.title_size }}" style="color: {{ section.settings.text_color }}; margin: 0;">
+            {{ section.settings.title_text }}
+          </h2>
+        {%- else -%}
+          {%- if section.settings.title_image != blank -%}
+            {{ section.settings.title_image | image_url: width: section.settings.title_image_width | image_tag: loading: 'lazy', style: 'max-width: 100%; height: auto;' }}
           {%- endif -%}
-        {%- endfor -%}
+        {%- endif -%}
+
+        <div class="{{ section.settings.subheader_size }}" style="color: {{ section.settings.text_color }}; margin-top: 1rem;">
+          {{ section.settings.subheader_text }}
+        </div>
+
+        <div class="split-banner-buttons">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'button' -%}
+              <a href="{{ block.settings.link }}" class="m-button {{ block.settings.button_style }}">
+                {{ block.settings.label }}
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
       </div>
     </div>
   </div>
@@ -125,6 +134,26 @@
     {
       "type": "header",
       "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container-fluid",
+      "options": [
+        {
+          "value": "container-fluid",
+          "label": "Default"
+        },
+        {
+          "value": "container",
+          "label": "Use container box"
+        },
+        {
+          "value": "w-full",
+          "label": "Full width"
+        }
+      ]
     },
     {
       "type": "image_picker",
