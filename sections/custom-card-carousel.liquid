@@ -8,7 +8,7 @@
   if section.settings.container_type == 'container'
     assign container_class = 'container'
   endif
-  if section.settings.container_type == 'full_width'
+  if section.settings.container_type == 'full_width' or section.settings.container_type == 'custom'
     assign container_class = 'container-full'
   endif
 -%}
@@ -41,9 +41,10 @@
     {% endif %}
 
     <m-custom-card-carousel
-      data-items="{{ items_per_row }}"
-      data-container-type="{{ section.settings.container_type }}"
-      data-autoplay="{{ section.settings.autoplay }}"
+    data-items="{{ items_per_row }}"
+    data-container-type="{{ section.settings.container_type }}"
+    data-container-width="{{ settings.container_width }}"
+    data-autoplay="{{ section.settings.autoplay }}"
       data-autoplay-speed="{{ section.settings.autoplay_speed }}"
       data-show-navigation="{{ section.settings.show_navigation }}"
       data-show-pagination="{{ section.settings.show_pagination }}"
@@ -119,6 +120,10 @@
         {
           "value": "full_width",
           "label": "Full width"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
         }
       ],
       "default": "container"
