@@ -1,0 +1,61 @@
+{% liquid
+  assign main_menu = section.settings.main_menu
+  assign mobile_menu = section.settings.mobile_menu
+  
+  if mobile_menu == blank
+    assign menu = main_menu
+  else
+    assign menu = mobile_menu
+  endif
+  
+  assign is_outlet_context = false
+  if template.name == 'collection' and collection.handle contains 'outlet'
+    assign is_outlet_context = true
+  elsif template.name == 'product' and product.tags contains 'Outlet'
+    assign is_outlet_context = true
+  elsif template.name == 'page' and page.handle contains 'outlet'
+    assign is_outlet_context = true
+  elsif request.path contains '/outlet'
+    assign is_outlet_context = true
+  endif
+%}
+{{ 'mobile-menu-tabs.css' | asset_url | stylesheet_tag }}
+<div id="m-menu-drawer" class="m-menu-drawer">
+  <div class="m-menu-drawer__backdrop"></div>
+  <div class="m-menu-drawer__wrapper">
+    <div class="m-menu-drawer__content">
+      <div class="m-mobile-tabs" data-mobile-tabs {% if is_outlet_context %}data-outlet-tabs{% endif %}>
+        {% if is_outlet_context %}
+          <button class="m-mobile-tab is-active" data-tab="outlet">Outlet</button>
+          <button class="m-mobile-tab" data-tab="main-store">Main Store</button>
+        {% else %}
+          <button class="m-mobile-tab is-active" data-tab="mens">Mens</button>
+          <button class="m-mobile-tab" data-tab="womens">Womens</button>
+          <button class="m-mobile-tab" data-tab="kids">Kids</button>
+          <button class="m-mobile-tab" data-tab="home-collection">Home Collection</button>
+        {% endif %}
+      </div>
+      <div class="m-mobile-panels" data-mobile-panels>
+        {% if is_outlet_context %}
+          <div class="m-mobile-panel is-active" data-panel="outlet">
+            {% render 'mobile-menu-panel', menu_handle: 'outlet-menu' %}
+          </div>
+        {% else %}
+          <div class="m-mobile-panel is-active" data-panel="mens">
+            {% render 'mobile-menu-panel', menu_handle: 'main-store-mens' %}
+          </div>
+          <div class="m-mobile-panel" data-panel="womens">
+            {% render 'mobile-menu-panel', menu_handle: 'main-store-womens' %}
+          </div>
+          <div class="m-mobile-panel" data-panel="kids">
+            {% render 'mobile-menu-panel', menu_handle: 'main-store-kids' %}
+          </div>
+          <div class="m-mobile-panel" data-panel="home-collection">
+            {% render 'mobile-menu-panel', menu_handle: 'main-store-home-collection' %}
+          </div>
+        {% endif %}
+      </div>
+      {% render 'mega-menu-customer', section: section %}
+    </div>
+  </div>
+</div>

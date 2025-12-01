@@ -1,0 +1,75 @@
+/* Mobile drawer tabs styles */
+.m-mobile-tabs {
+  display: flex;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.m-mobile-tab {
+  appearance: none;
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.16);
+  padding: 2px 12px;
+  border-radius: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 20px;
+  transition: all .2s ease;
+  cursor: pointer;
+  min-height: 50px;
+}
+.m-mobile-tab.is-active {
+  background: #fff;
+  color: #000;
+}
+.m-mobile-panels {
+  margin-top: 0;
+}
+.m-mobile-panel {
+  display: none;
+  animation: m-drawer-fade .2s ease;
+}
+.m-mobile-panel.is-active {
+  display: block;
+}
+
+/* Tighten spacing: push menu content to top */
+.m-mobile-panel > .m-menu-drawer__navigation { margin-top: 0; }
+.m-menu-drawer__navigation { margin: 0; padding-top: 0; }
+
+/* Override drawer content layout to top-align everything */
+.m-menu-drawer__content {
+  justify-content: flex-start !important;
+}
+/* Keep customer section pinned to bottom of drawer */
+.m-menu-drawer__content .m-menu-customer {
+  margin-top: auto !important;
+}
+
+/* Outlet specific styles */
+.m-outlet-main-store-message {
+  padding: 20px 16px;
+  text-align: center;
+}
+.m-outlet-main-store-message p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Outlet tabs specific styling */
+[data-outlet-tabs] .m-mobile-tab[data-tab="main-store"] {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+}
+[data-outlet-tabs] .m-mobile-tab[data-tab="main-store"]:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+}
+
+@keyframes m-drawer-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

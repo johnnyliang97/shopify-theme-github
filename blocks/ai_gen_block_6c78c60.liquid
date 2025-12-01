@@ -1,0 +1,388 @@
+{% comment %}
+  @prompt
+    a collection banner with title and description, align centre.
+    
+    if description is more than 3 lines, collapse and make a read more underline text button
+{% endcomment %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collection-banner-{{ ai_gen_id }} {
+    text-align: center;
+    padding: {{ block.settings.padding_top }}px 20px {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-collection-banner__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-collection-banner__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.title_weight }};
+    color: {{ block.settings.title_color }};
+    margin: 0 0 {{ block.settings.title_margin }}px;
+    line-height: 1.2;
+  }
+
+  .ai-collection-banner__description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.description_color }};
+    margin: 0;
+  }
+
+  .ai-collection-banner__description-content-{{ ai_gen_id }} {
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+  }
+
+  /* Note: The max-height is now set by the script, not directly here. */
+  .ai-collection-banner__description-content-{{ ai_gen_id }}.collapsed {
+    /* The dynamic collapsed height will be applied as an inline style. */
+  }
+
+  .ai-collection-banner__read-more-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    color: {{ block.settings.read_more_color }};
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: {{ block.settings.description_size }}px;
+    margin-top: 8px;
+    padding: 0;
+  }
+
+  .ai-collection-banner__read-more-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.read_more_hover_color }};
+  }
+
+  .ai-collection-banner__read-more-{{ ai_gen_id }}:focus {
+    outline: 2px solid {{ block.settings.read_more_color }};
+    outline-offset: 2px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-banner__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+    
+    .ai-collection-banner__description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<collection-banner-{{ ai_gen_id }}
+  class="ai-collection-banner-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collection-banner__container-{{ ai_gen_id }}">
+    {% if block.settings.collection != blank %}
+      {% if block.settings.show_title and block.settings.collection.title != blank %}
+        <h1 class="ai-collection-banner__title-{{ ai_gen_id }}">
+          {{ block.settings.collection.title }}
+        </h1>
+      {% endif %}
+      
+      {% if block.settings.show_description and block.settings.collection.description != blank %}
+        <div class="ai-collection-banner__description-{{ ai_gen_id }}">
+          <div
+            class="ai-collection-banner__description-content-{{ ai_gen_id }}"
+            data-full-height="0"
+            data-collapsed-height="0"
+          >
+            {{ block.settings.collection.description }}
+          </div>
+          <button 
+            class="ai-collection-banner__read-more-{{ ai_gen_id }}"
+            style="display: none;"
+            aria-expanded="false"
+          >
+            {{ block.settings.read_more_text }}
+          </button>
+        </div>
+      {% endif %}
+    {% else %}
+      {% if block.settings.show_title %}
+        <h1 class="ai-collection-banner__title-{{ ai_gen_id }}">
+          {{ block.settings.fallback_title }}
+        </h1>
+      {% endif %}
+      
+      {% if block.settings.show_description %}
+        <div class="ai-collection-banner__description-{{ ai_gen_id }}">
+          <div class="ai-collection-banner__description-content-{{ ai_gen_id }}">
+            {{ block.settings.fallback_description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</collection-banner-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CollectionBanner{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.descriptionContent = this.querySelector('.ai-collection-banner__description-content-{{ ai_gen_id }}');
+        this.readMoreButton = this.querySelector('.ai-collection-banner__read-more-{{ ai_gen_id }}');
+        
+        if (this.descriptionContent && this.readMoreButton) {
+          this.init();
+        }
+      }
+
+      init() {
+        setTimeout(() => {
+          // Get the computed line-height from the browser
+          const computedStyle = window.getComputedStyle(this.descriptionContent);
+          const lineHeight = parseFloat(computedStyle.lineHeight);
+
+          const fullHeight = this.descriptionContent.scrollHeight;
+          const lineCount = Math.round(fullHeight / lineHeight);
+          
+          this.descriptionContent.dataset.fullHeight = fullHeight;
+
+          // Check if the content is more than 3 lines tall
+          if (lineCount > 3) {
+            const collapsedHeight = lineHeight * 3;
+            this.descriptionContent.dataset.collapsedHeight = collapsedHeight;
+
+            this.descriptionContent.classList.add('collapsed');
+            this.descriptionContent.style.maxHeight = collapsedHeight + 'px'; // Apply initial collapsed height
+
+            this.readMoreButton.style.display = 'inline-block';
+            
+            this.readMoreButton.addEventListener('click', () => {
+              this.toggleDescription();
+            });
+          }
+        }, 1);
+      }
+
+      toggleDescription() {
+        const isCollapsed = this.descriptionContent.classList.contains('collapsed');
+        
+        if (isCollapsed) {
+          this.descriptionContent.classList.remove('collapsed');
+          this.descriptionContent.style.maxHeight = this.descriptionContent.dataset.fullHeight + 'px';
+          this.readMoreButton.textContent = '{{ block.settings.read_less_text }}';
+          this.readMoreButton.setAttribute('aria-expanded', 'true');
+        } else {
+          this.descriptionContent.classList.add('collapsed');
+          this.descriptionContent.style.maxHeight = this.descriptionContent.dataset.collapsedHeight + 'px';
+          this.readMoreButton.textContent = '{{ block.settings.read_more_text }}';
+          this.readMoreButton.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+
+    customElements.define('collection-banner-{{ ai_gen_id }}', CollectionBanner{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Collection banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show title",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Fallback content"
+    },
+    {
+      "type": "text",
+      "id": "fallback_title",
+      "label": "Title",
+      "default": "Collection title"
+    },
+    {
+      "type": "richtext",
+      "id": "fallback_description",
+      "label": "Description",
+      "default": "<p>Add a collection to display its title and description here.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Read more settings"
+    },
+    {
+      "type": "text",
+      "id": "read_more_text",
+      "label": "Read more text",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "read_less_text",
+      "label": "Read less text",
+      "default": "Read less"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "label": "Title bottom margin",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "read_more_color",
+      "label": "Read more button",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "read_more_hover_color",
+      "label": "Read more button hover",
+      "default": "#666666"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection banner"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
