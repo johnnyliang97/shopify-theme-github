@@ -196,11 +196,11 @@
           "type": "card",
           "name": "Versace",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.png",
+            "image": "shopify://shop_images/90_N24640-N409956_N1449_22_Medus-600x750.jpg",
             "header_text": "Versace Home",
             "subheader_text": "",
-            "link": "shopify://collections/versace",
-            "label_text": "NEW",
+            "link": "shopify://collections/versace-home-collection",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
           }
