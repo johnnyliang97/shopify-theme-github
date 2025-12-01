@@ -26,6 +26,7 @@
       ],
       "name": "Split Banner",
       "settings": {
+        "container": "container",
         "image": "shopify://shop_images/lestyle_home_mobile_palm-angels-mens.jpg",
         "image_position": "right",
         "background_color": "#f9f1f1",
@@ -36,7 +37,7 @@
         "title_size": "h2",
         "title_image": "shopify://shop_images/Palm-Angels-Logo_2000x_347a750a-69d0-446c-a625-f7b7e8ab13be.png",
         "title_image_width": 200,
-        "subheader_text": "<p>Iconic streetwear for him</p>",
+        "subheader_text": "<p>New collection arrives. Iconic streetwear for him.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
