@@ -77,7 +77,7 @@
         "heading_size": 24,
         "heading_weight": "500",
         "card_header_size": 16,
-        "card_header_weight": "700",
+        "card_header_weight": "400",
         "card_subheader_size": 14,
         "card_subheader_weight": "400",
         "items_per_row": 5,
