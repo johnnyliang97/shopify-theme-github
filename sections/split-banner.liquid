@@ -74,6 +74,15 @@
       .split-banner-image-container {
           order: -1;
       }
+      /* Force full width container on mobile */
+      .split-banner-container {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+      }
   }
 {%- endstyle -%}
 
@@ -85,7 +94,7 @@
 {%- endif -%}
 
 <div class="split-banner-{{ section.id }} section-{{ section.id }}-padding">
-  <div class="{{ container_class }}">
+  <div class="{{ container_class }} split-banner-container">
     <div class="split-banner-wrapper">
       <div class="split-banner-half split-banner-image-container">
         {%- if section.settings.image != blank -%}
