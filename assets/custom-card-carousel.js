@@ -20,9 +20,10 @@ if (!customElements.get("m-custom-card-carousel")) {
 
       if (typeof MinimogLibs !== 'undefined' && MinimogLibs.Swiper) {
         this.swiper = new MinimogLibs.Swiper(slideContainer, {
-          slidesPerView: 1.3,
-          centeredSlides: true,
+          slidesPerView: 1.2,
           spaceBetween: 16,
+          centeredSlides: true,
+          centeredSlidesBounds: true,
           autoplay: autoplay ? { delay: autoplaySpeed } : false,
           navigation: showNavigation ? {
             nextEl: this.querySelector(".swiper-button-next"),
@@ -35,18 +36,21 @@ if (!customElements.get("m-custom-card-carousel")) {
           breakpoints: {
             640: {
               slidesPerView: 2.2,
-              centeredSlides: false,
               spaceBetween: 20,
+              centeredSlides: false,
+              centeredSlidesBounds: false,
             },
             768: {
               slidesPerView: 3,
-              centeredSlides: false,
               spaceBetween: 24,
+              centeredSlides: false,
+              centeredSlidesBounds: false,
             },
             1024: {
               slidesPerView: items + 0.2,
-              centeredSlides: false,
               spaceBetween: 30,
+              centeredSlides: false,
+              centeredSlidesBounds: false,
             },
           },
           on: {
