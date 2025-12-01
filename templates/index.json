@@ -12,11 +12,11 @@
     "custom_card_carousel_HeykPg": {
       "type": "custom-card-carousel",
       "blocks": {
-        "card_Fhzt7n": {
+        "card_Qc7zEM": {
           "type": "card",
           "settings": {
-            "header_text": "Versace",
-            "subheader_text": "New Collection",
+            "header_text": "25% OFF",
+            "subheader_text": "All styles",
             "link": ""
           }
         },
@@ -54,7 +54,7 @@
         }
       },
       "block_order": [
-        "card_Fhzt7n",
+        "card_Qc7zEM",
         "card_dtFdem",
         "card_6YENz3",
         "card_Lm4fyL",
