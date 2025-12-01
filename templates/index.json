@@ -24,6 +24,7 @@
         },
         "card_Qc7zEM": {
           "type": "card",
+          "name": "Versace Jeans Couture",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-vjc-mens-tshirt-shorts.png",
             "header_text": "Versace Jeans Couture",
@@ -33,36 +34,52 @@
         },
         "card_dtFdem": {
           "type": "card",
+          "name": "Philipp Plein",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-philipp-plein-mens-hoodie-2.png",
             "header_text": "Philipp Plein",
             "subheader_text": "",
-            "link": ""
+            "link": "shopify://collections/philipp-plein"
           }
         },
         "card_6YENz3": {
           "type": "card",
+          "name": "Fendi",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-fendi-top.png",
             "header_text": "Fendi",
             "subheader_text": "",
-            "link": ""
+            "link": "shopify://collections/fendi"
           }
         },
         "card_Lm4fyL": {
           "type": "card",
+          "name": "Dolce & Gabbana",
           "settings": {
-            "header_text": "25% OFF",
+            "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
+            "header_text": "Dolce & Gabbana",
             "subheader_text": "",
-            "link": ""
+            "link": "shopify://collections/dolce-gabbana"
           }
         },
         "card_EpagUf": {
           "type": "card",
+          "name": "Palm Angels",
           "settings": {
-            "header_text": "25% OFF",
+            "image": "shopify://shop_images/lestyle-model-palm-angels-mens-sweatshirt.png",
+            "header_text": "Palm Angels",
             "subheader_text": "",
-            "link": ""
+            "link": "shopify://collections/palm-angels"
+          }
+        },
+        "card_jBETf9": {
+          "type": "card",
+          "name": "Amiri",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-mens-amiri-shorts-tshirt_copy.png",
+            "header_text": "Amiri",
+            "subheader_text": "",
+            "link": "shopify://collections/amiri"
           }
         }
       },
@@ -72,7 +89,8 @@
         "card_dtFdem",
         "card_6YENz3",
         "card_Lm4fyL",
-        "card_EpagUf"
+        "card_EpagUf",
+        "card_jBETf9"
       ],
       "name": "Brands",
       "settings": {
