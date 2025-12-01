@@ -149,9 +149,9 @@
         "title_type": "image",
         "title_text": "Banner Title",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/Palm-Angels-Logo_2000x_347a750a-69d0-446c-a625-f7b7e8ab13be.png",
-        "title_image_width": 200,
-        "subheader_text": "<p>New collection arrives. Shop the iconic streetwear.</p>",
+        "title_image": "shopify://shop_images/lestyle-christmas-title.png",
+        "title_image_width": 180,
+        "subheader_text": "<p>Make this holiday magical and special with Lestyle Boutique</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
