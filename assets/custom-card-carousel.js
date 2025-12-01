@@ -41,7 +41,7 @@ if (!customElements.get("m-custom-card-carousel")) {
               spaceBetween: 24,
             },
             1024: {
-              slidesPerView: items,
+              slidesPerView: items + 0.2,
               spaceBetween: 30,
             },
           },

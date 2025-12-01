@@ -90,6 +90,11 @@ a.m-custom-card-carousel__card:hover {
   justify-content: center;
 }
 
+.m-custom-card-carousel .swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .m-custom-card-carousel .swiper-button-prev::after,
 .m-custom-card-carousel .swiper-button-next::after {
   display: none;
