@@ -19,7 +19,9 @@
             "image": "shopify://shop_images/lestyle-model-versace-womens-dress.png",
             "header_text": "Versace",
             "subheader_text": "",
-            "link": "shopify://collections/versace"
+            "link": "shopify://collections/versace",
+            "label_text": "NEW COLLECTION",
+            "label_color": "#c19967"
           }
         },
         "card_Qc7zEM": {
@@ -29,7 +31,9 @@
             "image": "shopify://shop_images/lestyle-model-vjc-mens-tshirt-shorts.png",
             "header_text": "Versace Jeans Couture",
             "subheader_text": "",
-            "link": "shopify://collections/versace-jeans-couture"
+            "link": "shopify://collections/versace-jeans-couture",
+            "label_text": "",
+            "label_color": "#c19967"
           }
         },
         "card_dtFdem": {
@@ -39,7 +43,9 @@
             "image": "shopify://shop_images/lestyle-model-philipp-plein-mens-hoodie-2.png",
             "header_text": "Philipp Plein",
             "subheader_text": "",
-            "link": "shopify://collections/philipp-plein"
+            "link": "shopify://collections/philipp-plein",
+            "label_text": "",
+            "label_color": "#b30505"
           }
         },
         "card_6YENz3": {
@@ -49,7 +55,9 @@
             "image": "shopify://shop_images/lestyle-model-fendi-top.png",
             "header_text": "Fendi",
             "subheader_text": "",
-            "link": "shopify://collections/fendi"
+            "link": "shopify://collections/fendi",
+            "label_text": "",
+            "label_color": "#b30505"
           }
         },
         "card_Lm4fyL": {
@@ -59,7 +67,9 @@
             "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
             "header_text": "Dolce & Gabbana",
             "subheader_text": "",
-            "link": "shopify://collections/dolce-gabbana"
+            "link": "shopify://collections/dolce-gabbana",
+            "label_text": "",
+            "label_color": "#b30505"
           }
         },
         "card_EpagUf": {
@@ -69,7 +79,9 @@
             "image": "shopify://shop_images/lestyle-model-palm-angels-mens-sweatshirt.png",
             "header_text": "Palm Angels",
             "subheader_text": "",
-            "link": "shopify://collections/palm-angels"
+            "link": "shopify://collections/palm-angels",
+            "label_text": "",
+            "label_color": "#b30505"
           }
         },
         "card_jBETf9": {
@@ -79,7 +91,9 @@
             "image": "shopify://shop_images/lestyle-model-mens-amiri-shorts-tshirt_copy.png",
             "header_text": "Amiri",
             "subheader_text": "",
-            "link": "shopify://collections/amiri"
+            "link": "shopify://collections/amiri",
+            "label_text": "",
+            "label_color": "#b30505"
           }
         }
       },
