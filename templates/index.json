@@ -12,6 +12,14 @@
     "custom_card_carousel_HeykPg": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_KJmxxY": {
+          "type": "card",
+          "settings": {
+            "header_text": "25% OFF",
+            "subheader_text": "All styles",
+            "link": ""
+          }
+        },
         "card_Qc7zEM": {
           "type": "card",
           "settings": {
@@ -54,6 +62,7 @@
         }
       },
       "block_order": [
+        "card_KJmxxY",
         "card_Qc7zEM",
         "card_dtFdem",
         "card_6YENz3",
@@ -62,7 +71,7 @@
       ],
       "name": "Custom Card Carousel",
       "settings": {
-        "container_type": "container",
+        "container_type": "container-fluid",
         "heading": "BRANDS IN LESTYLE",
         "heading_size": 24,
         "heading_weight": "500",
