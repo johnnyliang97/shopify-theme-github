@@ -51,8 +51,12 @@
           {% endfor %}
         </div>
         {% if section.settings.show_navigation %}
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev m-custom-card-carousel__arrow">
+             <svg color="currentColor" fill="none" focusable="false" height="24px" viewBox="0 0 24 24" width="24px" style="transform: rotate(180deg);"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"><g stroke="currentColor" stroke-width="1"><polyline vector-effect="non-scaling-stroke" points="8 3.29999995 16.8163452 11.8633058 8 20.5598266"></polyline></g></g></svg>
+          </div>
+          <div class="swiper-button-next m-custom-card-carousel__arrow">
+             <svg color="currentColor" fill="none" focusable="false" height="24px" viewBox="0 0 24 24" width="24px"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square"><g stroke="currentColor" stroke-width="1"><polyline vector-effect="non-scaling-stroke" points="8 3.29999995 16.8163452 11.8633058 8 20.5598266"></polyline></g></g></svg>
+          </div>
         {% endif %}
         {% if section.settings.show_pagination %}
           <div class="swiper-pagination"></div>

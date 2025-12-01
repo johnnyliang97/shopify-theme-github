@@ -45,9 +45,34 @@ if (!customElements.get("m-custom-card-carousel")) {
               spaceBetween: 30,
             },
           },
+          on: {
+            init: () => this.updateArrowPosition(),
+            resize: () => this.updateArrowPosition()
+          }
         });
+        
+        // Initial update
+        this.updateArrowPosition();
+        
+        // Additional safety check for resize
+        window.addEventListener('resize', () => this.updateArrowPosition());
+        
       } else {
           console.warn('MinimogLibs.Swiper not found. Make sure vendor scripts are loaded.');
+      }
+    }
+    
+    updateArrowPosition() {
+      const imageWrapper = this.querySelector('.m-custom-card-carousel__image-wrapper');
+      const prevArrow = this.querySelector('.swiper-button-prev');
+      const nextArrow = this.querySelector('.swiper-button-next');
+      
+      if (imageWrapper && prevArrow && nextArrow) {
+        const imageHeight = imageWrapper.offsetHeight;
+        if (imageHeight > 0) {
+            prevArrow.style.top = `${imageHeight / 2}px`;
+            nextArrow.style.top = `${imageHeight / 2}px`;
+        }
       }
     }
   }

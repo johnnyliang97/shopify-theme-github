@@ -76,8 +76,18 @@
   color: #000;
   z-index: 10;
   position: absolute;
+  /* Top will be set by JS to align with image */
+  /* Fallback */
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-custom-card-carousel .swiper-button-prev::after,
+.m-custom-card-carousel .swiper-button-next::after {
+  display: none;
 }
 
 .m-custom-card-carousel .swiper-button-prev {
@@ -88,17 +98,15 @@
   right: 10px;
 }
 
-.m-custom-card-carousel .swiper-button-prev::after,
-.m-custom-card-carousel .swiper-button-next::after {
-  font-size: 18px;
-}
-
 /* Pagination */
 .m-custom-card-carousel .swiper-pagination {
   position: relative;
-  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  text-align: center;
+  bottom: auto;
 }
 
 .m-custom-card-carousel .swiper-pagination-bullet {
