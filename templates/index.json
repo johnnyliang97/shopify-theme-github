@@ -125,6 +125,22 @@
             "button_style": "m-button--white"
           }
         },
+        "button_RdMBFz": {
+          "type": "button",
+          "settings": {
+            "label": "Home Decor",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_KGtbnk": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Cutlery",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        },
         "button_UHtgJ4": {
           "type": "button",
           "settings": {
@@ -136,6 +152,8 @@
       },
       "block_order": [
         "button_xRpmKa",
+        "button_RdMBFz",
+        "button_KGtbnk",
         "button_UHtgJ4"
       ],
       "name": "Banner - Christmas",
