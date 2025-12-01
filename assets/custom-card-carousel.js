@@ -17,11 +17,28 @@ if (!customElements.get("m-custom-card-carousel")) {
       const autoplaySpeed = parseInt(this.dataset.autoplaySpeed) || 5000;
       const showPagination = this.dataset.showPagination === "true";
       const showNavigation = this.dataset.showNavigation === "true";
+      const containerType = this.dataset.containerType;
+
+      // Define padding offsets for full_width mode
+      // Default (Mobile): 16px
+      // Tablet: 24px
+      // Desktop: 40px
+      const offsets = containerType === 'full_width' ? {
+        mobile: 16,
+        tablet: 24,
+        desktop: 40
+      } : {
+        mobile: 0,
+        tablet: 0,
+        desktop: 0
+      };
 
       if (typeof MinimogLibs !== 'undefined' && MinimogLibs.Swiper) {
         this.swiper = new MinimogLibs.Swiper(slideContainer, {
           slidesPerView: 1.2,
           spaceBetween: 16,
+          slidesOffsetBefore: offsets.mobile,
+          slidesOffsetAfter: offsets.mobile,
           autoplay: autoplay ? { delay: autoplaySpeed } : false,
           navigation: showNavigation ? {
             nextEl: this.querySelector(".swiper-button-next"),
@@ -35,14 +52,20 @@ if (!customElements.get("m-custom-card-carousel")) {
             640: {
               slidesPerView: 2.2,
               spaceBetween: 20,
+              slidesOffsetBefore: offsets.mobile,
+              slidesOffsetAfter: offsets.mobile,
             },
             768: {
               slidesPerView: 3,
               spaceBetween: 24,
+              slidesOffsetBefore: offsets.tablet,
+              slidesOffsetAfter: offsets.tablet,
             },
             1024: {
               slidesPerView: items + 0.2,
               spaceBetween: 30,
+              slidesOffsetBefore: offsets.desktop,
+              slidesOffsetAfter: offsets.desktop,
             },
           },
           on: {
