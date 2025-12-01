@@ -98,12 +98,11 @@ a.m-custom-card-carousel__card:hover {
   border: 1px solid #000;
   background-color: transparent;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: 600;
-  text-transform: uppercase;
   transition: all 0.3s ease;
   line-height: 1.2;
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
 }
 
 a.m-custom-card-carousel__card:hover .m-custom-card-carousel__button {
