@@ -24,7 +24,7 @@
       "block_order": [
         "button_Lwnpef"
       ],
-      "name": "Split Banner",
+      "name": "Banner - Main",
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle_home_mobile_palm-angels-mens.jpg",
@@ -100,6 +100,81 @@
       "name": "Collection Slider",
       "settings": {}
     },
+    "empty_space_X4pMqw": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "split_banner_hbJTkB": {
+      "type": "split-banner",
+      "blocks": {
+        "button_xRpmKa": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Home Collection",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_RdMBFz": {
+          "type": "button",
+          "settings": {
+            "label": "Home Decor",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_KGtbnk": {
+          "type": "button",
+          "settings": {
+            "label": "Gifts Under $100",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_UHtgJ4": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Gift Cards",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        }
+      },
+      "block_order": [
+        "button_xRpmKa",
+        "button_RdMBFz",
+        "button_KGtbnk",
+        "button_UHtgJ4"
+      ],
+      "name": "Banner - Christmas",
+      "settings": {
+        "container": "container",
+        "image": "shopify://shop_images/lestyle-christmas-banner.jpg",
+        "image_position": "left",
+        "background_color": "#6c1b22",
+        "text_color": "#ffffff",
+        "content_alignment": "center",
+        "title_type": "image",
+        "title_text": "Banner Title",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-christmas-title.png",
+        "title_image_width": 180,
+        "subheader_text": "<p>Make this holiday magical and special with Lestyle Boutique</p>",
+        "subheader_size": "text-base",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "empty_space_HWbjTK": {
       "type": "empty-space",
       "name": "Empty space",
@@ -121,11 +196,11 @@
           "type": "card",
           "name": "Versace",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.png",
+            "image": "shopify://shop_images/90_N24640-N409956_N1449_22_Medus-600x750.jpg",
             "header_text": "Versace Home",
             "subheader_text": "",
-            "link": "shopify://collections/versace",
-            "label_text": "NEW",
+            "link": "shopify://collections/versace-home-collection",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
           }
@@ -960,6 +1035,8 @@
     "split_banner_RNxN7B",
     "empty_space_WNhyQK",
     "17535283352e75a626",
+    "empty_space_X4pMqw",
+    "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "custom_card_carousel_LgWiQH",
