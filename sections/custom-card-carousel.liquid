@@ -76,6 +76,11 @@
                 {% if block.settings.subheader_text != blank %}
                   <div class="m-custom-card-carousel__subheader-text">{{ block.settings.subheader_text }}</div>
                 {% endif %}
+                {% if block.settings.button_text != blank %}
+                  <div class="m-custom-card-carousel__button-wrapper">
+                    <span class="m-custom-card-carousel__button">{{ block.settings.button_text }}</span>
+                  </div>
+                {% endif %}
 
               {%- if block.settings.link != blank -%}
                 </a>
@@ -362,6 +367,13 @@
             { "value": "#c19967", "label": "Gold (#c19967)" }
           ],
           "default": "#b30505"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Shop Now",
+          "info": "Leave blank to hide button"
         }
       ]
     }
