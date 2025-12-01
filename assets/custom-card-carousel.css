@@ -9,8 +9,6 @@
 }
 
 .m-custom-card-carousel__title {
-  font-size: 24px;
-  font-weight: 600;
   margin: 0;
 }
 
@@ -19,6 +17,17 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+a.m-custom-card-carousel__card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+a.m-custom-card-carousel__card:hover {
+  opacity: 0.9;
 }
 
 .m-custom-card-carousel__image-wrapper {
@@ -52,16 +61,12 @@
   color: #757575;
 }
 
-.m-custom-card-carousel__text-bold {
-  font-weight: 700;
+.m-custom-card-carousel__header-text {
   margin-bottom: 5px;
-  font-size: 16px;
   line-height: 1.2;
 }
 
-.m-custom-card-carousel__text-regular {
-  font-weight: 400;
-  font-size: 14px;
+.m-custom-card-carousel__subheader-text {
   color: #555;
 }
 
