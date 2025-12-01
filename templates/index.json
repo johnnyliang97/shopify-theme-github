@@ -9,6 +9,64 @@
  */
 {
   "sections": {
+    "custom_card_carousel_HeykPg": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_Fhzt7n": {
+          "type": "card",
+          "settings": {
+            "text_bold": "25% OFF",
+            "text_regular": "All styles"
+          }
+        },
+        "card_dtFdem": {
+          "type": "card",
+          "settings": {
+            "text_bold": "25% OFF",
+            "text_regular": "All styles"
+          }
+        },
+        "card_6YENz3": {
+          "type": "card",
+          "settings": {
+            "text_bold": "25% OFF",
+            "text_regular": "All styles"
+          }
+        },
+        "card_Lm4fyL": {
+          "type": "card",
+          "settings": {
+            "text_bold": "25% OFF",
+            "text_regular": "All styles"
+          }
+        },
+        "card_EpagUf": {
+          "type": "card",
+          "settings": {
+            "text_bold": "25% OFF",
+            "text_regular": "All styles"
+          }
+        }
+      },
+      "block_order": [
+        "card_Fhzt7n",
+        "card_dtFdem",
+        "card_6YENz3",
+        "card_Lm4fyL",
+        "card_EpagUf"
+      ],
+      "name": "Custom Card Carousel",
+      "settings": {
+        "heading": "Best Brands, Unbeatable Savings!",
+        "items_per_row": 4,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1621243260e1af0c20": {
       "type": "slider",
       "blocks": {
@@ -1209,6 +1267,7 @@
     }
   },
   "order": [
+    "custom_card_carousel_HeykPg",
     "1621243260e1af0c20",
     "empty_space_HWbjTK",
     "17535283352e75a626",
