@@ -4,10 +4,14 @@
 {%- liquid
   assign items_per_row = section.settings.items_per_row
   assign heading = section.settings.heading
+  assign container_class = 'container'
+  if section.settings.container_type == 'full_width'
+    assign container_class = 'container-fluid'
+  endif
 -%}
 
 <section class="m-section m-custom-card-carousel" data-section-id="{{ section.id }}" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
-  <div class="container">
+  <div class="{{ container_class }}">
     {% if heading != blank %}
       <div class="m-custom-card-carousel__header">
         <h2 class="m-custom-card-carousel__title">{{ heading }}</h2>
@@ -62,6 +66,22 @@
 {
   "name": "Custom Card Carousel",
   "settings": [
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "Container type",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container box"
+        },
+        {
+          "value": "full_width",
+          "label": "Full width"
+        }
+      ],
+      "default": "container"
+    },
     {
       "type": "text",
       "id": "heading",
