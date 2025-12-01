@@ -74,6 +74,8 @@
       "settings": {
         "container_type": "container-fluid",
         "heading": "FEATURED BRANDS",
+        "image_ratio_desktop": "133.33",
+        "image_ratio_mobile": "133.33",
         "heading_size": 24,
         "heading_weight": "500",
         "card_header_size": 16,
