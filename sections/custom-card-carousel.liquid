@@ -11,6 +11,10 @@
 -%}
 
 <style>
+  #shopify-section-{{ section.id }} .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
   #shopify-section-{{ section.id }} .m-custom-card-carousel__title {
     font-size: {{ section.settings.heading_size }}px;
     font-weight: {{ section.settings.heading_weight }};
