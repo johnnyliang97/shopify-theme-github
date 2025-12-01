@@ -14,8 +14,9 @@
       "blocks": {
         "card_KJmxxY": {
           "type": "card",
+          "name": "Versace",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.jpg",
+            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.png",
             "header_text": "VERSACE",
             "subheader_text": "",
             "link": "shopify://collections/versace"
@@ -24,8 +25,9 @@
         "card_Qc7zEM": {
           "type": "card",
           "settings": {
-            "header_text": "25% OFF",
-            "subheader_text": "All styles",
+            "image": "shopify://shop_images/lestyle-model-vjc-mens-tshirt-shorts.png",
+            "header_text": "VERSACE JEANS COUTURE",
+            "subheader_text": "",
             "link": ""
           }
         },
@@ -70,12 +72,12 @@
         "card_Lm4fyL",
         "card_EpagUf"
       ],
-      "name": "Custom Card Carousel",
+      "name": "Brands",
       "settings": {
         "container_type": "container-fluid",
         "heading": "FEATURED BRANDS",
-        "image_ratio_desktop": "133.33",
-        "image_ratio_mobile": "133.33",
+        "image_ratio_desktop": "100",
+        "image_ratio_mobile": "125",
         "heading_size": 24,
         "heading_weight": "500",
         "card_header_size": 16,
