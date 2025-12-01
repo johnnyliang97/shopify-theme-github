@@ -865,7 +865,8 @@
           "type": "iconbox",
           "settings": {
             "card_color_scheme": "",
-            "image_by_url": "https://www.svgrepo.com/show/349541/uber.svg",
+            "image": "shopify://shop_images/uber.svg",
+            "image_by_url": "",
             "title": "Same Day Delivery",
             "description": "<p>Uber same day delivery available across Metropolitan Melbourne</p>",
             "link": "",
