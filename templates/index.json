@@ -95,7 +95,7 @@
       "name": "Brands",
       "settings": {
         "container_type": "container-fluid",
-        "heading": "FEATURED BRANDS",
+        "heading": "Featured Brands",
         "image_ratio_desktop": "100",
         "image_ratio_mobile": "125",
         "heading_size": 24,
