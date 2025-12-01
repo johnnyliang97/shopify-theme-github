@@ -11,6 +11,10 @@
 -%}
 
 <style>
+  #shopify-section-{{ section.id }} {
+    --image-ratio-mobile: {{ section.settings.image_ratio_mobile }}%;
+    --image-ratio-desktop: {{ section.settings.image_ratio_desktop }}%;
+  }
   #shopify-section-{{ section.id }} .m-custom-card-carousel__title {
     font-size: {{ section.settings.heading_size }}px;
     font-weight: {{ section.settings.heading_weight }};
@@ -124,6 +128,36 @@
       "id": "heading",
       "label": "Heading",
       "default": "Best Brands, Unbeatable Savings!"
+    },
+    {
+      "type": "header",
+      "content": "Image Settings"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_desktop",
+      "label": "Image Ratio (Desktop)",
+      "options": [
+        { "value": "100", "label": "Square (1:1)" },
+        { "value": "133.33", "label": "Portrait (3:4)" },
+        { "value": "150", "label": "Portrait (2:3)" },
+        { "value": "75", "label": "Landscape (4:3)" },
+        { "value": "56.25", "label": "Landscape (16:9)" }
+      ],
+      "default": "100"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_mobile",
+      "label": "Image Ratio (Mobile)",
+      "options": [
+        { "value": "100", "label": "Square (1:1)" },
+        { "value": "133.33", "label": "Portrait (3:4)" },
+        { "value": "150", "label": "Portrait (2:3)" },
+        { "value": "75", "label": "Landscape (4:3)" },
+        { "value": "56.25", "label": "Landscape (16:9)" }
+      ],
+      "default": "100"
     },
     {
       "type": "header",

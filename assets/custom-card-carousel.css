@@ -33,10 +33,16 @@ a.m-custom-card-carousel__card:hover {
 .m-custom-card-carousel__image-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 100%; /* Square aspect ratio */
+  padding-bottom: var(--image-ratio-mobile, 100%); /* Default square */
   overflow: hidden;
   background-color: #f4f4f4;
   margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .m-custom-card-carousel__image-wrapper {
+    padding-bottom: var(--image-ratio-desktop, 100%);
+  }
 }
 
 .m-custom-card-carousel__image {
