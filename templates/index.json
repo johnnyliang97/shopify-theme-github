@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "split_banner_RNxN7B": {
+      "type": "split-banner",
+      "blocks": {
+        "button_Lwnpef": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Now",
+            "link": "",
+            "button_style": "m-button--secondary"
+          }
+        }
+      },
+      "block_order": [
+        "button_Lwnpef"
+      ],
+      "name": "Split Banner",
+      "settings": {
+        "image": "shopify://shop_images/lestyle_home_mobile_palm-angels-mens.jpg",
+        "image_position": "right",
+        "background_color": "#f9f1f1",
+        "text_color": "#000000",
+        "content_alignment": "center",
+        "title_type": "image",
+        "title_text": "Banner Title",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/Palm-Angels-Logo_2000x_347a750a-69d0-446c-a625-f7b7e8ab13be.png",
+        "title_image_width": 200,
+        "subheader_text": "<p>Iconic streetwear for him</p>",
+        "subheader_size": "text-base",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "empty_space_WNhyQK": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
     "17535283352e75a626": {
       "type": "_blocks",
       "blocks": {
@@ -49,6 +96,7 @@
       "block_order": [
         "ai_gen_block_c6d9d65_BLCetQ"
       ],
+      "name": "Collection Slider",
       "settings": {}
     },
     "custom_card_carousel_HeykPg": {
@@ -505,7 +553,7 @@
         "enable_preload_image": true
       }
     },
-    "empty_space_WNhyQK": {
+    "empty_space_Twn6RR": {
       "type": "empty-space",
       "name": "Empty space",
       "settings": {
@@ -661,20 +709,6 @@
         "animations": "inherit"
       }
     },
-    "empty_space_dLfLNQ": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": ""
-      }
-    },
     "newsletter_feY3gE": {
       "type": "newsletter",
       "name": "Newsletter",
@@ -696,6 +730,20 @@
         "padding_bottom": 50,
         "custom_class": "",
         "animations": "inherit"
+      }
+    },
+    "empty_space_dLfLNQ": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
       }
     },
     "16225125199f82d8fe": {
@@ -797,6 +845,8 @@
     }
   },
   "order": [
+    "split_banner_RNxN7B",
+    "empty_space_WNhyQK",
     "17535283352e75a626",
     "custom_card_carousel_HeykPg",
     "scrolling_promotion_jjrFyf",
@@ -804,7 +854,7 @@
     "162251092958fcda7c",
     "empty_space_bdqtVc",
     "image_with_text_2_pxr8Fb",
-    "empty_space_WNhyQK",
+    "empty_space_Twn6RR",
     "7ea56e8d-5794-4708-8812-8ee9604a3a21",
     "image_with_text_7t8xii",
     "blog_posts_ayEFnz",
