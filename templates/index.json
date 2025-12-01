@@ -162,7 +162,7 @@
         "image": "shopify://shop_images/lestyle-christmas-banner.jpg",
         "image_position": "left",
         "background_color": "#6c1b22",
-        "text_color": "#ffffff",
+        "text_color": "#eeeeee",
         "content_alignment": "center",
         "title_type": "image",
         "title_text": "Banner Title",
@@ -840,40 +840,56 @@
         "custom_class": "sf-custom--collection-banner"
       }
     },
-    "image_with_text_7t8xii": {
-      "type": "image-with-text",
-      "name": "Lestyle Outlet",
+    "split_banner_n4Tr8e": {
+      "type": "split-banner",
+      "blocks": {
+        "button_weMcbq": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Mens",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_YQzV7g": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_rYaaUn": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Kids",
+            "link": "",
+            "button_style": "m-button--white"
+          }
+        }
+      },
+      "block_order": [
+        "button_weMcbq",
+        "button_YQzV7g",
+        "button_rYaaUn"
+      ],
+      "name": "Banner - Christmas",
       "settings": {
-        "heading": "",
-        "heading_size": "h3",
-        "subheading": "",
-        "container": "container-fluid",
-        "color_scheme": "scheme-f18c59ce-62bf-4d70-9c03-c41f1fdb8f53",
-        "item_gap": 100,
-        "item_gap_mobile": 30,
-        "layout": "left",
-        "image_column_size": "6",
-        "image_overlap": false,
-        "show_image_reverse": false,
-        "hover_effect": false,
-        "image_animation": "none",
-        "image": "shopify://shop_images/blackdriday25-social-outlet.jpg",
-        "link": "shopify://collections/lestyle-outlet",
-        "link_2": "",
-        "second_image_offset_top": 10,
-        "title": "BLACK FRIDAY OUTLET",
-        "sub_title": "",
-        "text": "<p>70% Off All Outlet Items</p>",
-        "text_size": "medium",
-        "content_alignment": "left",
-        "button_label": "Shop the Outlet",
-        "button_link": "shopify://collections/lestyle-outlet",
-        "button_style": "m-button--link",
-        "button_size": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": "",
-        "animations": "inherit"
+        "container": "container",
+        "image": "shopify://shop_images/lestyle-christmas-banner.jpg",
+        "image_position": "left",
+        "background_color": "#000000",
+        "text_color": "#bbbbbb",
+        "content_alignment": "center",
+        "title_type": "image",
+        "title_text": "Banner Title",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-outlet-logo.png",
+        "title_image_width": 128,
+        "subheader_text": "<p>Up to 70% OFF Outlet Sale. Online-Only.</p>",
+        "subheader_size": "text-base",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "blog_posts_ayEFnz": {
@@ -1061,7 +1077,7 @@
     "image_with_text_2_pxr8Fb",
     "empty_space_Twn6RR",
     "7ea56e8d-5794-4708-8812-8ee9604a3a21",
-    "image_with_text_7t8xii",
+    "split_banner_n4Tr8e",
     "blog_posts_ayEFnz",
     "newsletter_feY3gE",
     "empty_space_dLfLNQ",
