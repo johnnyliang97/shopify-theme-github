@@ -20,13 +20,11 @@ if (!customElements.get("m-custom-card-carousel")) {
       const containerType = this.dataset.containerType;
 
       // Define padding offsets for full_width mode
-      // Default (Mobile): 16px
-      // Tablet: 24px
-      // Desktop: 40px
+      // Set to 0 to match Slideshow section behavior (edge-to-edge)
       const offsets = containerType === 'full_width' ? {
-        mobile: 16,
-        tablet: 24,
-        desktop: 40
+        mobile: 0,
+        tablet: 0,
+        desktop: 0
       } : {
         mobile: 0,
         tablet: 0,

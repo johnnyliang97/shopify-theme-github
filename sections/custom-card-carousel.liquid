@@ -4,9 +4,12 @@
 {%- liquid
   assign items_per_row = section.settings.items_per_row
   assign heading = section.settings.heading
-  assign container_class = 'container'
+  assign container_class = 'container-fluid'
+  if section.settings.container_type == 'container'
+    assign container_class = 'container'
+  endif
   if section.settings.container_type == 'full_width'
-    assign container_class = 'container-fluid'
+    assign container_class = 'container-full'
   endif
 -%}
 
