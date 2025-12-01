@@ -63,6 +63,12 @@
                       {{ 'image' | placeholder_svg_tag }}
                     </div>
                   {% endif %}
+                  
+                  {% if block.settings.label_text != blank %}
+                    <div class="m-custom-card-carousel__label" style="background-color: {{ block.settings.label_color }};">
+                      {{ block.settings.label_text }}
+                    </div>
+                  {% endif %}
                 </div>
                 {% if block.settings.header_text != blank %}
                   <div class="m-custom-card-carousel__header-text">{{ block.settings.header_text }}</div>
@@ -336,6 +342,26 @@
           "type": "url",
           "id": "link",
           "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "Label Settings"
+        },
+        {
+          "type": "text",
+          "id": "label_text",
+          "label": "Label Text",
+          "info": "Leave blank to hide label"
+        },
+        {
+          "type": "select",
+          "id": "label_color",
+          "label": "Label Color",
+          "options": [
+            { "value": "#b30505", "label": "Red (#b30505)" },
+            { "value": "#c19967", "label": "Gold (#c19967)" }
+          ],
+          "default": "#b30505"
         }
       ]
     }
