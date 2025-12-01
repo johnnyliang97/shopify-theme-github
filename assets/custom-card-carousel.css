@@ -70,7 +70,7 @@ a.m-custom-card-carousel__card:hover {
 .m-custom-card-carousel__label {
   position: absolute;
   top: 15px;
-  left: 0;
+  left: 15px;
   padding: 6px 12px;
   color: #fff;
   font-weight: 700;
