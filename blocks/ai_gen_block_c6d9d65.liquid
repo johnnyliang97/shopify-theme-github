@@ -1,0 +1,585 @@
+{% comment %}
+  @prompt
+    create a collection list slider that loops the collections automatically based on time, collection image shown as rounded on top (image size options available on desktop and mobile), collection title align centre shown on bottom,
+  @request
+    add a feature that user can swipe horizontally on mobile and drag to swipe on desktop
+{% endcomment %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collection-slider-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+  }
+
+  .ai-collection-slider__track-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: {{ block.settings.gap }}px;
+    cursor: grab; /* NEW: Add grab cursor for desktop */
+  }
+
+  .ai-collection-slider__track-{{ ai_gen_id }}.dragging {
+    cursor: grabbing; /* NEW: Add grabbing cursor while dragging */
+  }
+
+
+  /* NEW: Prevent user from selecting text/images while dragging */
+  .ai-collection-slider__item-{{ ai_gen_id }} {
+    flex: 0 0 auto;
+    width: {{ block.settings.item_width_desktop }}px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .ai-collection-slider__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: {{ block.settings.image_size_desktop }}px;
+    height: {{ block.settings.image_size_desktop }}px;
+    margin: 0 auto {{ block.settings.spacing }}px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    pointer-events: none; /* NEW: Prevent image drag ghosting */
+  }
+
+  .ai-collection-slider__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-collection-slider__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-collection-slider__image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.5;
+  }
+
+  .ai-collection-slider__link-{{ ai_gen_id }} {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .ai-collection-slider__link-{{ ai_gen_id }}:hover .ai-collection-slider__image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-collection-slider__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.title_weight }};
+    color: {{ block.settings.title_color }};
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .ai-collection-slider__count-{{ ai_gen_id }} {
+    font-size: {{ block.settings.count_size }}px;
+    color: {{ block.settings.count_color }};
+    margin-top: 4px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-slider__item-{{ ai_gen_id }} {
+      width: {{ block.settings.item_width_mobile }}px;
+    }
+
+    .ai-collection-slider__image-wrapper-{{ ai_gen_id }} {
+      width: {{ block.settings.image_size_mobile }}px;
+      height: {{ block.settings.image_size_mobile }}px;
+    }
+
+    .ai-collection-slider__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.9 }}px;
+    }
+
+    .ai-collection-slider__count-{{ ai_gen_id }} {
+      font-size: {{ block.settings.count_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<collection-slider-{{ ai_gen_id }}
+  class="ai-collection-slider-{{ ai_gen_id }}"
+  data-autoplay-speed="{{ block.settings.autoplay_speed }}"
+  data-pause-on-hover="{{ block.settings.pause_on_hover }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collection-slider__track-{{ ai_gen_id }}">
+    {% for collection in block.settings.collections %}
+      <div class="ai-collection-slider__item-{{ ai_gen_id }}">
+        <a href="{{ collection.url }}" class="ai-collection-slider__link-{{ ai_gen_id }}">
+          <div class="ai-collection-slider__image-wrapper-{{ ai_gen_id }}">
+            {% if collection.featured_image %}
+              <img
+                src="{{ collection.featured_image | image_url: width: 400 }}"
+                alt="{{ collection.featured_image.alt | escape }}"
+                class="ai-collection-slider__image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              <div class="ai-collection-slider__image-placeholder-{{ ai_gen_id }}">
+                {{ 'collection-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+          <h3 class="ai-collection-slider__title-{{ ai_gen_id }}">{{ collection.title }}</h3>
+          {% if block.settings.show_product_count %}
+            <div class="ai-collection-slider__count-{{ ai_gen_id }}">
+              {{ collection.products_count }}
+              {% if collection.products_count == 1 %}
+                product
+              {% else %}
+                products
+              {% endif %}
+            </div>
+          {% endif %}
+        </a>
+      </div>
+    {% endfor %}
+    {% comment %} Duplicate for seamless loop {% endcomment %}
+    {% for collection in block.settings.collections %}
+      <div class="ai-collection-slider__item-{{ ai_gen_id }}">
+        <a href="{{ collection.url }}" class="ai-collection-slider__link-{{ ai_gen_id }}">
+          <div class="ai-collection-slider__image-wrapper-{{ ai_gen_id }}">
+            {% if collection.featured_image %}
+              <img
+                src="{{ collection.featured_image | image_url: width: 400 }}"
+                alt="{{ collection.featured_image.alt | escape }}"
+                class="ai-collection-slider__image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              <div class="ai-collection-slider__image-placeholder-{{ ai_gen_id }}">
+                {{ 'collection-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+          <h3 class="ai-collection-slider__title-{{ ai_gen_id }}">{{ collection.title }}</h3>
+          {% if block.settings.show_product_count %}
+            <div class="ai-collection-slider__count-{{ ai_gen_id }}">
+              {{ collection.products_count }}
+              {% if collection.products_count == 1 %}
+                product
+              {% else %}
+                products
+              {% endif %}
+            </div>
+          {% endif %}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</collection-slider-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CollectionSlider{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentIndex = 0;
+        this.autoplayInterval = null;
+        this.isHovered = false;
+
+        // Properties for drag/swipe functionality
+        this.isDragging = false;
+        this.wasDragged = false; // NEW: Better flag to distinguish click vs drag
+        this.startPos = 0;
+        this.currentTranslate = 0;
+        this.prevTranslate = 0;
+        this.animationID = 0;
+        this.clickThreshold = 10;
+        
+        // IMPROVEMENT: Bind event handlers once for easier add/remove
+        this.dragStart = this.dragStart.bind(this);
+        this.drag = this.drag.bind(this);
+        this.dragEnd = this.dragEnd.bind(this);
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.ai-collection-slider__track-{{ ai_gen_id }}');
+        this.items = this.querySelectorAll('.ai-collection-slider__item-{{ ai_gen_id }}');
+        if (this.items.length === 0) return;
+
+        this.autoplaySpeed = parseInt(this.dataset.autoplaySpeed) * 1000;
+        this.pauseOnHover = this.dataset.pauseOnHover === 'true';
+
+        this.totalItems = this.items.length / 2;
+        this.setupAutoplay();
+        this.setupHoverEvents();
+        this.updateSliderPosition();
+        this.setupDragEvents();
+
+        this.track.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
+      }
+
+      // IMPROVEMENT: Event listeners are now managed for a smoother desktop drag
+      setupDragEvents() {
+        this.track.addEventListener('mousedown', this.dragStart);
+        this.track.addEventListener('touchstart', this.dragStart, { passive: true });
+
+        // Prevent navigation on dragged links
+        this.links = this.querySelectorAll('.ai-collection-slider__link-{{ ai_gen_id }}');
+        this.links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (this.wasDragged) {
+                    e.preventDefault();
+                }
+            });
+        });
+      }
+
+      getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+      }
+      
+      dragStart(event) {
+        // Prevent text selection weirdness
+        if (event.type === 'mousedown') {
+            event.preventDefault();
+        }
+        
+        this.stopAutoplay();
+        this.isDragging = true;
+        this.wasDragged = false; // Reset drag flag
+        this.startPos = this.getPositionX(event);
+        this.animationID = requestAnimationFrame(this.animation.bind(this));
+        this.track.style.transition = 'none';
+        this.track.classList.add('dragging');
+        
+        // IMPROVEMENT: Listen for move/end on the whole document
+        document.addEventListener('mousemove', this.drag);
+        document.addEventListener('touchmove', this.drag, { passive: true });
+        document.addEventListener('mouseup', this.dragEnd);
+        document.addEventListener('touchend', this.dragEnd);
+      }
+
+      drag(event) {
+        if (this.isDragging) {
+          const currentPosition = this.getPositionX(event);
+          this.currentTranslate = this.prevTranslate + currentPosition - this.startPos;
+          
+          // If moved beyond the threshold, register it as a drag
+          if (Math.abs(currentPosition - this.startPos) > this.clickThreshold) {
+            this.wasDragged = true;
+          }
+        }
+      }
+      
+      dragEnd() {
+        if (!this.isDragging) return;
+        this.isDragging = false;
+        
+        // IMPROVEMENT: Remove document listeners
+        document.removeEventListener('mousemove', this.drag);
+        document.removeEventListener('touchmove', this.drag);
+        document.removeEventListener('mouseup', this.dragEnd);
+        document.removeEventListener('touchend', this.dragEnd);
+
+        cancelAnimationFrame(this.animationID);
+        const movedBy = this.currentTranslate - this.prevTranslate;
+
+        if (movedBy < -50) {
+          this.nextSlide();
+        } else if (movedBy > 50) {
+          this.prevSlide();
+        } else {
+          this.track.style.transition = 'transform 0.5s ease-in-out';
+          this.updateSliderPosition();
+        }
+
+        this.track.classList.remove('dragging');
+        if (!this.isHovered) {
+          this.startAutoplay();
+        }
+      }
+      
+      animation() {
+        this.track.style.transform = `translateX(${this.currentTranslate}px)`;
+        if (this.isDragging) requestAnimationFrame(this.animation.bind(this));
+      }
+
+      setupAutoplay() {
+        if (this.autoplaySpeed > 0) {
+          this.startAutoplay();
+        }
+      }
+
+      startAutoplay() {
+        this.stopAutoplay();
+        if (this.autoplaySpeed > 0) {
+          this.autoplayInterval = setInterval(() => {
+            if (!this.isHovered || !this.pauseOnHover) {
+              this.nextSlide();
+            }
+          }, this.autoplaySpeed);
+        }
+      }
+
+      stopAutoplay() {
+        clearInterval(this.autoplayInterval);
+        this.autoplayInterval = null;
+      }
+
+      setupHoverEvents() {
+        if (this.pauseOnHover) {
+          this.addEventListener('mouseenter', () => {
+            this.isHovered = true;
+            this.stopAutoplay();
+          });
+
+          this.addEventListener('mouseleave', () => {
+            this.isHovered = false;
+            if(!this.isDragging) {
+              this.startAutoplay();
+            }
+          });
+        }
+      }
+      
+      prevSlide() {
+        this.currentIndex--;
+        this.track.style.transition = 'transform 0.5s ease-in-out';
+        this.updateSliderPosition();
+      }
+
+      nextSlide() {
+        this.currentIndex++;
+        this.track.style.transition = 'transform 0.5s ease-in-out';
+        this.updateSliderPosition();
+      }
+      
+      handleTransitionEnd() {
+        if (this.currentIndex >= this.totalItems) {
+            this.track.style.transition = 'none';
+            this.currentIndex = this.currentIndex % this.totalItems;
+            this.updateSliderPosition();
+        } else if (this.currentIndex < 0) {
+            this.track.style.transition = 'none';
+            this.currentIndex = this.currentIndex + this.totalItems;
+            this.updateSliderPosition();
+        }
+      }
+
+      updateSliderPosition() {
+        if (this.items.length > 0) {
+          const itemWidth = this.items[0].offsetWidth;
+          const gap = parseInt(getComputedStyle(this.track).gap) || 0;
+          const translateX = -(this.currentIndex * (itemWidth + gap));
+          this.track.style.transform = `translateX(${translateX}px)`;
+          
+          this.prevTranslate = translateX;
+          this.currentTranslate = translateX;
+        }
+      }
+
+      disconnectedCallback() {
+        this.stopAutoplay();
+      }
+    }
+
+    customElements.define('collection-slider-{{ ai_gen_id }}', CollectionSlider{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Collection Slider",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collections"
+    },
+    {
+      "type": "collection_list",
+      "id": "collections",
+      "label": "Collections",
+      "limit": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_count",
+      "label": "Show product count",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Autoplay Settings"
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Autoplay speed",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Layout - Desktop"
+    },
+    {
+      "type": "range",
+      "id": "image_size_desktop",
+      "min": 80,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Image size",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "item_width_desktop",
+      "min": 120,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Item width",
+      "default": 180
+    },
+    {
+      "type": "header",
+      "content": "Layout - Mobile"
+    },
+    {
+      "type": "range",
+      "id": "image_size_mobile",
+      "min": 60,
+      "max": 150,
+      "step": 10,
+      "unit": "px",
+      "label": "Image size",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "item_width_mobile",
+      "min": 100,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Item width",
+      "default": 140
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between items",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Space between image and title",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "count_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Product count size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "count_color",
+      "label": "Product count color",
+      "default": "#666666"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Slider"
+    }
+  ]
+}
+{% endschema %}

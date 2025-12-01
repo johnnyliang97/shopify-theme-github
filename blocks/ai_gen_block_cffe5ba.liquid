@@ -1,0 +1,1277 @@
+{% doc %}
+  @prompt
+    Create a responsive carousel section called "TacTiles" that showcases promotional tiles with customizable content. Each tile should:
+    
+    1. Display a title with optional leading and trailing text (e.g., "UP TO 40% OFF")
+    2. Include a subtitle at the top (e.g., "SPEND & SAVE")
+    3. Feature a main offer text (e.g., "Home", "Toys", "Beauty")
+    4. Have a descriptive paragraph explaining the promotion
+    5. Include a primary CTA button with customizable text and link
+    6. Support an optional secondary CTA button
+    7. Allow for terms and conditions text at the bottom
+    8. Have customizable background and text colors
+    
+    The section should have:
+    - A main heading at the top (e.g., "ON SALE THIS WEEK")
+    - Optional navigation links above the carousel
+    - Responsive behavior: showing 3 tiles on desktop, 2 on tablet, and 1 on mobile
+    - Auto-scrolling functionality with navigation dots
+    - Arrow navigation on larger screens
+    
+    Make the section fully customizable through the theme editor with appropriate settings for each element.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .tactiles-carousel-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: {{ settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: block;
+  }
+
+  .tactiles-carousel__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .tactiles-carousel__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: 500;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tactiles-carousel__nav-links-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  .tactiles-carousel__nav-link-{{ ai_gen_id }} {
+    color: {{ block.settings.nav_link_color }};
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid {{ block.settings.nav_link_color }};
+    padding-bottom: 2px;
+  }
+
+  .tactiles-carousel__nav-link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.nav_link_hover_color }};
+    border-bottom-color: {{ block.settings.nav_link_hover_color }};
+  }
+
+  .tactiles-carousel__container-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tactiles-carousel__track-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .tactiles-carousel__slide-{{ ai_gen_id }} {
+    flex: 0 0 33.333%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .tactiles-tile-{{ ai_gen_id }} {
+    padding: 30px 20px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: {{ block.settings.tile_desktop_height }}px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  {% for i in (1..3) %}
+    {% liquid
+      assign tile_enabled_key = 'tile_' | append: i | append: '_enabled'
+      assign tile_enabled = block.settings[tile_enabled_key]
+    %}
+    
+    {% if tile_enabled %}
+      {% liquid
+        assign bg_color_key = 'tile_' | append: i | append: '_background_color'
+        assign bg_image_key = 'tile_' | append: i | append: '_background_image'
+        assign enable_overlay_key = 'tile_' | append: i | append: '_enable_color_overlay'
+        assign overlay_color_key = 'tile_' | append: i | append: '_color_overlay'
+        assign overlay_opacity_key = 'tile_' | append: i | append: '_overlay_opacity'
+        
+        assign bg_color = block.settings[bg_color_key]
+        assign bg_image = block.settings[bg_image_key]
+        assign enable_overlay = block.settings[enable_overlay_key]
+        assign overlay_color = block.settings[overlay_color_key]
+        assign overlay_opacity = block.settings[overlay_opacity_key]
+      %}
+
+      .tactiles-tile-{{ ai_gen_id }}[data-tile="{{ i }}"] {
+        background: {{ bg_color | default: '#ffffff' }};
+        {% if bg_image != blank %}
+          background-image: url('{{ bg_image | image_url }}');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        {% endif %}
+      }
+
+      {% if enable_overlay %}
+      .tactiles-tile-{{ ai_gen_id }}[data-tile="{{ i }}"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: {{ overlay_color | default: '#000000' }};
+        opacity: {{ overlay_opacity | default: 50 | divided_by: 100.0 }};
+        z-index: 1;
+      }
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  .tactiles-tile-{{ ai_gen_id }} > div {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tactiles-tile__top-section-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .tactiles-tile__bottom-section-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+  }
+
+
+
+  .tactiles-tile__title-wrapper-{{ ai_gen_id }} {
+    margin-bottom: 15px;
+  }
+
+  .tactiles-tile__title-leading-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 500;
+    color: {{ block.settings.tile_text_color }};
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tactiles-tile__title-main-{{ ai_gen_id }} {
+    font-size: {{ block.settings.tile_title_size }}px;
+    font-weight: 500;
+    color: {{ block.settings.tile_text_color }};
+    margin: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tactiles-tile__offer-{{ ai_gen_id }} {
+    font-size: {{ block.settings.tile_offer_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.tile_accent_color }};
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tactiles-tile__description-{{ ai_gen_id }} {
+    font-size: 14px;
+    line-height: 1.5;
+    color: {{ block.settings.tile_text_color }};
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+
+  .tactiles-tile__buttons-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .tactiles-tile__button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: {{ settings.btn_border_radius }}px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: {{ settings.btn_border_width }}px solid;
+    text-align: center;
+  }
+
+  .tactiles-tile__button--primary-{{ ai_gen_id }} {
+    background-color: {{ block.settings.primary_button_bg }};
+    color: {{ block.settings.primary_button_text }};
+    border-color: {{ block.settings.primary_button_bg }};
+  }
+
+  .tactiles-tile__button--primary-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.primary_button_hover_bg }};
+    color: {{ block.settings.primary_button_hover_text }};
+    border-color: {{ block.settings.primary_button_hover_bg }};
+  }
+
+
+
+  .tactiles-tile__terms-{{ ai_gen_id }} {
+    font-size: 11px;
+    color: {{ block.settings.tile_text_color }};
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+
+
+  .tactiles-carousel__dots-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .tactiles-carousel__dot-{{ ai_gen_id }} {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: {{ block.settings.dot_color }};
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+  }
+
+  .tactiles-carousel__dot-{{ ai_gen_id }}.active {
+    background: {{ block.settings.dot_active_color }};
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  @media screen and (min-width: 1025px) {
+    .tactiles-carousel__dots-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .tactiles-carousel__slide-{{ ai_gen_id }} {
+      flex: 0 0 50%;
+    }
+
+    .tactiles-carousel-{{ ai_gen_id }} {
+      padding: 0 5px;
+    }
+
+    .tactiles-carousel__nav-links-{{ ai_gen_id }} {
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .tactiles-carousel__slide-{{ ai_gen_id }} {
+      flex: 0 0 100%;
+    }
+
+    .tactiles-carousel__nav-links-{{ ai_gen_id }} {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .tactiles-tile-{{ ai_gen_id }} {
+      min-height: {{ block.settings.tile_mobile_height }}px;
+      padding: 25px 15px;
+    }
+
+    .tactiles-carousel__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+
+    .tactiles-tile__title-main-{{ ai_gen_id }} {
+      font-size: {{ block.settings.tile_title_size | times: 0.8 }}px;
+    }
+
+    .tactiles-tile__offer-{{ ai_gen_id }} {
+      font-size: {{ block.settings.tile_offer_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<tactiles-carousel-{{ ai_gen_id }}
+  class="tactiles-carousel-{{ ai_gen_id }}"
+  data-auto-scroll="{{ block.settings.auto_scroll }}"
+  data-auto-scroll-delay="{{ block.settings.auto_scroll_delay }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="tactiles-carousel__header-{{ ai_gen_id }}">
+    {% if block.settings.main_heading != blank %}
+      <h2 class="tactiles-carousel__title-{{ ai_gen_id }}">{{ block.settings.main_heading }}</h2>
+    {% endif %}
+
+    {% if block.settings.show_nav_links %}
+      <div class="tactiles-carousel__nav-links-{{ ai_gen_id }}">
+        {% for i in (1..5) %}
+          {% assign nav_text_key = 'nav_link_' | append: i | append: '_text' %}
+          {% assign nav_url_key = 'nav_link_' | append: i | append: '_url' %}
+          {% assign nav_text = block.settings[nav_text_key] %}
+          {% assign nav_url = block.settings[nav_url_key] %}
+          
+          {% if nav_text != blank %}
+            <a href="{{ nav_url | default: '#' }}" class="tactiles-carousel__nav-link-{{ ai_gen_id }}">
+              {{ nav_text }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="tactiles-carousel__container-{{ ai_gen_id }}">
+    <div class="tactiles-carousel__track-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign tile_enabled_key = 'tile_' | append: i | append: '_enabled'
+          assign tile_enabled = block.settings[tile_enabled_key]
+        %}
+        
+        {% if tile_enabled %}
+          {% liquid
+            assign title_leading_key = 'tile_' | append: i | append: '_title_leading'
+            assign title_main_key = 'tile_' | append: i | append: '_title_main'
+            assign offer_key = 'tile_' | append: i | append: '_offer'
+            assign description_key = 'tile_' | append: i | append: '_description'
+            assign primary_button_text_key = 'tile_' | append: i | append: '_primary_button_text'
+            assign primary_button_url_key = 'tile_' | append: i | append: '_primary_button_url'
+
+            assign terms_key = 'tile_' | append: i | append: '_terms'
+
+            assign title_leading = block.settings[title_leading_key]
+            assign title_main = block.settings[title_main_key]
+            assign offer = block.settings[offer_key]
+            assign description = block.settings[description_key]
+            assign primary_button_text = block.settings[primary_button_text_key]
+            assign primary_button_url = block.settings[primary_button_url_key]
+
+            assign terms = block.settings[terms_key]
+          %}
+
+          <div class="tactiles-carousel__slide-{{ ai_gen_id }}">
+            <div class="tactiles-tile-{{ ai_gen_id }}" data-tile="{{ i }}">
+              <div class="tactiles-tile__top-section-{{ ai_gen_id }}">
+                <div class="tactiles-tile__title-wrapper-{{ ai_gen_id }}">
+                  {% if title_leading != blank %}
+                    <div class="tactiles-tile__title-leading-{{ ai_gen_id }}">{{ title_leading }}</div>
+                  {% endif %}
+                  
+                  {% if title_main != blank %}
+                    <h3 class="tactiles-tile__title-main-{{ ai_gen_id }}">{{ title_main }}</h3 >
+                  {% endif %}
+                </div>
+
+                {% if offer != blank %}
+                  <div class="tactiles-tile__offer-{{ ai_gen_id }}">{{ offer }}</div>
+                {% endif %}
+              </div>
+
+              <div class="tactiles-tile__bottom-section-{{ ai_gen_id }}">
+                {% if description != blank %}
+                  <div class="tactiles-tile__description-{{ ai_gen_id }}">{{ description }}</div>
+                {% endif %}
+
+                <div class="tactiles-tile__buttons-{{ ai_gen_id }}">
+                  {% if primary_button_text != blank %}
+                    <a 
+                      href="{{ primary_button_url | default: '#' }}" 
+                      class="tactiles-tile__button-{{ ai_gen_id }} tactiles-tile__button--primary-{{ ai_gen_id }}"
+                    >
+                      {{ primary_button_text }}
+                    </a>
+                  {% endif %}
+                </div>
+
+                {% if terms != blank %}
+                  <div class="tactiles-tile__terms-{{ ai_gen_id }}">{{ terms }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+
+  </div>
+
+  {% if block.settings.show_dots %}
+    <div class="tactiles-carousel__dots-{{ ai_gen_id }}"></div>
+  {% endif %}
+</tactiles-carousel-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TacTilesCarousel{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.totalSlides = 0;
+        this.autoScrollInterval = null;
+        this.isAutoScrolling = false;
+        // 交互与动画状态标记，防止与自动滚动冲突
+        this.isInteracting = false;
+        this.isAnimating = false;
+        this.autoScrollRestartTimeout = null;
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.tactiles-carousel__track-{{ ai_gen_id }}');
+        this.slides = this.querySelectorAll('.tactiles-carousel__slide-{{ ai_gen_id }}');
+        this.dotsContainer = this.querySelector('.tactiles-carousel__dots-{{ ai_gen_id }}');
+        
+        this.totalSlides = this.slides.length;
+        this.autoScroll = this.dataset.autoScroll === 'true';
+        this.autoScrollDelay = parseInt(this.dataset.autoScrollDelay) * 1000;
+
+        this.init();
+      }
+
+      init() {
+        if (this.totalSlides === 0) return;
+
+        // 设置无缝循环
+        this.setupInfiniteLoop();
+        
+        // 确保track有正确的transition设置
+        this.track.style.transition = 'transform 0.5s ease';
+        
+        this.createDots();
+        this.updateSlidePositions();
+        this.bindEvents();
+        
+        if (this.autoScroll) {
+          this.startAutoScroll();
+        }
+      }
+
+      setupInfiniteLoop() {
+        // 只在移动端且启用了carousel时设置无缝循环
+        if (!this.autoScroll || window.innerWidth > 1024) return;
+        
+        // 克隆第一个和最后一个slide来实现无缝循环
+        const firstSlide = this.slides[0].cloneNode(true);
+        const lastSlide = this.slides[this.totalSlides - 1].cloneNode(true);
+        
+        // 添加标识符
+        firstSlide.setAttribute('data-cloned', 'true');
+        lastSlide.setAttribute('data-cloned', 'true');
+        
+        // 在track的开头添加最后一个slide的克隆
+        this.track.insertBefore(lastSlide, this.track.firstChild);
+        
+        // 在track的末尾添加第一个slide的克隆
+        this.track.appendChild(firstSlide);
+        
+        // 更新currentSlide以考虑前面添加的克隆slide
+        this.currentSlide = 1;
+        this.realCurrentSlide = 0; // 跟踪真实的slide索引
+      }
+
+      createDots() {
+        if (!this.dotsContainer) return;
+        
+        this.dotsContainer.innerHTML = '';
+        
+        for (let i = 0; i < this.totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'tactiles-carousel__dot-{{ ai_gen_id }}';
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => {
+            // 在desktop view时禁用dot点击
+            if (window.innerWidth > 1024) return;
+            this.goToSlide(i);
+          });
+          this.dotsContainer.appendChild(dot);
+        }
+        
+        this.updateDots();
+      }
+
+      updateDots() {
+        if (!this.dotsContainer) return;
+        
+        const dots = this.dotsContainer.querySelectorAll('.tactiles-carousel__dot-{{ ai_gen_id }}');
+        
+        // 如果启用了无缝循环，使用realCurrentSlide
+        let dotIndex = this.realCurrentSlide !== undefined ? this.realCurrentSlide : this.currentSlide;
+        
+        // 确保dots索引在有效范围内
+        if (dotIndex >= this.totalSlides) dotIndex = 0;
+        if (dotIndex < 0) dotIndex = this.totalSlides - 1;
+        
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === dotIndex);
+        });
+      }
+
+      updateSlidePositions() {
+        const slideWidth = this.getSlideWidth();
+        const translateX = -this.currentSlide * slideWidth;
+        this.track.style.transform = `translateX(${translateX}%)`;
+        this.updateDots();
+      }
+
+      getSlideWidth() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth <= 768) return 100;
+        if (screenWidth <= 1024) return 50;
+        return 33.333;
+      }
+
+      getSlidesPerView() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth <= 768) return 1;
+        if (screenWidth <= 1024) return 2;
+        return 3;
+      }
+
+      getMaxSlide() {
+        const slidesPerView = this.getSlidesPerView();
+        return Math.max(0, this.totalSlides - slidesPerView);
+      }
+
+      goToSlide(slideIndex) {
+        // 动画锁，防止连续触发造成多滑动
+        if (this.isAnimating) return;
+        this.isAnimating = true;
+
+        // 如果启用了无缝循环，调整索引
+        if (this.realCurrentSlide !== undefined) {
+          // 先更新真实索引，确保dots立即变化
+          this.realCurrentSlide = slideIndex;
+          this.currentSlide = slideIndex + 1; // +1 因为前面有克隆的slide
+        } else {
+          const maxSlide = this.getMaxSlide();
+          this.currentSlide = Math.max(0, Math.min(slideIndex, maxSlide));
+        }
+
+        this.updateSlidePositions();
+
+        // 过渡结束后解除动画与交互锁
+        setTimeout(() => {
+          this.isAnimating = false;
+          this.isInteracting = false;
+        }, 600);
+
+        this.resetAutoScroll();
+      }
+
+      nextSlide() {
+        const maxSlide = this.getMaxSlide();
+        
+        // 如果启用了carousel且不在desktop view
+        if (this.autoScroll && window.innerWidth <= 1024) {
+          this.currentSlide++;
+          
+          // 更新真实的slide索引在更新位置之前，确保dots立即响应
+          this.realCurrentSlide = this.currentSlide - 1;
+          if (this.realCurrentSlide >= this.totalSlides) this.realCurrentSlide = 0;
+          if (this.realCurrentSlide < 0) this.realCurrentSlide = this.totalSlides - 1;
+
+          this.updateSlidePositions();
+          
+          // 检查是否到达了克隆的第一个slide（在末尾）
+          if (this.currentSlide > this.totalSlides) {
+            // 等待transition完成后，无缝跳转到真正的第一个slide
+            setTimeout(() => {
+              this.track.style.transition = 'none';
+              this.currentSlide = 1; // 跳转到真正的第一个slide
+              this.updateSlidePositions();
+              
+              // 重新启用transition
+              setTimeout(() => {
+                this.track.style.transition = 'transform 0.5s ease';
+              }, 50);
+            }, 500);
+          }
+        } else {
+          // 原有逻辑，用于非carousel模式
+          if (this.currentSlide >= maxSlide) {
+            this.currentSlide = 0;
+          } else {
+            this.currentSlide++;
+          }
+          this.updateSlidePositions();
+        }
+      }
+
+      prevSlide() {
+        const maxSlide = this.getMaxSlide();
+        
+        // 如果启用了carousel且不在desktop view
+        if (this.autoScroll && window.innerWidth <= 1024) {
+          this.currentSlide--;
+          
+          // 更新真实的slide索引在更新位置之前，确保dots立即响应
+          this.realCurrentSlide = this.currentSlide - 1;
+          if (this.realCurrentSlide >= this.totalSlides) this.realCurrentSlide = 0;
+          if (this.realCurrentSlide < 0) this.realCurrentSlide = this.totalSlides - 1;
+
+          this.updateSlidePositions();
+          
+          // 检查是否到达了克隆的最后一个slide（在开头）
+          if (this.currentSlide < 1) {
+            // 等待transition完成后，无缝跳转到真正的最后一个slide
+            setTimeout(() => {
+              this.track.style.transition = 'none';
+              this.currentSlide = this.totalSlides; // 跳转到真正的最后一个slide
+              this.updateSlidePositions();
+              
+              // 重新启用transition
+              setTimeout(() => {
+                this.track.style.transition = 'transform 0.5s ease';
+              }, 50);
+            }, 500);
+          }
+        } else {
+          // 原有逻辑，用于非carousel模式
+          if (this.currentSlide <= 0) {
+            this.currentSlide = maxSlide;
+          } else {
+            this.currentSlide--;
+          }
+          this.updateSlidePositions();
+        }
+      }
+
+      startAutoScroll() {
+        // 在desktop view时（能显示3个tiles）禁用carousel动画
+        if (!this.autoScroll || this.totalSlides <= this.getSlidesPerView() || window.innerWidth > 1024) return;
+        if (this.autoScrollInterval) return;
+        if (this.isInteracting || this.isAnimating) return;
+        this.isAutoScrolling = true;
+        this.autoScrollInterval = setInterval(() => {
+          // 避免在用户交互或动画进行中触发自动滑动
+          if (this.isInteracting || this.isAnimating) return;
+          this.nextSlide();
+        }, this.autoScrollDelay);
+      }
+
+      stopAutoScroll() {
+        if (this.autoScrollInterval) {
+          clearInterval(this.autoScrollInterval);
+          this.autoScrollInterval = null;
+        }
+        this.isAutoScrolling = false;
+      }
+
+      resetAutoScroll() {
+        if (this.autoScroll) {
+          this.stopAutoScroll();
+          if (this.autoScrollRestartTimeout) {
+            clearTimeout(this.autoScrollRestartTimeout);
+            this.autoScrollRestartTimeout = null;
+          }
+          this.autoScrollRestartTimeout = setTimeout(() => {
+            this.startAutoScroll();
+          }, 1000);
+        }
+      }
+
+      bindEvents() {
+        window.addEventListener('resize', () => {
+          this.updateSlidePositions();
+        });
+
+        this.addEventListener('mouseenter', () => {
+          this.stopAutoScroll();
+        });
+
+        this.addEventListener('mouseleave', () => {
+          if (this.autoScroll) {
+            this.startAutoScroll();
+          }
+        });
+
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        this.track.addEventListener('touchstart', (e) => {
+          // 在desktop view时禁用触摸滑动
+          if (window.innerWidth > 1024) return;
+          startX = e.touches[0].clientX;
+          isDragging = true;
+          // 标记交互并暂停自动滚动
+          this.isInteracting = true;
+          this.stopAutoScroll();
+        });
+
+        this.track.addEventListener('touchmove', (e) => {
+          if (!isDragging || window.innerWidth > 1024) return;
+          currentX = e.touches[0].clientX;
+        });
+
+        this.track.addEventListener('touchend', () => {
+          if (!isDragging || window.innerWidth > 1024) return;
+          isDragging = false;
+          const diffX = startX - currentX;
+          const threshold = 50;
+          if (Math.abs(diffX) > threshold) {
+            if (diffX > 0) {
+              this.nextSlide();
+            } else {
+              this.prevSlide();
+            }
+          }
+          this.resetAutoScroll();
+          // 一段时间后解除交互锁，避免与自动滚动冲突
+          setTimeout(() => { this.isInteracting = false; }, 600);
+        });
+      }
+
+      disconnectedCallback() {
+        this.stopAutoScroll();
+      }
+    }
+
+    customElements.define('tactiles-carousel-{{ ai_gen_id }}', TacTilesCarousel{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "TacTiles",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main heading",
+      "default": "ON SALE THIS WEEK"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#222222"
+    },
+    {
+      "type": "header",
+      "content": "Navigation links"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_nav_links",
+      "label": "Show navigation links",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "nav_link_1_text",
+      "label": "Link 1 text",
+      "default": "Women"
+    },
+    {
+      "type": "url",
+      "id": "nav_link_1_url",
+      "label": "Link 1 URL"
+    },
+    {
+      "type": "text",
+      "id": "nav_link_2_text",
+      "label": "Link 2 text",
+      "default": "Men"
+    },
+    {
+      "type": "url",
+      "id": "nav_link_2_url",
+      "label": "Link 2 URL"
+    },
+    {
+      "type": "text",
+      "id": "nav_link_3_text",
+      "label": "Link 3 text",
+      "default": "Kids"
+    },
+    {
+      "type": "url",
+      "id": "nav_link_3_url",
+      "label": "Link 3 URL"
+    },
+    {
+      "type": "text",
+      "id": "nav_link_4_text",
+      "label": "Link 4 text"
+    },
+    {
+      "type": "url",
+      "id": "nav_link_4_url",
+      "label": "Link 4 URL"
+    },
+    {
+      "type": "text",
+      "id": "nav_link_5_text",
+      "label": "Link 5 text"
+    },
+    {
+      "type": "url",
+      "id": "nav_link_5_url",
+      "label": "Link 5 URL"
+    },
+    {
+      "type": "color",
+      "id": "nav_link_color",
+      "label": "Link color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "nav_link_hover_color",
+      "label": "Link hover color",
+      "default": "#222222"
+    },
+    {
+      "type": "header",
+      "content": "Carousel settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_scroll",
+      "label": "Enable auto-scroll",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "auto_scroll_delay",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Auto-scroll delay",
+      "default": 5
+    },
+
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show navigation dots",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "carousel_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Carousel border radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Global tile design"
+    },
+    {
+      "type": "color",
+      "id": "tile_text_color",
+      "label": "Default text color",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "tile_accent_color",
+      "label": "Default accent color",
+      "default": "#e84e4e"
+    },
+    {
+      "type": "range",
+      "id": "tile_title_size",
+      "min": 20,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "tile_offer_size",
+      "min": 14,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Offer text size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "tile_desktop_height",
+      "min": 80,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "label": "Desktop tile height",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "tile_mobile_height",
+      "min": 80,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Mobile tile height",
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "Button colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_bg",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_text",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_hover_bg",
+      "label": "Button hover background",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_hover_text",
+      "label": "Button hover text",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Navigation controls"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Active dot color",
+      "default": "#222222"
+    },
+    {
+      "type": "header",
+      "content": "Tile 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "tile_1_enabled",
+      "label": "Enable tile 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "tile_1_title_leading",
+      "label": "Title leading text",
+      "default": "UP TO"
+    },
+    {
+      "type": "text",
+      "id": "tile_1_title_main",
+      "label": "Main title",
+      "default": "40% OFF"
+    },
+    {
+      "type": "text",
+      "id": "tile_1_offer",
+      "label": "Offer text",
+      "default": "Home"
+    },
+    {
+      "type": "textarea",
+      "id": "tile_1_description",
+      "label": "Description",
+      "default": "Transform your living space with our curated collection of home essentials."
+    },
+    {
+      "type": "text",
+      "id": "tile_1_primary_button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "tile_1_primary_button_url",
+      "label": "Button URL"
+    },
+
+    {
+      "type": "text",
+      "id": "tile_1_terms",
+      "label": "Terms and conditions",
+      "default": "*Terms and conditions apply"
+    },
+    {
+      "type": "color",
+      "id": "tile_1_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_1_background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "tile_1_enable_color_overlay",
+      "label": "Enable color overlay",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "tile_1_color_overlay",
+      "label": "Color overlay",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "tile_1_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Tile 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "tile_2_enabled",
+      "label": "Enable tile 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "tile_2_title_leading",
+      "label": "Title leading text",
+      "default": "UP TO"
+    },
+    {
+      "type": "text",
+      "id": "tile_2_title_main",
+      "label": "Main title",
+      "default": "30% OFF"
+    },
+    {
+      "type": "text",
+      "id": "tile_2_offer",
+      "label": "Offer text",
+      "default": "Toys"
+    },
+    {
+      "type": "textarea",
+      "id": "tile_2_description",
+      "label": "Description",
+      "default": "Discover amazing toys that spark imagination and creativity in children."
+    },
+    {
+      "type": "text",
+      "id": "tile_2_primary_button_text",
+      "label": "Button text",
+      "default": "Shop Toys"
+    },
+    {
+      "type": "url",
+      "id": "tile_2_primary_button_url",
+      "label": "Button URL"
+    },
+
+    {
+      "type": "text",
+      "id": "tile_2_terms",
+      "label": "Terms and conditions",
+      "default": "*Limited time offer"
+    },
+    {
+      "type": "color",
+      "id": "tile_2_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_2_background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "tile_2_enable_color_overlay",
+      "label": "Enable color overlay",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "tile_2_color_overlay",
+      "label": "Color overlay",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "tile_2_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Tile 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "tile_3_enabled",
+      "label": "Enable tile 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "tile_3_title_leading",
+      "label": "Title leading text",
+      "default": "UP TO"
+    },
+    {
+      "type": "text",
+      "id": "tile_3_title_main",
+      "label": "Main title",
+      "default": "25% OFF"
+    },
+    {
+      "type": "text",
+      "id": "tile_3_offer",
+      "label": "Offer text",
+      "default": "Beauty"
+    },
+    {
+      "type": "textarea",
+      "id": "tile_3_description",
+      "label": "Description",
+      "default": "Enhance your natural beauty with our premium skincare and makeup collection."
+    },
+    {
+      "type": "text",
+      "id": "tile_3_primary_button_text",
+      "label": "Button text",
+      "default": "Shop Beauty"
+    },
+    {
+      "type": "url",
+      "id": "tile_3_primary_button_url",
+      "label": "Button URL"
+    },
+
+    {
+      "type": "text",
+      "id": "tile_3_terms",
+      "label": "Terms and conditions",
+      "default": "*While supplies last"
+    },
+    {
+      "type": "color",
+      "id": "tile_3_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_3_background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "tile_3_enable_color_overlay",
+      "label": "Enable color overlay",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "tile_3_color_overlay",
+      "label": "Color overlay",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "tile_3_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "TacTiles"
+    }
+  ]
+}
+{% endschema %}
