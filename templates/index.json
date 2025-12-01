@@ -12,6 +12,15 @@
     "custom_card_carousel_HeykPg": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_KJmxxY": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.jpg",
+            "header_text": "VERSACE",
+            "subheader_text": "",
+            "link": "shopify://collections/versace"
+          }
+        },
         "card_Qc7zEM": {
           "type": "card",
           "settings": {
@@ -54,6 +63,7 @@
         }
       },
       "block_order": [
+        "card_KJmxxY",
         "card_Qc7zEM",
         "card_dtFdem",
         "card_6YENz3",
@@ -62,8 +72,8 @@
       ],
       "name": "Custom Card Carousel",
       "settings": {
-        "container_type": "container",
-        "heading": "BRANDS IN LESTYLE",
+        "container_type": "container-fluid",
+        "heading": "FEATURED BRANDS",
         "heading_size": 24,
         "heading_weight": "500",
         "card_header_size": 16,
@@ -74,7 +84,7 @@
         "autoplay": false,
         "autoplay_speed": 5,
         "show_navigation": true,
-        "show_pagination": true,
+        "show_pagination": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
