@@ -102,7 +102,7 @@ a.m-custom-card-carousel__card:hover {
   font-weight: 600;
   transition: all 0.3s ease;
   line-height: 1.2;
-  border-radius: 0.6rem;
+  border-radius: 8px;
 }
 
 a.m-custom-card-carousel__card:hover .m-custom-card-carousel__button {
