@@ -114,7 +114,8 @@
           </h2>
         {%- else -%}
           {%- if section.settings.title_image != blank -%}
-            {{ section.settings.title_image | image_url: width: section.settings.title_image_width | image_tag: loading: 'lazy', style: 'max-width: 100%; height: auto;' }}
+            {%- assign image_width_2x = section.settings.title_image_width | times: 2 -%}
+            {{ section.settings.title_image | image_url: width: image_width_2x | image_tag: loading: 'lazy', style: 'max-width: 100%; height: auto;', width: section.settings.title_image_width }}
           {%- endif -%}
         {%- endif -%}
 
