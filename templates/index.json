@@ -672,7 +672,7 @@
       "custom_css": [
         ".m-section__header {--m-section-header-spacing-bottom: 60px;}",
         ".m-tab-header:after {background-color: #c19967;}",
-        ".m-tab-header {font-size: 1.1em;}"
+        ".m-tab-header {font-size: 14px;}"
       ],
       "name": "New arrivals",
       "settings": {
@@ -705,139 +705,6 @@
         "padding_bottom": 100,
         "custom_class": "sf-home__product-tab",
         "animations": "inherit"
-      }
-    },
-    "empty_space_bdqtVc": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "custom_class": ""
-      }
-    },
-    "image_with_text_2_pxr8Fb": {
-      "type": "image-with-text-2",
-      "name": "Image with text overlay",
-      "settings": {
-        "color_scheme": "",
-        "container": "w-full",
-        "hero_size": "adapt",
-        "show_overlay": false,
-        "image": "shopify://shop_images/blackdriday25-afterpay-desktop.jpg",
-        "image_link": "",
-        "parallax": false,
-        "parallax_direction": "vertical",
-        "content_in_container": false,
-        "content_position": "left middle",
-        "text_alignment": "left",
-        "text_size": "medium",
-        "text_color": "black",
-        "title": "SHOP NOW PAY LATER",
-        "subtitle": "",
-        "text": "<p>Shop the Black Friday Sale with Afterpay online and in-store</p>",
-        "button_label": "Shop Now",
-        "button_link": "shopify://collections/sale",
-        "button_style": "m-button--primary",
-        "button_size": "m-button--small",
-        "text_alignment_mobile": "left",
-        "mb_image": "shopify://shop_images/blackdriday25-afterpay-mobile_eb36ddba-fbad-4012-a116-26ed04428524.jpg",
-        "use_content_above": true,
-        "custom_class": "",
-        "animations": "inherit",
-        "enable_bg_zoom_effect": true,
-        "enable_preload_image": true
-      }
-    },
-    "empty_space_Twn6RR": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "custom_class": ""
-      }
-    },
-    "7ea56e8d-5794-4708-8812-8ee9604a3a21": {
-      "type": "custom-content",
-      "blocks": {
-        "template--15977492021425__7ea56e8d-5794-4708-8812-8ee9604a3a21-1678440566c64de1a8-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-mens-vjc-tshirt02-modified.png",
-            "link": "https://www.lestyle.com.au/collections/home-collection?sort_by=created-descending&filter.p.vendor=Versace&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "width": "50%",
-            "alignment": "center",
-            "block_custom_class": "hide-on-tablets-and-below",
-            "animations": "zoom-fade",
-            "enable_preload_image": true
-          }
-        },
-        "5c5877d5-05b2-4a50-81e3-78c3f6d0d833": {
-          "type": "image_card",
-          "settings": {
-            "width": "50%",
-            "color_scheme": "",
-            "content_position": "bottom_center",
-            "content_alignment": "center",
-            "text_size": "medium",
-            "text_color": "white",
-            "image": "shopify://shop_images/lestyle-model-mens-vjc-sweatshirt_e0e8ae9d-53e7-4c99-9165-3ae967f95e87.png",
-            "link": "shopify://collections/versace-jeans-couture-for-mens",
-            "title": "NEW COLLECTION",
-            "subtitle": "",
-            "description": "<p>Versace Jeans Couture Menswear</p>",
-            "button_label": "Shop Now",
-            "button_style": "m-button--link",
-            "button_size": "m-button--small",
-            "button_fixed": false,
-            "use_content_above": true,
-            "block_custom_class": "",
-            "animations": "inherit",
-            "enable_preload_image": false
-          }
-        }
-      },
-      "block_order": [
-        "template--15977492021425__7ea56e8d-5794-4708-8812-8ee9604a3a21-1678440566c64de1a8-1",
-        "5c5877d5-05b2-4a50-81e3-78c3f6d0d833"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".container-full {padding-left: 0; padding-right: 0;}",
-        ".m-button--fixed {border-color: #e2e2e2; padding: 24px 0; margin-bottom: 24px;}",
-        "@media (min-width: 1280px) {.m-image-card__content {padding-top: 115px; }}",
-        "@media (max-width: 767px) {.m-button--fixed {border: none; margin-bottom: 0; justify-content: center; column-gap: 12px; } .m-image-card__content {padding-top: 30px; }}"
-      ],
-      "name": "Featured Collection",
-      "settings": {
-        "heading": "",
-        "heading_size": "h3",
-        "subheading": "",
-        "description": "",
-        "header_alignment": "center",
-        "container": "container-fluid",
-        "color_scheme": "",
-        "content_color_scheme": "",
-        "enable_parallax": false,
-        "parallax_direction": "vertical",
-        "gap": 0,
-        "gap_mobile": 0,
-        "use_scroll_mobile": false,
-        "padding_top": 90,
-        "padding_bottom": 0,
-        "enable_preload_image": false,
-        "custom_class": "sf-custom--collection-banner"
       }
     },
     "split_banner_n4Tr8e": {
@@ -873,13 +740,13 @@
         "button_YQzV7g",
         "button_rYaaUn"
       ],
-      "name": "Banner - Christmas",
+      "name": "Banner - Outlet",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-christmas-banner.jpg",
+        "image": "shopify://shop_images/lestyle-model-vjc-mens-shirt_37c02dc1-c539-4746-9737-648c170d7f98.png",
         "image_position": "left",
-        "background_color": "#000000",
-        "text_color": "#bbbbbb",
+        "background_color": "#0e0e0e",
+        "text_color": "#eeeeee",
         "content_alignment": "center",
         "title_type": "image",
         "title_text": "Banner Title",
@@ -890,6 +757,20 @@
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "empty_space_nf4tkg": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
       }
     },
     "blog_posts_ayEFnz": {
@@ -1073,11 +954,8 @@
     "scrolling_promotion_jjrFyf",
     "empty_space_bJfRcq",
     "162251092958fcda7c",
-    "empty_space_bdqtVc",
-    "image_with_text_2_pxr8Fb",
-    "empty_space_Twn6RR",
-    "7ea56e8d-5794-4708-8812-8ee9604a3a21",
     "split_banner_n4Tr8e",
+    "empty_space_nf4tkg",
     "blog_posts_ayEFnz",
     "newsletter_feY3gE",
     "empty_space_dLfLNQ",
