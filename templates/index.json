@@ -61,7 +61,7 @@
           "name": "Mens",
           "settings": {
             "label": "Shop Mens",
-            "link": "",
+            "link": "shopify://collections/mens",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
             "bg_image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-02_876cc5bd-099c-4afd-9567-8df69a3a90a9.png",
@@ -73,7 +73,7 @@
           "name": "Womens",
           "settings": {
             "label": "Shop Womens",
-            "link": "",
+            "link": "shopify://collections/womens",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
             "bg_image": "shopify://shop_images/lestyle-model-vjc-womens-top.png",
@@ -85,7 +85,7 @@
           "name": "Kids",
           "settings": {
             "label": "Shop Kids",
-            "link": "",
+            "link": "shopify://collections/kids",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
             "bg_image": "shopify://shop_images/lestyle-model-fendi-boys-tshirt_e087ba4f-2c71-4351-ab39-ae9007f3c47e.png",
@@ -97,7 +97,7 @@
           "name": "Home Collection",
           "settings": {
             "label": "Shop Home Collection",
-            "link": "",
+            "link": "shopify://collections/home-collection",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
             "bg_image": "shopify://shop_images/90_ZPCSET009-ZCOP0105_Z7011_24_I-600x750.webp",
