@@ -121,13 +121,18 @@
       
       {%- if section.settings.banner_image != blank -%}
         <div class="small-banner-image-container" style="width: {{ section.settings.image_width }}px; max-width: 100%;">
-          {%- assign image_width_2x = section.settings.image_width | times: 2 -%}
-          {{ section.settings.banner_image | image_url: width: image_width_2x | image_tag:
-            loading: 'lazy',
-            class: 'small-banner-image',
-            width: section.settings.image_width,
-            height: 'auto'
-          }}
+          {%- assign width = section.settings.image_width -%}
+          {%- assign width_2x = width | times: 2 -%}
+          {%- assign width_3x = width | times: 3 -%}
+          <img
+            src="{{ section.settings.banner_image | image_url: width: width_2x }}"
+            srcset="{{ section.settings.banner_image | image_url: width: width }} 1x, {{ section.settings.banner_image | image_url: width: width_2x }} 2x, {{ section.settings.banner_image | image_url: width: width_3x }} 3x"
+            width="{{ width }}"
+            height="{{ width | divided_by: section.settings.banner_image.aspect_ratio | round }}"
+            loading="lazy"
+            class="small-banner-image"
+            alt="{{ section.settings.banner_image.alt | escape }}"
+          >
         </div>
       {%- endif -%}
 
