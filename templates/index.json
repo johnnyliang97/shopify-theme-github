@@ -108,20 +108,6 @@
         "button_font_weight": "600"
       }
     },
-    "empty_space_X4pMqw": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "custom_class": ""
-      }
-    },
     "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
@@ -956,7 +942,6 @@
   "order": [
     "split_banner_RNxN7B",
     "rectangle_buttons_QUnzWX",
-    "empty_space_X4pMqw",
     "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
