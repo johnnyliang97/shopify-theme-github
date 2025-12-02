@@ -830,8 +830,8 @@
         "mobile_disable_slider": false,
         "use_scroll_mobile": true,
         "item_gap_mobile": 16,
-        "padding_top": 100,
-        "padding_bottom": 100,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "custom_class": "sf-home__product-tab",
         "animations": "inherit"
       }
@@ -967,25 +967,25 @@
       "blocks": {
         "button_iApAab": {
           "type": "button",
-          "name": "Mens",
+          "name": "@lestyleboutique",
           "settings": {
             "label": "@lestyleboutique",
             "link": "",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-02_876cc5bd-099c-4afd-9567-8df69a3a90a9.png",
+            "bg_image": "shopify://shop_images/Lestyle_Lady.jpg",
             "text_color": "#ffffff"
           }
         },
         "button_mRE6Q7": {
           "type": "button",
-          "name": "Womens",
+          "name": "@lestylejunior",
           "settings": {
             "label": "@lestylejunior",
             "link": "",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/lestyle-model-vjc-womens-top.png",
+            "bg_image": "shopify://shop_images/lestyle-model-kids-versace-shirt.jpg",
             "text_color": "#ffffff"
           }
         }
