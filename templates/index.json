@@ -120,6 +120,29 @@
         "button_font_weight": "500"
       }
     },
+    "small_banner_CM8g4H": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#000000",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/afterpay-banner.webp",
+        "image_width": 150,
+        "text_color": "#ffffff",
+        "header_text": "WIN an extraordinary EXPERIENCE",
+        "header_size": "h3",
+        "subheader_text": "<p>Win a trip to the Australian Open with your credit card.</p>",
+        "subheader_size": "text-body",
+        "button_text": "Find Out More",
+        "button_link": "",
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
@@ -954,6 +977,7 @@
   "order": [
     "split_banner_RNxN7B",
     "rectangle_buttons_QUnzWX",
+    "small_banner_CM8g4H",
     "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
