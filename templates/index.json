@@ -851,7 +851,7 @@
     },
     "small_banner_wLTMK4": {
       "type": "small-banner",
-      "name": "Small Banner",
+      "name": "Uber",
       "settings": {
         "container": "container",
         "background_color": "#3c3c3c",
