@@ -104,7 +104,7 @@
       ],
       "name": "Menu Buttons",
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "padding_top": 36,
         "padding_bottom": 36,
         "desktop_columns": 4,
@@ -628,7 +628,7 @@
       "type": "small-banner",
       "name": "Small Banner",
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "background_color": "#b2fce4",
         "background_image": "shopify://shop_images/desktop_bg_afterpay.png",
         "background_overlay_opacity": 0,
@@ -905,14 +905,14 @@
     },
     "blog_posts_ayEFnz": {
       "type": "blog-posts",
-      "name": "Blog posts",
+      "name": "Lestyle Spotlight",
       "settings": {
         "heading": "Lestyle Spotlight",
         "heading_size": "h3",
         "subheading": "",
         "description": "",
-        "header_alignment": "center",
-        "container": "container-fluid",
+        "header_alignment": "left",
+        "container": "container",
         "color_scheme": "",
         "blog": "lestyle-spotlight",
         "limit": 3,
@@ -933,6 +933,31 @@
         "use_scroll_mobile": true,
         "padding_top": 50,
         "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "rich_text_LpREz9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pBpPQr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow Lestyle",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pBpPQr"
+      ],
+      "name": "Follow Lestyle",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 8,
         "custom_class": "",
         "animations": "inherit"
       }
@@ -969,10 +994,10 @@
         "button_iApAab",
         "button_mRE6Q7"
       ],
-      "name": "Menu Buttons",
+      "name": "Social Media",
       "settings": {
-        "container": "container-fluid",
-        "padding_top": 36,
+        "container": "container",
+        "padding_top": 12,
         "padding_bottom": 36,
         "desktop_columns": 2,
         "mobile_columns": 2,
@@ -987,12 +1012,63 @@
         "button_font_weight": "500"
       }
     },
+    "custom_content_X6za8h": {
+      "type": "custom-content",
+      "blocks": {
+        "liquid_jakWQN": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"max-width: 100%; margin: 20px auto; padding: 0; font-family: Arial, sans-serif;\">\n\n  <!-- Header & Text -->\n  <div style=\"margin-bottom: 20px;\">\n    <h3 style=\"margin: 0 0 8px 0;\">Need Help？</h3>\n    <p style=\"margin: 0; font-size: 14px; color: #555;\">\n      Got questions on sizing, styles, or new arrivals? Send us a message now!\n    </p>\n  </div>\n\n  <!-- Button Row -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 12px;\">\n\n    <!-- Instagram Button -->\n    <a href=\"https://ig.me/m/lestyleboutique\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff\" alt=\"Instagram Icon\" style=\"width: 20px; height: 20px;\">\n      Instagram\n    </a>\n\n    <!-- WhatsApp Button -->\n    <a href=\"https://wa.me/+61492266452\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #25D366; color: #ffffff; text-decoration: none; border-radius: 6px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff\" alt=\"WhatsApp Icon\" style=\"width: 20px; height: 20px;\">\n      WhatsApp\n    </a>\n\n  </div>\n\n</div>",
+            "width": "100%",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_jakWQN"
+      ],
+      "name": "Contact",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "enable_preload_image": false,
+        "custom_class": ""
+      }
+    },
+    "empty_space_UrwbCX": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
+      }
+    },
     "newsletter_feY3gE": {
       "type": "newsletter",
       "name": "Newsletter",
       "settings": {
         "container": "w-full",
-        "color_scheme": "default",
+        "color_scheme": "footer",
         "form_layout": "vertical",
         "form_design": "2",
         "heading": "Stay up to date with all fashion news<br> and exclusive offers",
@@ -1008,20 +1084,6 @@
         "padding_bottom": 50,
         "custom_class": "",
         "animations": "inherit"
-      }
-    },
-    "empty_space_dLfLNQ": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": ""
       }
     },
     "16225125199f82d8fe": {
@@ -1137,9 +1199,11 @@
     "split_banner_n4Tr8e",
     "empty_space_nf4tkg",
     "blog_posts_ayEFnz",
+    "rich_text_LpREz9",
     "rectangle_buttons_znmUJd",
+    "custom_content_X6za8h",
+    "empty_space_UrwbCX",
     "newsletter_feY3gE",
-    "empty_space_dLfLNQ",
     "16225125199f82d8fe"
   ]
 }
