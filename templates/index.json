@@ -649,6 +649,117 @@
         "padding_bottom": 36
       }
     },
+    "custom_card_carousel_m7M9q8": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_afBRKH": {
+          "type": "card",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/90_N24640-N409956_N1449_22_Medus-600x750.jpg",
+            "header_text": "Versace Home",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-home-collection",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_GPNkT8": {
+          "type": "card",
+          "name": "Small Leather Goods",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-christmas-wallets.jpg",
+            "header_text": "Small Leather Goods",
+            "subheader_text": "",
+            "link": "shopify://collections/wallets-cardholders",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_jQgeEQ": {
+          "type": "card",
+          "name": "Small Leather Goods",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-womens-bathrobe.webp",
+            "header_text": "Bathrobes",
+            "subheader_text": "",
+            "link": "shopify://collections/wallets-cardholders",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_36hpWk": {
+          "type": "card",
+          "name": "Gifts for Her",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-balmain-womens-christmas-sweater.jpg",
+            "header_text": "Gifts for Her",
+            "subheader_text": "",
+            "link": "shopify://collections/womens",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_tXLUnN": {
+          "type": "card",
+          "name": "Gifts for Him",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-marcelo-mens-tshirt.jpg",
+            "header_text": "Gifts for Him",
+            "subheader_text": "",
+            "link": "shopify://collections/mens",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_n9YkeK": {
+          "type": "card",
+          "name": "Lestyle Outlet",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-christmas-outlet.jpg",
+            "header_text": "Lestyle Outlet",
+            "subheader_text": "",
+            "link": "shopify://collections/fendi",
+            "label_text": "UP TO 70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_afBRKH",
+        "card_GPNkT8",
+        "card_jQgeEQ",
+        "card_36hpWk",
+        "card_tXLUnN",
+        "card_n9YkeK"
+      ],
+      "name": "Categories",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Trending Now",
+        "image_ratio_desktop": "125",
+        "image_ratio_mobile": "125",
+        "heading_size": 26,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "400",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
+        "items_per_row": 4,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "162251092958fcda7c": {
       "type": "product-tabs",
       "blocks": {
@@ -971,6 +1082,7 @@
     "custom_card_carousel_LgWiQH",
     "scrolling_promotion_jjrFyf",
     "small_banner_iAVEqz",
+    "custom_card_carousel_m7M9q8",
     "162251092958fcda7c",
     "split_banner_n4Tr8e",
     "empty_space_nf4tkg",
