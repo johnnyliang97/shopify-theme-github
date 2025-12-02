@@ -28,6 +28,7 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle_home_mobile_palm-angels-mens.jpg",
+        "image_link": "",
         "image_position": "left",
         "background_color": "#f2e0e0",
         "text_color": "#000000",
@@ -43,75 +44,68 @@
         "padding_bottom": 0
       }
     },
-    "empty_space_WNhyQK": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "custom_class": ""
-      }
-    },
-    "17535283352e75a626": {
-      "type": "_blocks",
+    "rectangle_buttons_QUnzWX": {
+      "type": "rectangle-buttons",
       "blocks": {
-        "ai_gen_block_c6d9d65_BLCetQ": {
-          "type": "ai_gen_block_c6d9d65",
+        "button_KJxkfR": {
+          "type": "button",
           "settings": {
-            "collections": [
-              "bathrobes",
-              "bags",
-              "dresses",
-              "home-collection",
-              "jewellery",
-              "jackets",
-              "watches",
-              "t-shirts-tops",
-              "sweatshirts",
-              "sunglasses",
-              "sneakers"
-            ],
-            "show_product_count": false,
-            "autoplay_speed": 3,
-            "pause_on_hover": true,
-            "image_size_desktop": 100,
-            "item_width_desktop": 140,
-            "image_size_mobile": 80,
-            "item_width_mobile": 100,
-            "gap": 10,
-            "spacing": 16,
-            "title_size": 14,
-            "title_weight": "500",
-            "count_size": 14,
-            "title_color": "#222222",
-            "count_color": "#666666"
-          },
-          "blocks": {}
+            "label": "Shop Mens",
+            "link": "",
+            "bg_color": "",
+            "bg_image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-02.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_jHJEeQ": {
+          "type": "button",
+          "settings": {
+            "label": "Button Label",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "button_rzHgTz": {
+          "type": "button",
+          "settings": {
+            "label": "Button Label",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "button_FUdTgg": {
+          "type": "button",
+          "settings": {
+            "label": "Button Label",
+            "link": "",
+            "bg_color": "",
+            "text_color": ""
+          }
         }
       },
       "block_order": [
-        "ai_gen_block_c6d9d65_BLCetQ"
+        "button_KJxkfR",
+        "button_jHJEeQ",
+        "button_rzHgTz",
+        "button_FUdTgg"
       ],
-      "name": "Collection Slider",
-      "settings": {}
-    },
-    "empty_space_X4pMqw": {
-      "type": "empty-space",
-      "name": "Empty space",
+      "name": "Rectangle Buttons",
       "settings": {
         "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 60,
-        "padding_bottom": 0,
-        "custom_class": ""
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "desktop_columns": 4,
+        "mobile_columns": 2,
+        "gap_desktop": 20,
+        "gap_mobile": 10,
+        "button_height": 128,
+        "button_border_radius": 0,
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_font_size": 16,
+        "button_font_weight": "600"
       }
     },
     "split_banner_hbJTkB": {
@@ -160,6 +154,7 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle-christmas-banner.jpg",
+        "image_link": "",
         "image_position": "left",
         "background_color": "#6c1b22",
         "text_color": "#eeeeee",
@@ -744,6 +739,7 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle-model-vjc-mens-shirt_37c02dc1-c539-4746-9737-648c170d7f98.png",
+        "image_link": "",
         "image_position": "left",
         "background_color": "#0e0e0e",
         "text_color": "#eeeeee",
@@ -945,9 +941,7 @@
   },
   "order": [
     "split_banner_RNxN7B",
-    "empty_space_WNhyQK",
-    "17535283352e75a626",
-    "empty_space_X4pMqw",
+    "rectangle_buttons_QUnzWX",
     "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
