@@ -34,7 +34,6 @@
     text-decoration: none;
     width: 100%;
     height: {{ section.settings.button_height }}px;
-    background-color: {{ section.settings.button_bg_color }};
     color: {{ section.settings.button_text_color }};
     font-size: {{ section.settings.button_font_size }}px;
     font-weight: {{ section.settings.button_font_weight }};
@@ -46,6 +45,8 @@
     padding: 0 10px;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
   }
 
   .rect-button-{{ section.id }}:hover {
@@ -67,14 +68,28 @@
       {%- for block in section.blocks -%}
         {%- style -%}
            .rect-button-{{ block.id }} {
-              {% if block.settings.bg_color != blank %}
-                background-color: {{ block.settings.bg_color }};
-              {% endif %}
-              {% if block.settings.bg_image != blank %}
-                background-image: url({{ block.settings.bg_image | image_url: width: 600 }});
-              {% elsif section.settings.button_bg_image != blank and block.settings.bg_color == blank %}
-                 background-image: url({{ section.settings.button_bg_image | image_url: width: 600 }});
-              {% endif %}
+              {%- assign overlay_color = section.settings.color_overlay -%}
+              {%- assign overlay_opacity = section.settings.overlay_opacity | divided_by: 100.0 -%}
+              
+              {%- if block.settings.color_overlay != blank -%}
+                {%- assign overlay_color = block.settings.color_overlay -%}
+              {%- endif -%}
+              
+              {%- if block.settings.overlay_opacity != blank -%}
+                {%- assign overlay_opacity = block.settings.overlay_opacity | divided_by: 100.0 -%}
+              {%- endif -%}
+              
+              {%- assign bg_image = section.settings.button_bg_image -%}
+              {%- if block.settings.bg_image != blank -%}
+                {%- assign bg_image = block.settings.bg_image -%}
+              {%- endif -%}
+
+              {%- if bg_image != blank -%}
+                 background-image: linear-gradient({{ overlay_color | color_modify: 'alpha', overlay_opacity }}, {{ overlay_color | color_modify: 'alpha', overlay_opacity }}), url({{ bg_image | image_url: width: 600 }});
+              {%- else -%}
+                 background-color: {{ overlay_color }};
+              {%- endif -%}
+
               {% if block.settings.text_color != blank %}
                 color: {{ block.settings.text_color }};
               {% endif %}
@@ -202,9 +217,20 @@
     },
     {
       "type": "color",
-      "id": "button_bg_color",
-      "label": "Default Background Color",
+      "id": "color_overlay",
+      "label": "Color Overlay",
       "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay Opacity",
+      "default": 40,
+      "info": "Only applies when background image is present"
     },
     {
       "type": "image_picker",
@@ -262,8 +288,18 @@
         },
         {
           "type": "color",
-          "id": "bg_color",
-          "label": "Background Color (Override)"
+          "id": "color_overlay",
+          "label": "Color Overlay (Override)"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay Opacity (Override)",
+          "default": 40
         },
         {
           "type": "image_picker",
