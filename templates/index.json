@@ -678,7 +678,7 @@
           "type": "card",
           "name": "Bags",
           "settings": {
-            "image": "shopify://shop_images/lestyle-christmas-wallets.jpg",
+            "image": "shopify://shop_images/lestyle-bags-banner.webp",
             "header_text": "Bags",
             "subheader_text": "",
             "link": "shopify://collections/wallets-cardholders",
@@ -691,7 +691,7 @@
           "type": "card",
           "name": "Dresses",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-womens-bathrobe.webp",
+            "image": "shopify://shop_images/lestyle-model-dress-womens-vjc.png",
             "header_text": "Dresses",
             "subheader_text": "",
             "link": "shopify://collections/wallets-cardholders",
@@ -704,7 +704,7 @@
           "type": "card",
           "name": "Shorts",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-balmain-womens-christmas-sweater.jpg",
+            "image": "shopify://shop_images/lestyle-model-versace-shorts-mens.jpg",
             "header_text": "Shorts",
             "subheader_text": "",
             "link": "shopify://collections/womens",
@@ -717,6 +717,7 @@
           "type": "card",
           "name": "Swimwear",
           "settings": {
+            "image": "shopify://shop_images/lestyle-model-swimwear-womens-fendi.png",
             "header_text": "Swimwear",
             "subheader_text": "",
             "link": "",
@@ -729,7 +730,7 @@
           "type": "card",
           "name": "Jackets",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-marcelo-mens-tshirt.jpg",
+            "image": "shopify://shop_images/lestyle-model-vjc-mens-jacket.jpg",
             "header_text": "Jackets",
             "subheader_text": "",
             "link": "shopify://collections/mens",
@@ -742,7 +743,7 @@
           "type": "card",
           "name": "Jewellery",
           "settings": {
-            "image": "shopify://shop_images/lestyle-christmas-outlet.jpg",
+            "image": "shopify://shop_images/lestyle-model-versace-jewellery-womens.jpg",
             "header_text": "Jewellery",
             "subheader_text": "",
             "link": "shopify://collections/fendi",
