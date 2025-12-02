@@ -104,7 +104,7 @@
       ],
       "name": "Menu Buttons",
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "padding_top": 36,
         "padding_bottom": 36,
         "desktop_columns": 4,
@@ -118,30 +118,6 @@
         "button_text_color": "#ffffff",
         "button_font_size": 16,
         "button_font_weight": "500"
-      }
-    },
-    "small_banner_iAVEqz": {
-      "type": "small-banner",
-      "name": "Small Banner",
-      "settings": {
-        "container": "container-fluid",
-        "background_color": "#b2fce4",
-        "background_image": "shopify://shop_images/desktop_bg_afterpay.png",
-        "background_overlay_opacity": 0,
-        "banner_image": "shopify://shop_images/lestyle-afterpay-banner.png",
-        "image_width": 140,
-        "text_color": "#00193a",
-        "header_text": "Buy Now Pay Later with Afterpay",
-        "header_size": "h3",
-        "subheader_text": "<p>Afterpay is now accepted at Lestyle in-store and online</p>",
-        "subheader_size": "text-small",
-        "button_text": "Find Out More",
-        "button_link": "",
-        "button_bg_color": "#ffffff",
-        "button_text_color": "#000000",
-        "button_border_color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "split_banner_hbJTkB": {
@@ -648,18 +624,177 @@
         "custom_class": ""
       }
     },
-    "empty_space_bJfRcq": {
-      "type": "empty-space",
-      "name": "Empty space",
+    "small_banner_iAVEqz": {
+      "type": "small-banner",
+      "name": "Small Banner",
       "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 0,
-        "padding_bottom": 20,
-        "custom_class": ""
+        "container": "container",
+        "background_color": "#b2fce4",
+        "background_image": "shopify://shop_images/desktop_bg_afterpay.png",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-afterpay-banner.png",
+        "image_width": 140,
+        "text_color": "#00193a",
+        "header_text": "Buy Now, Pay it in 4",
+        "header_size": "h3",
+        "subheader_text": "<p>Afterpay is now accepted at Lestyle in-store and online</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#00193a",
+        "button_border_color": "#00193a",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "small_banner_wLTMK4": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#3c3c3c",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
+        "image_width": 160,
+        "text_color": "#ffffff",
+        "header_text": "Same Day Delivery in Melbourne",
+        "header_size": "h3",
+        "subheader_text": "<p>Uber Local Delivery is available in the Melbourne metropolitan area*</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_card_carousel_m7M9q8": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_afBRKH": {
+          "type": "card",
+          "name": "Sneakers",
+          "settings": {
+            "image": "shopify://shop_images/90_N24640-N409956_N1449_22_Medus-600x750.jpg",
+            "header_text": "Sneakers",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-home-collection",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_GPNkT8": {
+          "type": "card",
+          "name": "Bags",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-christmas-wallets.jpg",
+            "header_text": "Bags",
+            "subheader_text": "",
+            "link": "shopify://collections/wallets-cardholders",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_jQgeEQ": {
+          "type": "card",
+          "name": "Dresses",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-womens-bathrobe.webp",
+            "header_text": "Dresses",
+            "subheader_text": "",
+            "link": "shopify://collections/wallets-cardholders",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_36hpWk": {
+          "type": "card",
+          "name": "Shorts",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-balmain-womens-christmas-sweater.jpg",
+            "header_text": "Shorts",
+            "subheader_text": "",
+            "link": "shopify://collections/womens",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_hdTia7": {
+          "type": "card",
+          "name": "Swimwear",
+          "settings": {
+            "header_text": "Swimwear",
+            "subheader_text": "",
+            "link": "",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_tXLUnN": {
+          "type": "card",
+          "name": "Jackets",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-marcelo-mens-tshirt.jpg",
+            "header_text": "Jackets",
+            "subheader_text": "",
+            "link": "shopify://collections/mens",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_n9YkeK": {
+          "type": "card",
+          "name": "Jewellery",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-christmas-outlet.jpg",
+            "header_text": "Jewellery",
+            "subheader_text": "",
+            "link": "shopify://collections/fendi",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_afBRKH",
+        "card_GPNkT8",
+        "card_jQgeEQ",
+        "card_36hpWk",
+        "card_hdTia7",
+        "card_tXLUnN",
+        "card_n9YkeK"
+      ],
+      "name": "Categories",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Trending Now",
+        "image_ratio_desktop": "125",
+        "image_ratio_mobile": "125",
+        "heading_size": 26,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "400",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
+        "items_per_row": 4,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "162251092958fcda7c": {
@@ -732,8 +867,8 @@
         "mobile_disable_slider": false,
         "use_scroll_mobile": true,
         "item_gap_mobile": 16,
-        "padding_top": 100,
-        "padding_bottom": 100,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "custom_class": "sf-home__product-tab",
         "animations": "inherit"
       }
@@ -807,14 +942,14 @@
     },
     "blog_posts_ayEFnz": {
       "type": "blog-posts",
-      "name": "Blog posts",
+      "name": "Lestyle Spotlight",
       "settings": {
         "heading": "Lestyle Spotlight",
         "heading_size": "h3",
         "subheading": "",
         "description": "",
-        "header_alignment": "center",
-        "container": "container-fluid",
+        "header_alignment": "left",
+        "container": "container",
         "color_scheme": "",
         "blog": "lestyle-spotlight",
         "limit": 3,
@@ -839,12 +974,138 @@
         "animations": "inherit"
       }
     },
+    "rich_text_LpREz9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pBpPQr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow Lestyle",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pBpPQr"
+      ],
+      "name": "Follow Lestyle",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 8,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "rectangle_buttons_znmUJd": {
+      "type": "rectangle-buttons",
+      "blocks": {
+        "button_iApAab": {
+          "type": "button",
+          "name": "@lestyleboutique",
+          "settings": {
+            "label": "@lestyleboutique",
+            "link": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/Lestyle_Lady.jpg",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_mRE6Q7": {
+          "type": "button",
+          "name": "@lestylejunior",
+          "settings": {
+            "label": "@lestylejunior",
+            "link": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-kids-versace-shirt.jpg",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_iApAab",
+        "button_mRE6Q7"
+      ],
+      "name": "Social Media",
+      "settings": {
+        "container": "container",
+        "padding_top": 12,
+        "padding_bottom": 36,
+        "desktop_columns": 2,
+        "mobile_columns": 2,
+        "gap_desktop": 10,
+        "gap_mobile": 10,
+        "button_height": 128,
+        "button_border_radius": 0,
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "button_text_color": "#ffffff",
+        "button_font_size": 16,
+        "button_font_weight": "500"
+      }
+    },
+    "custom_content_X6za8h": {
+      "type": "custom-content",
+      "blocks": {
+        "liquid_jakWQN": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"max-width: 100%; margin: 20px auto; padding: 0; font-family: Arial, sans-serif;\">\n\n  <!-- Header & Text -->\n  <div style=\"margin-bottom: 20px;\">\n    <h3 style=\"margin: 0 0 8px 0;\">Need Help？</h3>\n    <p style=\"margin: 0; font-size: 14px; color: #555;\">\n      Got questions on sizing, styles, or new arrivals? Send us a message now!\n    </p>\n  </div>\n\n  <!-- Button Row -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 12px;\">\n\n    <!-- Instagram Button -->\n    <a href=\"https://ig.me/m/lestyleboutique\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff\" alt=\"Instagram Icon\" style=\"width: 20px; height: 20px;\">\n      Instagram\n    </a>\n\n    <!-- WhatsApp Button -->\n    <a href=\"https://wa.me/+61492266452\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #25D366; color: #ffffff; text-decoration: none; border-radius: 6px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff\" alt=\"WhatsApp Icon\" style=\"width: 20px; height: 20px;\">\n      WhatsApp\n    </a>\n\n  </div>\n\n</div>",
+            "width": "100%",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_jakWQN"
+      ],
+      "name": "Contact",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "enable_preload_image": false,
+        "custom_class": ""
+      }
+    },
+    "empty_space_UrwbCX": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
+      }
+    },
     "newsletter_feY3gE": {
       "type": "newsletter",
       "name": "Newsletter",
       "settings": {
         "container": "w-full",
-        "color_scheme": "default",
+        "color_scheme": "footer",
         "form_layout": "vertical",
         "form_design": "2",
         "heading": "Stay up to date with all fashion news<br> and exclusive offers",
@@ -860,20 +1121,6 @@
         "padding_bottom": 50,
         "custom_class": "",
         "animations": "inherit"
-      }
-    },
-    "empty_space_dLfLNQ": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": ""
       }
     },
     "16225125199f82d8fe": {
@@ -978,19 +1225,23 @@
   "order": [
     "split_banner_RNxN7B",
     "rectangle_buttons_QUnzWX",
-    "small_banner_iAVEqz",
     "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "custom_card_carousel_LgWiQH",
     "scrolling_promotion_jjrFyf",
-    "empty_space_bJfRcq",
+    "small_banner_iAVEqz",
+    "small_banner_wLTMK4",
+    "custom_card_carousel_m7M9q8",
     "162251092958fcda7c",
     "split_banner_n4Tr8e",
     "empty_space_nf4tkg",
     "blog_posts_ayEFnz",
+    "rich_text_LpREz9",
+    "rectangle_buttons_znmUJd",
+    "custom_content_X6za8h",
+    "empty_space_UrwbCX",
     "newsletter_feY3gE",
-    "empty_space_dLfLNQ",
     "16225125199f82d8fe"
   ]
 }
