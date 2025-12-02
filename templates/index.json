@@ -15,14 +15,23 @@
         "button_Lwnpef": {
           "type": "button",
           "settings": {
-            "label": "Shop Now",
-            "link": "",
+            "label": "Shop Mens",
+            "link": "shopify://collections/palm-angels-for-mens",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_k3PLAE": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "shopify://collections/palm-angels-womens",
             "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_Lwnpef"
+        "button_Lwnpef",
+        "button_k3PLAE"
       ],
       "name": "Banner - Main",
       "settings": {
@@ -656,7 +665,7 @@
           "type": "card",
           "name": "Sneakers",
           "settings": {
-            "image": "shopify://shop_images/90_N24640-N409956_N1449_22_Medus-600x750.jpg",
+            "image": "shopify://shop_images/lestyle-sneakers.jpg",
             "header_text": "Sneakers",
             "subheader_text": "",
             "link": "shopify://collections/versace-home-collection",
