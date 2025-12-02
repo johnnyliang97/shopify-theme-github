@@ -668,7 +668,7 @@
             "image": "shopify://shop_images/lestyle-sneakers.jpg",
             "header_text": "Sneakers",
             "subheader_text": "",
-            "link": "shopify://collections/versace-home-collection",
+            "link": "shopify://collections/sneakers",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
@@ -681,7 +681,7 @@
             "image": "shopify://shop_images/lestyle-bags-banner.webp",
             "header_text": "Bags",
             "subheader_text": "",
-            "link": "shopify://collections/wallets-cardholders",
+            "link": "shopify://collections/bags",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
@@ -694,7 +694,7 @@
             "image": "shopify://shop_images/lestyle-model-dress-womens-vjc.png",
             "header_text": "Dresses",
             "subheader_text": "",
-            "link": "shopify://collections/wallets-cardholders",
+            "link": "shopify://collections/dresses",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
@@ -707,7 +707,7 @@
             "image": "shopify://shop_images/lestyle-model-versace-shorts-mens.jpg",
             "header_text": "Shorts",
             "subheader_text": "",
-            "link": "shopify://collections/womens",
+            "link": "shopify://collections/shorts-for-mens",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -720,7 +720,7 @@
             "image": "shopify://shop_images/lestyle-model-swimwear-womens-fendi.png",
             "header_text": "Swimwear",
             "subheader_text": "",
-            "link": "",
+            "link": "shopify://collections/swimwear",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -733,7 +733,7 @@
             "image": "shopify://shop_images/lestyle-model-vjc-mens-jacket.jpg",
             "header_text": "Jackets",
             "subheader_text": "",
-            "link": "shopify://collections/mens",
+            "link": "shopify://collections/jackets",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -746,7 +746,7 @@
             "image": "shopify://shop_images/lestyle-model-versace-jewellery-womens.jpg",
             "header_text": "Jewellery",
             "subheader_text": "",
-            "link": "shopify://collections/fendi",
+            "link": "shopify://collections/jewellery",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
