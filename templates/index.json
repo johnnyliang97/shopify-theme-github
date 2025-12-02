@@ -73,6 +73,7 @@
         },
         "button_rzHgTz": {
           "type": "button",
+          "name": "Kids",
           "settings": {
             "label": "Shop Kids",
             "link": "",
@@ -84,6 +85,7 @@
         },
         "button_FUdTgg": {
           "type": "button",
+          "name": "Home Collection",
           "settings": {
             "label": "Shop Home Collection",
             "link": "",
