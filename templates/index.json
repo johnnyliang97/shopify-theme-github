@@ -37,7 +37,7 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle_home_mobile_palm-angels-mens.jpg",
-        "image_link": "",
+        "image_link": "shopify://collections/palm-angels",
         "image_position": "left",
         "background_color": "#f2e0e0",
         "text_color": "#000000",
@@ -136,7 +136,7 @@
           "type": "button",
           "settings": {
             "label": "Shop Home Collection",
-            "link": "",
+            "link": "shopify://collections/home-collection",
             "button_style": "m-button--white"
           }
         },
@@ -144,7 +144,7 @@
           "type": "button",
           "settings": {
             "label": "Home Decor",
-            "link": "",
+            "link": "shopify://collections/home-decor",
             "button_style": "m-button--white"
           }
         },
@@ -152,7 +152,7 @@
           "type": "button",
           "settings": {
             "label": "Gifts Under $100",
-            "link": "",
+            "link": "https://www.lestyle.com.au/collections/all/?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=100&filter.v.availability=1",
             "button_style": "m-button--white"
           }
         },
@@ -160,7 +160,7 @@
           "type": "button",
           "settings": {
             "label": "Shop Gift Cards",
-            "link": "",
+            "link": "shopify://products/lestyle-voucher",
             "button_style": "m-button--white"
           }
         }
@@ -175,7 +175,7 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle-christmas-banner.jpg",
-        "image_link": "",
+        "image_link": "shopify://collections/home-collection",
         "image_position": "left",
         "background_color": "#6c1b22",
         "text_color": "#eeeeee",
