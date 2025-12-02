@@ -49,21 +49,26 @@
       "blocks": {
         "button_KJxkfR": {
           "type": "button",
+          "name": "Mens",
           "settings": {
             "label": "Shop Mens",
             "link": "",
-            "bg_color": "",
-            "bg_image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-02.png",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-02_876cc5bd-099c-4afd-9567-8df69a3a90a9.png",
             "text_color": "#ffffff"
           }
         },
         "button_jHJEeQ": {
           "type": "button",
+          "name": "Womens",
           "settings": {
             "label": "Shop Womens",
             "link": "",
-            "bg_color": "",
-            "text_color": ""
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-vjc-womens-top.png",
+            "text_color": "#ffffff"
           }
         },
         "button_rzHgTz": {
@@ -71,8 +76,10 @@
           "settings": {
             "label": "Shop Kids",
             "link": "",
-            "bg_color": "",
-            "text_color": ""
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-fendi-boys-tshirt_e087ba4f-2c71-4351-ab39-ae9007f3c47e.png",
+            "text_color": "#ffffff"
           }
         },
         "button_FUdTgg": {
@@ -80,8 +87,10 @@
           "settings": {
             "label": "Shop Home Collection",
             "link": "",
-            "bg_color": "",
-            "text_color": ""
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/90_ZPCSET009-ZCOP0105_Z7011_24_I-600x750.webp",
+            "text_color": "#ffffff"
           }
         }
       },
@@ -91,21 +100,22 @@
         "button_rzHgTz",
         "button_FUdTgg"
       ],
-      "name": "Rectangle Buttons",
+      "name": "Menu Buttons",
       "settings": {
         "container": "container-fluid",
         "padding_top": 36,
         "padding_bottom": 36,
         "desktop_columns": 4,
         "mobile_columns": 2,
-        "gap_desktop": 20,
+        "gap_desktop": 10,
         "gap_mobile": 10,
         "button_height": 128,
         "button_border_radius": 0,
-        "button_bg_color": "#000000",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
         "button_text_color": "#ffffff",
         "button_font_size": 16,
-        "button_font_weight": "600"
+        "button_font_weight": "500"
       }
     },
     "split_banner_hbJTkB": {
