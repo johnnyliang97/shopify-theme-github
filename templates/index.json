@@ -649,15 +649,39 @@
         "padding_bottom": 36
       }
     },
+    "small_banner_wLTMK4": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#3c3c3c",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
+        "image_width": 160,
+        "text_color": "#ffffff",
+        "header_text": "Same Day Delivery in Melbourne",
+        "header_size": "h3",
+        "subheader_text": "<p>Uber Local Delivery is available in the Melbourne metropolitan area*</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_card_carousel_m7M9q8": {
       "type": "custom-card-carousel",
       "blocks": {
         "card_afBRKH": {
           "type": "card",
-          "name": "Versace",
+          "name": "Sneakers",
           "settings": {
             "image": "shopify://shop_images/90_N24640-N409956_N1449_22_Medus-600x750.jpg",
-            "header_text": "Versace Home",
+            "header_text": "Sneakers",
             "subheader_text": "",
             "link": "shopify://collections/versace-home-collection",
             "label_text": "",
@@ -667,10 +691,10 @@
         },
         "card_GPNkT8": {
           "type": "card",
-          "name": "Small Leather Goods",
+          "name": "Bags",
           "settings": {
             "image": "shopify://shop_images/lestyle-christmas-wallets.jpg",
-            "header_text": "Small Leather Goods",
+            "header_text": "Bags",
             "subheader_text": "",
             "link": "shopify://collections/wallets-cardholders",
             "label_text": "",
@@ -680,10 +704,10 @@
         },
         "card_jQgeEQ": {
           "type": "card",
-          "name": "Small Leather Goods",
+          "name": "Dresses",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-womens-bathrobe.webp",
-            "header_text": "Bathrobes",
+            "header_text": "Dresses",
             "subheader_text": "",
             "link": "shopify://collections/wallets-cardholders",
             "label_text": "",
@@ -693,10 +717,10 @@
         },
         "card_36hpWk": {
           "type": "card",
-          "name": "Gifts for Her",
+          "name": "Shorts",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-balmain-womens-christmas-sweater.jpg",
-            "header_text": "Gifts for Her",
+            "header_text": "Shorts",
             "subheader_text": "",
             "link": "shopify://collections/womens",
             "label_text": "",
@@ -704,12 +728,24 @@
             "button_text": "Shop Now"
           }
         },
+        "card_hdTia7": {
+          "type": "card",
+          "name": "Swimwear",
+          "settings": {
+            "header_text": "Swimwear",
+            "subheader_text": "",
+            "link": "",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
         "card_tXLUnN": {
           "type": "card",
-          "name": "Gifts for Him",
+          "name": "Jackets",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-marcelo-mens-tshirt.jpg",
-            "header_text": "Gifts for Him",
+            "header_text": "Jackets",
             "subheader_text": "",
             "link": "shopify://collections/mens",
             "label_text": "",
@@ -719,13 +755,13 @@
         },
         "card_n9YkeK": {
           "type": "card",
-          "name": "Lestyle Outlet",
+          "name": "Jewellery",
           "settings": {
             "image": "shopify://shop_images/lestyle-christmas-outlet.jpg",
-            "header_text": "Lestyle Outlet",
+            "header_text": "Jewellery",
             "subheader_text": "",
             "link": "shopify://collections/fendi",
-            "label_text": "UP TO 70% OFF",
+            "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -736,6 +772,7 @@
         "card_GPNkT8",
         "card_jQgeEQ",
         "card_36hpWk",
+        "card_hdTia7",
         "card_tXLUnN",
         "card_n9YkeK"
       ],
@@ -1194,6 +1231,7 @@
     "custom_card_carousel_LgWiQH",
     "scrolling_promotion_jjrFyf",
     "small_banner_iAVEqz",
+    "small_banner_wLTMK4",
     "custom_card_carousel_m7M9q8",
     "162251092958fcda7c",
     "split_banner_n4Tr8e",
