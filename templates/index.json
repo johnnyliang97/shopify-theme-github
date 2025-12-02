@@ -60,7 +60,7 @@
         "button_jHJEeQ": {
           "type": "button",
           "settings": {
-            "label": "Button Label",
+            "label": "Shop Womens",
             "link": "",
             "bg_color": "",
             "text_color": ""
@@ -69,7 +69,7 @@
         "button_rzHgTz": {
           "type": "button",
           "settings": {
-            "label": "Button Label",
+            "label": "Shop Kids",
             "link": "",
             "bg_color": "",
             "text_color": ""
@@ -78,7 +78,7 @@
         "button_FUdTgg": {
           "type": "button",
           "settings": {
-            "label": "Button Label",
+            "label": "Shop Home Collection",
             "link": "",
             "bg_color": "",
             "text_color": ""
