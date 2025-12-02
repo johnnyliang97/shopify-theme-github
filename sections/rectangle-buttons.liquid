@@ -1,0 +1,301 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .rect-buttons-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.mobile_columns }}, 1fr);
+    gap: {{ section.settings.gap_mobile }}px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .rect-buttons-grid-{{ section.id }} {
+      grid-template-columns: repeat({{ section.settings.desktop_columns }}, 1fr);
+      gap: {{ section.settings.gap_desktop }}px;
+    }
+  }
+
+  .rect-button-{{ section.id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: {{ section.settings.button_height }}px;
+    background-color: {{ section.settings.button_bg_color }};
+    color: {{ section.settings.button_text_color }};
+    font-size: {{ section.settings.button_font_size }}px;
+    font-weight: {{ section.settings.button_font_weight }};
+    background-size: cover;
+    background-position: center;
+    border-radius: {{ section.settings.button_border_radius }}px;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .rect-button-{{ section.id }}:hover {
+    opacity: 0.8;
+    color: {{ section.settings.button_text_color }};
+  }
+{%- endstyle -%}
+
+{%- assign container_class = 'container-fluid' -%}
+{%- if section.settings.container == 'container' -%}
+  {%- assign container_class = 'container' -%}
+{%- elsif section.settings.container == 'w-full' -%}
+  {%- assign container_class = 'w-full' -%}
+{%- endif -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="{{ container_class }}">
+    <div class="rect-buttons-grid-{{ section.id }}">
+      {%- for block in section.blocks -%}
+        {%- style -%}
+           .rect-button-{{ block.id }} {
+              {% if block.settings.bg_color != blank %}
+                background-color: {{ block.settings.bg_color }};
+              {% endif %}
+              {% if block.settings.bg_image != blank %}
+                background-image: url({{ block.settings.bg_image | image_url: width: 600 }});
+              {% elsif section.settings.button_bg_image != blank and block.settings.bg_color == blank %}
+                 background-image: url({{ section.settings.button_bg_image | image_url: width: 600 }});
+              {% endif %}
+              {% if block.settings.text_color != blank %}
+                color: {{ block.settings.text_color }};
+              {% endif %}
+           }
+        {%- endstyle -%}
+        <a href="{{ block.settings.link }}" class="rect-button-{{ section.id }} rect-button-{{ block.id }}" {{ block.shopify_attributes }}>
+          {{ block.settings.label }}
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Rectangle Buttons",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container-fluid",
+      "options": [
+        {
+          "value": "container-fluid",
+          "label": "Default"
+        },
+        {
+          "value": "container",
+          "label": "Use container box"
+        },
+        {
+          "value": "w-full",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Buttons per row (Desktop)",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Buttons per row (Mobile)",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap (Desktop)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap (Mobile)",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Button Style"
+    },
+    {
+      "type": "range",
+      "id": "button_height",
+      "min": 30,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Button Height",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Corner Radius",
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Default Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_bg_image",
+      "label": "Default Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600",
+      "label": "Font Weight"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "default": "Button Label",
+          "label": "Label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color (Override)"
+        },
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image (Override)"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color (Override)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rectangle Buttons",
+      "blocks": [
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
