@@ -236,12 +236,12 @@
         },
         "card_BfVQWe": {
           "type": "card",
-          "name": "Small Leather Goods",
+          "name": "Bathrobes",
           "settings": {
             "image": "shopify://shop_images/s-l1600_84700748-63ad-46d7-924f-00682c740377.webp",
             "header_text": "Bathrobes",
             "subheader_text": "",
-            "link": "shopify://collections/wallets-cardholders",
+            "link": "shopify://collections/bathrobes",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
@@ -280,7 +280,7 @@
             "image": "shopify://shop_images/lestyle-christmas-outlet.jpg",
             "header_text": "Lestyle Outlet",
             "subheader_text": "",
-            "link": "shopify://collections/fendi",
+            "link": "shopify://collections/lestyle-outlet",
             "label_text": "UP TO 70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
