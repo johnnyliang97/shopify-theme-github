@@ -649,30 +649,6 @@
         "padding_bottom": 36
       }
     },
-    "small_banner_wLTMK4": {
-      "type": "small-banner",
-      "name": "Small Banner",
-      "settings": {
-        "container": "container",
-        "background_color": "#3c3c3c",
-        "background_overlay_opacity": 0,
-        "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
-        "image_width": 160,
-        "text_color": "#ffffff",
-        "header_text": "Same Day Delivery in Melbourne",
-        "header_size": "h3",
-        "subheader_text": "<p>Uber Local Delivery is available in the Melbourne metropolitan area*</p>",
-        "subheader_size": "text-small",
-        "button_text": "Find Out More",
-        "button_link": "",
-        "button_font_size": 12,
-        "button_bg_color": "rgba(0,0,0,0)",
-        "button_text_color": "#ffffff",
-        "button_border_color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_card_carousel_m7M9q8": {
       "type": "custom-card-carousel",
       "blocks": {
@@ -871,6 +847,31 @@
         "padding_bottom": 80,
         "custom_class": "sf-home__product-tab",
         "animations": "inherit"
+      }
+    },
+    "small_banner_wLTMK4": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#3c3c3c",
+        "background_image": "shopify://shop_images/luxury-dark-grey-and-black-color-gradient-background-texture-abstract-pattern-design-illustration-element-for-artwork-wallpaper-template-banner-poster-cover-decoration-backdrop-produc.jpg",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
+        "image_width": 160,
+        "text_color": "#ffffff",
+        "header_text": "Same Day Delivery in Melbourne",
+        "header_size": "h3",
+        "subheader_text": "<p>Uber Local Delivery is available in the Melbourne metropolitan area*</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "split_banner_n4Tr8e": {
@@ -1231,9 +1232,9 @@
     "custom_card_carousel_LgWiQH",
     "scrolling_promotion_jjrFyf",
     "small_banner_iAVEqz",
-    "small_banner_wLTMK4",
     "custom_card_carousel_m7M9q8",
     "162251092958fcda7c",
+    "small_banner_wLTMK4",
     "split_banner_n4Tr8e",
     "empty_space_nf4tkg",
     "blog_posts_ayEFnz",
