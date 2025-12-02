@@ -104,9 +104,10 @@
     color: {{ section.settings.button_text_color }};
     text-decoration: none;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 600;
     transition: opacity 0.3s ease;
     border: 1px solid {{ section.settings.button_border_color }};
+    font-size: {{ section.settings.button_font_size }}px;
   }
 
   .small-banner-btn:hover {
@@ -120,9 +121,12 @@
       
       {%- if section.settings.banner_image != blank -%}
         <div class="small-banner-image-container" style="width: {{ section.settings.image_width }}px; max-width: 100%;">
-          {{ section.settings.banner_image | image_url: width: section.settings.image_width | image_tag:
+          {%- assign image_width_2x = section.settings.image_width | times: 2 -%}
+          {{ section.settings.banner_image | image_url: width: image_width_2x | image_tag:
             loading: 'lazy',
-            class: 'small-banner-image'
+            class: 'small-banner-image',
+            width: section.settings.image_width,
+            height: 'auto'
           }}
         </div>
       {%- endif -%}
@@ -281,6 +285,16 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Font Size",
+      "default": 14
     },
     {
       "type": "color",
