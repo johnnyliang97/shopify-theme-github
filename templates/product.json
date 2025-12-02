@@ -183,8 +183,33 @@
       "custom_css": [],
       "name": "Custom liquid",
       "settings": {
-        "custom_liquid": "{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 14px; color: #555; margin: 8px 0; text-align: center; padding: 0 15px;\">\n    SKU: {{ product.selected_or_first_available_variant.sku }}\n  </p>\n{% endif %}",
+        "custom_liquid": "{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 14px; color: #555; margin: 28px 0; text-align: center; padding: 0 15px;\">\n    SKU: {{ product.selected_or_first_available_variant.sku }}\n  </p>\n{% endif %}",
         "custom_class": ""
+      }
+    },
+    "small_banner_fyMBaW": {
+      "type": "small-banner",
+      "name": "Uber",
+      "settings": {
+        "container": "container",
+        "background_color": "#3c3c3c",
+        "background_image": "shopify://shop_images/luxury-dark-grey-and-black-color-gradient-background-texture-abstract-pattern-design-illustration-element-for-artwork-wallpaper-template-banner-poster-cover-decoration-backdrop-produc.jpg",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
+        "image_width": 160,
+        "text_color": "#ffffff",
+        "header_text": "Same Day Delivery in Melbourne",
+        "header_size": "h3",
+        "subheader_text": "<p>Uber Local Delivery is available in the Melbourne metropolitan area*</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product-recommendations": {
@@ -258,7 +283,8 @@
           "type": "iconbox",
           "settings": {
             "card_color_scheme": "",
-            "image_by_url": "https://www.svgrepo.com/show/349541/uber.svg",
+            "image": "shopify://shop_images/uber.svg",
+            "image_by_url": "",
             "title": "Same Day Delivery",
             "description": "<p>Uber same day delivery available across Metropolitan Melbourne</p>",
             "link": "",
@@ -339,6 +365,7 @@
     "main",
     "product-details-tabs",
     "custom_liquid_CHJgEC",
+    "small_banner_fyMBaW",
     "product-recommendations",
     "recent-viewed-products",
     "icon_box_VnzpGn"
