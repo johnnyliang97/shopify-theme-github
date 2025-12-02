@@ -799,7 +799,7 @@
         "button_link": "",
         "button_text": "View More",
         "button_style": "m-button--primary",
-        "button_size": "",
+        "button_size": "m-button--small",
         "use_scroll_mobile": true,
         "padding_top": 50,
         "padding_bottom": 50,
