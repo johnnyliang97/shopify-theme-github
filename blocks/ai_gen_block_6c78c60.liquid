@@ -6,17 +6,21 @@
 {% endcomment %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
+{% liquid
+  assign container = block.settings.container
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
+%}
+
 {% style %}
   .ai-collection-banner-{{ ai_gen_id }} {
     text-align: center;
-    padding: {{ block.settings.padding_top }}px 20px {{ block.settings.padding_bottom }}px;
     background-color: {{ block.settings.background_color }};
     color: {{ block.settings.text_color }};
   }
 
   .ai-collection-banner__container-{{ ai_gen_id }} {
-    max-width: {{ block.settings.max_width }}px;
-    margin: 0 auto;
   }
 
   .ai-collection-banner__title-{{ ai_gen_id }} {
@@ -79,7 +83,7 @@
   class="ai-collection-banner-{{ ai_gen_id }}"
   {{ block.shopify_attributes }}
 >
-  <div class="ai-collection-banner__container-{{ ai_gen_id }}">
+  <div class="{{ container }} ai-collection-banner__container-{{ ai_gen_id }}">
     {% if block.settings.collection != blank %}
       {% if block.settings.show_title and block.settings.collection.title != blank %}
         <h1 class="ai-collection-banner__title-{{ ai_gen_id }}">
@@ -189,9 +193,9 @@
 </script>
 
 {% schema %}
-{
-  "name": "Collection banner",
-  "settings": [
+  {
+    "name": "Collection banner",
+    "settings": [
     {
       "type": "header",
       "content": "Collection"
@@ -250,34 +254,15 @@
       "content": "Layout"
     },
     {
-      "type": "range",
-      "id": "max_width",
-      "label": "Maximum width",
-      "min": 400,
-      "max": 1200,
-      "step": 50,
-      "unit": "px",
-      "default": 800
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Top padding",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Bottom padding",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "default": 40
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container-fluid",
+      "options": [
+        { "value": "container-fluid", "label": "Default" },
+        { "value": "w-full", "label": "Full width" },
+        { "value": "container", "label": "Use container box" }
+      ]
     },
     {
       "type": "range",
