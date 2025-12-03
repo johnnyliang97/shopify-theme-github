@@ -202,7 +202,7 @@
         "logo_max_width": 110,
         "sticky_logo_max_width": 110,
         "mobile_logo_max_width": 100,
-        "main_menu": "",
+        "main_menu": "mega-menu",
         "secondary_menu": "",
         "mobile_menu": "",
         "uppercase_parent_level": true,
