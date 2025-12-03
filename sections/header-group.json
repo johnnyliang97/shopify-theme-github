@@ -179,6 +179,22 @@
             "container": "inherit",
             "html": ""
           }
+        },
+        "custom_html_tHwQfX": {
+          "type": "custom_html",
+          "settings": {
+            "heading": "Linens & Bedding",
+            "container": "inherit",
+            "html": ""
+          }
+        },
+        "custom_html_waXkeP": {
+          "type": "custom_html",
+          "settings": {
+            "heading": "Tableware",
+            "container": "inherit",
+            "html": ""
+          }
         }
       },
       "block_order": [
@@ -197,7 +213,9 @@
         "custom_html_iBm8Kj",
         "custom_html_9emTYa",
         "custom_html_pRxDGh",
-        "custom_html_XfWCAX"
+        "custom_html_XfWCAX",
+        "custom_html_tHwQfX",
+        "custom_html_waXkeP"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
