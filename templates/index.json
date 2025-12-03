@@ -668,7 +668,7 @@
             "image": "shopify://shop_images/lestyle-sneakers.jpg",
             "header_text": "Sneakers",
             "subheader_text": "",
-            "link": "shopify://collections/versace-home-collection",
+            "link": "shopify://collections/sneakers",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
@@ -681,7 +681,7 @@
             "image": "shopify://shop_images/lestyle-bags-banner.webp",
             "header_text": "Bags",
             "subheader_text": "",
-            "link": "shopify://collections/wallets-cardholders",
+            "link": "shopify://collections/bags",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
@@ -694,7 +694,7 @@
             "image": "shopify://shop_images/lestyle-model-dress-womens-vjc.png",
             "header_text": "Dresses",
             "subheader_text": "",
-            "link": "shopify://collections/wallets-cardholders",
+            "link": "shopify://collections/dresses",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
@@ -707,7 +707,7 @@
             "image": "shopify://shop_images/lestyle-model-versace-shorts-mens.jpg",
             "header_text": "Shorts",
             "subheader_text": "",
-            "link": "shopify://collections/womens",
+            "link": "shopify://collections/shorts-for-mens",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -720,7 +720,7 @@
             "image": "shopify://shop_images/lestyle-model-swimwear-womens-fendi.png",
             "header_text": "Swimwear",
             "subheader_text": "",
-            "link": "",
+            "link": "shopify://collections/swimwear",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -733,7 +733,7 @@
             "image": "shopify://shop_images/lestyle-model-vjc-mens-jacket.jpg",
             "header_text": "Jackets",
             "subheader_text": "",
-            "link": "shopify://collections/mens",
+            "link": "shopify://collections/jackets",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -746,7 +746,7 @@
             "image": "shopify://shop_images/lestyle-model-versace-jewellery-womens.jpg",
             "header_text": "Jewellery",
             "subheader_text": "",
-            "link": "shopify://collections/fendi",
+            "link": "shopify://collections/jewellery",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -798,7 +798,7 @@
         "subheader_text": "<p>Enjoy free express shipping Australia-wide on orders over $300*.</p>",
         "subheader_size": "text-small",
         "button_text": "Find Out More",
-        "button_link": "",
+        "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
         "button_font_size": 12,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#ffffff",
@@ -899,7 +899,7 @@
         "subheader_text": "<p>Get it in a few minutes. Uber Local Delivery is available in the Melbourne metropolitan area*.</p>",
         "subheader_size": "text-small",
         "button_text": "Find Out More",
-        "button_link": "",
+        "button_link": "shopify://blogs/lestyle-spotlight/get-your-order-today-with-uber",
         "button_font_size": 12,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#ffffff",
@@ -915,7 +915,7 @@
           "type": "button",
           "settings": {
             "label": "Shop Mens",
-            "link": "",
+            "link": "shopify://collections/mens-outlet",
             "button_style": "m-button--white"
           }
         },
@@ -923,7 +923,7 @@
           "type": "button",
           "settings": {
             "label": "Shop Womens",
-            "link": "",
+            "link": "shopify://collections/outlet-womens",
             "button_style": "m-button--white"
           }
         },
@@ -931,7 +931,7 @@
           "type": "button",
           "settings": {
             "label": "Shop Kids",
-            "link": "",
+            "link": "shopify://collections/kids-outlet",
             "button_style": "m-button--white"
           }
         }
@@ -945,7 +945,7 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle-model-vjc-mens-shirt_ebfe9a81-acdd-44cf-98f7-4c59507e0941.png",
-        "image_link": "",
+        "image_link": "shopify://pages/lestyle-outlet",
         "image_position": "left",
         "background_color": "#0e0e0e",
         "text_color": "#eeeeee",
@@ -1042,7 +1042,7 @@
           "name": "@lestyleboutique",
           "settings": {
             "label": "@lestyleboutique",
-            "link": "",
+            "link": "https://www.instagram.com/lestyleboutique/",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
             "bg_image": "shopify://shop_images/Lestyle_Lady.jpg",
@@ -1054,7 +1054,7 @@
           "name": "@lestylejunior",
           "settings": {
             "label": "@lestylejunior",
-            "link": "",
+            "link": "https://www.instagram.com/lestylejunior/",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
             "bg_image": "shopify://shop_images/lestyle-model-kids-versace-shirt.jpg",
@@ -1166,9 +1166,9 @@
           "settings": {
             "card_color_scheme": "",
             "image_by_url": "https://www.svgrepo.com/show/352446/shipping-fast.svg",
-            "title": "Express Shipping",
-            "description": "<p>Australia wide and international shipping available</p>",
-            "link": "",
+            "title": "Free Express Shipping*",
+            "description": "<p>Australia-wide and international shipping available on eligible orders*</p>",
+            "link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
             "button_label": "",
             "button_link": "",
             "button_style": "sf__btn-link",
@@ -1183,7 +1183,7 @@
             "image_by_url": "",
             "title": "Same Day Delivery",
             "description": "<p>Uber same day delivery available across Metropolitan Melbourne</p>",
-            "link": "",
+            "link": "shopify://blogs/lestyle-spotlight/get-your-order-today-with-uber",
             "button_label": "",
             "button_link": "",
             "button_style": "sf__btn-link",
@@ -1196,7 +1196,7 @@
             "card_color_scheme": "",
             "image_by_url": "https://www.svgrepo.com/show/448108/question.svg",
             "title": "Online Support",
-            "description": "<p>Message us on <a href=\"http://ig.me/m/lestyleoutique\" target=\"_blank\" title=\"Lestyle Instagram DM Contact\">Instagram</a> or <a href=\"http://wa.me/+61423185118\" target=\"_blank\" title=\"Lestyle WhatsApp Contact\">WhatsApp</a></p>",
+            "description": "<p>Message us on <a href=\"http://ig.me/m/lestyleoutique\" target=\"_blank\" title=\"Lestyle Instagram DM Contact\">Instagram</a> or <a href=\"https://wa.me/+61492266452\" target=\"_blank\" title=\"https://wa.me/+61492266452\">WhatsApp</a></p>",
             "link": "shopify://pages/contact",
             "button_label": "",
             "button_link": "",
