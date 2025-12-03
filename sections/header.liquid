@@ -510,7 +510,7 @@
     </div>
   </div>
   <div class="m-header__main m-menu-bar m-gradient m-color-{{ section.settings.color_scheme_menu }}">
-    <div class="m-header__container {{ container }}">
+    <div class="m-header__container container-full">
       {% liquid
         comment
           Compute dynamic menu handle based on URL and Outlet state
@@ -588,7 +588,7 @@
             </div>
           </div>
           <div class="m-header__main m-menu-bar m-gradient m-color-{{ section.settings.color_scheme_menu }}">
-            <div class="m-header__container {{ container }}">
+            <div class="m-header__container container-full">
               {% liquid
                 assign current_path = request.path | downcase
                 assign specific_menu_handle = 'mega-menu'
