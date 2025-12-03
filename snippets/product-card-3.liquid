@@ -17,6 +17,7 @@
 {% endcomment %}
 
 {% liquid
+  assign context_collection = context_collection | default: context
   if show_variant_options == null
     assign show_variant_options = settings.show_swatch_option
   endif
@@ -136,8 +137,11 @@
   endif
 
   assign product_url = product.url
+  if context_collection != blank
+    assign product_url = product_url | within: context_collection
+  endif
   if remove_params
-    assign product_url = product.url | split: '?' | first
+    assign product_url = product_url | split: '?' | first
   endif
 
   assign first_media_type = product.media.first.media_type
@@ -497,7 +501,7 @@
       {%- endif -%}
       {%- if show_quickview_button or show_wishlist_button or show_compare_button or show_cart_button -%}
         <div class="m-product-card__action">
-          {% render 'product-card-quick-add-btn', product: product, quick_add_text: quick_add_text, section: section %}
+          {% render 'product-card-quick-add-btn', product: product, quick_add_text: quick_add_text, section: section, context_collection: context_collection %}
           <div class="m-product-card__action-icons">
             {% liquid
               assign tooltips = 'compare,quickview,'

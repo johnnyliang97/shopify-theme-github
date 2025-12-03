@@ -32,7 +32,7 @@
             <p class="m-product-card__type">{{ product.type }}</p>
           {% endif %}
           <h3 class="m-product-card__title">
-            <a href="{{ product.url }}" class="m-product-card__name">
+            <a href="{{ product.url | within: collection }}" class="m-product-card__name">
               {{ product.title }}
             </a>
           </h3>

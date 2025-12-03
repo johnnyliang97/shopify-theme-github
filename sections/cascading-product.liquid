@@ -54,7 +54,7 @@
         capture product_items
           for product in collection.products limit: section.settings.product_to_show
             echo '<div data-media-item>'
-            render 'cascade-product-card', product: product
+            render 'cascade-product-card', product: product, context_collection: collection
             echo '</div>'
             echo item_separator
           else

@@ -160,7 +160,7 @@
                             %}
                             {%- capture sizes -%}(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2){%- endcapture -%}
                             <div class="m-collection-showcase__product m:relative">
-                              <a href="{{ product.url }}" class="m-hidden-link" aria-label="{{ product.title }}"></a>
+                              <a href="{{ product.url | within: collection }}" class="m-hidden-link" aria-label="{{ product.title }}"></a>
                               <div class="m-collection-showcase__product-media m:blocks-radius-md">
                                 {% if preview_image != blank %}
                                   <responsive-image class="m-image" style="--aspect-ratio: {{ asp_rat }}">

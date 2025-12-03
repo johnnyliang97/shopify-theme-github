@@ -1,5 +1,5 @@
 {% liquid
-  assign menu_handle = menu_handle | default: 'mega-menu'
+  assign menu_handle = menu_handle | default: 'menu'
 %}
 <ul class="m-menu-drawer__navigation m-menu-mobile" data-menu="{{ menu_handle }}">
   {% for link in linklists[menu_handle].links %}
@@ -93,7 +93,7 @@
                       <div class="m:column m:w-1/2">
                         <div class="m-product-card m-product-card--style-1">
                           <div class="m-product-card__media">
-                            <a class="m-product-card__link m:block m:w-full" href="{{ product.url }}" aria-label="{{ product.title | default: forloop.index }}">
+                            <a class="m-product-card__link m:block m:w-full" href="{{ product.url | within: collection }}" aria-label="{{ product.title | default: forloop.index }}">
                               <div class="m-product-card__main-image">
                                 {% render 'responsive-image',
                                   image: product.featured_image,
@@ -106,7 +106,7 @@
                           <div class="m-product-card__content m:text-left">
                             <div class="m-product-card__info">
                               <h3 class="m-product-card__title">
-                                <a href="{{ product.url }}" class="m-product-card__name">
+                                <a href="{{ product.url | within: collection }}" class="m-product-card__name">
                                   {{ product.title }}
                                 </a>
                               </h3>

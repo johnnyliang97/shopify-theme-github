@@ -7,7 +7,7 @@
 %}
 <div class="m-cascading-product-card m:relative{% if second_image != blank %} m-cascading-product-card--has-second-image{% endif %}">
   {% if product != blank %}
-    <a class="m-link-absolute" href="{{ product.url }}">
+    <a class="m-link-absolute" href="{% if context_collection != blank %}{{ product.url | within: context_collection }}{% else %}{{ product.url }}{% endif %}">
       <span class="m:sr-only">{{ product.title }}</span>
     </a>
   {% endif %}
@@ -29,7 +29,7 @@
     <div class="m-cascading-product-card__content m:text-left">
       <a
         class="m-cascading-product-card__title"
-        href="{{ product.url | default: "#" }}"
+        href="{% if context_collection != blank %}{{ product.url | within: context_collection }}{% else %}{{ product.url | default: "#" }}{% endif %}"
       >
         <h4 class="h6">{{ product.title | default: 'Product title' }}</h4>
       </a>

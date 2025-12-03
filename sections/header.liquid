@@ -516,7 +516,7 @@
           Compute dynamic menu handle based on URL and Outlet state
         endcomment
         assign current_path = request.path | downcase
-        assign specific_menu_handle = 'mega-menu'
+        assign specific_menu_handle = 'menu'
         if is_outlet_context
           assign specific_menu_handle = 'outlet-menu'
         elsif current_path contains '/mens' or current_path contains '-mens'
@@ -530,13 +530,13 @@
         elsif current_path contains '/home' or current_path contains '-home'
           assign specific_menu_handle = 'main-store-home'
         else
-          assign specific_menu_handle = 'mega-menu'
+          assign specific_menu_handle = 'menu'
         endif
         comment
           Robust fallback: if target menu is missing/empty, use default
         endcomment
         if linklists[specific_menu_handle] == blank or linklists[specific_menu_handle].links == blank
-          assign specific_menu_handle = 'mega-menu'
+          assign specific_menu_handle = 'menu'
         endif
       %}
       {% render 'header-main-menu-container', section: section, justify: 'm:justify-center', specific_menu_handle: specific_menu_handle %}
@@ -589,7 +589,29 @@
           </div>
           <div class="m-header__main m-menu-bar m-gradient m-color-{{ section.settings.color_scheme_menu }}">
             <div class="m-header__container {{ container }}">
-              {% render 'header-main-menu-container', section: section %}
+              {% liquid
+                assign current_path = request.path | downcase
+                assign specific_menu_handle = 'menu'
+                if is_outlet_context
+                  assign specific_menu_handle = 'outlet-menu'
+                elsif current_path contains '/mens' or current_path contains '-mens'
+                  assign specific_menu_handle = 'main-store-mens'
+                elsif current_path contains '/womens' or current_path contains '-womens' or current_path contains '/women' or current_path contains '-women' or current_path contains '/ladies' or current_path contains '-ladies'
+                  assign specific_menu_handle = 'main-store-womens'
+                elsif current_path contains '/girls' or current_path contains '-girls' or current_path contains '/boys' or current_path contains '-boys' or current_path contains '/kids' or current_path contains '-kids' or current_path contains '/baby' or current_path contains '-baby'
+                  assign specific_menu_handle = 'main-store-kids'
+                elsif current_path contains '/home-collection' or current_path contains '-home-collection'
+                  assign specific_menu_handle = 'main-store-home-collection'
+                elsif current_path contains '/home' or current_path contains '-home'
+                  assign specific_menu_handle = 'main-store-home'
+                else
+                  assign specific_menu_handle = 'menu'
+                endif
+                if linklists[specific_menu_handle] == blank or linklists[specific_menu_handle].links == blank
+                  assign specific_menu_handle = 'menu'
+                endif
+              %}
+              {% render 'header-main-menu-container', section: section, specific_menu_handle: specific_menu_handle %}
             </div>
           </div>
       {% endcase %}

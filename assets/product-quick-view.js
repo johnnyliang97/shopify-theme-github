@@ -34,7 +34,10 @@ class QuickView {
       this.close(); // Close any existing modal before loading a new one
     }
     this.isLoading = true;
-    fetchSection("product-quickview", { url: `${window.MinimogSettings.base_url}products/${productHandle}` })
+    const productUrl = this.target.dataset.productUrl
+      ? this.target.dataset.productUrl
+      : `${window.MinimogSettings.base_url}products/${productHandle}`;
+    fetchSection("product-quickview", { url: productUrl })
       .then((html) => {
         this.modalContent = html.querySelector("#MainProduct-quick-view__content");
         const productInfo = html.querySelector("product-info");
@@ -59,6 +62,10 @@ class QuickView {
         this.toggleLoading(false);
         this.isOpen = true;
         this.isLoading = false; // Reset loading state
+        const viewMoreLink = this.modal.modal.querySelector('.m-product-quickview--viewmore');
+        if (viewMoreLink) viewMoreLink.setAttribute('href', productUrl);
+        const titleLink = this.modal.modal.querySelector('.m-product-title a');
+        if (titleLink) titleLink.setAttribute('href', productUrl);
       })
       .then(() => {
         document.dispatchEvent(
@@ -69,7 +76,7 @@ class QuickView {
 
         document.dispatchEvent(
           new CustomEvent("quick-view:loaded", {
-            detail: { productUrl: this.target.dataset.productHandle }
+            detail: { productUrl: this.target.dataset.productUrl || `${window.MinimogSettings.base_url}products/${productHandle}` }
           })
         );
       })

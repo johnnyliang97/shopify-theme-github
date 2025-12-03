@@ -4,11 +4,19 @@
   comment
     Determine menu handle from specific_menu_handle or fallback
   endcomment
-  assign menu_handle = specific_menu_handle | default: menu | default: 'main_menu'
+  assign menu_handle = specific_menu_handle | default: menu | default: 'menu'
   assign menu_links = linklists[menu_handle].links
   comment
-    Robust fallback to site's default mega menu if empty
+    Robust fallback: prefer 'menu' then 'main_menu', then last-resort 'mega-menu'
   endcomment
+  if menu_links == blank
+    assign menu_handle = 'menu'
+    assign menu_links = linklists[menu_handle].links
+  endif
+  if menu_links == blank
+    assign menu_handle = 'main_menu'
+    assign menu_links = linklists[menu_handle].links
+  endif
   if menu_links == blank
     assign menu_handle = 'mega-menu'
     assign menu_links = linklists[menu_handle].links
@@ -143,7 +151,7 @@
                           <div class="swiper-slide m:column">
                             <div class="m-product-card m-product-card--style-1">
                               <div class="m-product-card__media">
-                                <a class="m-product-card__link m:block m:w-full" href="{{ product.url }}" aria-label="{{ product.title | default: forloop.index }}">
+                                <a class="m-product-card__link m:block m:w-full" href="{{ product.url | within: collection }}" aria-label="{{ product.title | default: forloop.index }}">
                                   <div class="m-product-card__main-image">
                                     {%- if product.featured_image -%}
                                       {% render 'responsive-image',
@@ -160,7 +168,7 @@
                               <div class="m-product-card__content m:text-left">
                                 <div class="m-product-card__info">
                                   <h3 class="m-product-card__title">
-                                    <a href="{{ product.url }}" class="m-product-card__name">
+                                    <a href="{{ product.url | within: collection }}" class="m-product-card__name">
                                       {{ product.title }}
                                     </a>
                                   </h3>
