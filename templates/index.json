@@ -899,7 +899,7 @@
         "subheader_text": "<p>Get it in a few minutes. Uber Local Delivery is available in the Melbourne metropolitan area*.</p>",
         "subheader_size": "text-small",
         "button_text": "Find Out More",
-        "button_link": "",
+        "button_link": "shopify://blogs/lestyle-spotlight/get-your-order-today-with-uber",
         "button_font_size": 12,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#ffffff",
