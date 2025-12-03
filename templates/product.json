@@ -187,6 +187,30 @@
         "custom_class": ""
       }
     },
+    "small_banner_TE9wDT": {
+      "type": "small-banner",
+      "name": "Uber Delivery",
+      "settings": {
+        "container": "container",
+        "background_color": "#b89b6f",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-shopping-bag.jpg",
+        "image_width": 240,
+        "text_color": "#ffffff",
+        "header_text": "Make it Free Shipping",
+        "header_size": "h3",
+        "subheader_text": "<p>Enjoy free express shipping Australia-wide on orders over $300*.</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "small_banner_fyMBaW": {
       "type": "small-banner",
       "name": "Uber",
@@ -365,6 +389,7 @@
     "main",
     "product-details-tabs",
     "custom_liquid_CHJgEC",
+    "small_banner_TE9wDT",
     "small_banner_fyMBaW",
     "product-recommendations",
     "recent-viewed-products",

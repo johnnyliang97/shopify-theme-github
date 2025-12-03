@@ -12,5 +12,17 @@
   "context": {
     "market": "international"
   },
-  "sections": {}
+  "sections": {
+    "small_banner_wLTMK4": {
+      "settings": {
+        "subheader_text": "<p>Enjoy free express shipping on orders over A$400*.</p>"
+      },
+      "blocks": {}
+    },
+    "small_banner_iMR6eU": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
 }

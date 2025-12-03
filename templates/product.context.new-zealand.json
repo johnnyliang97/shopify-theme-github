@@ -12,5 +12,17 @@
   "context": {
     "market": "new-zealand"
   },
-  "sections": {}
+  "sections": {
+    "small_banner_fyMBaW": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "small_banner_TE9wDT": {
+      "settings": {
+        "subheader_text": "<p>Enjoy free express shipping to New Zealand on orders over $300*.</p>"
+      },
+      "blocks": {}
+    }
+  }
 }
