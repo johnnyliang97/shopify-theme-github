@@ -798,7 +798,7 @@
         "subheader_text": "<p>Enjoy free express shipping Australia-wide on orders over $300*.</p>",
         "subheader_size": "text-small",
         "button_text": "Find Out More",
-        "button_link": "",
+        "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
         "button_font_size": 12,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#ffffff",
