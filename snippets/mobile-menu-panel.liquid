@@ -1,5 +1,5 @@
 {% liquid
-  assign menu_handle = menu_handle | default: 'menu'
+  assign menu_handle = menu_handle | default: 'mega-menu'
 %}
 <ul class="m-menu-drawer__navigation m-menu-mobile" data-menu="{{ menu_handle }}">
   {% for link in linklists[menu_handle].links %}

@@ -516,7 +516,7 @@
           Compute dynamic menu handle based on URL and Outlet state
         endcomment
         assign current_path = request.path | downcase
-        assign specific_menu_handle = 'menu'
+        assign specific_menu_handle = 'mega-menu'
         if is_outlet_context
           assign specific_menu_handle = 'outlet-menu'
         elsif current_path contains '/mens' or current_path contains '-mens'
@@ -530,13 +530,13 @@
         elsif current_path contains '/home' or current_path contains '-home'
           assign specific_menu_handle = 'main-store-home'
         else
-          assign specific_menu_handle = 'menu'
+          assign specific_menu_handle = 'mega-menu'
         endif
         comment
           Robust fallback: if target menu is missing/empty, use default
         endcomment
         if linklists[specific_menu_handle] == blank or linklists[specific_menu_handle].links == blank
-          assign specific_menu_handle = 'menu'
+          assign specific_menu_handle = 'mega-menu'
         endif
       %}
       {% render 'header-main-menu-container', section: section, justify: 'm:justify-center', specific_menu_handle: specific_menu_handle %}
@@ -591,7 +591,7 @@
             <div class="m-header__container {{ container }}">
               {% liquid
                 assign current_path = request.path | downcase
-                assign specific_menu_handle = 'menu'
+                assign specific_menu_handle = 'mega-menu'
                 if is_outlet_context
                   assign specific_menu_handle = 'outlet-menu'
                 elsif current_path contains '/mens' or current_path contains '-mens'
@@ -605,10 +605,10 @@
                 elsif current_path contains '/home' or current_path contains '-home'
                   assign specific_menu_handle = 'main-store-home'
                 else
-                  assign specific_menu_handle = 'menu'
+                  assign specific_menu_handle = 'mega-menu'
                 endif
                 if linklists[specific_menu_handle] == blank or linklists[specific_menu_handle].links == blank
-                  assign specific_menu_handle = 'menu'
+                  assign specific_menu_handle = 'mega-menu'
                 endif
               %}
               {% render 'header-main-menu-container', section: section, specific_menu_handle: specific_menu_handle %}

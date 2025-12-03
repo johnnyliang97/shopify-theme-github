@@ -4,19 +4,11 @@
   comment
     Determine menu handle from specific_menu_handle or fallback
   endcomment
-  assign menu_handle = specific_menu_handle | default: menu | default: 'menu'
+  assign menu_handle = specific_menu_handle | default: menu | default: 'main_menu'
   assign menu_links = linklists[menu_handle].links
   comment
-    Robust fallback: prefer 'menu' then 'main_menu', then last-resort 'mega-menu'
+    Robust fallback to site's default mega menu if empty
   endcomment
-  if menu_links == blank
-    assign menu_handle = 'menu'
-    assign menu_links = linklists[menu_handle].links
-  endif
-  if menu_links == blank
-    assign menu_handle = 'main_menu'
-    assign menu_links = linklists[menu_handle].links
-  endif
   if menu_links == blank
     assign menu_handle = 'mega-menu'
     assign menu_links = linklists[menu_handle].links
