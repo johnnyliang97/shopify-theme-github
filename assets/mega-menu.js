@@ -257,7 +257,8 @@ class SiteNav {
   onMenuItemEnter = (evt, index) => {
     const { target } = evt;
 
-    if (!target.classList.contains("m-menu__item--mega")) return;
+    const hasSubMenu = !!target.querySelector(this.selectors.subMenu);
+    if (!hasSubMenu) return;
 
     clearTimeout(this.timeoutLeave);
     this.activeIndex = target.dataset && Number(target.dataset.index);

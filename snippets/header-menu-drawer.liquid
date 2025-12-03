@@ -33,6 +33,15 @@
   elsif current_path contains '/home-collection' or current_path contains '-home-collection' or current_path contains '/home' or current_path contains '-home'
     assign is_home_selected = true
   endif
+
+  assign active_tab = 'mens'
+  if is_womens_selected
+    assign active_tab = 'womens'
+  elsif is_kids_selected
+    assign active_tab = 'kids'
+  elsif is_home_selected
+    assign active_tab = 'home-collection'
+  endif
 %}
 {{ 'mobile-menu-tabs.css' | asset_url | stylesheet_tag }}
 <div id="m-menu-drawer" class="m-menu-drawer">
@@ -44,10 +53,10 @@
           <button class="m-mobile-tab is-active" data-tab="outlet">Outlet</button>
           <button class="m-mobile-tab" data-tab="main-store">Main Store</button>
         {% else %}
-          <button class="m-mobile-tab {% if is_mens_selected or (is_womens_selected == false and is_kids_selected == false and is_home_selected == false) %}is-active{% endif %}" data-tab="mens">Mens</button>
-          <button class="m-mobile-tab {% if is_womens_selected %}is-active{% endif %}" data-tab="womens">Womens</button>
-          <button class="m-mobile-tab {% if is_kids_selected %}is-active{% endif %}" data-tab="kids">Kids</button>
-          <button class="m-mobile-tab {% if is_home_selected %}is-active{% endif %}" data-tab="home-collection">Home Collection</button>
+          <button class="m-mobile-tab {% if active_tab == 'mens' %}is-active{% endif %}" data-tab="mens">Mens</button>
+          <button class="m-mobile-tab {% if active_tab == 'womens' %}is-active{% endif %}" data-tab="womens">Womens</button>
+          <button class="m-mobile-tab {% if active_tab == 'kids' %}is-active{% endif %}" data-tab="kids">Kids</button>
+          <button class="m-mobile-tab {% if active_tab == 'home-collection' %}is-active{% endif %}" data-tab="home-collection">Home Collection</button>
         {% endif %}
       </div>
       <div class="m-mobile-panels" data-mobile-panels>
@@ -56,16 +65,16 @@
             {% render 'mobile-menu-panel', menu_handle: 'outlet-menu' %}
           </div>
         {% else %}
-          <div class="m-mobile-panel {% if is_mens_selected or (is_womens_selected == false and is_kids_selected == false and is_home_selected == false) %}is-active{% endif %}" data-panel="mens">
+          <div class="m-mobile-panel {% if active_tab == 'mens' %}is-active{% endif %}" data-panel="mens">
             {% render 'mobile-menu-panel', menu_handle: 'main-store-mens' %}
           </div>
-          <div class="m-mobile-panel {% if is_womens_selected %}is-active{% endif %}" data-panel="womens">
+          <div class="m-mobile-panel {% if active_tab == 'womens' %}is-active{% endif %}" data-panel="womens">
             {% render 'mobile-menu-panel', menu_handle: 'main-store-womens' %}
           </div>
-          <div class="m-mobile-panel {% if is_kids_selected %}is-active{% endif %}" data-panel="kids">
+          <div class="m-mobile-panel {% if active_tab == 'kids' %}is-active{% endif %}" data-panel="kids">
             {% render 'mobile-menu-panel', menu_handle: 'main-store-kids' %}
           </div>
-          <div class="m-mobile-panel {% if is_home_selected %}is-active{% endif %}" data-panel="home-collection">
+          <div class="m-mobile-panel {% if active_tab == 'home-collection' %}is-active{% endif %}" data-panel="home-collection">
             {% render 'mobile-menu-panel', menu_handle: 'main-store-home-collection' %}
           </div>
         {% endif %}
