@@ -148,16 +148,36 @@
             "html": ""
           }
         },
-        "banner_6mdFMn": {
-          "type": "banner",
+        "custom_html_iBm8Kj": {
+          "type": "custom_html",
           "settings": {
             "heading": "Shoes",
             "container": "inherit",
-            "banner_style": "outside",
-            "banner_link": "",
-            "banner_title": "New collection",
-            "banner_desc": "",
-            "banner_button_text": "Shop now"
+            "html": ""
+          }
+        },
+        "custom_html_9emTYa": {
+          "type": "custom_html",
+          "settings": {
+            "heading": "Baby",
+            "container": "inherit",
+            "html": ""
+          }
+        },
+        "custom_html_pRxDGh": {
+          "type": "custom_html",
+          "settings": {
+            "heading": "Boys",
+            "container": "inherit",
+            "html": ""
+          }
+        },
+        "custom_html_XfWCAX": {
+          "type": "custom_html",
+          "settings": {
+            "heading": "Girls",
+            "container": "inherit",
+            "html": ""
           }
         }
       },
@@ -174,7 +194,10 @@
         "custom_html_TfENwb",
         "custom_html_wdyKR6",
         "custom_html_fdNMTV",
-        "banner_6mdFMn"
+        "custom_html_iBm8Kj",
+        "custom_html_9emTYa",
+        "custom_html_pRxDGh",
+        "custom_html_XfWCAX"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
