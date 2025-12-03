@@ -97,19 +97,6 @@
     "custom_card_carousel_8rkRNX": {
       "type": "custom-card-carousel",
       "blocks": {
-        "card_YDQNh8": {
-          "type": "card",
-          "name": "Versace",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-womens-versace-dress.jpg",
-            "header_text": "Versace",
-            "subheader_text": "",
-            "link": "shopify://collections/versace-outlet",
-            "label_text": "70% OFF",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
         "card_nnMrtq": {
           "type": "card",
           "name": "Versace Jeans Couture",
@@ -123,11 +110,24 @@
             "button_text": "Shop Now"
           }
         },
+        "card_YDQNh8": {
+          "type": "card",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-womens-versace-dress.jpg",
+            "header_text": "Versace",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
         "card_iLGBxT": {
           "type": "card",
           "name": "Moschino",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-philipp-plein-mens-hoodie-2.png",
+            "image": "shopify://shop_images/lestyle-model-mens-moschino-jumper.jpg",
             "header_text": "Moschino",
             "subheader_text": "",
             "link": "shopify://collections/moschino-outlet",
@@ -177,8 +177,8 @@
         }
       },
       "block_order": [
-        "card_YDQNh8",
         "card_nnMrtq",
+        "card_YDQNh8",
         "card_iLGBxT",
         "card_wMW4xV",
         "card_hEQNbW",
