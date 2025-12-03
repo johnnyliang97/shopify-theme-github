@@ -101,7 +101,7 @@
           "type": "card",
           "name": "Versace",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.png",
+            "image": "shopify://shop_images/lestyle-model-womens-versace-dress.jpg",
             "header_text": "Versace",
             "subheader_text": "",
             "link": "shopify://collections/versace-outlet",
@@ -114,7 +114,7 @@
           "type": "card",
           "name": "Versace Jeans Couture",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-mens-tshirt-shorts.png",
+            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
             "header_text": "Versace Jeans Couture",
             "subheader_text": "",
             "link": "shopify://collections/versace-jeans-couture-outlet",
