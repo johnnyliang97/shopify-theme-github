@@ -1,1 +1,308 @@
-{"sections":{"main":{"type":"page-about-us","disabled":true,"custom_css":[".m-breadcrumb--wrapper {display: none;}"],"name":"Page Title","settings":{}},"17601009311f9400d0":{"type":"_blocks","blocks":{"ai_gen_block_c955ae7_cpG3EC":{"type":"ai_gen_block_c955ae7","settings":{"banner_height_desktop":600,"banner_height_mobile":540,"image_1_desktop":"shopify:\/\/shop_images\/outlet-banner-men-women.jpg","image_1_mobile":"shopify:\/\/shop_images\/outlet-banner-mobile-women.jpg","image_2_desktop":"shopify:\/\/shop_images\/outlet-banner-bag-kids.jpg","image_2_mobile":"shopify:\/\/shop_images\/outlet-banner-mobile-men.jpg","slide_interval":3,"fade_duration":1,"show_overlay":true,"overlay_color":"#000000","overlay_opacity":30,"content_max_width":600,"text_color":"#ffffff","subheader":"BLACK FRIDAY SALE","subheader_size":16,"subheader_margin":20,"header":"70% OFF","header_size":80,"header_weight":"500","header_margin":40,"text":"Shop designer outlet sale online","text_size":14,"text_margin":30,"button_1_text":"Men","button_1_link":"shopify:\/\/collections\/mens-outlet","button_primary_bg":"#000000","button_primary_text":"#ffffff","button_primary_hover_bg":"#ffffff","button_primary_hover_text":"#000000","button_2_text":"Women","button_2_link":"shopify:\/\/collections\/womens-outlet","button_secondary_bg":"#000000","button_secondary_text":"#ffffff","button_secondary_hover_bg":"#ffffff","button_secondary_hover_text":"#000000","button_3_text":"Kids","button_3_link":"shopify:\/\/collections\/kids-outlet","button_tertiary_bg":"#000000","button_tertiary_text":"#ffffff","button_tertiary_hover_bg":"#ffffff","button_tertiary_hover_text":"#000000","button_gap":15,"button_padding_vertical":14,"button_padding_horizontal":30,"button_font_size":14,"button_border_radius":4},"blocks":{}}},"block_order":["ai_gen_block_c955ae7_cpG3EC"],"name":"Banner Section","settings":{}},"empty_space_iWJHNV":{"type":"empty-space","name":"Empty space","settings":{"container":"container-fluid","color_scheme":"","show_divider_line":false,"divider_style":"solid","divider_height":1,"padding_top":50,"padding_bottom":50,"custom_class":""}},"17601442311ee106da":{"type":"_blocks","blocks":{"ai_gen_block_cffe5ba_bjyjNW":{"type":"ai_gen_block_cffe5ba","settings":{"main_heading":"ON SALE THIS WEEK","heading_size":32,"heading_color":"#222222","show_nav_links":true,"nav_link_1_text":"Women","nav_link_1_url":"shopify:\/\/collections\/womens-outlet","nav_link_2_text":"Men","nav_link_2_url":"shopify:\/\/collections\/mens-outlet","nav_link_3_text":"Kids","nav_link_3_url":"shopify:\/\/collections\/kids-outlet","nav_link_4_text":"Home","nav_link_4_url":"shopify:\/\/collections\/home-collection-outlet","nav_link_5_text":"","nav_link_5_url":"","nav_link_color":"#666666","nav_link_hover_color":"#222222","auto_scroll":true,"auto_scroll_delay":5,"show_dots":true,"carousel_border_radius":12,"tile_text_color":"#ffffff","tile_accent_color":"#da3f3f","tile_title_size":46,"tile_offer_size":20,"tile_desktop_height":460,"tile_mobile_height":460,"primary_button_bg":"#ffffff","primary_button_text":"#222222","primary_button_hover_bg":"#222222","primary_button_hover_text":"#ffffff","dot_color":"#cccccc","dot_active_color":"#222222","tile_1_enabled":true,"tile_1_title_leading":"","tile_1_title_main":"UNDER $100","tile_1_offer":"GIFT IDEA","tile_1_description":"Surprise your loved ones with a little luxury","tile_1_primary_button_text":"Shop Now","tile_1_primary_button_url":"shopify:\/\/collections\/outlet-under-100","tile_1_terms":"","tile_1_background_color":"#000000","tile_1_background_image":"shopify:\/\/shop_images\/0001-7234387809385588621.png","tile_1_enable_color_overlay":true,"tile_1_color_overlay":"#000000","tile_1_overlay_opacity":30,"tile_2_enabled":true,"tile_2_title_leading":"","tile_2_title_main":"70% OFF","tile_2_offer":"KIDS COLLECTION","tile_2_description":"Save on a range of amazing designer kidswear","tile_2_primary_button_text":"Shop Now","tile_2_primary_button_url":"shopify:\/\/collections\/kids-outlet","tile_2_terms":"","tile_2_background_color":"#000000","tile_2_background_image":"shopify:\/\/shop_images\/boss-kids-01.png","tile_2_enable_color_overlay":true,"tile_2_color_overlay":"#000000","tile_2_overlay_opacity":30,"tile_3_enabled":true,"tile_3_title_leading":"","tile_3_title_main":"70% OFF","tile_3_offer":"MOSCHINO","tile_3_description":"Save on bold graphics, playful designs from Moschino","tile_3_primary_button_text":"Shop Now","tile_3_primary_button_url":"shopify:\/\/collections\/moschino-outlet","tile_3_terms":"","tile_3_background_color":"#000000","tile_3_background_image":"shopify:\/\/shop_images\/Lestyle_Product_9_e62a2230-1f7c-4e8a-8f56-cd7467f6d745.jpg","tile_3_enable_color_overlay":true,"tile_3_color_overlay":"#000000","tile_3_overlay_opacity":30},"blocks":{}}},"block_order":["ai_gen_block_cffe5ba_bjyjNW"],"custom_css":[],"name":"TacTiles","settings":{}},"empty_space_3bhqVP":{"type":"empty-space","name":"Empty space","settings":{"container":"container-fluid","color_scheme":"","show_divider_line":false,"divider_style":"solid","divider_height":1,"padding_top":50,"padding_bottom":50,"custom_class":""}},"featured_collection_eVUk6N":{"type":"featured-collection","name":"Recently Update","settings":{"heading":"UPDATE DAILY","heading_size":"h3","subheading":"","description":"","header_alignment":"center","color_scheme":"","container":"container-fluid","collection":"lestyle-outlet","enable_flashsale":false,"show_countdown":false,"product_to_show":6,"items_per_row":4,"item_gap":30,"pcard_layout":"","pcard_image_ratio":"","show_vendor":false,"hide_title":false,"enable_slider":false,"show_pagination":false,"show_navigation":false,"show_button_on_header":true,"button_type":"load","button_text":"Shop more","button_style":"m-button--plain","button_size":"","infinite_load":true,"max_page_load":4,"mobile_disable_slider":true,"use_scroll_mobile":false,"item_gap_mobile":16,"padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}},"promotion_banner_b8KJm6":{"type":"promotion-banner","name":"Shop Now Button","settings":{"container":"container-fluid","color_scheme":"","heading":"","heading_size":"h2","text":"","content_alignment":"center","banner_url":"shopify:\/\/collections\/lestyle-outlet","button_label":"Shop More","button_style":"m-button--secondary","button_size":"","padding_top":0,"padding_bottom":40,"custom_class":"","animations":"inherit","enable_preload_image":false}},"empty_space_R7QyYa":{"type":"empty-space","name":"Empty space","settings":{"container":"container-fluid","color_scheme":"","show_divider_line":false,"divider_style":"solid","divider_height":1,"padding_top":50,"padding_bottom":50,"custom_class":""}}},"order":["main","17601009311f9400d0","empty_space_iWJHNV","17601442311ee106da","empty_space_3bhqVP","featured_collection_eVUk6N","promotion_banner_b8KJm6","empty_space_R7QyYa"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-about-us",
+      "disabled": true,
+      "custom_css": [
+        ".m-breadcrumb--wrapper {display: none;}"
+      ],
+      "name": "Page Title",
+      "settings": {}
+    },
+    "17601009311f9400d0": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c955ae7_cpG3EC": {
+          "type": "ai_gen_block_c955ae7",
+          "settings": {
+            "banner_height_desktop": 600,
+            "banner_height_mobile": 540,
+            "image_1_desktop": "shopify://shop_images/outlet-banner-men-women.jpg",
+            "image_1_mobile": "shopify://shop_images/outlet-banner-mobile-women.jpg",
+            "image_2_desktop": "shopify://shop_images/outlet-banner-bag-kids.jpg",
+            "image_2_mobile": "shopify://shop_images/outlet-banner-mobile-men.jpg",
+            "slide_interval": 3,
+            "fade_duration": 1,
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "content_max_width": 600,
+            "text_color": "#ffffff",
+            "subheader": "OUTLET SALE",
+            "subheader_size": 16,
+            "subheader_margin": 20,
+            "header": "70% OFF",
+            "header_size": 80,
+            "header_weight": "500",
+            "header_margin": 40,
+            "text": "Shop designer outlet sale online",
+            "text_size": 14,
+            "text_margin": 30,
+            "button_1_text": "Men",
+            "button_1_link": "shopify://collections/mens-outlet",
+            "button_primary_bg": "#000000",
+            "button_primary_text": "#ffffff",
+            "button_primary_hover_bg": "#ffffff",
+            "button_primary_hover_text": "#000000",
+            "button_2_text": "Women",
+            "button_2_link": "shopify://collections/womens-outlet",
+            "button_secondary_bg": "#000000",
+            "button_secondary_text": "#ffffff",
+            "button_secondary_hover_bg": "#ffffff",
+            "button_secondary_hover_text": "#000000",
+            "button_3_text": "Kids",
+            "button_3_link": "shopify://collections/kids-outlet",
+            "button_tertiary_bg": "#000000",
+            "button_tertiary_text": "#ffffff",
+            "button_tertiary_hover_bg": "#ffffff",
+            "button_tertiary_hover_text": "#000000",
+            "button_gap": 15,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 30,
+            "button_font_size": 14,
+            "button_border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c955ae7_cpG3EC"
+      ],
+      "name": "Banner Section",
+      "settings": {}
+    },
+    "empty_space_iWJHNV": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
+      }
+    },
+    "custom_card_carousel_8rkRNX": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_YDQNh8": {
+          "type": "card",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.png",
+            "header_text": "Versace",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_nnMrtq": {
+          "type": "card",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-mens-tshirt-shorts.png",
+            "header_text": "Versace Jeans Couture",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_iLGBxT": {
+          "type": "card",
+          "name": "Moschino",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-philipp-plein-mens-hoodie-2.png",
+            "header_text": "Moschino",
+            "subheader_text": "",
+            "link": "shopify://collections/moschino-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_wMW4xV": {
+          "type": "card",
+          "name": "Dsquared2",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-fendi-top.png",
+            "header_text": "Dsquared2",
+            "subheader_text": "",
+            "link": "shopify://collections/dsquared2-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_hEQNbW": {
+          "type": "card",
+          "name": "Roberto Cavalli",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
+            "header_text": "Roberto Cavalli",
+            "subheader_text": "",
+            "link": "shopify://collections/roberto-cavalli-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_tCRygE": {
+          "type": "card",
+          "name": "Balmain",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-palm-angels-mens-sweatshirt.png",
+            "header_text": "Balmain",
+            "subheader_text": "",
+            "link": "shopify://collections/balmain-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_YDQNh8",
+        "card_nnMrtq",
+        "card_iLGBxT",
+        "card_wMW4xV",
+        "card_hEQNbW",
+        "card_tCRygE"
+      ],
+      "name": "Brands",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Top Brands On Sale",
+        "image_ratio_desktop": "100",
+        "image_ratio_mobile": "125",
+        "heading_size": 26,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "400",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
+        "items_per_row": 5,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "empty_space_3bhqVP": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
+      }
+    },
+    "featured_collection_eVUk6N": {
+      "type": "featured-collection",
+      "name": "Recently Update",
+      "settings": {
+        "heading": "Last Chance to Get",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "left",
+        "color_scheme": "",
+        "container": "container-fluid",
+        "collection": "lestyle-outlet",
+        "enable_flashsale": false,
+        "show_countdown": false,
+        "product_to_show": 6,
+        "items_per_row": 4,
+        "item_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "show_button_on_header": true,
+        "button_type": "load",
+        "button_text": "Shop more",
+        "button_style": "m-button--plain",
+        "button_size": "",
+        "infinite_load": true,
+        "max_page_load": 4,
+        "mobile_disable_slider": true,
+        "use_scroll_mobile": false,
+        "item_gap_mobile": 16,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "promotion_banner_b8KJm6": {
+      "type": "promotion-banner",
+      "name": "Shop Now Button",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "heading": "",
+        "heading_size": "h2",
+        "text": "",
+        "content_alignment": "center",
+        "banner_url": "shopify://collections/lestyle-outlet",
+        "button_label": "Shop More",
+        "button_style": "m-button--secondary",
+        "button_size": "",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "custom_class": "",
+        "animations": "inherit",
+        "enable_preload_image": false
+      }
+    },
+    "empty_space_R7QyYa": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17601009311f9400d0",
+    "empty_space_iWJHNV",
+    "custom_card_carousel_8rkRNX",
+    "empty_space_3bhqVP",
+    "featured_collection_eVUk6N",
+    "promotion_banner_b8KJm6",
+    "empty_space_R7QyYa"
+  ]
+}
