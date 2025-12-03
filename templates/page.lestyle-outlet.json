@@ -188,7 +188,7 @@
       "settings": {
         "container_type": "container-fluid",
         "heading": "Top Brands On Sale",
-        "image_ratio_desktop": "100",
+        "image_ratio_desktop": "125",
         "image_ratio_mobile": "125",
         "heading_size": 26,
         "heading_weight": "500",
@@ -197,6 +197,131 @@
         "card_subheader_size": 14,
         "card_subheader_weight": "400",
         "items_per_row": 5,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_card_carousel_fmdyea": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_enmBYq": {
+          "type": "card",
+          "name": "Outlet Under $500",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "header_text": "Outlet Under $500",
+            "subheader_text": "",
+            "link": "shopify://collections/outlet-under-500",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_Bwh76T": {
+          "type": "card",
+          "name": "Outlet Under $100",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "header_text": "Outlet Under $100",
+            "subheader_text": "",
+            "link": "shopify://collections/outlet-under-100",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_WdmBx3": {
+          "type": "card",
+          "name": "Bags",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "header_text": "Bags",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_hRcxVY": {
+          "type": "card",
+          "name": "T-Shirts & Tops",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.webp",
+            "header_text": "T-Shirts & Tops",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_CdRaDQ": {
+          "type": "card",
+          "name": "Sweatshirts",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-mens-moschino-jumper.jpg",
+            "header_text": "Sweatshirts",
+            "subheader_text": "",
+            "link": "shopify://collections/moschino-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_36dkwT": {
+          "type": "card",
+          "name": "Dresses",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-cavalli-mens-tshirt.webp",
+            "header_text": "Dresses",
+            "subheader_text": "",
+            "link": "shopify://collections/roberto-cavalli-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_Tme8Xb": {
+          "type": "card",
+          "name": "Shirts",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-balmain-kids-dress.webp",
+            "header_text": "Shirts",
+            "subheader_text": "",
+            "link": "shopify://collections/balmain-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_enmBYq",
+        "card_Bwh76T",
+        "card_WdmBx3",
+        "card_hRcxVY",
+        "card_CdRaDQ",
+        "card_36dkwT",
+        "card_Tme8Xb"
+      ],
+      "name": "Brands",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Trending Bestsellers",
+        "image_ratio_desktop": "125",
+        "image_ratio_mobile": "125",
+        "heading_size": 26,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "400",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
+        "items_per_row": 4,
         "autoplay": false,
         "autoplay_speed": 5,
         "show_navigation": true,
@@ -300,6 +425,7 @@
     "17601009311f9400d0",
     "empty_space_iWJHNV",
     "custom_card_carousel_8rkRNX",
+    "custom_card_carousel_fmdyea",
     "empty_space_3bhqVP",
     "featured_collection_eVUk6N",
     "promotion_banner_b8KJm6",
