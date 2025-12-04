@@ -249,6 +249,19 @@
         },
         "card_dtFdem": {
           "type": "card",
+          "name": "Gifts for Kids",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-kids-girls-balmain-tshirt-dress.jpg",
+            "header_text": "Gifts for Kids",
+            "subheader_text": "",
+            "link": "shopify://collections/kids",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_zFcJyj": {
+          "type": "card",
           "name": "Gifts for Her",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-balmain-womens-christmas-sweater.jpg",
@@ -292,6 +305,7 @@
         "card_Qc7zEM",
         "card_BfVQWe",
         "card_dtFdem",
+        "card_zFcJyj",
         "card_6YENz3",
         "card_jVynpa"
       ],
