@@ -428,6 +428,9 @@
       font-weight: normal;
       text-transform: uppercase;
     }
+    .header-text-links-container .header-text-link--outlet {
+      color: #dc4648;
+    }
     .header-text-links-container .header-text-link.selected,
     .header-text-links-container .header-text-link:hover {
       font-weight: bold;
@@ -472,6 +475,7 @@
     <a href="/collections/womens" class="header-text-link {% if is_womens_selected %}selected{% endif %}">Womens</a>
     <a href="/collections/kids" class="header-text-link {% if is_kids_selected %}selected{% endif %}">Kids</a>
     <a href="/collections/home-collection" class="header-text-link {% if is_home_selected %}selected{% endif %}">Home Collection</a>
+    <a href="{{ outlet_href }}" class="header-text-link header-text-link--outlet">Outlet</a>
   {% endif %}
 
   {% liquid
