@@ -264,7 +264,7 @@
           "type": "card",
           "name": "T-Shirts & Tops",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.webp",
+            "image": "shopify://shop_images/lestyle-model-kenzo-kids-long-sleeves.webp",
             "header_text": "T-Shirts & Tops",
             "subheader_text": "Designer tops sale for Men, Women and Kids",
             "link": "shopify://collections/t-shirts-tops-outlet",
@@ -277,7 +277,7 @@
           "type": "card",
           "name": "Dresses",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-cavalli-mens-tshirt.webp",
+            "image": "shopify://shop_images/lestyle-model-vjc-womens-dress.jpg",
             "header_text": "Dresses",
             "subheader_text": "Desginer dresses for all occasions from Moschino, Versace and more",
             "link": "shopify://collections/dresses-outlet",
@@ -290,9 +290,9 @@
           "type": "card",
           "name": "Shirts",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-balmain-kids-dress.webp",
-            "header_text": "Shirts with iconic prints from Versace, Roberto Cavalli and more",
-            "subheader_text": "",
+            "image": "shopify://shop_images/download-2024-07-05T115243.661.jpg",
+            "header_text": "Shirts",
+            "subheader_text": "Shirts with iconic prints from Versace, Roberto Cavalli and more",
             "link": "shopify://collections/shirts-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
