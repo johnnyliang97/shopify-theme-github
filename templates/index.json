@@ -998,10 +998,10 @@
       "name": "Banner - Outlet",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-model-vjc-mens-shirt_ebfe9a81-acdd-44cf-98f7-4c59507e0941.png",
+        "image": "shopify://shop_images/lestyle-outlet-under100.jpg",
         "image_link": "shopify://pages/lestyle-outlet",
         "image_position": "left",
-        "background_color": "#0e0e0e",
+        "background_color": "#393939",
         "text_color": "#eeeeee",
         "content_alignment": "center",
         "title_type": "image",
