@@ -40,7 +40,7 @@
             "subheader": "OUTLET SALE",
             "subheader_size": 16,
             "subheader_margin": 20,
-            "header": "70% OFF",
+            "header": "50% - 70% OFF",
             "header_size": 80,
             "header_weight": "500",
             "header_margin": 40,
@@ -212,9 +212,9 @@
           "type": "card",
           "name": "Outlet Under $500",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "image": "shopify://shop_images/black-down-velvet-jacket.jpg",
             "header_text": "Outlet Under $500",
-            "subheader_text": "",
+            "subheader_text": "Lestyle's curated outlet collections",
             "link": "shopify://collections/outlet-under-500",
             "label_text": "70% OFF",
             "label_color": "#b30505",
@@ -225,9 +225,9 @@
           "type": "card",
           "name": "Outlet Under $100",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "image": "shopify://shop_images/lestyle-outlet-under100.jpg",
             "header_text": "Outlet Under $100",
-            "subheader_text": "",
+            "subheader_text": "Shop designer pieces at bargain prices",
             "link": "shopify://collections/outlet-under-100",
             "label_text": "70% OFF",
             "label_color": "#b30505",
@@ -238,10 +238,23 @@
           "type": "card",
           "name": "Bags",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "image": "shopify://shop_images/lestyle-outlet-accessories.jpg",
+            "header_text": "Accessories",
+            "subheader_text": "Belts, keychains, phone cases, caps and more",
+            "link": "shopify://collections/accessories-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_GTfJza": {
+          "type": "card",
+          "name": "Bags",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-outlet-bags.jpg",
             "header_text": "Bags",
-            "subheader_text": "",
-            "link": "shopify://collections/versace-jeans-couture-outlet",
+            "subheader_text": "Designer bags from Moschino, Roberto Cavalli and more",
+            "link": "shopify://collections/bags-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -253,21 +266,8 @@
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-womens-dress.webp",
             "header_text": "T-Shirts & Tops",
-            "subheader_text": "",
-            "link": "shopify://collections/versace-outlet",
-            "label_text": "70% OFF",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_CdRaDQ": {
-          "type": "card",
-          "name": "Sweatshirts",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-mens-moschino-jumper.jpg",
-            "header_text": "Sweatshirts",
-            "subheader_text": "",
-            "link": "shopify://collections/moschino-outlet",
+            "subheader_text": "Designer tops sale for Men, Women and Kids",
+            "link": "shopify://collections/t-shirts-tops-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -279,8 +279,8 @@
           "settings": {
             "image": "shopify://shop_images/lestyle-model-cavalli-mens-tshirt.webp",
             "header_text": "Dresses",
-            "subheader_text": "",
-            "link": "shopify://collections/roberto-cavalli-outlet",
+            "subheader_text": "Desginer dresses for all occasions from Moschino, Versace and more",
+            "link": "shopify://collections/dresses-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -291,9 +291,9 @@
           "name": "Shirts",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-balmain-kids-dress.webp",
-            "header_text": "Shirts",
+            "header_text": "Shirts with iconic prints from Versace, Roberto Cavalli and more",
             "subheader_text": "",
-            "link": "shopify://collections/balmain-outlet",
+            "link": "shopify://collections/shirts-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -304,8 +304,8 @@
         "card_enmBYq",
         "card_Bwh76T",
         "card_WdmBx3",
+        "card_GTfJza",
         "card_hRcxVY",
-        "card_CdRaDQ",
         "card_36dkwT",
         "card_Tme8Xb"
       ],
