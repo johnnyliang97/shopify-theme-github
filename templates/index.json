@@ -674,6 +674,18 @@
             "button_text": "Shop Now"
           }
         },
+        "card_bCbiwC": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-cavalli-mens-shirt.webp",
+            "header_text": "Sale",
+            "subheader_text": "",
+            "link": "",
+            "label_text": "UP TO 60% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
         "card_GPNkT8": {
           "type": "card",
           "name": "Bags",
@@ -755,6 +767,7 @@
       },
       "block_order": [
         "card_afBRKH",
+        "card_bCbiwC",
         "card_GPNkT8",
         "card_jQgeEQ",
         "card_36hpWk",
