@@ -113,7 +113,12 @@
 
           assign discount = ''
           if sale_badge_type == 'percentage'
-            assign discount = save_amount | times: 100.0 | divided_by: compare_at_price | round | append: '%'
+            assign discount_percent = save_amount | times: 100.0 | divided_by: compare_at_price
+            assign discount_percent = discount_percent | divided_by: 5.0 | round | times: 5
+            if discount_percent < 5
+              assign discount_percent = 5
+            endif
+            assign discount = discount_percent | append: '% OFF'
           elsif sale_badge_type == 'fixed_amount'
             if settings.currency_code_enabled
               assign discount = save_amount | money_with_currency
@@ -125,7 +130,7 @@
         <div class="m-price__badge-sale" data-type="{{ sale_badge_type }}">
           <span class="m-product-tag m-product-tag--sale m-gradient m-color-{{ settings.sale_badge_color_scheme }}">
             {% unless sale_badge_type == 'text' %}
-              {% render 'new-locale', key: 'products.product.save_html', param: '{{ amount }}', value: discount %}
+              {{ discount }}
             {% else %}
               {% render 'new-locale', key: 'products.product.sale_text' %}
             {% endunless %}
