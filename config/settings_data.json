@@ -43,7 +43,7 @@
     "show_quickview_button": false,
     "show_wishlist_button": false,
     "show_compare_button": false,
-    "on_sale_badge": "show_text",
+    "on_sale_badge": "show_percentage",
     "show_badge_sale": false,
     "show_vendor": false,
     "uppercase_prd_name": true,

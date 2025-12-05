@@ -57,7 +57,11 @@
   assign on_sale = false
   if compare_at_price > price
     assign on_sale = true
-    assign discount = compare_at_price | minus: price | times: 100 | divided_by: compare_at_price
+    assign discount = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price
+    assign discount = discount | divided_by: 5.0 | round | times: 5
+    if discount < 5
+      assign discount = 5
+    endif
   endif
 
   assign show_on_sale_badge = false
