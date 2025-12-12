@@ -15,39 +15,47 @@
         "button_Lwnpef": {
           "type": "button",
           "settings": {
-            "label": "Shop Mens",
-            "link": "shopify://collections/palm-angels-for-mens",
+            "label": "Shop Chloe",
+            "link": "shopify://collections/chloe",
             "button_style": "m-button--secondary"
           }
         },
         "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Shop Womens",
-            "link": "shopify://collections/palm-angels-womens",
+            "label": "Shop Kenzo",
+            "link": "shopify://collections/kenzo",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_bdc8jp": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Boss",
+            "link": "shopify://collections/boss",
             "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
         "button_Lwnpef",
-        "button_k3PLAE"
+        "button_k3PLAE",
+        "button_bdc8jp"
       ],
       "name": "Banner - Main",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle_home_mobile_palm-angels-mens.jpg",
+        "image": "shopify://shop_images/lestyle-model-kids-chloe-kenzo-boss.gif",
         "image_link": "shopify://collections/palm-angels",
         "image_position": "left",
-        "background_color": "#f2e0e0",
+        "background_color": "#e2e3dc",
         "text_color": "#000000",
         "content_alignment": "center",
-        "title_type": "image",
-        "title_text": "Banner Title",
+        "title_type": "text",
+        "title_text": "Festive Perfect Styles",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/Palm-Angels-Logo_2000x_347a750a-69d0-446c-a625-f7b7e8ab13be.png",
         "title_image_width": 200,
-        "subheader_text": "<p>New collection arrives. Shop the iconic streetwear.</p>",
+        "subheader_text": "<p>Make their Christmas magical with gifts that blend style and comfort</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
