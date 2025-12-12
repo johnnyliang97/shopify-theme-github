@@ -729,7 +729,7 @@
             "image": "shopify://shop_images/lestyle-model-cavalli-mens-shirt.webp",
             "header_text": "Sale",
             "subheader_text": "",
-            "link": "",
+            "link": "shopify://collections/sale",
             "label_text": "UP TO 60% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
