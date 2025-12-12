@@ -31,7 +31,7 @@
         "button_bdc8jp": {
           "type": "button",
           "settings": {
-            "label": "Shop Boss",
+            "label": "Shop Hugo Boss",
             "link": "shopify://collections/boss",
             "button_style": "m-button--secondary"
           }
@@ -341,6 +341,45 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_9fYyNd": {
+          "type": "card",
+          "name": "Chloe",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-boss-kids-01.png",
+            "header_text": "Chloe",
+            "subheader_text": "",
+            "link": "shopify://collections/chloe",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_KBbgxn": {
+          "type": "card",
+          "name": "Kenzo",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-boss-kids-01.png",
+            "header_text": "Kenzo",
+            "subheader_text": "",
+            "link": "shopify://collections/kenzo",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_GcyLwV": {
+          "type": "card",
+          "name": "Boss",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-boss-kids-01.png",
+            "header_text": "BOSS",
+            "subheader_text": "",
+            "link": "shopify://collections/boss",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
         "card_9pRebr": {
           "type": "card",
           "name": "Versace",
@@ -349,7 +388,7 @@
             "header_text": "Versace",
             "subheader_text": "",
             "link": "shopify://collections/versace",
-            "label_text": "NEW",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": "Shop Now"
           }
@@ -434,6 +473,9 @@
         }
       },
       "block_order": [
+        "card_9fYyNd",
+        "card_KBbgxn",
+        "card_GcyLwV",
         "card_9pRebr",
         "card_EJfrR9",
         "card_HpbLmm",
