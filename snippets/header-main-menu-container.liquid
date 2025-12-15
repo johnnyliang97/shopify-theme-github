@@ -33,7 +33,9 @@
           assign block_menu_scope = block.settings.for_menu_handle | default: ''
           assign is_scope_matched = true
           if block_menu_scope != ''
-            assign is_scope_matched = block_menu_scope == menu_handle
+            if block_menu_scope != menu_handle
+              assign is_scope_matched = false
+            endif
           endif
 
           if menu_title == blank or menu_title != title_handle or is_scope_matched == false
