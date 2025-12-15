@@ -330,6 +330,42 @@
             "subtitle_color": "#666666",
             "button_text_color": "#000000"
           }
+        },
+        "banner_g8gcVf": {
+          "type": "banner",
+          "name": "Kids",
+          "settings": {
+            "heading": "Designers",
+            "for_menu_handle": "main-store-kids",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-chloe-kenzo-kids.jpg",
+            "banner_link": "shopify://collections/kids-new-arrivals",
+            "banner_title": "New Collections",
+            "banner_desc": "Chloe, Kenzo, Hugo Boss",
+            "banner_button_text": "Shop Now",
+            "title_color": "#222222",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#222222"
+          }
+        },
+        "banner_d9XHzn": {
+          "type": "banner",
+          "name": "Kids",
+          "settings": {
+            "heading": "Baby",
+            "for_menu_handle": "main-store-kids",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-kenzo-kids-rompers.jpg",
+            "banner_link": "shopify://collections/clothing-for-baby",
+            "banner_title": "Baby Rompers",
+            "banner_desc": "Up to 36-month",
+            "banner_button_text": "Shop Now",
+            "title_color": "#222222",
+            "subtitle_color": "#666666",
+            "button_text_color": "#222222"
+          }
         }
       },
       "block_order": [
@@ -348,7 +384,9 @@
         "banner_YQKcaD",
         "banner_J8cHpq",
         "banner_zgREWE",
-        "banner_aCK9Wn"
+        "banner_aCK9Wn",
+        "banner_g8gcVf",
+        "banner_d9XHzn"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
