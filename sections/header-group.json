@@ -45,6 +45,7 @@
       "blocks": {
         "banner_PEhNCb": {
           "type": "banner",
+          "name": "Mens",
           "settings": {
             "heading": "Designers",
             "for_menu_handle": "main-store-mens",
@@ -54,12 +55,53 @@
             "banner_link": "shopify://collections/palm-angels-for-mens",
             "banner_title": "Palm Angels",
             "banner_desc": "New Collection",
-            "banner_button_text": "Shop now"
+            "banner_button_text": "Shop Now",
+            "title_color": "#000000",
+            "subtitle_color": "#666666",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_LDTKfJ": {
+          "type": "banner",
+          "name": "Mens",
+          "settings": {
+            "heading": "Accessories",
+            "for_menu_handle": "main-store-mens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle_product_image_09122025_424010_409690df-0a82-4726-8250-f9a40e186e3b.jpg",
+            "banner_link": "shopify://collections/philipp-plein-mens-accessories",
+            "banner_title": "Philipp Plein Accessories",
+            "banner_desc": "Watches + Jewellery",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_HGcBKK": {
+          "type": "banner",
+          "name": "Mens",
+          "settings": {
+            "heading": "Bags",
+            "for_menu_handle": "main-store-mens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle_product_image_09122025_424010_409690df-0a82-4726-8250-f9a40e186e3b.jpg",
+            "banner_link": "shopify://collections/philipp-plein-mens-accessories",
+            "banner_title": "Philipp Plein Accessories",
+            "banner_desc": "Watches + Jewellery",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#ffffff"
           }
         }
       },
       "block_order": [
-        "banner_PEhNCb"
+        "banner_PEhNCb",
+        "banner_LDTKfJ",
+        "banner_HGcBKK"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
