@@ -43,179 +43,22 @@
     "header": {
       "type": "header",
       "blocks": {
-        "5e153016-a9d7-46c9-a10e-30d16446793d": {
-          "type": "topbar",
-          "disabled": true,
-          "settings": {
-            "color_scheme": "",
-            "show_divider": true,
-            "transparent_on_top": false,
-            "show_phone_numb": false,
-            "show_email": false,
-            "show_social_links": false,
-            "show_stores_page": false,
-            "show_currency_switcher": false,
-            "show_country_selector": false,
-            "show_language_switcher": false,
-            "alert_message": "<span>Lestyle Website Updated</span>"
-          }
-        },
-        "custom_html_8z9NYN": {
-          "type": "custom_html",
+        "banner_PEhNCb": {
+          "type": "banner",
           "settings": {
             "heading": "Designers",
+            "for_menu_handle": "main-store-mens",
             "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_Te4mGm": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Mens",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_LGzDEY": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Womens",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_iGireC": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Kids",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_BzNrHk": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Home Collection",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_wKaHA8": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Sale",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_abg7N3": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Outlet",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_pXzyQb": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Accessories",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_TfENwb": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Bags",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_wdyKR6": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Clothing",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_fdNMTV": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Jewellery",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_iBm8Kj": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Shoes",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_9emTYa": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Baby",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_pRxDGh": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Boys",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_XfWCAX": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Girls",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_tHwQfX": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Linens & Bedding",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_waXkeP": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Tableware",
-            "container": "inherit",
-            "html": ""
+            "banner_style": "outside",
+            "banner_link": "",
+            "banner_title": "New collection",
+            "banner_desc": "",
+            "banner_button_text": "Shop now"
           }
         }
       },
       "block_order": [
-        "5e153016-a9d7-46c9-a10e-30d16446793d",
-        "custom_html_8z9NYN",
-        "custom_html_Te4mGm",
-        "custom_html_LGzDEY",
-        "custom_html_iGireC",
-        "custom_html_BzNrHk",
-        "custom_html_wKaHA8",
-        "custom_html_abg7N3",
-        "custom_html_pXzyQb",
-        "custom_html_TfENwb",
-        "custom_html_wdyKR6",
-        "custom_html_fdNMTV",
-        "custom_html_iBm8Kj",
-        "custom_html_9emTYa",
-        "custom_html_pRxDGh",
-        "custom_html_XfWCAX",
-        "custom_html_tHwQfX",
-        "custom_html_waXkeP"
+        "banner_PEhNCb"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
