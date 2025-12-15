@@ -18,6 +18,85 @@
       "name": "Page Title",
       "settings": {}
     },
+    "split_banner_6z6DLt": {
+      "type": "split-banner",
+      "blocks": {
+        "button_D4MmnF": {
+          "type": "button",
+          "settings": {
+            "label": "Mens",
+            "link": "shopify://collections/mens-outlet",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_MTn6Lj": {
+          "type": "button",
+          "settings": {
+            "label": "Womens",
+            "link": "shopify://collections/womens-outlet",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_k3JbLN": {
+          "type": "button",
+          "settings": {
+            "label": "Kids",
+            "link": "shopify://collections/kids-outlet",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_VHyXmX": {
+          "type": "button",
+          "settings": {
+            "label": "Under $500",
+            "link": "shopify://collections/outlet-under-500",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_PfJEc4": {
+          "type": "button",
+          "settings": {
+            "label": "Under $100",
+            "link": "shopify://collections/outlet-under-100",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_4zMhCE": {
+          "type": "button",
+          "settings": {
+            "label": "Shop All",
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--white"
+          }
+        }
+      },
+      "block_order": [
+        "button_D4MmnF",
+        "button_MTn6Lj",
+        "button_k3JbLN",
+        "button_VHyXmX",
+        "button_PfJEc4",
+        "button_4zMhCE"
+      ],
+      "name": "Banner - Christmas",
+      "settings": {
+        "container": "container",
+        "image": "shopify://shop_images/lestyle-model-vjc-womens-dress01.png",
+        "image_link": "shopify://collections/lestyle-outlet",
+        "image_position": "left",
+        "background_color": "#000000",
+        "text_color": "#da3f3f",
+        "content_alignment": "center",
+        "title_type": "text",
+        "title_text": "50—70% OFF",
+        "title_size": "h2",
+        "title_image_width": 180,
+        "subheader_text": "<p>Explore exceptional savings on luxury designer fashion at Lestyle Boutique's exclusive Outlet collection</p>",
+        "subheader_size": "text-base",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "17601009311f9400d0": {
       "type": "_blocks",
       "blocks": {
@@ -77,6 +156,7 @@
       "block_order": [
         "ai_gen_block_c955ae7_cpG3EC"
       ],
+      "disabled": true,
       "name": "Banner Section",
       "settings": {}
     },
@@ -422,6 +502,7 @@
   },
   "order": [
     "main",
+    "split_banner_6z6DLt",
     "17601009311f9400d0",
     "empty_space_iWJHNV",
     "custom_card_carousel_8rkRNX",
