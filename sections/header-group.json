@@ -492,6 +492,24 @@
             "subtitle_color": "#666666",
             "button_text_color": "#ffffff"
           }
+        },
+        "banner_4WAmWE": {
+          "type": "banner",
+          "name": "Home Collection",
+          "settings": {
+            "heading": "Mens",
+            "for_menu_handle": "outlet-menu",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "banner_link": "shopify://collections/bathrobes",
+            "banner_title": "Mens Clothing",
+            "banner_desc": "50%—70% OFF",
+            "banner_button_text": "Shop Now",
+            "title_color": "#da3f3f",
+            "subtitle_color": "#666666",
+            "button_text_color": "#000000"
+          }
         }
       },
       "block_order": [
@@ -519,7 +537,8 @@
         "banner_wxHbMU",
         "banner_VkjPqE",
         "banner_9qr4Ec",
-        "banner_R7G47G"
+        "banner_R7G47G",
+        "banner_4WAmWE"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
