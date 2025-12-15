@@ -49,10 +49,11 @@
             "heading": "Designers",
             "for_menu_handle": "main-store-mens",
             "container": "inherit",
-            "banner_style": "outside",
-            "banner_link": "",
-            "banner_title": "New collection",
-            "banner_desc": "",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle_home_mobile_palm-angels-mens.jpg",
+            "banner_link": "shopify://collections/palm-angels-for-mens",
+            "banner_title": "Palm Angels",
+            "banner_desc": "New Collection",
             "banner_button_text": "Shop now"
           }
         }
