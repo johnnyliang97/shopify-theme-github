@@ -222,6 +222,78 @@
             "subtitle_color": "#bbbbbb",
             "button_text_color": "#ffffff"
           }
+        },
+        "banner_DRndzT": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Bags",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/18126572_38546958_1000.jpg",
+            "banner_link": "shopify://collections/versace-bags-womens",
+            "banner_title": "Versace",
+            "banner_desc": "Bags",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_b3eTtT": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Clothing",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-versace-swimwear-womens.jpg",
+            "banner_link": "shopify://collections/swimwear-for-womens",
+            "banner_title": "Swimwear",
+            "banner_desc": "Summer Ready",
+            "banner_button_text": "Shop Now",
+            "title_color": "#000000",
+            "subtitle_color": "#666666",
+            "button_text_color": "#000000"
+          }
+        },
+        "banner_YQKcaD": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Jewellery",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-versace-jewellery-womens.jpg",
+            "banner_link": "shopify://collections/versace-jewellery-womens",
+            "banner_title": "Versace",
+            "banner_desc": "Jewellery",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#f5f5f5",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_J8cHpq": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Shoes",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-versace-jewellery-womens.jpg",
+            "banner_link": "shopify://collections/swimwear-for-womens",
+            "banner_title": "Versace",
+            "banner_desc": "Jewellery",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#f5f5f5",
+            "button_text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
@@ -234,7 +306,11 @@
         "banner_BGi4gc",
         "banner_WPkJbm",
         "banner_BM7XMi",
-        "banner_XY7Xat"
+        "banner_XY7Xat",
+        "banner_DRndzT",
+        "banner_b3eTtT",
+        "banner_YQKcaD",
+        "banner_J8cHpq"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
