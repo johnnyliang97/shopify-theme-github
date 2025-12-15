@@ -43,27 +43,11 @@
     "header": {
       "type": "header",
       "blocks": {
-        "5e153016-a9d7-46c9-a10e-30d16446793d": {
-          "type": "topbar",
-          "disabled": true,
-          "settings": {
-            "color_scheme": "",
-            "show_divider": true,
-            "transparent_on_top": false,
-            "show_phone_numb": false,
-            "show_email": false,
-            "show_social_links": false,
-            "show_stores_page": false,
-            "show_currency_switcher": false,
-            "show_country_selector": false,
-            "show_language_switcher": false,
-            "alert_message": "<span>Lestyle Website Updated</span>"
-          }
-        },
         "custom_html_8z9NYN": {
           "type": "custom_html",
           "settings": {
             "heading": "Designers",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -72,6 +56,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Mens",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -80,6 +65,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Womens",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -88,6 +74,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Kids",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -96,6 +83,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Home Collection",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -104,6 +92,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Sale",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -112,6 +101,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Outlet",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -120,6 +110,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Accessories",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -128,6 +119,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Bags",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -136,6 +128,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Clothing",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -144,6 +137,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Jewellery",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -152,6 +146,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Shoes",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -160,6 +155,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Baby",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -168,6 +164,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Boys",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -176,6 +173,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Girls",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -184,6 +182,7 @@
           "type": "custom_html",
           "settings": {
             "heading": "Linens & Bedding",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
@@ -192,13 +191,13 @@
           "type": "custom_html",
           "settings": {
             "heading": "Tableware",
+            "for_menu_handle": "",
             "container": "inherit",
             "html": ""
           }
         }
       },
       "block_order": [
-        "5e153016-a9d7-46c9-a10e-30d16446793d",
         "custom_html_8z9NYN",
         "custom_html_Te4mGm",
         "custom_html_LGzDEY",
