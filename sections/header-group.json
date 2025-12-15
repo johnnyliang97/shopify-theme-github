@@ -273,7 +273,7 @@
             "banner_desc": "Jewellery",
             "banner_button_text": "Shop Now",
             "title_color": "#ffffff",
-            "subtitle_color": "#f5f5f5",
+            "subtitle_color": "#eeeeee",
             "button_text_color": "#ffffff"
           }
         },
@@ -285,14 +285,50 @@
             "for_menu_handle": "main-store-womens",
             "container": "inherit",
             "banner_style": "inside",
-            "banner_image": "shopify://shop_images/lestyle-model-versace-jewellery-womens.jpg",
-            "banner_link": "shopify://collections/swimwear-for-womens",
-            "banner_title": "Versace",
-            "banner_desc": "Jewellery",
+            "banner_image": "shopify://shop_images/lestyle-model-sneakers-womens-givenchy.jpg",
+            "banner_link": "shopify://collections/sneakers-womens",
+            "banner_title": "Sneakers",
+            "banner_desc": "New Arrivals",
             "banner_button_text": "Shop Now",
             "title_color": "#ffffff",
-            "subtitle_color": "#f5f5f5",
+            "subtitle_color": "#bbbbbb",
             "button_text_color": "#ffffff"
+          }
+        },
+        "banner_zgREWE": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Sale",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-vjc-womens-dress_a539a706-fc56-4307-837a-3dcc2fb6e810.png",
+            "banner_link": "shopify://collections/sale-womens",
+            "banner_title": "Up to 60% OFF",
+            "banner_desc": "Womens Sale",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_aCK9Wn": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Outlet",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-versace-womens-dress.webp",
+            "banner_link": "shopify://collections/outlet-womens",
+            "banner_title": "50%—70% OFF",
+            "banner_desc": "Online Only",
+            "banner_button_text": "Shop Now",
+            "title_color": "#000000",
+            "subtitle_color": "#666666",
+            "button_text_color": "#000000"
           }
         }
       },
@@ -310,7 +346,9 @@
         "banner_DRndzT",
         "banner_b3eTtT",
         "banner_YQKcaD",
-        "banner_J8cHpq"
+        "banner_J8cHpq",
+        "banner_zgREWE",
+        "banner_aCK9Wn"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
