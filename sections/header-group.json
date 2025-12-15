@@ -71,8 +71,8 @@
             "banner_style": "inside",
             "banner_image": "shopify://shop_images/lestyle_product_image_09122025_424010_409690df-0a82-4726-8250-f9a40e186e3b.jpg",
             "banner_link": "shopify://collections/philipp-plein-mens-accessories",
-            "banner_title": "Philipp Plein Accessories",
-            "banner_desc": "Watches + Jewellery",
+            "banner_title": "Philipp Plein",
+            "banner_desc": "Watches & Jewellery",
             "banner_button_text": "Shop Now",
             "title_color": "#ffffff",
             "subtitle_color": "#bbbbbb",
@@ -87,21 +87,116 @@
             "for_menu_handle": "main-store-mens",
             "container": "inherit",
             "banner_style": "inside",
-            "banner_image": "shopify://shop_images/lestyle_product_image_09122025_424010_409690df-0a82-4726-8250-f9a40e186e3b.jpg",
-            "banner_link": "shopify://collections/philipp-plein-mens-accessories",
-            "banner_title": "Philipp Plein Accessories",
-            "banner_desc": "Watches + Jewellery",
+            "banner_image": "shopify://shop_images/lestyle-model-clutch-mens-versace.jpg",
+            "banner_link": "shopify://collections/versace-bags-for-mens",
+            "banner_title": "Versace",
+            "banner_desc": "Bags",
+            "banner_button_text": "Shop Now",
+            "title_color": "#666666",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#000000"
+          }
+        },
+        "banner_VeABGP": {
+          "type": "banner",
+          "name": "Mens",
+          "settings": {
+            "heading": "Clothing",
+            "for_menu_handle": "main-store-mens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-balmain-shorts.jpg",
+            "banner_link": "shopify://collections/balmain-for-mens",
+            "banner_title": "Balmain",
+            "banner_desc": "Shorts",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#eeeeee",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_3xEkWb": {
+          "type": "banner",
+          "name": "Mens",
+          "settings": {
+            "heading": "Jewellery",
+            "for_menu_handle": "main-store-mens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/90_1005334-1A00620_3J000_24_Medu.webp",
+            "banner_link": "shopify://collections/versace-jewellery-for-mens",
+            "banner_title": "Versace",
+            "banner_desc": "Jewellery",
+            "banner_button_text": "Shop Now",
+            "title_color": "#000000",
+            "subtitle_color": "#4b4b4b",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_3fxdwe": {
+          "type": "banner",
+          "name": "Mens",
+          "settings": {
+            "heading": "Shoes",
+            "for_menu_handle": "main-store-mens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-sneakers.jpg",
+            "banner_link": "shopify://collections/sneakers-for-mens",
+            "banner_title": "Sneakers",
+            "banner_desc": "New Arrivals",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#bbbbbb"
+          }
+        },
+        "banner_BGi4gc": {
+          "type": "banner",
+          "name": "Mens",
+          "settings": {
+            "heading": "Sale",
+            "for_menu_handle": "main-store-mens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-marcelo-mens-tshirt.jpg",
+            "banner_link": "shopify://collections/sneakers-for-mens",
+            "banner_title": "Up to 60% OFF",
+            "banner_desc": "Menswear Sale",
             "banner_button_text": "Shop Now",
             "title_color": "#ffffff",
             "subtitle_color": "#bbbbbb",
             "button_text_color": "#ffffff"
+          }
+        },
+        "banner_WPkJbm": {
+          "type": "banner",
+          "name": "Mens",
+          "settings": {
+            "heading": "Outlet",
+            "for_menu_handle": "main-store-mens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-mens-moschino-jumper.jpg",
+            "banner_link": "shopify://collections/sneakers-for-mens",
+            "banner_title": "50%—70% OFF",
+            "banner_desc": "Online Only",
+            "banner_button_text": "Shop Now",
+            "title_color": "#222222",
+            "subtitle_color": "#666666",
+            "button_text_color": "#222222"
           }
         }
       },
       "block_order": [
         "banner_PEhNCb",
         "banner_LDTKfJ",
-        "banner_HGcBKK"
+        "banner_HGcBKK",
+        "banner_VeABGP",
+        "banner_3xEkWb",
+        "banner_3fxdwe",
+        "banner_BGi4gc",
+        "banner_WPkJbm"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
