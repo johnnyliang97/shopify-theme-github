@@ -106,9 +106,9 @@
             "container": "inherit",
             "banner_style": "inside",
             "banner_image": "shopify://shop_images/lestyle-model-balmain-shorts.jpg",
-            "banner_link": "shopify://collections/balmain-for-mens",
-            "banner_title": "Balmain",
-            "banner_desc": "Shorts",
+            "banner_link": "shopify://collections/shorts-for-mens",
+            "banner_title": "Shorts",
+            "banner_desc": "Ready for Summer",
             "banner_button_text": "Shop Now",
             "title_color": "#ffffff",
             "subtitle_color": "#eeeeee",
@@ -186,6 +186,42 @@
             "subtitle_color": "#666666",
             "button_text_color": "#222222"
           }
+        },
+        "banner_BM7XMi": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Designers",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-vjc-womens-top.webp",
+            "banner_link": "shopify://collections/versace-jeans-couture-for-womens",
+            "banner_title": "Versace Jeans Couture",
+            "banner_desc": "Iconic Prints",
+            "banner_button_text": "Shop Now",
+            "title_color": "#222222",
+            "subtitle_color": "#666666",
+            "button_text_color": "#222222"
+          }
+        },
+        "banner_XY7Xat": {
+          "type": "banner",
+          "name": "Womens",
+          "settings": {
+            "heading": "Accessories",
+            "for_menu_handle": "main-store-womens",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle_product_image_09122025_169739_8f577e9c-31e3-445a-920a-631252b50761.jpg",
+            "banner_link": "shopify://collections/philipp-plein-womens-accessories",
+            "banner_title": "Philipp Plein",
+            "banner_desc": "Watches & Jewellery",
+            "banner_button_text": "Shop Now",
+            "title_color": "#ffffff",
+            "subtitle_color": "#bbbbbb",
+            "button_text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
@@ -196,7 +232,9 @@
         "banner_3xEkWb",
         "banner_3fxdwe",
         "banner_BGi4gc",
-        "banner_WPkJbm"
+        "banner_WPkJbm",
+        "banner_BM7XMi",
+        "banner_XY7Xat"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
