@@ -63,6 +63,9 @@
                       assign banner_title = block.settings.banner_title
                       assign banner_desc = block.settings.banner_desc
                       assign banner_button_text = block.settings.banner_button_text
+                      assign title_color = block.settings.title_color
+                      assign subtitle_color = block.settings.subtitle_color
+                      assign button_text_color = block.settings.button_text_color
 
                       if banner_title == blank and banner_desc == blank and banner_button_text == blank
                         assign banner_class = banner_class | append: ' m-mega-banner--no-content'
@@ -78,11 +81,11 @@
                       </div>
                       <div class="m-mega-banner__inner">
                         <div class="m-mega-banner__conntent">
-                          <h4 class="m-mega-banner__title">{{ banner_title }}</h4>
-                          <p class="m-mega-banner__description">{{ banner_desc }}</p>
+                          <h4 class="m-mega-banner__title"{% if title_color != blank %} style="color: {{ title_color }};"{% endif %}>{{ banner_title }}</h4>
+                          <p class="m-mega-banner__description"{% if subtitle_color != blank %} style="color: {{ subtitle_color }};"{% endif %}>{{ banner_desc }}</p>
                         </div>
                         {% if banner_link != blank and banner_button_text != blank %}
-                          <a href="{{ banner_link }}" class="m-mega-banner__button m-button m-button--link">{{ banner_button_text }}</a>
+                          <a href="{{ banner_link }}" class="m-mega-banner__button m-button m-button--link"{% if button_text_color != blank %} style="color: {{ button_text_color }};"{% endif %}>{{ banner_button_text }}</a>
                         {% endif %}
                       </div>
                     </div>
