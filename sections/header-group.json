@@ -43,178 +43,22 @@
     "header": {
       "type": "header",
       "blocks": {
-        "custom_html_8z9NYN": {
-          "type": "custom_html",
+        "banner_PEhNCb": {
+          "type": "banner",
           "settings": {
             "heading": "Designers",
-            "for_menu_handle": "",
+            "for_menu_handle": "main-store-mens",
             "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_Te4mGm": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Mens",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_LGzDEY": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Womens",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_iGireC": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Kids",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_BzNrHk": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Home Collection",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_wKaHA8": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Sale",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_abg7N3": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Outlet",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_pXzyQb": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Accessories",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_TfENwb": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Bags",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_wdyKR6": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Clothing",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_fdNMTV": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Jewellery",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_iBm8Kj": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Shoes",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_9emTYa": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Baby",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_pRxDGh": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Boys",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_XfWCAX": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Girls",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_tHwQfX": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Linens & Bedding",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
-          }
-        },
-        "custom_html_waXkeP": {
-          "type": "custom_html",
-          "settings": {
-            "heading": "Tableware",
-            "for_menu_handle": "",
-            "container": "inherit",
-            "html": ""
+            "banner_style": "outside",
+            "banner_link": "",
+            "banner_title": "New collection",
+            "banner_desc": "",
+            "banner_button_text": "Shop now"
           }
         }
       },
       "block_order": [
-        "custom_html_8z9NYN",
-        "custom_html_Te4mGm",
-        "custom_html_LGzDEY",
-        "custom_html_iGireC",
-        "custom_html_BzNrHk",
-        "custom_html_wKaHA8",
-        "custom_html_abg7N3",
-        "custom_html_pXzyQb",
-        "custom_html_TfENwb",
-        "custom_html_wdyKR6",
-        "custom_html_fdNMTV",
-        "custom_html_iBm8Kj",
-        "custom_html_9emTYa",
-        "custom_html_pRxDGh",
-        "custom_html_XfWCAX",
-        "custom_html_tHwQfX",
-        "custom_html_waXkeP"
+        "banner_PEhNCb"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
