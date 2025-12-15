@@ -182,7 +182,7 @@
             "banner_title": "50%—70% OFF",
             "banner_desc": "Online Only",
             "banner_button_text": "Shop Now",
-            "title_color": "#222222",
+            "title_color": "#da3f3f",
             "subtitle_color": "#666666",
             "button_text_color": "#222222"
           }
@@ -326,7 +326,7 @@
             "banner_title": "50%—70% OFF",
             "banner_desc": "Online Only",
             "banner_button_text": "Shop Now",
-            "title_color": "#000000",
+            "title_color": "#da3f3f",
             "subtitle_color": "#666666",
             "button_text_color": "#000000"
           }
@@ -377,7 +377,7 @@
             "banner_style": "inside",
             "banner_image": "shopify://shop_images/lestyle-model-fendi-boys-tshirt.png",
             "banner_link": "shopify://collections/clothing-boys",
-            "banner_title": "Boys' Clothing",
+            "banner_title": "Boys Clothing",
             "banner_desc": "Up to 14-year",
             "banner_button_text": "Shop Now",
             "title_color": "#222222",
@@ -395,7 +395,7 @@
             "banner_style": "inside",
             "banner_image": "shopify://shop_images/lestyle-model-moschino-kids-girls-sweatshirt.png",
             "banner_link": "shopify://collections/clothing-girls",
-            "banner_title": "Girls' Clothing",
+            "banner_title": "Girls Clothing",
             "banner_desc": "Up to 14-year",
             "banner_button_text": "Shop Now",
             "title_color": "#ffffff",
@@ -434,7 +434,7 @@
             "banner_title": "50%—70% OFF",
             "banner_desc": "Online Only",
             "banner_button_text": "Shop Now",
-            "title_color": "#ffffff",
+            "title_color": "#da3f3f",
             "subtitle_color": "#f5f5f5",
             "button_text_color": "#ffffff"
           }
@@ -493,6 +493,24 @@
             "button_text_color": "#ffffff"
           }
         },
+        "banner_ErHDgC": {
+          "type": "banner",
+          "name": "Outlet",
+          "settings": {
+            "heading": "Designers",
+            "for_menu_handle": "outlet-menu",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-vjc-mens-shirt_37c02dc1-c539-4746-9737-648c170d7f98.png",
+            "banner_link": "shopify://collections/versace-jeans-couture-outlet",
+            "banner_title": "Versace Jeans Couture",
+            "banner_desc": "50%—70% OFF",
+            "banner_button_text": "Shop Now",
+            "title_color": "#da3f3f",
+            "subtitle_color": "#666666",
+            "button_text_color": "#ffffff"
+          }
+        },
         "banner_4WAmWE": {
           "type": "banner",
           "name": "Outlet",
@@ -502,13 +520,49 @@
             "container": "inherit",
             "banner_style": "inside",
             "banner_image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
-            "banner_link": "shopify://collections/bathrobes",
-            "banner_title": "Mens Clothing",
+            "banner_link": "shopify://collections/mens-outlet",
+            "banner_title": "Mens Outlet",
             "banner_desc": "50%—70% OFF",
             "banner_button_text": "Shop Now",
             "title_color": "#da3f3f",
             "subtitle_color": "#666666",
             "button_text_color": "#000000"
+          }
+        },
+        "banner_hr77Xd": {
+          "type": "banner",
+          "name": "Outlet",
+          "settings": {
+            "heading": "Womens",
+            "for_menu_handle": "outlet-menu",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/download-2024-07-10T151431.456.jpg",
+            "banner_link": "shopify://collections/womens-outlet",
+            "banner_title": "Womens Outlet",
+            "banner_desc": "50%—70% OFF",
+            "banner_button_text": "Shop Now",
+            "title_color": "#da3f3f",
+            "subtitle_color": "#666666",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "banner_FgLeXw": {
+          "type": "banner",
+          "name": "Outlet",
+          "settings": {
+            "heading": "Kids",
+            "for_menu_handle": "outlet-menu",
+            "container": "inherit",
+            "banner_style": "inside",
+            "banner_image": "shopify://shop_images/lestyle-model-boss-kids-02.png",
+            "banner_link": "shopify://collections/kids-outlet",
+            "banner_title": "Kids Outlet",
+            "banner_desc": "50%—70% OFF",
+            "banner_button_text": "Shop Now",
+            "title_color": "#da3f3f",
+            "subtitle_color": "#666666",
+            "button_text_color": "#ffffff"
           }
         }
       },
@@ -538,7 +592,10 @@
         "banner_VkjPqE",
         "banner_9qr4Ec",
         "banner_R7G47G",
-        "banner_4WAmWE"
+        "banner_ErHDgC",
+        "banner_4WAmWE",
+        "banner_hr77Xd",
+        "banner_FgLeXw"
       ],
       "custom_css": [
         ".m-topbar a[href*=\"facebook\"] {order: 2;}",
