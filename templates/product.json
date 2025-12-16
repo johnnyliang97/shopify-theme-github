@@ -183,7 +183,7 @@
       "custom_css": [],
       "name": "Custom liquid",
       "settings": {
-        "custom_liquid": "{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 14px; color: #555; margin: 28px 0; text-align: center; padding: 0 15px;\">\n    SKU: {{ product.selected_or_first_available_variant.sku }}\n  </p>\n{% endif %}",
+        "custom_liquid": "{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 14px; color: #555; margin: 28px 0; text-align: center; padding: 0 15px;\">\n    Item Code: {{ product.selected_or_first_available_variant.barcode }}\n  </p>\n{% endif %}",
         "custom_class": ""
       }
     },
