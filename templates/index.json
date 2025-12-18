@@ -152,7 +152,7 @@
           "type": "button",
           "settings": {
             "label": "Home Decor",
-            "link": "shopify://collections/home-decor",
+            "link": "shopify://collections/home-collection-home-decor",
             "button_style": "m-button--white"
           }
         },
