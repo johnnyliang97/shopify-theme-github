@@ -15,32 +15,50 @@
         "button_Lwnpef": {
           "type": "button",
           "settings": {
-            "label": "Shop Chloe",
-            "link": "shopify://collections/chloe",
-            "button_style": "m-button--secondary"
+            "label": "Shop Gift Voucher",
+            "link": "shopify://products/lestyle-voucher",
+            "button_style": "m-button--white"
           }
         },
         "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Shop Kenzo",
-            "link": "shopify://collections/kenzo",
-            "button_style": "m-button--secondary"
+            "label": "Home Collection",
+            "link": "shopify://collections/home-collection",
+            "button_style": "m-button--white"
           }
         },
         "button_bdc8jp": {
           "type": "button",
           "settings": {
-            "label": "Shop Hugo Boss",
-            "link": "shopify://collections/boss",
-            "button_style": "m-button--secondary"
+            "label": "10% OFF First Order",
+            "link": "shopify://pages/subscribe",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_qbGW7N": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Sale",
+            "link": "shopify://collections/sale",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_DzRMYp": {
+          "type": "button",
+          "settings": {
+            "label": "50-70% OFF Outlet",
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
         "button_Lwnpef",
         "button_k3PLAE",
-        "button_bdc8jp"
+        "button_bdc8jp",
+        "button_qbGW7N",
+        "button_DzRMYp"
       ],
       "name": "Banner - Main",
       "settings": {
@@ -48,14 +66,14 @@
         "image": "shopify://shop_images/lestyle-home-decor-versace-vase-christmas.png",
         "image_link": "shopify://collections/palm-angels",
         "image_position": "left",
-        "background_color": "#e2e3dc",
-        "text_color": "#000000",
+        "background_color": "#0f1112",
+        "text_color": "#ffffff",
         "content_alignment": "center",
         "title_type": "text",
-        "title_text": "Festive Ready",
+        "title_text": "Luxe Festive Ready",
         "title_size": "h2",
         "title_image_width": 200,
-        "subheader_text": "<p>Make their Christmas magical with gifts that blend style and comfort</p>",
+        "subheader_text": "<p>Open 10AM - 7PM daily before Christmas. Click & Collect, Uber Express, Express Overnight Shipping available.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -184,7 +202,7 @@
         "container": "container",
         "image": "shopify://shop_images/lestyle-christmas-banner.jpg",
         "image_link": "shopify://collections/home-collection",
-        "image_position": "left",
+        "image_position": "right",
         "background_color": "#6c1b22",
         "text_color": "#eeeeee",
         "content_alignment": "center",
