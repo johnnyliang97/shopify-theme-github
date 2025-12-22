@@ -13,9 +13,15 @@
 
   .split-banner-{{ section.id }} {
     background-color: {{ section.settings.background_color }};
+    {%- if section.settings.background_image != blank -%}
+      background-image: url({{ section.settings.background_image | image_url: width: 2000 }});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    {%- endif -%}
   }
   
-  .split-banner-content {
+  .split-banner-{{ section.id }} .split-banner-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -39,7 +45,7 @@
       height: 100%;
   }
   
-  .split-banner-buttons {
+  .split-banner-{{ section.id }} .split-banner-buttons {
       margin-top: 2rem;
       display: flex;
       gap: 1rem;
@@ -57,31 +63,31 @@
 
   /* Desktop layout */
   @media screen and (min-width: 768px) {
-      .split-banner-wrapper {
+      .split-banner-{{ section.id }} .split-banner-wrapper {
           display: flex;
           align-items: stretch;
           flex-direction: {% if section.settings.image_position == 'right' %}row-reverse{% else %}row{% endif %};
       }
-      .split-banner-half {
+      .split-banner-{{ section.id }} .split-banner-half {
           width: 50%;
       }
   }
   
   /* Mobile layout */
   @media screen and (max-width: 767px) {
-      .split-banner-wrapper {
+      .split-banner-{{ section.id }} .split-banner-wrapper {
           display: flex;
           flex-direction: column;
       }
-      .split-banner-half {
+      .split-banner-{{ section.id }} .split-banner-half {
           width: 100%;
       }
       /* Image on top for mobile */
-      .split-banner-image-container {
+      .split-banner-{{ section.id }} .split-banner-image-container {
           order: -1;
       }
       /* Force full width container on mobile */
-      .split-banner-container {
+      .split-banner-{{ section.id }} .split-banner-container {
           width: 100% !important;
           max-width: 100% !important;
           padding-left: 0 !important;
@@ -202,6 +208,11 @@
       "id": "background_color",
       "label": "Background Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
     },
     {
       "type": "color",
