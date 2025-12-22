@@ -64,7 +64,7 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle-home-decor-versace-vase-christmas.png",
-        "image_link": "shopify://collections/palm-angels",
+        "image_link": "shopify://collections/new-arrivals",
         "image_position": "left",
         "background_color": "#0f1112",
         "text_color": "#ffffff",
