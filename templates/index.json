@@ -196,8 +196,8 @@
       "name": "Promotion countdown timer",
       "settings": {
         "container": "container-fluid",
-        "color_scheme": "",
-        "background_in_container": true,
+        "color_scheme": "dark",
+        "background_in_container": false,
         "padding_top": 50,
         "padding_bottom": 50,
         "custom_class": "",
@@ -385,10 +385,10 @@
         "card_6YENz3",
         "card_jVynpa"
       ],
-      "name": "Christmas",
+      "name": "Collections",
       "settings": {
         "container_type": "container-fluid",
-        "heading": "A Luxe Christmas Awaits",
+        "heading": "Selected Sale",
         "image_ratio_desktop": "125",
         "image_ratio_mobile": "125",
         "heading_size": 26,
