@@ -104,7 +104,7 @@
             "link": "shopify://collections/womens",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/lestyle-model-vjc-womens-top.png",
+            "bg_image": "shopify://shop_images/Instagram_post_-_1_c75c4feb-a82e-4f5f-a5f3-51789f269430.png",
             "text_color": "#ffffff"
           }
         },
@@ -116,7 +116,7 @@
             "link": "shopify://collections/kids",
             "color_overlay": "#000000",
             "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/lestyle-model-fendi-boys-tshirt_e087ba4f-2c71-4351-ab39-ae9007f3c47e.png",
+            "bg_image": "shopify://shop_images/lestyle-model-chloe-kenzo-kids.png",
             "text_color": "#ffffff"
           }
         },
@@ -210,33 +210,33 @@
         "button_xRpmKa": {
           "type": "button",
           "settings": {
-            "label": "Shop Home Collection",
-            "link": "shopify://collections/home-collection",
-            "button_style": "m-button--white"
+            "label": "Shop Accessories",
+            "link": "shopify://collections/accessories",
+            "button_style": "m-button--primary"
           }
         },
         "button_RdMBFz": {
           "type": "button",
           "settings": {
-            "label": "Home Decor",
-            "link": "shopify://collections/home-collection-home-decor",
-            "button_style": "m-button--white"
+            "label": "Sale Under $200",
+            "link": "shopify://collections/sale-under-200",
+            "button_style": "m-button--primary"
           }
         },
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Gifts Under $100",
+            "label": "Sale Under $100",
             "link": "https://www.lestyle.com.au/collections/all/?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=100&filter.v.availability=1",
-            "button_style": "m-button--white"
+            "button_style": "m-button--primary"
           }
         },
         "button_UHtgJ4": {
           "type": "button",
           "settings": {
-            "label": "Shop Gift Cards",
-            "link": "shopify://products/lestyle-voucher",
-            "button_style": "m-button--white"
+            "label": "50-70% OFF Outlet",
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--primary"
           }
         }
       },
