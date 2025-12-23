@@ -289,10 +289,10 @@
           "name": "Versace",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-tshirt-men.webp",
-            "header_text": "Versace Basic T-shirts",
-            "subheader_text": "",
+            "header_text": "Versace",
+            "subheader_text": "Mens Basic T-shirts",
             "link": "shopify://collections/versace-basic-t-shirts",
-            "label_text": "$99",
+            "label_text": "FROM $99",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -301,12 +301,12 @@
           "type": "card",
           "name": "Small Leather Goods",
           "settings": {
-            "image": "shopify://shop_images/lestyle-christmas-wallets.jpg",
-            "header_text": "Small Leather Goods",
-            "subheader_text": "",
+            "image": "shopify://shop_images/lestyle-model-tshirt-mens-2.webp",
+            "header_text": "Lestyle",
+            "subheader_text": "Iconic Unisex T-shirt",
             "link": "shopify://collections/wallets-cardholders",
-            "label_text": "",
-            "label_color": "#c19967",
+            "label_text": "$65",
+            "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
