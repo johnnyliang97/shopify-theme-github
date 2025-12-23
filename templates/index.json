@@ -289,11 +289,11 @@
           "name": "Versace",
           "settings": {
             "image": "shopify://shop_images/90_N24640-N409956_N1449_22_Medus-600x750.jpg",
-            "header_text": "Versace Home",
+            "header_text": "Versace Basic T-shirts",
             "subheader_text": "",
-            "link": "shopify://collections/versace-home-collection",
-            "label_text": "",
-            "label_color": "#c19967",
+            "link": "shopify://collections/versace-basic-t-shirts",
+            "label_text": "$99",
+            "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
@@ -388,7 +388,7 @@
       "name": "Collections",
       "settings": {
         "container_type": "container-fluid",
-        "heading": "Selected Sale",
+        "heading": "Up to 70% OFF",
         "image_ratio_desktop": "125",
         "image_ratio_mobile": "125",
         "heading_size": 26,
