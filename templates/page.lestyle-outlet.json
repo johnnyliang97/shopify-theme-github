@@ -85,6 +85,7 @@
         "image_link": "shopify://collections/lestyle-outlet",
         "image_position": "left",
         "background_color": "#000000",
+        "background_image": "shopify://shop_images/lestyle-model-accessories_02.png",
         "text_color": "#ffffff",
         "content_alignment": "center",
         "title_type": "image",
