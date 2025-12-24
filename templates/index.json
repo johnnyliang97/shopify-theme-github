@@ -249,7 +249,7 @@
       "name": "Banner - Christmas",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-model-versace-balmain-swimwear_copy.webp",
+        "image": "shopify://shop_images/lestyle-model-kids_7_copy.png",
         "image_link": "shopify://collections/home-collection",
         "image_position": "right",
         "background_color": "#6c1b22",
@@ -301,11 +301,11 @@
           "type": "card",
           "name": "Small Leather Goods",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-tshirt-mens-2.webp",
-            "header_text": "Lestyle",
-            "subheader_text": "Iconic Unisex T-shirt",
-            "link": "shopify://collections/wallets-cardholders",
-            "label_text": "$65",
+            "image": "shopify://shop_images/lestyle-model-kids_9_copy.webp",
+            "header_text": "Givenchy",
+            "subheader_text": "Kidswear",
+            "link": "shopify://collections/givenchy-kids",
+            "label_text": "UP TO 50% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
