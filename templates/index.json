@@ -299,13 +299,13 @@
         },
         "card_dtFdem": {
           "type": "card",
-          "name": "Gifts for Kids",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-boss-kids-tshirt.webp",
-            "header_text": "BOSS Outlet",
-            "subheader_text": "Kidswear Sale",
+            "header_text": "Kidswear Outlet",
+            "subheader_text": "Sale",
             "link": "shopify://collections/boss-outlet",
-            "label_text": "Up to 70% OFF",
+            "label_text": "50-70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -338,39 +338,39 @@
         },
         "card_zFcJyj": {
           "type": "card",
-          "name": "Gifts for Her",
+          "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-balmain-womens-christmas-sweater.jpg",
-            "header_text": "Gifts for Her",
-            "subheader_text": "",
-            "link": "shopify://collections/womens",
-            "label_text": "",
+            "image": "shopify://shop_images/lestyle-model-kids_4_copy.webp",
+            "header_text": "Versace",
+            "subheader_text": "Kidswear Sale",
+            "link": "shopify://collections/versace-kidswear",
+            "label_text": "Up to 50% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
         "card_6YENz3": {
           "type": "card",
-          "name": "Gifts for Him",
+          "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-marcelo-mens-tshirt.jpg",
-            "header_text": "Gifts for Him",
-            "subheader_text": "",
-            "link": "shopify://collections/mens",
-            "label_text": "",
+            "image": "shopify://shop_images/lestyle-model-dsquared2-hoodie.webp",
+            "header_text": "Sweatshirts",
+            "subheader_text": "Mega Sale",
+            "link": "shopify://collections/sweatshirts",
+            "label_text": "USE CODE BD20",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
         "card_jVynpa": {
           "type": "card",
-          "name": "Lestyle Outlet",
+          "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-christmas-outlet.jpg",
+            "image": "shopify://shop_images/lestyle-model-accessories.jpg",
             "header_text": "Lestyle Outlet",
-            "subheader_text": "",
+            "subheader_text": "Boxing Day Sale",
             "link": "shopify://collections/lestyle-outlet",
-            "label_text": "UP TO 70% OFF",
+            "label_text": "50-70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -822,14 +822,14 @@
       "blocks": {
         "card_afBRKH": {
           "type": "card",
-          "name": "Sneakers",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-sneakers.jpg",
             "header_text": "Sneakers",
             "subheader_text": "",
             "link": "shopify://collections/sneakers",
-            "label_text": "",
-            "label_color": "#c19967",
+            "label_text": "Up to 70% OFF",
+            "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
@@ -837,7 +837,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-cavalli-mens-shirt.webp",
-            "header_text": "Sale",
+            "header_text": "All Sale",
             "subheader_text": "",
             "link": "shopify://collections/sale",
             "label_text": "UP TO 60% OFF",
@@ -845,80 +845,80 @@
             "button_text": "Shop Now"
           }
         },
+        "card_hdTia7": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-outlet-bags.jpg",
+            "header_text": "Lestyle Outlet",
+            "subheader_text": "",
+            "link": "shopify://collections/lestyle-outlet",
+            "label_text": "50-70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
         "card_GPNkT8": {
           "type": "card",
-          "name": "Bags",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-bags-banner.webp",
             "header_text": "Bags",
             "subheader_text": "",
             "link": "shopify://collections/bags",
-            "label_text": "",
-            "label_color": "#c19967",
+            "label_text": "Up to 50% OFF",
+            "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
         "card_jQgeEQ": {
           "type": "card",
-          "name": "Dresses",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-dress-womens-vjc.png",
             "header_text": "Dresses",
             "subheader_text": "",
             "link": "shopify://collections/dresses",
-            "label_text": "",
-            "label_color": "#c19967",
+            "label_text": "Up to 50% OFF",
+            "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
         "card_36hpWk": {
           "type": "card",
-          "name": "Shorts",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-shorts-mens.jpg",
             "header_text": "Shorts",
             "subheader_text": "",
             "link": "shopify://collections/shorts-for-mens",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_hdTia7": {
-          "type": "card",
-          "name": "Swimwear",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-swimwear-womens-fendi.png",
-            "header_text": "Swimwear",
-            "subheader_text": "",
-            "link": "shopify://collections/swimwear",
-            "label_text": "",
+            "label_text": "Up to 50% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
         "card_tXLUnN": {
           "type": "card",
-          "name": "Jackets",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-vjc-mens-jacket.jpg",
             "header_text": "Jackets",
             "subheader_text": "",
             "link": "shopify://collections/jackets",
-            "label_text": "",
+            "label_text": "Up to 50% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
         },
         "card_n9YkeK": {
           "type": "card",
-          "name": "Jewellery",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-jewellery-womens.jpg",
             "header_text": "Jewellery",
             "subheader_text": "",
             "link": "shopify://collections/jewellery",
-            "label_text": "",
+            "label_text": "USE CODE BD20",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -927,10 +927,10 @@
       "block_order": [
         "card_afBRKH",
         "card_bCbiwC",
+        "card_hdTia7",
         "card_GPNkT8",
         "card_jQgeEQ",
         "card_36hpWk",
-        "card_hdTia7",
         "card_tXLUnN",
         "card_n9YkeK"
       ],
@@ -1066,9 +1066,9 @@
         "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
         "image_width": 160,
         "text_color": "#ffffff",
-        "header_text": "Rush for Gifts?",
+        "header_text": "Same Day Delivery",
         "header_size": "h3",
-        "subheader_text": "<p>Get it in a few minutes. Uber Local Delivery is available in the Melbourne metropolitan area*.</p>",
+        "subheader_text": "<p>Get it in a few minutes. Uber Local Delivery is available in Melbourne and surrounding suburbs.</p>",
         "subheader_size": "text-small",
         "button_text": "Find Out More",
         "button_link": "shopify://blogs/lestyle-spotlight/get-your-order-today-with-uber",
