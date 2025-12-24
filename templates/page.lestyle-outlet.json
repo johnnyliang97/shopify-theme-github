@@ -87,7 +87,7 @@
         "button_4zMhCE",
         "button_jJLthD"
       ],
-      "name": "Banner - Christmas",
+      "name": "Banner",
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle-model-vjc-womens-dress01.png",
@@ -294,6 +294,53 @@
         "show_pagination": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "promotion_countdown_timer_9V7ztJ": {
+      "type": "promotion-countdown-timer",
+      "blocks": {
+        "text_zrxin7": {
+          "type": "text",
+          "settings": {
+            "text_alignment": "left",
+            "subheading": "",
+            "heading": "Boxing Day Sale",
+            "heading_size": "h2",
+            "text": "<p>Use code <strong>BD20 </strong>at checkout for <strong>20% OFF </strong>full-priced item<br/><em>*T&Cs apply</em></p>"
+          }
+        },
+        "countdown_Eryen6": {
+          "type": "countdown",
+          "settings": {
+            "text_alignment": "center",
+            "time": "2025-12-31 23:59:00"
+          }
+        },
+        "button_YyqiCL": {
+          "type": "button",
+          "settings": {
+            "text_alignment": "right",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--primary",
+            "button_size": "m-button--small"
+          }
+        }
+      },
+      "block_order": [
+        "text_zrxin7",
+        "countdown_Eryen6",
+        "button_YyqiCL"
+      ],
+      "name": "Promotion countdown timer",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "dark",
+        "background_in_container": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "rectangle_buttons_CWpfbw": {
@@ -518,24 +565,10 @@
         "container": "container",
         "color_scheme": "",
         "content_alignment": "center",
-        "padding_top": 52,
+        "padding_top": 0,
         "padding_bottom": 52,
         "custom_class": "",
         "animations": "inherit"
-      }
-    },
-    "empty_space_3bhqVP": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 0,
-        "padding_bottom": 20,
-        "custom_class": ""
       }
     },
     "featured_collection_eVUk6N": {
@@ -620,10 +653,10 @@
     "17601009311f9400d0",
     "empty_space_iWJHNV",
     "custom_card_carousel_8rkRNX",
+    "promotion_countdown_timer_9V7ztJ",
     "rectangle_buttons_CWpfbw",
     "custom_card_carousel_fmdyea",
     "rich_text_fBzpK7",
-    "empty_space_3bhqVP",
     "featured_collection_eVUk6N",
     "promotion_banner_b8KJm6",
     "empty_space_R7QyYa"
