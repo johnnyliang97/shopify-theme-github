@@ -1,1 +1,88 @@
-{"sections":{"main":{"type":"cart-template","custom_css":[".m-breadcrumb--wrapper {display: none;}"],"settings":{}},"custom_liquid_KAWRc6":{"type":"custom-liquid","name":"Custom liquid","settings":{"custom_liquid":"{%- comment -%}\n  AFTERPAY MINI-BANNER — Cart Version\n  Shows: \"4 payments of {cart subtotal \/ 4} with [Afterpay logo]\n          Learn more\"\n{%- endcomment -%}\n\n{%- assign _per_payment = cart.total_price | times: 0.25 -%}\n\n<div id=\"afterpay-cart-banner\" class=\"ap-mini-banner\" role=\"note\" aria-label=\"Afterpay instalments\">\n  <span class=\"ap-text\">\n    4 payments of\n    <strong class=\"ap-amount\">\n      {{ _per_payment | money | replace: \"A$\", \"$\" }}\n    <\/strong>\n    with\n  <\/span>\n\n  <a class=\"ap-logo\" href=\"https:\/\/www.lestyle.com.au\/blogs\/lestyle-spotlight\/buy-now-pay-later-with-afterpay\/\" target=\"_blank\" rel=\"noopener\" aria-label=\"About Afterpay\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0758\/6467\/0467\/files\/afterpay_logo.png?v=1755220716\" alt=\"afterpay\" loading=\"lazy\">\n  <\/a>\n\n  <div class=\"ap-learn-wrapper\">\n    <a class=\"ap-learn\" href=\"https:\/\/www.lestyle.com.au\/blogs\/lestyle-spotlight\/buy-now-pay-later-with-afterpay\/\" target=\"_blank\" rel=\"noopener\">Learn more<\/a>\n  <\/div>\n<\/div>\n\n<style>\n  .ap-mini-banner{\n    display:flex; flex-wrap:wrap; align-items:center; gap:.5rem;\n    font: 400 14px\/1.4 -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;\n    color:#111;\n    margin: 0 0 15px 0; \/* Left\/Right: 15px, Bottom: 20px *\/\n  }\n  .ap-mini-banner .ap-text{white-space:nowrap;}\n  .ap-mini-banner .ap-amount{font-weight:700;}\n  .ap-mini-banner .ap-logo img{\n    height:26px; \/* Bigger logo *\/\n    width:auto;\n    display:block;\n  }\n  .ap-mini-banner .ap-learn-wrapper{\n    flex-basis:100%;\n  }\n  .ap-mini-banner .ap-learn{\n    text-decoration:underline;\n    color:#111;\n    font-size:14px;\n  }\n<\/style>\n\n<script>\n(function() {\n  const container = document.getElementById('afterpay-cart-banner');\n  if (!container) return;\n\n  const amountEl = container.querySelector('.ap-amount');\n\n  function formatMoneyFromCents(cents) {\n    try {\n      return (cents\/100).toLocaleString(undefined, { style: 'currency', currency: \"AUD\" }).replace(\/^A\\$\/, '$');\n    } catch(e) {\n      return '$' + (cents\/100).toFixed(2);\n    }\n  }\n\n  function updateFromCart() {\n    fetch('{{ routes.cart_url }}.js')\n      .then(res => res.json())\n      .then(cart => {\n        const perPaymentCents = Math.round(cart.total_price \/ 4);\n        amountEl.textContent = formatMoneyFromCents(perPaymentCents);\n      });\n  }\n\n  \/\/ Initial load\n  updateFromCart();\n\n  \/\/ Theme events\n  document.addEventListener('cart:updated', updateFromCart);\n  document.addEventListener('cart:change', updateFromCart);\n\n  \/\/ Fallback for AJAX fetch\n  const origFetch = window.fetch;\n  window.fetch = function(...args) {\n    return origFetch.apply(this, args).then(res => {\n      if (args[0] && typeof args[0] === 'string' && args[0].includes('\/cart')) {\n        updateFromCart();\n      }\n      return res;\n    });\n  };\n})();\n<\/script>","custom_class":"container-fluid"}},"recent-viewed-products":{"type":"recent-viewed-products","settings":{"container":"container","color_scheme":"","heading":"Recently Viewed Products","heading_size":"h3","text_align":"left","limit":8,"columns":4,"column_gap":30,"pcard_layout":"","pcard_image_ratio":"","show_vendor":false,"hide_title":false,"enable_slider":true,"show_pagination":false,"show_navigation":false,"mobile_disable_slider":false,"use_scroll_mobile":true,"item_gap_mobile":16,"padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}}},"order":["main","custom_liquid_KAWRc6","recent-viewed-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "small_banner_PABnxX": {
+      "type": "small-banner",
+      "custom_css": [
+        ".small-banner-text-content {align-items: center;}"
+      ],
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#000000",
+        "background_image": "shopify://shop_images/lestyle-model-accessories_02.png",
+        "background_overlay_opacity": 0,
+        "image_width": 150,
+        "text_color": "#ffffff",
+        "header_text": "BOXING DAY SALE",
+        "header_size": "h4",
+        "subheader_text": "<p>USE CODE <strong>BD20</strong> AT CHECKOUT</p>",
+        "subheader_size": "text-small",
+        "button_text": "",
+        "button_link": "",
+        "button_font_size": 14,
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "cart-template",
+      "custom_css": [
+        ".m-breadcrumb--wrapper {display: none;}"
+      ],
+      "settings": {}
+    },
+    "custom_liquid_KAWRc6": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "{%- comment -%}\n  AFTERPAY MINI-BANNER — Cart Version\n  Shows: \"4 payments of {cart subtotal / 4} with [Afterpay logo]\n          Learn more\"\n{%- endcomment -%}\n\n{%- assign _per_payment = cart.total_price | times: 0.25 -%}\n\n<div id=\"afterpay-cart-banner\" class=\"ap-mini-banner\" role=\"note\" aria-label=\"Afterpay instalments\">\n  <span class=\"ap-text\">\n    4 payments of\n    <strong class=\"ap-amount\">\n      {{ _per_payment | money | replace: \"A$\", \"$\" }}\n    </strong>\n    with\n  </span>\n\n  <a class=\"ap-logo\" href=\"https://www.lestyle.com.au/blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay/\" target=\"_blank\" rel=\"noopener\" aria-label=\"About Afterpay\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0758/6467/0467/files/afterpay_logo.png?v=1755220716\" alt=\"afterpay\" loading=\"lazy\">\n  </a>\n\n  <div class=\"ap-learn-wrapper\">\n    <a class=\"ap-learn\" href=\"https://www.lestyle.com.au/blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay/\" target=\"_blank\" rel=\"noopener\">Learn more</a>\n  </div>\n</div>\n\n<style>\n  .ap-mini-banner{\n    display:flex; flex-wrap:wrap; align-items:center; gap:.5rem;\n    font: 400 14px/1.4 -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;\n    color:#111;\n    margin: 0 0 15px 0; /* Left/Right: 15px, Bottom: 20px */\n  }\n  .ap-mini-banner .ap-text{white-space:nowrap;}\n  .ap-mini-banner .ap-amount{font-weight:700;}\n  .ap-mini-banner .ap-logo img{\n    height:26px; /* Bigger logo */\n    width:auto;\n    display:block;\n  }\n  .ap-mini-banner .ap-learn-wrapper{\n    flex-basis:100%;\n  }\n  .ap-mini-banner .ap-learn{\n    text-decoration:underline;\n    color:#111;\n    font-size:14px;\n  }\n</style>\n\n<script>\n(function() {\n  const container = document.getElementById('afterpay-cart-banner');\n  if (!container) return;\n\n  const amountEl = container.querySelector('.ap-amount');\n\n  function formatMoneyFromCents(cents) {\n    try {\n      return (cents/100).toLocaleString(undefined, { style: 'currency', currency: \"AUD\" }).replace(/^A\\$/, '$');\n    } catch(e) {\n      return '$' + (cents/100).toFixed(2);\n    }\n  }\n\n  function updateFromCart() {\n    fetch('{{ routes.cart_url }}.js')\n      .then(res => res.json())\n      .then(cart => {\n        const perPaymentCents = Math.round(cart.total_price / 4);\n        amountEl.textContent = formatMoneyFromCents(perPaymentCents);\n      });\n  }\n\n  // Initial load\n  updateFromCart();\n\n  // Theme events\n  document.addEventListener('cart:updated', updateFromCart);\n  document.addEventListener('cart:change', updateFromCart);\n\n  // Fallback for AJAX fetch\n  const origFetch = window.fetch;\n  window.fetch = function(...args) {\n    return origFetch.apply(this, args).then(res => {\n      if (args[0] && typeof args[0] === 'string' && args[0].includes('/cart')) {\n        updateFromCart();\n      }\n      return res;\n    });\n  };\n})();\n</script>",
+        "custom_class": "container-fluid"
+      }
+    },
+    "recent-viewed-products": {
+      "type": "recent-viewed-products",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "heading": "Recently Viewed Products",
+        "heading_size": "h3",
+        "text_align": "left",
+        "limit": 8,
+        "columns": 4,
+        "column_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": true,
+        "show_pagination": false,
+        "show_navigation": false,
+        "mobile_disable_slider": false,
+        "use_scroll_mobile": true,
+        "item_gap_mobile": 16,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "small_banner_PABnxX",
+    "main",
+    "custom_liquid_KAWRc6",
+    "recent-viewed-products"
+  ]
+}
