@@ -497,6 +497,33 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_fBzpK7": {
+      "type": "rich-text",
+      "blocks": {
+        "button_wrXjT8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--primary",
+            "button_size": "m-button--large"
+          }
+        }
+      },
+      "block_order": [
+        "button_wrXjT8"
+      ],
+      "name": "Button",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_alignment": "center",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
     "empty_space_3bhqVP": {
       "type": "empty-space",
       "name": "Empty space",
@@ -595,6 +622,7 @@
     "custom_card_carousel_8rkRNX",
     "rectangle_buttons_CWpfbw",
     "custom_card_carousel_fmdyea",
+    "rich_text_fBzpK7",
     "empty_space_3bhqVP",
     "featured_collection_eVUk6N",
     "promotion_banner_b8KJm6",
