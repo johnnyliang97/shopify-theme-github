@@ -284,9 +284,35 @@
     "custom_card_carousel_HeykPg": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_Qc7zEM": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-kids_9_copy.webp",
+            "header_text": "Givenchy",
+            "subheader_text": "Kidswear Sale",
+            "link": "shopify://collections/givenchy-kids",
+            "label_text": "UP TO 50% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_dtFdem": {
+          "type": "card",
+          "name": "Gifts for Kids",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-boss-kids-tshirt.webp",
+            "header_text": "BOSS Outlet",
+            "subheader_text": "Kidswear Sale",
+            "link": "shopify://collections/boss-outlet",
+            "label_text": "Up to 70% OFF",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
         "card_KJmxxY": {
           "type": "card",
-          "name": "Versace",
+          "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-tshirt-men.webp",
             "header_text": "Versace",
@@ -297,41 +323,15 @@
             "button_text": "Shop Now"
           }
         },
-        "card_Qc7zEM": {
-          "type": "card",
-          "name": "Small Leather Goods",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-kids_9_copy.webp",
-            "header_text": "Givenchy",
-            "subheader_text": "Kidswear",
-            "link": "shopify://collections/givenchy-kids",
-            "label_text": "UP TO 50% OFF",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
         "card_BfVQWe": {
           "type": "card",
-          "name": "Bathrobes",
+          "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/s-l1600_84700748-63ad-46d7-924f-00682c740377.webp",
-            "header_text": "Bathrobes",
-            "subheader_text": "",
-            "link": "shopify://collections/home-collection-bathrobes",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_dtFdem": {
-          "type": "card",
-          "name": "Gifts for Kids",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-kids-girls-balmain-tshirt-dress.jpg",
-            "header_text": "Gifts for Kids",
-            "subheader_text": "",
-            "link": "shopify://collections/kids",
-            "label_text": "",
+            "image": "shopify://shop_images/lestyle-model-versace-balmain-swimwear_copy.webp",
+            "header_text": "Swimwear",
+            "subheader_text": "Ready for Summer",
+            "link": "shopify://collections/swimwear",
+            "label_text": "UP TO 70% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -377,10 +377,10 @@
         }
       },
       "block_order": [
-        "card_KJmxxY",
         "card_Qc7zEM",
-        "card_BfVQWe",
         "card_dtFdem",
+        "card_KJmxxY",
+        "card_BfVQWe",
         "card_zFcJyj",
         "card_6YENz3",
         "card_jVynpa"
