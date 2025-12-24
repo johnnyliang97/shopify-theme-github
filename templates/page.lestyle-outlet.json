@@ -26,7 +26,7 @@
           "settings": {
             "label": "Mens",
             "link": "shopify://collections/mens-outlet",
-            "button_style": "m-button--white"
+            "button_style": "m-button--primary"
           }
         },
         "button_MTn6Lj": {
@@ -34,7 +34,7 @@
           "settings": {
             "label": "Womens",
             "link": "shopify://collections/womens-outlet",
-            "button_style": "m-button--white"
+            "button_style": "m-button--primary"
           }
         },
         "button_k3JbLN": {
@@ -42,7 +42,7 @@
           "settings": {
             "label": "Kids",
             "link": "shopify://collections/kids-outlet",
-            "button_style": "m-button--white"
+            "button_style": "m-button--primary"
           }
         },
         "button_VHyXmX": {
@@ -50,7 +50,7 @@
           "settings": {
             "label": "Under $500",
             "link": "shopify://collections/outlet-under-500",
-            "button_style": "m-button--white"
+            "button_style": "m-button--primary"
           }
         },
         "button_PfJEc4": {
@@ -58,7 +58,7 @@
           "settings": {
             "label": "Under $100",
             "link": "shopify://collections/outlet-under-100",
-            "button_style": "m-button--white"
+            "button_style": "m-button--primary"
           }
         },
         "button_4zMhCE": {
@@ -66,7 +66,15 @@
           "settings": {
             "label": "Shop All",
             "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--white"
+            "button_style": "m-button--primary"
+          }
+        },
+        "button_jJLthD": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Now",
+            "link": "",
+            "button_style": "m-button--primary"
           }
         }
       },
@@ -76,7 +84,8 @@
         "button_k3JbLN",
         "button_VHyXmX",
         "button_PfJEc4",
-        "button_4zMhCE"
+        "button_4zMhCE",
+        "button_jJLthD"
       ],
       "name": "Banner - Christmas",
       "settings": {
@@ -285,6 +294,82 @@
         "show_pagination": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rectangle_buttons_CWpfbw": {
+      "type": "rectangle-buttons",
+      "blocks": {
+        "button_BDTweC": {
+          "type": "button",
+          "name": "Mens",
+          "settings": {
+            "label": "Shop Mens",
+            "link": "shopify://collections/mens-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-02_876cc5bd-099c-4afd-9567-8df69a3a90a9.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_wchCGm": {
+          "type": "button",
+          "name": "Womens",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "shopify://collections/womens-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-versace-accessories.-womens.jpg",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_TFQghR": {
+          "type": "button",
+          "name": "Kids",
+          "settings": {
+            "label": "Shop Kids",
+            "link": "shopify://collections/kids-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-fendi-dress-kids-girls_6e0c76ff-723b-4de6-bab6-a9104e8d4ff8.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_KiF3DH": {
+          "type": "button",
+          "name": "Home Collection",
+          "settings": {
+            "label": "Shop All",
+            "link": "shopify://collections/lestyle-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-lestyle-outlet.png",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_BDTweC",
+        "button_wchCGm",
+        "button_TFQghR",
+        "button_KiF3DH"
+      ],
+      "name": "Menu Buttons",
+      "settings": {
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "desktop_columns": 4,
+        "mobile_columns": 2,
+        "gap_desktop": 10,
+        "gap_mobile": 10,
+        "button_height": 128,
+        "button_border_radius": 0,
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "button_text_color": "#ffffff",
+        "button_font_size": 16,
+        "button_font_weight": "500"
       }
     },
     "custom_card_carousel_fmdyea": {
@@ -508,6 +593,7 @@
     "17601009311f9400d0",
     "empty_space_iWJHNV",
     "custom_card_carousel_8rkRNX",
+    "rectangle_buttons_CWpfbw",
     "custom_card_carousel_fmdyea",
     "empty_space_3bhqVP",
     "featured_collection_eVUk6N",
