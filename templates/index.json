@@ -12,50 +12,77 @@
     "split_banner_RNxN7B": {
       "type": "split-banner",
       "blocks": {
-        "button_Lwnpef": {
+        "button_h8NHf7": {
           "type": "button",
           "settings": {
-            "label": "Shop Sale",
-            "link": "shopify://collections/sale",
-            "button_style": "m-button--primary"
+            "label": "Womens",
+            "link": "shopify://collections/womens",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_3WpaW4": {
+          "type": "button",
+          "settings": {
+            "label": "Mens",
+            "link": "shopify://collections/mens",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_wWLXJ3": {
+          "type": "button",
+          "settings": {
+            "label": "Kids",
+            "link": "shopify://collections/kids",
+            "button_style": "m-button--white"
           }
         },
         "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Mens",
-            "link": "shopify://collections/mens",
-            "button_style": "m-button--primary"
+            "label": "T-shirts",
+            "link": "shopify://collections/t-shirts-tops",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_Lwnpef": {
+          "type": "button",
+          "settings": {
+            "label": "Shorts",
+            "link": "shopify://collections/shorts-for-mens",
+            "button_style": "m-button--secondary"
           }
         },
         "button_bdc8jp": {
           "type": "button",
           "settings": {
-            "label": "Womens",
-            "link": "shopify://collections/womens",
-            "button_style": "m-button--primary"
+            "label": "Swimwear",
+            "link": "shopify://collections/swimwear",
+            "button_style": "m-button--secondary"
           }
         },
         "button_DzRMYp": {
           "type": "button",
           "settings": {
-            "label": "Kids",
-            "link": "shopify://collections/kids",
-            "button_style": "m-button--primary"
+            "label": "Towels",
+            "link": "shopify://collections/home-collection-towels",
+            "button_style": "m-button--secondary"
           }
         },
         "button_qbGW7N": {
           "type": "button",
           "settings": {
-            "label": "50-70% OFF Outlet",
-            "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--primary"
+            "label": "Slippers & Slides",
+            "link": "shopify://collections/home-collection-slippers-slides",
+            "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_Lwnpef",
+        "button_h8NHf7",
+        "button_3WpaW4",
+        "button_wWLXJ3",
         "button_k3PLAE",
+        "button_Lwnpef",
         "button_bdc8jp",
         "button_DzRMYp",
         "button_qbGW7N"
@@ -63,19 +90,19 @@
       "name": "Banner - Main",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-boxingday25.gif",
-        "image_link": "shopify://collections/sale",
+        "image": "shopify://shop_images/lestyle-model-plein-tshirt-watch-mens.png",
+        "image_link": "shopify://collections/new-arrivals",
         "image_position": "left",
         "background_color": "#0f1112",
-        "background_image": "shopify://shop_images/lestyle-model-accessories_02.png",
-        "text_color": "#ffffff",
+        "background_image": "shopify://shop_images/bg.webp",
+        "text_color": "#222222",
         "content_alignment": "center",
         "title_type": "image",
-        "title_text": "Boxing Day Sale Starts",
+        "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/BoxingDay25_Title.png",
-        "title_image_width": 200,
-        "subheader_text": "<p>Lestyle's biggest sale of the year.<strong> 20-70% OFF</strong> storewide. Use code <strong>BD20</strong> for 20% OFF full-priced item. *T&Cs apply</p>",
+        "title_image": "shopify://shop_images/lestyle-title-summer-ready.png",
+        "title_image_width": 240,
+        "subheader_text": "<p>Get summer stylin' with Lestyle's designer accessories and fashion must-haves</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -193,6 +220,7 @@
         "countdown_G9V6qf",
         "button_jVjieL"
       ],
+      "disabled": true,
       "name": "Promotion countdown timer",
       "settings": {
         "container": "container-fluid",
