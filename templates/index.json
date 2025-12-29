@@ -235,61 +235,68 @@
     "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_xRpmKa": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Accessories",
-            "link": "shopify://collections/accessories",
-            "button_style": "m-button--primary"
-          }
-        },
         "button_RdMBFz": {
           "type": "button",
           "settings": {
-            "label": "Sale Under $200",
-            "link": "shopify://collections/sale-under-200",
-            "button_style": "m-button--primary"
+            "label": "Versace Jeans Couture",
+            "link": "https://www.lestyle.com.au/collections/dresses-for-womens?sort_by=created-descending&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "button_style": "m-button--white"
           }
         },
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Sale Under $100",
-            "link": "https://www.lestyle.com.au/collections/all/?sort_by=created-descending&filter.v.price.gte=&filter.v.price.lte=100&filter.v.availability=1",
-            "button_style": "m-button--primary"
+            "label": "Roberto Cavalli",
+            "link": "https://www.lestyle.com.au/collections/dresses-for-womens?sort_by=created-descending&filter.p.vendor=Roberto+Cavalli&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "button_style": "m-button--white"
           }
         },
         "button_UHtgJ4": {
           "type": "button",
           "settings": {
-            "label": "50-70% OFF Outlet",
-            "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--primary"
+            "label": "Moschino",
+            "link": "https://www.lestyle.com.au/collections/dresses-for-womens?sort_by=created-descending&filter.p.vendor=Moschino&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_TqFq4g": {
+          "type": "button",
+          "settings": {
+            "label": "Up to 70% Off Dresses",
+            "link": "https://www.lestyle.com.au/collections/dresses-outlet-womens",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_xRpmKa": {
+          "type": "button",
+          "settings": {
+            "label": "Shop All Dresses",
+            "link": "shopify://collections/dresses-for-womens",
+            "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_xRpmKa",
         "button_RdMBFz",
         "button_KGtbnk",
-        "button_UHtgJ4"
+        "button_UHtgJ4",
+        "button_TqFq4g",
+        "button_xRpmKa"
       ],
       "name": "Banner - Christmas",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-model-kids_7_copy.png",
+        "image": "shopify://shop_images/lestyle-model-vjc-dress-womens.png",
         "image_link": "shopify://collections/home-collection",
         "image_position": "right",
-        "background_color": "#6c1b22",
-        "background_image": "shopify://shop_images/lestyle-model-accessories_02.png",
-        "text_color": "#eeeeee",
+        "background_color": "#f1eeed",
+        "text_color": "#222222",
         "content_alignment": "center",
-        "title_type": "image",
-        "title_text": "Banner Title",
+        "title_type": "text",
+        "title_text": "THE LUXE EDIT",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/BoxingDay25_Title02.png",
         "title_image_width": 220,
-        "subheader_text": "<p>Shop now for huge discounts of <strong>20-70% OFF</strong> across the entire store. *T&Cs apply</p>",
+        "subheader_text": "<p>Make every moment glamorous with stunning dresses from prestigious designers</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
