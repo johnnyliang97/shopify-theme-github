@@ -319,6 +319,19 @@
     "custom_card_carousel_HeykPg": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_KJmxxY": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-sunglasses-mens-versace.webp",
+            "header_text": "Sunglasses",
+            "subheader_text": "Versace, Dolce & Gabbana",
+            "link": "shopify://collections/sunglasses",
+            "label_text": "New Arrivals",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
         "card_Qc7zEM": {
           "type": "card",
           "name": "Card",
@@ -354,19 +367,6 @@
             "subheader_text": "Summer Style",
             "link": "shopify://collections/shorts-for-mens",
             "label_text": "",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_KJmxxY": {
-          "type": "card",
-          "name": "Card",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-tshirt-men.webp",
-            "header_text": "Versace",
-            "subheader_text": "Mens Basic T-shirts",
-            "link": "shopify://collections/versace-basic-t-shirts",
-            "label_text": "To edit",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -412,10 +412,10 @@
         }
       },
       "block_order": [
+        "card_KJmxxY",
         "card_Qc7zEM",
         "card_BfVQWe",
         "card_dtFdem",
-        "card_KJmxxY",
         "card_zFcJyj",
         "card_6YENz3",
         "card_jVynpa"
