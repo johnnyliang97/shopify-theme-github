@@ -325,8 +325,21 @@
           "settings": {
             "image": "shopify://shop_images/lestyle-model-womens-versace-activewear.jpg",
             "header_text": "Activewear",
-            "subheader_text": "New Year, New You",
-            "link": "shopify://collections/givenchy-kids",
+            "subheader_text": "New Year, New Motivations",
+            "link": "shopify://collections/womens-activewear",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": "Shop Now"
+          }
+        },
+        "card_BfVQWe": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-balmain-swimwear_copy.webp",
+            "header_text": "Swimwear",
+            "subheader_text": "Ready for Summer",
+            "link": "shopify://collections/swimwear",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
@@ -354,19 +367,6 @@
             "subheader_text": "Mens Basic T-shirts",
             "link": "shopify://collections/versace-basic-t-shirts",
             "label_text": "FROM $99",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_BfVQWe": {
-          "type": "card",
-          "name": "Card",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-balmain-swimwear_copy.webp",
-            "header_text": "Swimwear",
-            "subheader_text": "Ready for Summer",
-            "link": "shopify://collections/swimwear",
-            "label_text": "UP TO 60% OFF",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -413,9 +413,9 @@
       },
       "block_order": [
         "card_Qc7zEM",
+        "card_BfVQWe",
         "card_dtFdem",
         "card_KJmxxY",
-        "card_BfVQWe",
         "card_zFcJyj",
         "card_6YENz3",
         "card_jVynpa"
