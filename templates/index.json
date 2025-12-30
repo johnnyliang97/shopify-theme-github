@@ -336,7 +336,7 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-balmain-swimwear_copy.webp",
+            "image": "shopify://shop_images/lestyle-model-versace-swimwear02.jpg",
             "header_text": "Swimwear",
             "subheader_text": "Ready for Summer",
             "link": "shopify://collections/swimwear",
@@ -349,11 +349,11 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-boss-kids-tshirt.webp",
-            "header_text": "Kidswear Outlet",
-            "subheader_text": "Sale",
-            "link": "shopify://collections/boss-outlet",
-            "label_text": "50-70% OFF",
+            "image": "shopify://shop_images/lestyle-model-versace-shorts-mens_copy.webp",
+            "header_text": "Mens Shorts",
+            "subheader_text": "Summer Style",
+            "link": "shopify://collections/shorts-for-mens",
+            "label_text": "",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
@@ -366,7 +366,7 @@
             "header_text": "Versace",
             "subheader_text": "Mens Basic T-shirts",
             "link": "shopify://collections/versace-basic-t-shirts",
-            "label_text": "FROM $99",
+            "label_text": "To edit",
             "label_color": "#b30505",
             "button_text": "Shop Now"
           }
