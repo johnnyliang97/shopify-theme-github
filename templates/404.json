@@ -1,1 +1,501 @@
-{"sections":{"image_with_text_WJwD46":{"type":"image-with-text","name":"Image with text","settings":{"heading":"","heading_size":"h3","subheading":"","container":"container-fluid","color_scheme":"","item_gap":100,"item_gap_mobile":30,"layout":"left","image_column_size":"6","image_overlap":false,"show_image_reverse":false,"hover_effect":false,"image_animation":"none","image":"shopify:\/\/shop_images\/LestyleHome_Mobile_NewSite.webp","link":"","link_2":"","second_image_offset_top":10,"title":"LESTYLE JUST GOT AN UPGRADE","sub_title":"","text":"<p>Now powered by Shopify for a faster, smoother shopping experience<\/p>","text_size":"medium","content_alignment":"left","button_label":"Shop Now","button_link":"https:\/\/lestyle.com.au","button_style":"m-button--link","button_size":"","padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}},"scrolling_promotion_iqtEjR":{"type":"scrolling-promotion","blocks":{"image_LExH6x":{"type":"image","name":"Amiri","settings":{"image":"shopify:\/\/shop_images\/logo_amiri.png","image_height":80,"image_link":"shopify:\/\/collections\/amiri"}},"image_hpnDtC":{"type":"image","name":"Balmain","settings":{"image":"shopify:\/\/shop_images\/logo_balmain.png","image_height":80,"image_link":"shopify:\/\/collections\/balmain"}},"image_BFTEJY":{"type":"image","name":"Boss","settings":{"image":"shopify:\/\/shop_images\/logo_boss.png","image_height":80,"image_link":"shopify:\/\/collections\/boss"}},"image_kLBzCe":{"type":"image","name":"Casablanca","settings":{"image":"shopify:\/\/shop_images\/logo_casablanca.png","image_height":80,"image_link":"shopify:\/\/collections\/casablanca"}},"image_MEBgP9":{"type":"image","name":"Dolce Gabbana","settings":{"image":"shopify:\/\/shop_images\/logo_dolcegabbana.png","image_height":80,"image_link":"shopify:\/\/collections\/dolce-gabbana"}},"image_yCUP9p":{"type":"image","name":"Dsquared2","settings":{"image":"shopify:\/\/shop_images\/logo_dsquared2.png","image_height":80,"image_link":"shopify:\/\/collections\/dsquared2"}},"image_hwWmtP":{"type":"image","name":"Fendi","settings":{"image":"shopify:\/\/shop_images\/logo_fendi.png","image_height":80,"image_link":"shopify:\/\/collections\/fendi"}},"image_re4HTF":{"type":"image","name":"Givenchy","settings":{"image":"shopify:\/\/shop_images\/logo_givenchy.png","image_height":80,"image_link":"shopify:\/\/collections\/givenchy"}},"image_DgnQUL":{"type":"image","name":"Karl Lagerfeld","settings":{"image":"shopify:\/\/shop_images\/logo_karllagerfeld.png","image_height":80,"image_link":"shopify:\/\/collections\/karl-lagerfeld"}},"image_pfnPJw":{"type":"image","name":"Kenzo","settings":{"image":"shopify:\/\/shop_images\/logo_kenzo.png","image_height":80,"image_link":"shopify:\/\/collections\/kenzo"}},"image_y8tQYC":{"type":"image","name":"Marcelo Burlon","settings":{"image":"shopify:\/\/shop_images\/logo_marcelo_burlon.png","image_height":80,"image_link":"shopify:\/\/collections\/marcelo-burlon"}},"image_EMdqeA":{"type":"image","name":"Moschino","settings":{"image":"shopify:\/\/shop_images\/logo_moschino.png","image_height":80,"image_link":"shopify:\/\/collections\/moschino"}},"image_q8Agx8":{"type":"image","name":"Palm Angels","settings":{"image":"shopify:\/\/shop_images\/logo_palm_angels.png","image_height":80,"image_link":"shopify:\/\/collections\/palm-angels"}},"image_AA3PYE":{"type":"image","name":"Philipp Plein","settings":{"image":"shopify:\/\/shop_images\/logo_philipp_plein.png","image_height":80,"image_link":"shopify:\/\/collections\/philipp-plein"}},"image_Dd3xQW":{"type":"image","name":"Roberto Cavalli","settings":{"image":"shopify:\/\/shop_images\/logo_roberto_cavalli.png","image_height":80,"image_link":"shopify:\/\/collections\/roberto-cavalli"}},"image_6HhwYK":{"type":"image","name":"Versace","settings":{"image":"shopify:\/\/shop_images\/logo_versace.png","image_height":80,"image_link":"shopify:\/\/collections\/versace"}},"image_9pyWe3":{"type":"image","name":"Versace Jeans Couture","settings":{"image":"shopify:\/\/shop_images\/logo_versace_jeans_couture.png","image_height":80,"image_link":"shopify:\/\/collections\/versace-jeans-couture"}}},"block_order":["image_LExH6x","image_hpnDtC","image_BFTEJY","image_kLBzCe","image_MEBgP9","image_yCUP9p","image_hwWmtP","image_re4HTF","image_DgnQUL","image_pfnPJw","image_y8tQYC","image_EMdqeA","image_q8Agx8","image_AA3PYE","image_Dd3xQW","image_6HhwYK","image_9pyWe3"],"name":"Scrolling logos","settings":{"container":"w-full","direction":"left","speed":30,"item_gap":40,"item_gap_mobile":20,"color_scheme":"","padding_top":52,"padding_bottom":52,"custom_class":""}},"rich_text_W7NVYQ":{"type":"rich-text","blocks":{"heading_wNNQNX":{"type":"heading","settings":{"heading":"SEARCH YOUR FAVOURITES","heading_size":"h2"}},"button_QtGAyr":{"type":"button","settings":{"button_label":"Search Now","button_link":"https:\/\/www.lestyle.com.au\/search","button_style":"m-button--secondary","button_size":""}}},"block_order":["heading_wNNQNX","button_QtGAyr"],"name":"Rich text","settings":{"container":"container","color_scheme":"","content_alignment":"center","padding_top":52,"padding_bottom":52,"custom_class":"","animations":"inherit"}},"collection_list_6kDyma":{"type":"collection-list","blocks":{"collection_block_a9yA8y":{"type":"collection_block","settings":{"collection":"mens","title":"Shop Mens","item_image":"{{ block.settings.collection.image }}"}},"collection_block_H6tizX":{"type":"collection_block","settings":{"collection":"womens","title":"Shop Womens","item_image":"{{ block.settings.collection.image }}"}},"collection_block_Kz9p7B":{"type":"collection_block","settings":{"collection":"kids","title":"Shop Kids","item_image":"{{ block.settings.collection.image }}"}},"collection_block_iEEAqm":{"type":"collection_block","settings":{"collection":"home-collection","title":"Shop Home Collection","item_image":"{{ block.settings.collection.image }}"}}},"block_order":["collection_block_a9yA8y","collection_block_H6tizX","collection_block_Kz9p7B","collection_block_iEEAqm"],"name":"Mens Womens Kids Home","settings":{"heading":"","heading_size":"h3","subheading":"","description":"","button_label":"","button_link":"","button_style":"m-button--primary","header_alignment":"center","color_scheme":"","container":"container-fluid","layout":"grid","expanded":true,"card_style":"standard","text_alignment":"left","hover_effect":"scaling-down","show_product_count":false,"count_inline_title":true,"image_rounded":false,"items_per_row":4,"item_gap":30,"enable_slider":false,"show_pagination":false,"show_navigation":false,"autorotate":false,"autorotate_speed":5,"mobile_disable_slider":false,"use_scroll_mobile":true,"mobile_gap":10,"hidden_slide_control_mobile":false,"padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}},"icon_box_9rgbdk":{"type":"icon-box","blocks":{"iconbox_NiGpnC":{"type":"iconbox","settings":{"card_color_scheme":"","image_by_url":"https:\/\/www.svgrepo.com\/show\/352446\/shipping-fast.svg","title":"Express Shipping","description":"<p>Australia wide and international shipping available<\/p>","link":"","button_label":"","button_link":"","button_style":"sf__btn-link","button_size":""}},"iconbox_hEHkJp":{"type":"iconbox","settings":{"card_color_scheme":"","image_by_url":"https:\/\/www.svgrepo.com\/show\/349541\/uber.svg","title":"Same Day Delivery","description":"<p>Uber same day delivery available across Metropolitan Melbourne<\/p>","link":"","button_label":"","button_link":"","button_style":"sf__btn-link","button_size":""}},"iconbox_3WidcR":{"type":"iconbox","settings":{"card_color_scheme":"","image_by_url":"https:\/\/www.svgrepo.com\/show\/448108\/question.svg","title":"Online Support","description":"<p>Message us on <a href=\"http:\/\/ig.me\/m\/lestyleoutique\" target=\"_blank\" title=\"Lestyle Instagram DM Contact\">Instagram<\/a> or <a href=\"http:\/\/wa.me\/+61423185118\" target=\"_blank\" title=\"Lestyle WhatsApp Contact\">WhatsApp<\/a><\/p>","link":"shopify:\/\/pages\/contact","button_label":"","button_link":"","button_style":"sf__btn-link","button_size":""}},"iconbox_iBX4Jh":{"type":"iconbox","settings":{"card_color_scheme":"","image_by_url":"https:\/\/www.svgrepo.com\/show\/352522\/store-alt.svg","title":"Open Hours","description":"<p>Click <a href=\"https:\/\/lestyleau.myshopify.com\/pages\/open-hours\" title=\"Lestyle Open Hours\">here<\/a> for Lestyle's opening hours<\/p>","link":"shopify:\/\/pages\/open-hours","button_label":"","button_link":"","button_style":"sf__btn-link","button_size":""}}},"block_order":["iconbox_NiGpnC","iconbox_hEHkJp","iconbox_3WidcR","iconbox_iBX4Jh"],"custom_css":[".m-icon-box__icon {margin-right: 12px; width: 26px !important;}",".m-icon-box--small {border-top-width: 0;}"],"name":"Info Footer","settings":{"container":"container-fluid","color_scheme":"default","heading":"","heading_size":"h3","subheading":"","description":"","header_alignment":"center","item_per_row":4,"item_gap":30,"item_gap_mobile":10,"card_style":"horizontal","image_max_width":"60px","content_alignment":"start","hover_effect":"none","enable_slider":false,"show_pagination":true,"show_navigation":true,"use_scroll_mobile":false,"use_grid_column_mb":false,"padding_top":46,"padding_bottom":46,"custom_class":"m-icon-box--small","animations":"inherit"}},"main":{"type":"404-template","disabled":true,"settings":{"bg_color":"#eeeeee","t1_color":"#000000","t2_color":"#000000"}}},"order":["image_with_text_WJwD46","scrolling_promotion_iqtEjR","rich_text_W7NVYQ","collection_list_6kDyma","icon_box_9rgbdk","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_WJwD46": {
+      "type": "image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "container": "container",
+        "color_scheme": "",
+        "item_gap": 100,
+        "item_gap_mobile": 30,
+        "layout": "left",
+        "image_column_size": "6",
+        "image_overlap": false,
+        "show_image_reverse": false,
+        "hover_effect": false,
+        "image_animation": "none",
+        "image": "shopify://shop_images/Lestyle_Lady.jpg",
+        "link": "",
+        "link_2": "",
+        "second_image_offset_top": 10,
+        "title": "The item is no longer available",
+        "sub_title": "",
+        "text": "<p>Lestyle Boutique on 136 Little Collins St, Melbourne, offers a curated collection of top designer brands in Mens, Womens, Kids, and Homewares.</p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "Shop Now",
+        "button_link": "https://lestyle.com.au",
+        "button_style": "m-button--link",
+        "button_size": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "custom_content_Xwfwpz": {
+      "type": "custom-content",
+      "blocks": {
+        "liquid_rGc3QK": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"max-width: 100%; margin: 20px auto; padding: 0; font-family: Arial, sans-serif;\">\n\n  <!-- Header & Text -->\n  <div style=\"margin-bottom: 20px;\">\n    <h3 style=\"margin: 0 0 8px 0;\">Need Help？</h3>\n    <p style=\"margin: 0; font-size: 14px; color: #555;\">\n      Got questions on sizing, styles, or new arrivals? Send us a message now!\n    </p>\n  </div>\n\n  <!-- Button Row -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 12px;\">\n\n    <!-- Instagram Button -->\n    <a href=\"https://ig.me/m/lestyleboutique\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff\" alt=\"Instagram Icon\" style=\"width: 20px; height: 20px;\">\n      Instagram\n    </a>\n\n    <!-- WhatsApp Button -->\n    <a href=\"https://wa.me/+61492266452\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #25D366; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff\" alt=\"WhatsApp Icon\" style=\"width: 20px; height: 20px;\">\n      WhatsApp\n    </a>\n\n  </div>\n\n</div>",
+            "width": "100%",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_rGc3QK"
+      ],
+      "name": "Contact",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "enable_preload_image": false,
+        "custom_class": ""
+      }
+    },
+    "rectangle_buttons_QM4ABJ": {
+      "type": "rectangle-buttons",
+      "blocks": {
+        "button_t4YQcc": {
+          "type": "button",
+          "name": "Mens",
+          "settings": {
+            "label": "Shop Mens",
+            "link": "shopify://collections/mens",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-versace-shorts-vjc-shirt-mens_e598c56f-8d7e-4a30-aef2-6a3a9a7f56d2.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_Vbw6qG": {
+          "type": "button",
+          "name": "Womens",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "shopify://collections/womens",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/Instagram_post_-_1_c75c4feb-a82e-4f5f-a5f3-51789f269430.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_WERF6V": {
+          "type": "button",
+          "name": "Kids",
+          "settings": {
+            "label": "Shop Kids",
+            "link": "shopify://collections/kids",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-chloe-kenzo-kids.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_6Vckmx": {
+          "type": "button",
+          "name": "Home Collection",
+          "settings": {
+            "label": "Shop Home Collection",
+            "link": "shopify://collections/home-collection",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/90_ZPCSET009-ZCOP0105_Z7011_24_I-600x750.webp",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_t4YQcc",
+        "button_Vbw6qG",
+        "button_WERF6V",
+        "button_6Vckmx"
+      ],
+      "name": "Menu Buttons",
+      "settings": {
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "desktop_columns": 4,
+        "mobile_columns": 2,
+        "gap_desktop": 10,
+        "gap_mobile": 10,
+        "button_height": 128,
+        "button_border_radius": 0,
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "button_text_color": "#ffffff",
+        "button_font_size": 16,
+        "button_font_weight": "500"
+      }
+    },
+    "scrolling_promotion_iqtEjR": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "image_LExH6x": {
+          "type": "image",
+          "name": "Amiri",
+          "settings": {
+            "image": "shopify://shop_images/logo_amiri.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/amiri"
+          }
+        },
+        "image_hpnDtC": {
+          "type": "image",
+          "name": "Balmain",
+          "settings": {
+            "image": "shopify://shop_images/logo_balmain.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/balmain"
+          }
+        },
+        "image_BFTEJY": {
+          "type": "image",
+          "name": "Boss",
+          "settings": {
+            "image": "shopify://shop_images/logo_boss.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/boss"
+          }
+        },
+        "image_kLBzCe": {
+          "type": "image",
+          "name": "Casablanca",
+          "settings": {
+            "image": "shopify://shop_images/logo_casablanca.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/casablanca"
+          }
+        },
+        "image_MEBgP9": {
+          "type": "image",
+          "name": "Dolce Gabbana",
+          "settings": {
+            "image": "shopify://shop_images/logo_dolcegabbana.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/dolce-gabbana"
+          }
+        },
+        "image_yCUP9p": {
+          "type": "image",
+          "name": "Dsquared2",
+          "settings": {
+            "image": "shopify://shop_images/logo_dsquared2.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/dsquared2"
+          }
+        },
+        "image_hwWmtP": {
+          "type": "image",
+          "name": "Fendi",
+          "settings": {
+            "image": "shopify://shop_images/logo_fendi.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/fendi"
+          }
+        },
+        "image_re4HTF": {
+          "type": "image",
+          "name": "Givenchy",
+          "settings": {
+            "image": "shopify://shop_images/logo_givenchy.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/givenchy"
+          }
+        },
+        "image_DgnQUL": {
+          "type": "image",
+          "name": "Karl Lagerfeld",
+          "settings": {
+            "image": "shopify://shop_images/logo_karllagerfeld.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/karl-lagerfeld"
+          }
+        },
+        "image_pfnPJw": {
+          "type": "image",
+          "name": "Kenzo",
+          "settings": {
+            "image": "shopify://shop_images/logo_kenzo.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/kenzo"
+          }
+        },
+        "image_y8tQYC": {
+          "type": "image",
+          "name": "Marcelo Burlon",
+          "settings": {
+            "image": "shopify://shop_images/logo_marcelo_burlon.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/marcelo-burlon"
+          }
+        },
+        "image_EMdqeA": {
+          "type": "image",
+          "name": "Moschino",
+          "settings": {
+            "image": "shopify://shop_images/logo_moschino.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/moschino"
+          }
+        },
+        "image_q8Agx8": {
+          "type": "image",
+          "name": "Palm Angels",
+          "settings": {
+            "image": "shopify://shop_images/logo_palm_angels.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/palm-angels"
+          }
+        },
+        "image_AA3PYE": {
+          "type": "image",
+          "name": "Philipp Plein",
+          "settings": {
+            "image": "shopify://shop_images/logo_philipp_plein.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/philipp-plein"
+          }
+        },
+        "image_Dd3xQW": {
+          "type": "image",
+          "name": "Roberto Cavalli",
+          "settings": {
+            "image": "shopify://shop_images/logo_roberto_cavalli.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/roberto-cavalli"
+          }
+        },
+        "image_6HhwYK": {
+          "type": "image",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/logo_versace.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/versace"
+          }
+        },
+        "image_9pyWe3": {
+          "type": "image",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/logo_versace_jeans_couture.png",
+            "image_height": 80,
+            "image_link": "shopify://collections/versace-jeans-couture"
+          }
+        }
+      },
+      "block_order": [
+        "image_LExH6x",
+        "image_hpnDtC",
+        "image_BFTEJY",
+        "image_kLBzCe",
+        "image_MEBgP9",
+        "image_yCUP9p",
+        "image_hwWmtP",
+        "image_re4HTF",
+        "image_DgnQUL",
+        "image_pfnPJw",
+        "image_y8tQYC",
+        "image_EMdqeA",
+        "image_q8Agx8",
+        "image_AA3PYE",
+        "image_Dd3xQW",
+        "image_6HhwYK",
+        "image_9pyWe3"
+      ],
+      "name": "Scrolling logos",
+      "settings": {
+        "container": "w-full",
+        "direction": "left",
+        "speed": 30,
+        "item_gap": 40,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
+    },
+    "rich_text_W7NVYQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wNNQNX": {
+          "type": "heading",
+          "settings": {
+            "heading": "SEARCH YOUR FAVOURITES",
+            "heading_size": "h2"
+          }
+        },
+        "button_QtGAyr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Search Now",
+            "button_link": "https://www.lestyle.com.au/search",
+            "button_style": "m-button--secondary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_wNNQNX",
+        "button_QtGAyr"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_alignment": "center",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "icon_box_9rgbdk": {
+      "type": "icon-box",
+      "blocks": {
+        "iconbox_NiGpnC": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image_by_url": "https://www.svgrepo.com/show/352446/shipping-fast.svg",
+            "title": "Express Shipping",
+            "description": "<p>Australia wide and international shipping available</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "iconbox_hEHkJp": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image_by_url": "https://www.svgrepo.com/show/349541/uber.svg",
+            "title": "Same Day Delivery",
+            "description": "<p>Uber same day delivery available across Metropolitan Melbourne</p>",
+            "link": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "iconbox_3WidcR": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image_by_url": "https://www.svgrepo.com/show/448108/question.svg",
+            "title": "Online Support",
+            "description": "<p>Message us on <a href=\"http://ig.me/m/lestyleoutique\" target=\"_blank\" title=\"Lestyle Instagram DM Contact\">Instagram</a> or <a href=\"http://wa.me/+61423185118\" target=\"_blank\" title=\"Lestyle WhatsApp Contact\">WhatsApp</a></p>",
+            "link": "shopify://pages/contact",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        },
+        "iconbox_iBX4Jh": {
+          "type": "iconbox",
+          "settings": {
+            "card_color_scheme": "",
+            "image_by_url": "https://www.svgrepo.com/show/352522/store-alt.svg",
+            "title": "Open Hours",
+            "description": "<p>Click <a href=\"https://lestyleau.myshopify.com/pages/open-hours\" title=\"Lestyle Open Hours\">here</a> for Lestyle's opening hours</p>",
+            "link": "shopify://pages/open-hours",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "sf__btn-link",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "iconbox_NiGpnC",
+        "iconbox_hEHkJp",
+        "iconbox_3WidcR",
+        "iconbox_iBX4Jh"
+      ],
+      "custom_css": [
+        ".m-icon-box__icon {margin-right: 12px; width: 26px !important;}",
+        ".m-icon-box--small {border-top-width: 0;}"
+      ],
+      "name": "Info Footer",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "default",
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "item_per_row": 4,
+        "item_gap": 30,
+        "item_gap_mobile": 10,
+        "card_style": "horizontal",
+        "image_max_width": "60px",
+        "content_alignment": "start",
+        "hover_effect": "none",
+        "enable_slider": false,
+        "show_pagination": true,
+        "show_navigation": true,
+        "use_scroll_mobile": false,
+        "use_grid_column_mb": false,
+        "padding_top": 46,
+        "padding_bottom": 46,
+        "custom_class": "m-icon-box--small",
+        "animations": "inherit"
+      }
+    },
+    "main": {
+      "type": "404-template",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#eeeeee",
+        "t1_color": "#000000",
+        "t2_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "image_with_text_WJwD46",
+    "custom_content_Xwfwpz",
+    "rectangle_buttons_QM4ABJ",
+    "scrolling_promotion_iqtEjR",
+    "rich_text_W7NVYQ",
+    "icon_box_9rgbdk",
+    "main"
+  ]
+}
