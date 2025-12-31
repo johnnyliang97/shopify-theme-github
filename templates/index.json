@@ -416,6 +416,19 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_HpbLmm": {
+          "type": "card",
+          "name": "Philipp Plein",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-watch_copy.png",
+            "header_text": "Philipp Plein",
+            "subheader_text": "",
+            "link": "shopify://collections/philipp-plein",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
         "card_9fYyNd": {
           "type": "card",
           "name": "Chloe",
@@ -481,19 +494,6 @@
             "button_text": "Shop Now"
           }
         },
-        "card_HpbLmm": {
-          "type": "card",
-          "name": "Philipp Plein",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-philipp-plein-mens-hoodie-2.png",
-            "header_text": "Philipp Plein",
-            "subheader_text": "",
-            "link": "shopify://collections/philipp-plein",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
         "card_eRET9U": {
           "type": "card",
           "name": "Fendi",
@@ -548,12 +548,12 @@
         }
       },
       "block_order": [
+        "card_HpbLmm",
         "card_9fYyNd",
         "card_9pRebr",
         "card_KBbgxn",
         "card_GcyLwV",
         "card_EJfrR9",
-        "card_HpbLmm",
         "card_eRET9U",
         "card_EVUnen",
         "card_XcHpVk",
