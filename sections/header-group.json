@@ -16,6 +16,7 @@
       "blocks": {
         "item_dGj4GU": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "message": "Code BD20 for 20% OFF",
             "message_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay"
