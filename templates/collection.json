@@ -11,6 +11,7 @@
   "sections": {
     "small_banner_94bCdV": {
       "type": "small-banner",
+      "disabled": true,
       "custom_css": [
         ".small-banner-text-content {align-items: center;}"
       ],

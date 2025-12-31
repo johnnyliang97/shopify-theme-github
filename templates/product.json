@@ -22,6 +22,7 @@
     },
     "small_banner_bN6CQH": {
       "type": "small-banner",
+      "disabled": true,
       "custom_css": [
         ".small-banner-text-content {align-items: center;}"
       ],
