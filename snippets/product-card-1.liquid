@@ -408,7 +408,21 @@
             href="{{ product_url }}"
             class="m-product-card__name{% if settings.uppercase_prd_name %} m:uppercase{% endif %}"
           >
-            {{ product.title }}
+            {%- liquid
+              assign display_title = product.title
+              if template.name == 'collection' and product.vendor != blank
+                assign vendor_original = product.vendor
+                assign vendor_lower = vendor_original | downcase
+                assign vendor_upper = vendor_original | upcase
+                assign vendor_cap = vendor_original | capitalize
+                assign display_title = display_title | remove: vendor_original
+                assign display_title = display_title | remove: vendor_lower
+                assign display_title = display_title | remove: vendor_upper
+                assign display_title = display_title | remove: vendor_cap
+                assign display_title = display_title | replace: '  ', ' ' | strip
+              endif
+            -%}
+            {{ display_title }}
           </a>
         </h3>
       {% endif %}

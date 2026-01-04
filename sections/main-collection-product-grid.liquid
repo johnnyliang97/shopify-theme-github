@@ -56,7 +56,7 @@
         animated: animated,
         animation_effect: animation_effect
       -%}
-      <div id="CollectionProductGrid" class="m:flex-1" data-collection-id="{{ collection.id }}" data-vendors="{{ vendors | json }}">
+      <div id="CollectionProductGrid" class="m:flex-1" data-collection-id="{{ collection.id }}" data-vendors='{{ vendors | json }}'>
         {%- render 'collection-page-toolbar',
           section: section,
           results: collection,
