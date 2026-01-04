@@ -29,6 +29,10 @@
   if container == 'w-full'
     assign container = 'container-full'
   endif
+  assign vendors = shop.vendors
+  if vendors == blank
+    assign vendors = collection.products | map: 'vendor' | uniq
+  endif
 -%}
 
 <section
@@ -52,7 +56,7 @@
         animated: animated,
         animation_effect: animation_effect
       -%}
-      <div id="CollectionProductGrid" class="m:flex-1" data-collection-id="{{ collection.id }}">
+      <div id="CollectionProductGrid" class="m:flex-1" data-collection-id="{{ collection.id }}" data-vendors="{{ vendors | json }}">
         {%- render 'collection-page-toolbar',
           section: section,
           results: collection,
@@ -138,6 +142,58 @@
       MinimogTheme.Collection = new Collection();
       MinimogTheme.Collection.init();
     }
+    (function () {
+      var grid = document.getElementById('CollectionProductGrid');
+      if (!grid) return;
+      var vendorsAttr = grid.getAttribute('data-vendors') || '[]';
+      var vendors;
+      try { vendors = JSON.parse(vendorsAttr); } catch (e) { vendors = []; }
+      if (!Array.isArray(vendors)) vendors = [];
+      vendors = vendors.filter(Boolean).map(function (v) { return v.trim(); }).filter(function (v) { return v.length > 0; });
+      if (vendors.length === 0) return;
+
+      function buildPatterns(list) {
+        return list.map(function (v) {
+          var escaped = v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          return new RegExp(escaped, 'gi');
+        });
+      }
+      var patterns = buildPatterns(vendors);
+
+      function cleanTitle(text) {
+        var cleaned = text;
+        patterns.forEach(function (re) {
+          cleaned = cleaned.replace(re, '');
+        });
+        cleaned = cleaned.replace(/\s{2,}/g, ' ').replace(/^\s+|\s+$/g, '');
+        cleaned = cleaned.replace(/^[\-\|\–\—•]+\s*/, '').replace(/\s*[\-\|\–\—•]+$/, '');
+        return cleaned;
+      }
+
+      function process(container) {
+        var titleEls = container.querySelectorAll('.m-product-card__title .m-product-card__name');
+        if (!titleEls.length) return;
+        titleEls.forEach(function (el) {
+          var original = el.textContent || el.innerText || '';
+          var cleaned = cleanTitle(original);
+          if (cleaned && cleaned !== original) {
+            el.textContent = cleaned;
+          }
+        });
+      }
+
+      var productsContainer = grid.querySelector('[data-product-container]') || grid;
+      process(productsContainer);
+
+      var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (m) {
+          if (m.addedNodes && m.addedNodes.length) {
+            process(productsContainer);
+          }
+        });
+      });
+      observer.observe(productsContainer, { childList: true, subtree: true });
+    })();
   });
   if (Shopify.designMode) {
     document.addEventListener('shopify:section:load', function (event) {
