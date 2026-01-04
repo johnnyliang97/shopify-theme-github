@@ -412,13 +412,19 @@
               assign display_title = product.title
               if template.name == 'collection' and product.vendor != blank
                 assign vendor_original = product.vendor
-                assign vendor_lower = vendor_original | downcase
-                assign vendor_upper = vendor_original | upcase
-                assign vendor_cap = vendor_original | capitalize
-                assign display_title = display_title | remove: vendor_original
-                assign display_title = display_title | remove: vendor_lower
-                assign display_title = display_title | remove: vendor_upper
-                assign display_title = display_title | remove: vendor_cap
+              assign vendor_lower = vendor_original | downcase
+              assign vendor_upper = vendor_original | upcase
+              assign vendor_cap = vendor_original | capitalize
+              assign display_title = display_title | remove: vendor_original
+              assign display_title = display_title | remove: vendor_lower
+              assign display_title = display_title | remove: vendor_upper
+              assign display_title = display_title | remove: vendor_cap
+                assign vendor_accent_e = vendor_original | replace: 'e', 'é'
+                assign vendor_accent_E = vendor_original | upcase | replace: 'E', 'É'
+                assign vendor_accent_cap_e = vendor_original | capitalize | replace: 'e', 'é'
+                assign display_title = display_title | remove: vendor_accent_e
+                assign display_title = display_title | remove: vendor_accent_E
+                assign display_title = display_title | remove: vendor_accent_cap_e
                 assign display_title = display_title | replace: '  ', ' ' | strip
               endif
             -%}

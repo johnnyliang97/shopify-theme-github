@@ -152,13 +152,35 @@
       vendors = vendors.filter(Boolean).map(function (v) { return v.trim(); }).filter(function (v) { return v.length > 0; });
       if (vendors.length === 0) return;
 
-      function buildPatterns(list) {
-        return list.map(function (v) {
-          var escaped = v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-          return new RegExp(escaped, 'gi');
-        });
+      function vendorToRegex(vendor) {
+        var map = {
+          a: 'aàáâãäåāăą',
+          c: 'cçćč',
+          e: 'eèéêëēĕėęě',
+          i: 'iìíîïīĭįı',
+          o: 'oòóôõöōŏő',
+          u: 'uùúûüũūŭůű',
+          y: 'yýÿŷ',
+          n: 'nñńň',
+          s: 'sśšș',
+          z: 'zźżž',
+          l: 'lĺľł',
+          r: 'rŕř',
+          t: 'tťț'
+        };
+        var pattern = '';
+        for (var i = 0; i < vendor.length; i++) {
+          var ch = vendor[i];
+          var low = ch.toLowerCase();
+          if (map[low]) {
+            pattern += '[' + map[low] + ']';
+          } else {
+            pattern += ch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          }
+        }
+        return new RegExp(pattern, 'giu');
       }
-      var patterns = buildPatterns(vendors);
+      var patterns = vendors.map(vendorToRegex);
 
       function cleanTitle(text) {
         var cleaned = text;
