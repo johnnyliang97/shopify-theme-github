@@ -45,7 +45,7 @@
     "show_compare_button": false,
     "on_sale_badge": "show_percentage",
     "show_badge_sale": false,
-    "show_vendor": false,
+    "show_vendor": true,
     "uppercase_prd_name": true,
     "article_show_date": false,
     "article_show_excerpt": true,
