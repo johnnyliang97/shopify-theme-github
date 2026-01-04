@@ -332,6 +332,7 @@
         "countdown_Eryen6",
         "button_YyqiCL"
       ],
+      "disabled": true,
       "name": "Promotion countdown timer",
       "settings": {
         "container": "container-fluid",
