@@ -22,21 +22,18 @@
     },
     "small_banner_bN6CQH": {
       "type": "small-banner",
-      "disabled": true,
-      "custom_css": [
-        ".small-banner-text-content {align-items: center;}"
-      ],
+      "custom_css": [],
       "name": "Small Banner",
       "settings": {
         "container": "container",
         "background_color": "#000000",
-        "background_image": "shopify://shop_images/lestyle-model-accessories_02.png",
-        "background_overlay_opacity": 0,
+        "background_image": "shopify://shop_images/bg.webp",
+        "background_overlay_opacity": 50,
         "image_width": 150,
         "text_color": "#ffffff",
-        "header_text": "BOXING DAY SALE",
+        "header_text": "EXTRA 10% OFF",
         "header_size": "h4",
-        "subheader_text": "<p>USE CODE <strong>BD20</strong> AT CHECKOUT</p>",
+        "subheader_text": "<p><a href=\"/pages/subscribe\" title=\"Subscribe\">Subscribe to Lestyle email newsletter to get extra 10% OFF all orders</a></p>",
         "subheader_size": "text-small",
         "button_text": "",
         "button_link": "",
