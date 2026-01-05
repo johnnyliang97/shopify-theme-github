@@ -12,97 +12,50 @@
     "split_banner_RNxN7B": {
       "type": "split-banner",
       "blocks": {
-        "button_h8NHf7": {
-          "type": "button",
-          "settings": {
-            "label": "Womens",
-            "link": "shopify://collections/womens",
-            "button_style": "m-button--white"
-          }
-        },
         "button_3WpaW4": {
           "type": "button",
           "settings": {
-            "label": "Mens",
-            "link": "shopify://collections/mens",
-            "button_style": "m-button--white"
+            "label": "Shop Womens",
+            "link": "shopify://collections/versace-jeans-couture-for-womens",
+            "button_style": "m-button--primary"
           }
         },
-        "button_wWLXJ3": {
+        "button_h8NHf7": {
           "type": "button",
           "settings": {
-            "label": "Kids",
-            "link": "shopify://collections/kids",
-            "button_style": "m-button--white"
+            "label": "Shop Mens",
+            "link": "shopify://collections/versace-jeans-couture-for-mens",
+            "button_style": "m-button--primary"
           }
         },
         "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "T-shirts",
-            "link": "shopify://collections/t-shirts-tops",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_Lwnpef": {
-          "type": "button",
-          "settings": {
-            "label": "Shorts",
-            "link": "shopify://collections/shorts-for-mens",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_bdc8jp": {
-          "type": "button",
-          "settings": {
-            "label": "Swimwear",
-            "link": "shopify://collections/swimwear",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_DzRMYp": {
-          "type": "button",
-          "settings": {
-            "label": "Towels",
-            "link": "shopify://collections/home-collection-towels",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_qbGW7N": {
-          "type": "button",
-          "settings": {
-            "label": "Slippers & Slides",
-            "link": "shopify://collections/home-collection-slippers-slides",
+            "label": "Shop Versace Jeans Couture",
+            "link": "shopify://collections/versace-jeans-couture",
             "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_h8NHf7",
         "button_3WpaW4",
-        "button_wWLXJ3",
-        "button_k3PLAE",
-        "button_Lwnpef",
-        "button_bdc8jp",
-        "button_DzRMYp",
-        "button_qbGW7N"
+        "button_h8NHf7",
+        "button_k3PLAE"
       ],
       "name": "Banner - Main",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-model-plein-tshirt-watch-mens.png",
+        "image": "shopify://shop_images/lestyle-model-vjc-blazer-womens.png",
         "image_link": "shopify://collections/new-arrivals",
         "image_position": "left",
-        "background_color": "#0f1112",
-        "background_image": "shopify://shop_images/bg.webp",
-        "text_color": "#222222",
+        "background_color": "#75797c",
+        "text_color": "#000000",
         "content_alignment": "center",
-        "title_type": "image",
-        "title_text": "",
+        "title_type": "text",
+        "title_text": "Baroque Renaissance",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-summer-ready.png",
         "title_image_width": 240,
-        "subheader_text": "<p>Get summer stylin' with Lestyle's designer accessories and fashion must-haves</p>",
+        "subheader_text": "<p>Discover the latest Baroque prints in Versace Jeans Couture new collection</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
