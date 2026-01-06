@@ -66,15 +66,7 @@
           "settings": {
             "label": "Shop All",
             "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_jJLthD": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Now",
-            "link": "",
-            "button_style": "m-button--primary"
+            "button_style": "m-button--secondary"
           }
         }
       },
@@ -84,8 +76,7 @@
         "button_k3JbLN",
         "button_VHyXmX",
         "button_PfJEc4",
-        "button_4zMhCE",
-        "button_jJLthD"
+        "button_4zMhCE"
       ],
       "name": "Banner",
       "settings": {
@@ -94,8 +85,8 @@
         "image_link": "shopify://collections/lestyle-outlet",
         "image_position": "left",
         "background_color": "#000000",
-        "background_image": "shopify://shop_images/lestyle-model-accessories_02.png",
-        "text_color": "#ffffff",
+        "background_image": "shopify://shop_images/bg.webp",
+        "text_color": "#222222",
         "content_alignment": "center",
         "title_type": "image",
         "title_text": "50—70% OFF",
