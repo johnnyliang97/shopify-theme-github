@@ -15,24 +15,24 @@
         "button_3WpaW4": {
           "type": "button",
           "settings": {
-            "label": "Shop Womens",
-            "link": "shopify://collections/versace-jeans-couture-for-womens",
+            "label": "Shop Now",
+            "link": "shopify://collections/boss-outlet",
             "button_style": "m-button--primary"
           }
         },
         "button_h8NHf7": {
           "type": "button",
           "settings": {
-            "label": "Shop Mens",
-            "link": "shopify://collections/versace-jeans-couture-for-mens",
-            "button_style": "m-button--primary"
+            "label": "Shop Kids Outlet",
+            "link": "shopify://collections/kids-outlet",
+            "button_style": "m-button--secondary"
           }
         },
         "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Shop Versace Jeans Couture",
-            "link": "shopify://collections/versace-jeans-couture",
+            "label": "Shop All Outlet",
+            "link": "shopify://pages/lestyle-outlet",
             "button_style": "m-button--secondary"
           }
         }
@@ -45,17 +45,18 @@
       "name": "Banner - Main",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-model-vjc-blazer-womens.png",
-        "image_link": "shopify://collections/new-arrivals",
+        "image": "shopify://shop_images/lestyle-website-boss-60off-extra10.gif",
+        "image_link": "shopify://collections/boss-outlet",
         "image_position": "left",
-        "background_color": "#75797c",
+        "background_color": "#f1f0e4",
         "text_color": "#000000",
         "content_alignment": "center",
-        "title_type": "text",
-        "title_text": "Baroque Renaissance",
+        "title_type": "image",
+        "title_text": "50% OFF HUGO BOSS",
         "title_size": "h2",
-        "title_image_width": 240,
-        "subheader_text": "<p>Discover the latest Baroque prints in Versace Jeans Couture new collection</p>",
+        "title_image": "shopify://shop_images/boss-50off.png",
+        "title_image_width": 200,
+        "subheader_text": "<p>Outlet sale on Hugo Boss is now live. Enjoy extra 10% OFF on any orders using code <strong>NEW10</strong> at checkout.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -191,65 +192,39 @@
         "button_RdMBFz": {
           "type": "button",
           "settings": {
-            "label": "Versace Jeans Couture",
-            "link": "https://www.lestyle.com.au/collections/dresses-for-womens?sort_by=created-descending&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "button_style": "m-button--white"
+            "label": "Shop Sale",
+            "link": "shopify://collections/balmain-for-mens",
+            "button_style": "m-button--primary"
           }
         },
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Roberto Cavalli",
-            "link": "https://www.lestyle.com.au/collections/dresses-for-womens?sort_by=created-descending&filter.p.vendor=Roberto+Cavalli&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_UHtgJ4": {
-          "type": "button",
-          "settings": {
-            "label": "Moschino",
-            "link": "https://www.lestyle.com.au/collections/dresses-for-womens?sort_by=created-descending&filter.p.vendor=Moschino&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_TqFq4g": {
-          "type": "button",
-          "settings": {
-            "label": "Up to 70% Off Dresses",
-            "link": "https://www.lestyle.com.au/collections/dresses-outlet-womens",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_xRpmKa": {
-          "type": "button",
-          "settings": {
-            "label": "Shop All Dresses",
-            "link": "shopify://collections/dresses-for-womens",
+            "label": "Balmain Outlet",
+            "link": "shopify://collections/balmain-outlet",
             "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
         "button_RdMBFz",
-        "button_KGtbnk",
-        "button_UHtgJ4",
-        "button_TqFq4g",
-        "button_xRpmKa"
+        "button_KGtbnk"
       ],
       "name": "Banner - Christmas",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-model-vjc-dress-womens.png",
-        "image_link": "shopify://collections/home-collection",
+        "image": "shopify://shop_images/lestyle-model-balmain-shorts-tshirt-mens02_copy.webp",
+        "image_link": "shopify://collections/balmain-for-mens",
         "image_position": "right",
         "background_color": "#f1eeed",
         "text_color": "#222222",
         "content_alignment": "center",
-        "title_type": "text",
-        "title_text": "THE EDIT",
+        "title_type": "image",
+        "title_text": "UP TO 60% OFF",
         "title_size": "h2",
+        "title_image": "shopify://shop_images/balmain-up-to-60off.png",
         "title_image_width": 220,
-        "subheader_text": "<p>Make every moment glamorous with stunning dresses from prestigious designers</p>",
+        "subheader_text": "<p>Summer sale is now on with Balmain menswear. Use code <strong>NEW10</strong> for extra 10% OFF.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
