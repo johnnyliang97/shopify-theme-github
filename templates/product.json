@@ -285,7 +285,6 @@
     },
     "recent-viewed-products": {
       "type": "recent-viewed-products",
-      "disabled": true,
       "settings": {
         "container": "container-fluid",
         "color_scheme": "",
