@@ -1,1 +1,88 @@
-{"parent":"cart.json","context":{"market":"new-zealand"},"sections":{"custom_liquid_Kd3tD":{"type":"custom-liquid","disabled":false,"custom_css":[],"settings":{"custom_liquid":"{%- comment -%}\n  Dismissible Promotional Banner\n  - Shows a message that can be closed by the user.\n  - Uses sessionStorage to keep it closed for the current browser session.\n{%- endcomment -%}\n\n{%- assign banner_id = \"promo-banner-\" | append: section.id | default: \"global\" -%}\n\n<div id=\"{{ banner_id }}\" class=\"promo-banner\">\n  <span class=\"promo-banner__text\">\n    Free shipping on orders over $300\n  <\/span>\n  <button id=\"{{ banner_id }}__close\" class=\"promo-banner__close\" aria-label=\"Dismiss this message\" title=\"Dismiss\">\n    <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line>\n      <line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line>\n    <\/svg>\n  <\/button>\n<\/div>\n\n<style>\n  .promo-banner {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 12px 20px;\n    margin: 12px 0; \/* Updated margin top\/bottom to 12px *\/\n    background-color: #f8f2e9; \/* Light tan to align with #c19967 *\/\n    color: #5c4730; \/* Darker brown for text contrast *\/\n    border-radius: 8px; \/* Corner radius *\/\n    font: 400 15px\/1.4 -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;\n  }\n  .promo-banner__close {\n    background: none;\n    border: none;\n    padding: 0;\n    margin-left: 16px;\n    cursor: pointer;\n    line-height: 0; \/* Ensures the icon aligns well *\/\n    opacity: 0.6;\n    transition: opacity 0.2s ease-in-out;\n  }\n  .promo-banner__close:hover {\n    opacity: 1;\n  }\n  .promo-banner__close svg {\n    color: #5c4730; \/* Updated icon color *\/\n    display: block;\n  }\n<\/style>\n\n<script>\n(function() {\n  const bannerId = '{{ banner_id }}';\n  const closeButtonId = bannerId + '__close';\n  const storageKey = 'promoBannerClosed_' + bannerId;\n\n  const banner = document.getElementById(bannerId);\n  const closeButton = document.getElementById(closeButtonId);\n\n  if (!banner || !closeButton) {\n    return;\n  }\n\n  \/\/ Check if the banner was already closed during this session\n  if (sessionStorage.getItem(storageKey) === 'true') {\n    banner.style.display = 'none';\n    return;\n  }\n\n  \/\/ Listen for a click on the close button\n  closeButton.addEventListener('click', function() {\n    banner.style.display = 'none';\n    \n    \/\/ Remember the closed state for this session only\n    try {\n      sessionStorage.setItem(storageKey, 'true');\n    } catch (e) {\n      console.error('sessionStorage is unavailable or full:', e);\n    }\n  });\n})();\n<\/script>","custom_class":"container-fluid"},"blocks":{},"block_order":[],"name":"Free shipping banner"}},"order":["custom_liquid_Kd3tD","main","custom_liquid_KAWRc6","recent-viewed-products"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "cart.json",
+  "context": {
+    "market": "new-zealand"
+  },
+  "sections": {
+    "custom_liquid_Kd3tD": {
+      "type": "custom-liquid",
+      "disabled": false,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "{%- comment -%}\n  Dismissible Promotional Banner\n  - Shows a message that can be closed by the user.\n  - Uses sessionStorage to keep it closed for the current browser session.\n{%- endcomment -%}\n\n{%- assign banner_id = \"promo-banner-\" | append: section.id | default: \"global\" -%}\n\n<div id=\"{{ banner_id }}\" class=\"promo-banner\">\n  <span class=\"promo-banner__text\">\n    Free shipping on orders over $300\n  </span>\n  <button id=\"{{ banner_id }}__close\" class=\"promo-banner__close\" aria-label=\"Dismiss this message\" title=\"Dismiss\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line>\n      <line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line>\n    </svg>\n  </button>\n</div>\n\n<style>\n  .promo-banner {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 12px 20px;\n    margin: 12px 0; /* Updated margin top/bottom to 12px */\n    background-color: #f8f2e9; /* Light tan to align with #c19967 */\n    color: #5c4730; /* Darker brown for text contrast */\n    border-radius: 8px; /* Corner radius */\n    font: 400 15px/1.4 -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif;\n  }\n  .promo-banner__close {\n    background: none;\n    border: none;\n    padding: 0;\n    margin-left: 16px;\n    cursor: pointer;\n    line-height: 0; /* Ensures the icon aligns well */\n    opacity: 0.6;\n    transition: opacity 0.2s ease-in-out;\n  }\n  .promo-banner__close:hover {\n    opacity: 1;\n  }\n  .promo-banner__close svg {\n    color: #5c4730; /* Updated icon color */\n    display: block;\n  }\n</style>\n\n<script>\n(function() {\n  const bannerId = '{{ banner_id }}';\n  const closeButtonId = bannerId + '__close';\n  const storageKey = 'promoBannerClosed_' + bannerId;\n\n  const banner = document.getElementById(bannerId);\n  const closeButton = document.getElementById(closeButtonId);\n\n  if (!banner || !closeButton) {\n    return;\n  }\n\n  // Check if the banner was already closed during this session\n  if (sessionStorage.getItem(storageKey) === 'true') {\n    banner.style.display = 'none';\n    return;\n  }\n\n  // Listen for a click on the close button\n  closeButton.addEventListener('click', function() {\n    banner.style.display = 'none';\n    \n    // Remember the closed state for this session only\n    try {\n      sessionStorage.setItem(storageKey, 'true');\n    } catch (e) {\n      console.error('sessionStorage is unavailable or full:', e);\n    }\n  });\n})();\n</script>",
+        "custom_class": "container-fluid"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Free shipping banner"
+    },
+    "custom_content_jdccxV": {
+      "type": "custom-content",
+      "disabled": false,
+      "settings": {
+        "paragraph-1cd228427579cea5d9a3d04434d56dfc": null,
+        "header-da982d7b23a6a91a16eb3a29ffc96343": null,
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "header-e428df143a69f1e40317c11905226285": null,
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "header-12adb1a25595f83aa6976b642c0fea96": null,
+        "background_image": null,
+        "background_image_mobile": null,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "header-45b972aacbe3bd05fb28d1103d275d22": null,
+        "gap": 30,
+        "gap_mobile": 16,
+        "header-ddeda01550780525560f3b281ab836e2": null,
+        "use_scroll_mobile": false,
+        "header-7d0150b27f4cc48204fe483a22b2c328": null,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "header-8071579ed62d9d33a22360e5aa6cee20": null,
+        "enable_preload_image": false,
+        "header-b058a2364614f648db5887f6fcc60b5a": null,
+        "custom_class": ""
+      },
+      "blocks": {
+        "liquid_zjhqXY": {
+          "type": "liquid",
+          "disabled": false,
+          "settings": {
+            "custom_liquid": "<div style=\"max-width: 100%; margin: 20px auto; padding: 0; font-family: Arial, sans-serif;\">\n\n  <!-- Header & Text -->\n  <div style=\"margin-bottom: 20px;\">\n    <h3 style=\"margin: 0 0 8px 0;\">Need Help？</h3>\n    <p style=\"margin: 0; font-size: 14px; color: #555;\">\n      Got questions on sizing, styles, or new arrivals? Send us a message now!\n    </p>\n  </div>\n\n  <!-- Button Row -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 12px;\">\n\n    <!-- Instagram Button -->\n    <a href=\"https://ig.me/m/lestyleboutique\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff\" alt=\"Instagram Icon\" style=\"width: 20px; height: 20px;\">\n      Instagram\n    </a>\n\n    <!-- WhatsApp Button -->\n    <a href=\"https://wa.me/+61492266452\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #25D366; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff\" alt=\"WhatsApp Icon\" style=\"width: 20px; height: 20px;\">\n      WhatsApp\n    </a>\n\n  </div>\n\n</div>",
+            "width": "100%",
+            "header-ccc9c0f25689d9bc346bd9957eb6c6e5": null,
+            "block_custom_class": "",
+            "header-b900f5223579be2e42c16c1673e79fd7": null,
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_zjhqXY"
+      ],
+      "name": "Contact"
+    }
+  },
+  "order": [
+    "custom_liquid_Kd3tD",
+    "main",
+    "custom_liquid_KAWRc6",
+    "custom_content_jdccxV",
+    "recent-viewed-products"
+  ]
+}
