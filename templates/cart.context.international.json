@@ -28,35 +28,87 @@
       "type": "small-banner",
       "disabled": false,
       "settings": {
-        "header-1164541338ea1c19b8f4f2b701b09431": null,
+        "header-13725d504aaac3ebd32e3579815f98f5": null,
         "container": "container",
-        "header-d3d60d5267d9ff2ac24f8a11c9235c2e": null,
+        "header-69d1d7aaa7fd40f4c663e40c93f3dd61": null,
         "background_color": "#b89b6f",
         "background_image": null,
         "background_overlay_opacity": 0,
-        "header-4595257e64e78c1a7c54d0031e0d6050": null,
+        "header-75c47404895f19be36eeeabdfeeb2826": null,
         "banner_image": "shopify://shop_images/lestyle-shopping-bag.jpg",
         "image_width": 80,
-        "header-ccd4da0616aac6046259cb47692c2981": null,
+        "header-9d2d062980876c1adeff953f6c478641": null,
         "text_color": "#ffffff",
         "header_text": "Make it Free Shipping",
         "header_size": "h3",
         "subheader_text": "<p>Enjoy free express shipping on orders over A$500*.</p>",
         "subheader_size": "text-small",
-        "header-5ba899728bfbce05b0b62a10167de762": null,
+        "header-a17e9cc5efc5f5d7bb72fb555a0fd998": null,
         "button_text": "Find Out More",
         "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
         "button_font_size": 12,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#ffffff",
         "button_border_color": "#ffffff",
-        "header-4269cdbba9b31a8866e767e1e2e6b9e7": null,
+        "header-02223b83fca260d173f5932fc94657e2": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
       "blocks": {},
       "block_order": [],
       "name": "Free shipping"
+    },
+    "custom_content_7UDnpb": {
+      "type": "custom-content",
+      "disabled": false,
+      "settings": {
+        "paragraph-1cd228427579cea5d9a3d04434d56dfc": null,
+        "header-da982d7b23a6a91a16eb3a29ffc96343": null,
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "header-e428df143a69f1e40317c11905226285": null,
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "header-12adb1a25595f83aa6976b642c0fea96": null,
+        "background_image": null,
+        "background_image_mobile": null,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "header-45b972aacbe3bd05fb28d1103d275d22": null,
+        "gap": 30,
+        "gap_mobile": 16,
+        "header-ddeda01550780525560f3b281ab836e2": null,
+        "use_scroll_mobile": false,
+        "header-7d0150b27f4cc48204fe483a22b2c328": null,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "header-8071579ed62d9d33a22360e5aa6cee20": null,
+        "enable_preload_image": false,
+        "header-b058a2364614f648db5887f6fcc60b5a": null,
+        "custom_class": ""
+      },
+      "blocks": {
+        "liquid_DUcVg4": {
+          "type": "liquid",
+          "disabled": false,
+          "settings": {
+            "custom_liquid": "<div style=\"max-width: 100%; margin: 20px auto; padding: 0; font-family: Arial, sans-serif;\">\n\n  <!-- Header & Text -->\n  <div style=\"margin-bottom: 20px;\">\n    <h3 style=\"margin: 0 0 8px 0;\">Need Help？</h3>\n    <p style=\"margin: 0; font-size: 14px; color: #555;\">\n      Got questions on sizing, styles, or new arrivals? Send us a message now!\n    </p>\n  </div>\n\n  <!-- Button Row -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 12px;\">\n\n    <!-- Instagram Button -->\n    <a href=\"https://ig.me/m/lestyleboutique\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff\" alt=\"Instagram Icon\" style=\"width: 20px; height: 20px;\">\n      Instagram\n    </a>\n\n    <!-- WhatsApp Button -->\n    <a href=\"https://wa.me/+61492266452\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #25D366; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff\" alt=\"WhatsApp Icon\" style=\"width: 20px; height: 20px;\">\n      WhatsApp\n    </a>\n\n  </div>\n\n</div>",
+            "width": "100%",
+            "header-a4c150ea53744a86a711f4061b64f16e": null,
+            "block_custom_class": "",
+            "header-d4b1ae2a17d121a36fd3ad86de23bf14": null,
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_DUcVg4"
+      ],
+      "name": "Contact"
     }
   },
   "order": [
@@ -64,6 +116,7 @@
     "main",
     "custom_liquid_KAWRc6",
     "small_banner_HJ7HEh",
+    "custom_content_7UDnpb",
     "recent-viewed-products"
   ]
 }
