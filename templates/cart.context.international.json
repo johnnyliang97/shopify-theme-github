@@ -23,12 +23,47 @@
       "blocks": {},
       "block_order": [],
       "name": "Free shipping banner"
+    },
+    "small_banner_HJ7HEh": {
+      "type": "small-banner",
+      "disabled": false,
+      "settings": {
+        "header-1164541338ea1c19b8f4f2b701b09431": null,
+        "container": "container",
+        "header-d3d60d5267d9ff2ac24f8a11c9235c2e": null,
+        "background_color": "#b89b6f",
+        "background_image": null,
+        "background_overlay_opacity": 0,
+        "header-4595257e64e78c1a7c54d0031e0d6050": null,
+        "banner_image": "shopify://shop_images/lestyle-shopping-bag.jpg",
+        "image_width": 80,
+        "header-ccd4da0616aac6046259cb47692c2981": null,
+        "text_color": "#ffffff",
+        "header_text": "Make it Free Shipping",
+        "header_size": "h3",
+        "subheader_text": "<p>Enjoy free express shipping on orders over A$500*.</p>",
+        "subheader_size": "text-small",
+        "header-5ba899728bfbce05b0b62a10167de762": null,
+        "button_text": "Find Out More",
+        "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "header-4269cdbba9b31a8866e767e1e2e6b9e7": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Free shipping"
     }
   },
   "order": [
     "custom_liquid_i6Nt3",
     "main",
     "custom_liquid_KAWRc6",
+    "small_banner_HJ7HEh",
     "recent-viewed-products"
   ]
 }
