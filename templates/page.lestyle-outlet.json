@@ -18,6 +18,31 @@
       "name": "Page Title",
       "settings": {}
     },
+    "small_banner_rpibD7": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#b2fce4",
+        "background_image": "shopify://shop_images/desktop_bg_afterpay.png",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-afterpay-banner.png",
+        "image_width": 60,
+        "text_color": "#00193a",
+        "header_text": "Buy Now, Pay it in 4",
+        "header_size": "h3",
+        "subheader_text": "<p>Afterpay is now accepted at Lestyle in-store and online.</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#00193a",
+        "button_border_color": "#00193a",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "split_banner_wymEHz": {
       "type": "split-banner",
       "blocks": {
@@ -621,6 +646,7 @@
     "custom_card_carousel_8rkRNX",
     "promotion_countdown_timer_9V7ztJ",
     "rectangle_buttons_CWpfbw",
+    "small_banner_rpibD7",
     "custom_card_carousel_fmdyea",
     "rich_text_fBzpK7",
     "featured_collection_eVUk6N",
