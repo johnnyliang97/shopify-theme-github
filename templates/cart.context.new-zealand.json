@@ -29,33 +29,33 @@
       "type": "custom-content",
       "disabled": false,
       "settings": {
-        "paragraph-1cd228427579cea5d9a3d04434d56dfc": null,
-        "header-da982d7b23a6a91a16eb3a29ffc96343": null,
+        "paragraph-a2ee97b2199b67e2bb1cc35e881999f9": null,
+        "header-aef71ec17c1d2f0961633c22f4de9c11": null,
         "heading": "",
         "heading_size": "h3",
         "subheading": "",
         "description": "",
         "header_alignment": "center",
-        "header-e428df143a69f1e40317c11905226285": null,
+        "header-b4ae3252ef1154c45878ff54831484d2": null,
         "container": "container",
         "color_scheme": "",
         "content_color_scheme": "",
-        "header-12adb1a25595f83aa6976b642c0fea96": null,
+        "header-3af26eadb78bc6319b04aba1436f9d29": null,
         "background_image": null,
         "background_image_mobile": null,
         "enable_parallax": false,
         "parallax_direction": "vertical",
-        "header-45b972aacbe3bd05fb28d1103d275d22": null,
+        "header-28a2b33d822d7b11e018decc6816cb34": null,
         "gap": 30,
         "gap_mobile": 16,
-        "header-ddeda01550780525560f3b281ab836e2": null,
+        "header-d22c97db7fdbf23d562c3d4479c76204": null,
         "use_scroll_mobile": false,
-        "header-7d0150b27f4cc48204fe483a22b2c328": null,
+        "header-76276450937cc86452b01ec6e99c67b5": null,
         "padding_top": 20,
         "padding_bottom": 20,
-        "header-8071579ed62d9d33a22360e5aa6cee20": null,
+        "header-494f68f3fa12673a0b80e455bfe93fd4": null,
         "enable_preload_image": false,
-        "header-b058a2364614f648db5887f6fcc60b5a": null,
+        "header-ffef8121e49eb257bc5396e78249c3bd": null,
         "custom_class": ""
       },
       "blocks": {
@@ -65,9 +65,9 @@
           "settings": {
             "custom_liquid": "<div style=\"max-width: 100%; margin: 20px auto; padding: 0; font-family: Arial, sans-serif;\">\n\n  <!-- Header & Text -->\n  <div style=\"margin-bottom: 20px;\">\n    <h3 style=\"margin: 0 0 8px 0;\">Need Help？</h3>\n    <p style=\"margin: 0; font-size: 14px; color: #555;\">\n      Got questions on sizing, styles, or new arrivals? Send us a message now!\n    </p>\n  </div>\n\n  <!-- Button Row -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 12px;\">\n\n    <!-- Instagram Button -->\n    <a href=\"https://ig.me/m/lestyleboutique\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff\" alt=\"Instagram Icon\" style=\"width: 20px; height: 20px;\">\n      Instagram\n    </a>\n\n    <!-- WhatsApp Button -->\n    <a href=\"https://wa.me/+61492266452\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #25D366; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff\" alt=\"WhatsApp Icon\" style=\"width: 20px; height: 20px;\">\n      WhatsApp\n    </a>\n\n  </div>\n\n</div>",
             "width": "100%",
-            "header-ccc9c0f25689d9bc346bd9957eb6c6e5": null,
+            "header-913173d95e993e790acd3d22fd8f957f": null,
             "block_custom_class": "",
-            "header-b900f5223579be2e42c16c1673e79fd7": null,
+            "header-280b26d2cc570eb1b769abd0d859e6bf": null,
             "animations": "inherit"
           }
         }
@@ -76,12 +76,47 @@
         "liquid_zjhqXY"
       ],
       "name": "Contact"
+    },
+    "small_banner_maNHNE": {
+      "type": "small-banner",
+      "disabled": false,
+      "settings": {
+        "header-bcf143dbb454c5baf2b1ca909b50aece": null,
+        "container": "container",
+        "header-cb09665d595f42d7d7bca926b2001cc2": null,
+        "background_color": "#b89b6f",
+        "background_image": null,
+        "background_overlay_opacity": 0,
+        "header-c832ca749d5994c5a558166674a7b54a": null,
+        "banner_image": "shopify://shop_images/lestyle-shopping-bag.jpg",
+        "image_width": 80,
+        "header-7afe074d196162e33175d4d3ccbd60aa": null,
+        "text_color": "#ffffff",
+        "header_text": "Make it Free Shipping",
+        "header_size": "h3",
+        "subheader_text": "<p>Enjoy free express shipping to New Zealand on orders over $300*.</p>",
+        "subheader_size": "text-small",
+        "header-1eb4760757000f29a6486f1fbc282fd6": null,
+        "button_text": "Find Out More",
+        "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "header-b8602d1ecbda409a4b60265e0f66872b": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Uber Delivery"
     }
   },
   "order": [
     "custom_liquid_Kd3tD",
     "main",
     "custom_liquid_KAWRc6",
+    "small_banner_maNHNE",
     "custom_content_jdccxV",
     "recent-viewed-products"
   ]
