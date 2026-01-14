@@ -64,6 +64,31 @@
         "padding_bottom": 0
       }
     },
+    "small_banner_EdWnqy": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#b2fce4",
+        "background_image": "shopify://shop_images/blackdriday25-social-blackfridayguide_0360b5fc-e1ab-441d-bc9b-653971308416.png",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/NEW10.jpg",
+        "image_width": 120,
+        "text_color": "#ffffff",
+        "header_text": "Extra 10% OFF",
+        "header_size": "h3",
+        "subheader_text": "<p>Use code <strong>NEW10 </strong>at checkout</p>",
+        "subheader_size": "text-small",
+        "button_text": "Shop Now",
+        "button_link": "https://www.lestyle.com.au/discount/NEW10",
+        "button_font_size": 12,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rectangle_buttons_QUnzWX": {
       "type": "rectangle-buttons",
       "blocks": {
@@ -1372,6 +1397,7 @@
   },
   "order": [
     "split_banner_RNxN7B",
+    "small_banner_EdWnqy",
     "rectangle_buttons_QUnzWX",
     "promotion_countdown_timer_Q6WpDW",
     "split_banner_hbJTkB",
