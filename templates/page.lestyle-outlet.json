@@ -18,91 +18,54 @@
       "name": "Page Title",
       "settings": {}
     },
-    "split_banner_6z6DLt": {
+    "split_banner_wymEHz": {
       "type": "split-banner",
       "blocks": {
-        "button_D4MmnF": {
-          "type": "button",
-          "settings": {
-            "label": "Mens",
-            "link": "shopify://collections/mens-outlet",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_MTn6Lj": {
-          "type": "button",
-          "settings": {
-            "label": "Womens",
-            "link": "shopify://collections/womens-outlet",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_k3JbLN": {
-          "type": "button",
-          "settings": {
-            "label": "Kids",
-            "link": "shopify://collections/kids-outlet",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_VHyXmX": {
-          "type": "button",
-          "settings": {
-            "label": "Under $500",
-            "link": "shopify://collections/outlet-under-500",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_PfJEc4": {
-          "type": "button",
-          "settings": {
-            "label": "Under $100",
-            "link": "shopify://collections/outlet-under-100",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_4zMhCE": {
-          "type": "button",
-          "settings": {
-            "label": "Shop All",
-            "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_jJLthD": {
+        "button_nbWRCV": {
           "type": "button",
           "settings": {
             "label": "Shop Now",
-            "link": "",
+            "link": "shopify://collections/boss-outlet",
             "button_style": "m-button--primary"
+          }
+        },
+        "button_UyCQdG": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Kids Outlet",
+            "link": "shopify://collections/kids-outlet",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_gbC76k": {
+          "type": "button",
+          "settings": {
+            "label": "Shop All Outlet",
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_D4MmnF",
-        "button_MTn6Lj",
-        "button_k3JbLN",
-        "button_VHyXmX",
-        "button_PfJEc4",
-        "button_4zMhCE",
-        "button_jJLthD"
+        "button_nbWRCV",
+        "button_UyCQdG",
+        "button_gbC76k"
       ],
-      "name": "Banner",
+      "name": "Banner - Main",
       "settings": {
         "container": "container",
-        "image": "shopify://shop_images/lestyle-model-vjc-womens-dress01.png",
-        "image_link": "shopify://collections/lestyle-outlet",
+        "image": "shopify://shop_images/lestyle-website-boss-60off-extra10.gif",
+        "image_link": "shopify://collections/boss-outlet",
         "image_position": "left",
-        "background_color": "#000000",
-        "background_image": "shopify://shop_images/lestyle-model-accessories_02.png",
-        "text_color": "#ffffff",
+        "background_color": "#f1f0e4",
+        "text_color": "#000000",
         "content_alignment": "center",
         "title_type": "image",
-        "title_text": "50—70% OFF",
+        "title_text": "50% OFF HUGO BOSS",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-outlet-title.png",
-        "title_image_width": 220,
-        "subheader_text": "<p>Explore Boxing Day Sale on luxury designer fashion at Lestyle Boutique's exclusive Outlet collection</p>",
+        "title_image": "shopify://shop_images/boss-50off.png",
+        "title_image_width": 200,
+        "subheader_text": "<p>Outlet sale on Hugo Boss is now live. Enjoy extra 10% OFF on any orders using code <strong>NEW10</strong> at checkout.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -650,7 +613,7 @@
   },
   "order": [
     "main",
-    "split_banner_6z6DLt",
+    "split_banner_wymEHz",
     "17601009311f9400d0",
     "empty_space_iWJHNV",
     "custom_card_carousel_8rkRNX",

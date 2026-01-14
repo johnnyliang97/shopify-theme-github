@@ -11,6 +11,7 @@
   "sections": {
     "small_banner_PABnxX": {
       "type": "small-banner",
+      "disabled": true,
       "custom_css": [
         ".small-banner-text-content {align-items: center;}"
       ],
@@ -51,6 +52,43 @@
         "custom_class": "container-fluid"
       }
     },
+    "custom_content_UGFYDF": {
+      "type": "custom-content",
+      "blocks": {
+        "liquid_KEdj7j": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"max-width: 100%; margin: 20px auto; padding: 0; font-family: Arial, sans-serif;\">\n\n  <!-- Header & Text -->\n  <div style=\"margin-bottom: 20px;\">\n    <h3 style=\"margin: 0 0 8px 0;\">Need Help？</h3>\n    <p style=\"margin: 0; font-size: 14px; color: #555;\">\n      Got questions on sizing, styles, or new arrivals? Send us a message now!\n    </p>\n  </div>\n\n  <!-- Button Row -->\n  <div style=\"display: flex; flex-wrap: wrap; gap: 12px;\">\n\n    <!-- Instagram Button -->\n    <a href=\"https://ig.me/m/lestyleboutique\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff\" alt=\"Instagram Icon\" style=\"width: 20px; height: 20px;\">\n      Instagram\n    </a>\n\n    <!-- WhatsApp Button -->\n    <a href=\"https://wa.me/+61492266452\" target=\"_blank\" style=\"flex: 1 1 48%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background-color: #25D366; color: #ffffff; text-decoration: none; border-radius: 6px; font-size:14px;\">\n      <img src=\"https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff\" alt=\"WhatsApp Icon\" style=\"width: 20px; height: 20px;\">\n      WhatsApp\n    </a>\n\n  </div>\n\n</div>",
+            "width": "100%",
+            "block_custom_class": "",
+            "animations": "inherit"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_KEdj7j"
+      ],
+      "name": "Contact",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container",
+        "color_scheme": "",
+        "content_color_scheme": "",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "gap": 30,
+        "gap_mobile": 16,
+        "use_scroll_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "enable_preload_image": false,
+        "custom_class": ""
+      }
+    },
     "recent-viewed-products": {
       "type": "recent-viewed-products",
       "settings": {
@@ -83,6 +121,7 @@
     "small_banner_PABnxX",
     "main",
     "custom_liquid_KAWRc6",
+    "custom_content_UGFYDF",
     "recent-viewed-products"
   ]
 }
