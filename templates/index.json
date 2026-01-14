@@ -44,7 +44,7 @@
       ],
       "name": "Banner - Main",
       "settings": {
-        "container": "container",
+        "container": "container-fluid",
         "image": "shopify://shop_images/lestyle-website-boss-60off-extra10.gif",
         "image_link": "shopify://collections/boss-outlet",
         "image_position": "left",
@@ -212,7 +212,7 @@
       ],
       "name": "Banner - Christmas",
       "settings": {
-        "container": "container",
+        "container": "container-fluid",
         "image": "shopify://shop_images/lestyle-model-balmain-shorts-tshirt-mens02_copy.webp",
         "image_link": "shopify://collections/balmain-for-mens",
         "image_position": "right",
