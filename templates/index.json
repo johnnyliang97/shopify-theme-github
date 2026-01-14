@@ -46,6 +46,8 @@
       "settings": {
         "container": "container-fluid",
         "image": "shopify://shop_images/lestyle-website-boss-60off-extra10.gif",
+        "image_ratio": "3/2",
+        "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/boss-outlet",
         "image_position": "left",
         "background_color": "#f1f0e4",
@@ -213,7 +215,9 @@
       "name": "Banner - Christmas",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-balmain-shorts-tshirt-mens02_copy.webp",
+        "image": "shopify://shop_images/lestyle-model-balmain-shorts-tshirt-mens02_copy.png",
+        "image_ratio": "3/2",
+        "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/balmain-for-mens",
         "image_position": "right",
         "background_color": "#f1eeed",
@@ -1052,6 +1056,8 @@
       "settings": {
         "container": "container",
         "image": "shopify://shop_images/lestyle-outlet-under100.jpg",
+        "image_ratio": "1/1",
+        "image_ratio_mobile": "1/1",
         "image_link": "shopify://pages/lestyle-outlet",
         "image_position": "left",
         "background_color": "#393939",
