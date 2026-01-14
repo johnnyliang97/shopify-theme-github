@@ -124,7 +124,7 @@
       ],
       "name": "Menu Buttons",
       "settings": {
-        "container": "container",
+        "container": "container-fluid",
         "padding_top": 36,
         "padding_bottom": 36,
         "desktop_columns": 4,
