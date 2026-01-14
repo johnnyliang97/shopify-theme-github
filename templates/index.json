@@ -12,53 +12,44 @@
     "split_banner_RNxN7B": {
       "type": "split-banner",
       "blocks": {
-        "button_3WpaW4": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/boss-outlet",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_h8NHf7": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Kids Outlet",
-            "link": "shopify://collections/kids-outlet",
-            "button_style": "m-button--secondary"
-          }
-        },
         "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Shop All Outlet",
+            "label": "Up to 70% OFF",
             "link": "shopify://pages/lestyle-outlet",
-            "button_style": "m-button--secondary"
+            "button_style": "m-button--white"
+          }
+        },
+        "button_3WpaW4": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Sale",
+            "link": "shopify://collections/sale",
+            "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
-        "button_3WpaW4",
-        "button_h8NHf7",
-        "button_k3PLAE"
+        "button_k3PLAE",
+        "button_3WpaW4"
       ],
       "name": "Banner - Main",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-website-boss-60off-extra10.gif",
-        "image_ratio": "3/2",
+        "image": "shopify://shop_images/lestyle-email-summer-sale.webp",
+        "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/boss-outlet",
         "image_position": "left",
-        "background_color": "#f1f0e4",
-        "text_color": "#000000",
+        "background_color": "#b30505",
+        "text_color": "#ffffff",
         "content_alignment": "center",
         "title_type": "image",
-        "title_text": "50% OFF HUGO BOSS",
+        "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/boss-50off.png",
+        "title_image": "shopify://shop_images/summer-sale_78c8a264-e01d-4418-8c4e-66d19f6652f7.png",
         "title_image_width": 200,
-        "subheader_text": "<p>Outlet sale on Hugo Boss is now live. Enjoy extra 10% OFF on any orders using code <strong>NEW10</strong> at checkout.</p>",
+        "subheader_text": "<p>Save <strong>up to 70%</strong> on Lestyle Outlet and apply code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for an <strong>extra 10% discount</strong></p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -165,6 +156,20 @@
         "padding_bottom": 36
       }
     },
+    "empty_space_kycKUx": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
+      }
+    },
     "promotion_countdown_timer_Q6WpDW": {
       "type": "promotion-countdown-timer",
       "blocks": {
@@ -216,31 +221,40 @@
     "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_RdMBFz": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Sale",
-            "link": "shopify://collections/balmain-for-mens",
-            "button_style": "m-button--primary"
-          }
-        },
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Balmain Outlet",
-            "link": "shopify://collections/balmain-outlet",
+            "label": "Shop Versace",
+            "link": "shopify://collections/versace-sunglasses",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_FbTjEY": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Dolce & Gabbana",
+            "link": "shopify://collections/dolce-gabbana-sunglasses",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_RdMBFz": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Sunglasses",
+            "link": "shopify://collections/sunglasses",
             "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_RdMBFz",
-        "button_KGtbnk"
+        "button_KGtbnk",
+        "button_FbTjEY",
+        "button_RdMBFz"
       ],
       "name": "Banner - Christmas",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-balmain-shorts-tshirt-mens02_copy.png",
+        "image": "shopify://shop_images/lestyle-model-sunglasses-womens-dolce_cf63a0e2-97da-420d-9259-9bd62d3c8cb8.png",
         "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/balmain-for-mens",
@@ -248,12 +262,11 @@
         "background_color": "#f1eeed",
         "text_color": "#222222",
         "content_alignment": "center",
-        "title_type": "image",
-        "title_text": "UP TO 60% OFF",
+        "title_type": "text",
+        "title_text": "STYLE IN SHADES",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/balmain-up-to-60off.png",
         "title_image_width": 220,
-        "subheader_text": "<p>Summer sale is now on with Balmain menswear. Use code <strong>NEW10</strong> for extra 10% OFF.</p>",
+        "subheader_text": "<p>Shop new collections of sunglasses from Versace, Dolce & Gabbana</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -273,36 +286,9 @@
         "custom_class": ""
       }
     },
-    "empty_space_kycKUx": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 0,
-        "padding_bottom": 20,
-        "custom_class": ""
-      }
-    },
     "custom_card_carousel_HeykPg": {
       "type": "custom-card-carousel",
       "blocks": {
-        "card_KJmxxY": {
-          "type": "card",
-          "name": "Card",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-sunglasses-mens-versace.webp",
-            "header_text": "Sunglasses",
-            "subheader_text": "Versace, Dolce & Gabbana",
-            "link": "shopify://collections/sunglasses",
-            "label_text": "New",
-            "label_color": "#c19967",
-            "button_text": "Shop Now"
-          }
-        },
         "card_Qc7zEM": {
           "type": "card",
           "name": "Card",
@@ -342,6 +328,19 @@
             "button_text": "Shop Now"
           }
         },
+        "card_KJmxxY": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-sunglasses-mens-versace.webp",
+            "header_text": "Sunglasses",
+            "subheader_text": "Versace, Dolce & Gabbana",
+            "link": "shopify://collections/sunglasses",
+            "label_text": "New",
+            "label_color": "#c19967",
+            "button_text": "Shop Now"
+          }
+        },
         "card_jVynpa": {
           "type": "card",
           "name": "Card",
@@ -357,16 +356,16 @@
         }
       },
       "block_order": [
-        "card_KJmxxY",
         "card_Qc7zEM",
         "card_BfVQWe",
         "card_dtFdem",
+        "card_KJmxxY",
         "card_jVynpa"
       ],
       "name": "Collections",
       "settings": {
         "container_type": "container-fluid",
-        "heading": "New Year Collections",
+        "heading": "Lestyle Edit",
         "image_ratio_desktop": "125",
         "image_ratio_mobile": "125",
         "heading_size": 26,
