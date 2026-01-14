@@ -19,6 +19,7 @@
       background-position: center;
       background-repeat: no-repeat;
     {%- endif -%}
+    --image-ratio: {{ section.settings.image_ratio | default: '1/1' | replace: '/', ' / ' }};
   }
   
   .split-banner-{{ section.id }} .split-banner-content {
@@ -32,7 +33,7 @@
   }
   
   .split-banner-image {
-      aspect-ratio: 1 / 1;
+      aspect-ratio: var(--image-ratio, 1 / 1);
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -75,6 +76,9 @@
   
   /* Mobile layout */
   @media screen and (max-width: 767px) {
+      .split-banner-{{ section.id }} {
+          --image-ratio: {{ section.settings.image_ratio_mobile | default: section.settings.image_ratio | replace: '/', ' / ' }};
+      }
       .split-banner-{{ section.id }} .split-banner-wrapper {
           display: flex;
           flex-direction: column;
@@ -112,12 +116,21 @@
         {%- if section.settings.image_link != blank -%}
           <a href="{{ section.settings.image_link }}" class="split-banner-image-link">
         {%- endif -%}
-        {%- if section.settings.image != blank -%}
-          {{ section.settings.image | image_url: width: 1500 | image_tag:
-            loading: 'lazy',
-            class: 'split-banner-image',
-            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-          }}
+        {%- if section.settings.image != blank or section.settings.image_mobile != blank -%}
+          <picture class="split-banner-picture">
+            {%- if section.settings.image_mobile != blank -%}
+              <source media="(max-width: 767px)" srcset="{{ section.settings.image_mobile | image_url: width: 1500 }}">
+            {%- endif -%}
+            {%- if section.settings.image != blank -%}
+              {{ section.settings.image | image_url: width: 1500 | image_tag:
+                loading: 'lazy',
+                class: 'split-banner-image',
+                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg split-banner-image' }}
+            {%- endif -%}
+          </picture>
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg split-banner-image' }}
         {%- endif -%}
@@ -187,6 +200,43 @@
       "type": "image_picker",
       "id": "image",
       "label": "Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Banner Mobile Image"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Banner Image Ratio",
+      "default": "1/1",
+      "options": [
+        { "value": "1/1", "label": "1:1" },
+        { "value": "4/5", "label": "4:5" },
+        { "value": "3/4", "label": "3:4" },
+        { "value": "2/3", "label": "2:3" },
+        { "value": "4/3", "label": "4:3" },
+        { "value": "3/2", "label": "3:2" },
+        { "value": "16/9", "label": "16:9" },
+        { "value": "21/9", "label": "21:9" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_mobile",
+      "label": "Banner Mobile Image Ratio",
+      "default": "1/1",
+      "options": [
+        { "value": "1/1", "label": "1:1" },
+        { "value": "4/5", "label": "4:5" },
+        { "value": "3/4", "label": "3:4" },
+        { "value": "2/3", "label": "2:3" },
+        { "value": "4/3", "label": "4:3" },
+        { "value": "3/2", "label": "3:2" },
+        { "value": "16/9", "label": "16:9" },
+        { "value": "21/9", "label": "21:9" }
+      ]
     },
     {
       "type": "url",
