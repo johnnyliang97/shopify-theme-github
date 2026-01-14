@@ -1054,10 +1054,10 @@
       ],
       "name": "Banner - Outlet",
       "settings": {
-        "container": "container",
+        "container": "container-fluid",
         "image": "shopify://shop_images/lestyle-outlet-under100.jpg",
-        "image_ratio": "1/1",
-        "image_ratio_mobile": "1/1",
+        "image_ratio": "3/2",
+        "image_ratio_mobile": "4/3",
         "image_link": "shopify://pages/lestyle-outlet",
         "image_position": "left",
         "background_color": "#393939",
