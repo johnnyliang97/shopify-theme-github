@@ -1102,7 +1102,7 @@
       "name": "Banner - Outlet",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-outlet-under100.jpg",
+        "image": "shopify://shop_images/lestyle-model-dsquared2-womens-tshirt.jpg",
         "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://pages/lestyle-outlet",
