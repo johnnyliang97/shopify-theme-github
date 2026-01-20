@@ -9,47 +9,64 @@
  */
 {
   "sections": {
-    "split_banner_RNxN7B": {
+    "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_k3PLAE": {
+        "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Up to 70% OFF",
-            "link": "shopify://pages/lestyle-outlet",
-            "button_style": "m-button--white"
+            "label": "Shop Versace",
+            "link": "shopify://collections/versace-menswear",
+            "button_style": "m-button--secondary"
           }
         },
-        "button_3WpaW4": {
+        "button_FbTjEY": {
           "type": "button",
           "settings": {
-            "label": "Shop Sale",
-            "link": "shopify://collections/sale",
-            "button_style": "m-button--white"
+            "label": "Shop Palm Angels",
+            "link": "shopify://collections/palm-angels-for-mens",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_RdMBFz": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Amiri",
+            "link": "shopify://collections/amiri-for-mens",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_QKWHqy": {
+          "type": "button",
+          "settings": {
+            "label": "Mens New Arrivals",
+            "link": "shopify://collections/mens-new-arrivals",
+            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_k3PLAE",
-        "button_3WpaW4"
+        "button_KGtbnk",
+        "button_FbTjEY",
+        "button_RdMBFz",
+        "button_QKWHqy"
       ],
-      "name": "Banner - Main",
+      "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-email-summer-sale.webp",
-        "image_ratio": "4/3",
+        "image": "shopify://shop_images/lestyle-model-versace-tshirt-mens03.png",
+        "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/boss-outlet",
+        "image_link": "shopify://collections/mens-new-arrivals",
         "image_position": "left",
-        "background_color": "#b30505",
-        "text_color": "#ffffff",
+        "background_color": "#f8f8f8",
+        "text_color": "#222222",
         "content_alignment": "center",
-        "title_type": "image",
-        "title_text": "",
+        "title_type": "text",
+        "title_text": "NEW ARRIVALS",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/summer-sale_78c8a264-e01d-4418-8c4e-66d19f6652f7.png",
-        "title_image_width": 200,
-        "subheader_text": "<p>Save <strong>up to 70%</strong> on Lestyle Outlet and apply code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for an <strong>extra 10% discount</strong></p>",
+        "title_image_width": 220,
+        "subheader_text": "<p>Shop new menswear collections from Versace, Palm Angels & AMIRI</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -218,55 +235,47 @@
         "animations": "inherit"
       }
     },
-    "split_banner_hbJTkB": {
+    "split_banner_RNxN7B": {
       "type": "split-banner",
       "blocks": {
-        "button_KGtbnk": {
+        "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Shop Versace",
-            "link": "shopify://collections/versace-sunglasses",
-            "button_style": "m-button--secondary"
+            "label": "Up to 70% OFF",
+            "link": "shopify://pages/lestyle-outlet",
+            "button_style": "m-button--white"
           }
         },
-        "button_FbTjEY": {
+        "button_3WpaW4": {
           "type": "button",
           "settings": {
-            "label": "Shop Dolce & Gabbana",
-            "link": "shopify://collections/dolce-gabbana-sunglasses",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_RdMBFz": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Sunglasses",
-            "link": "shopify://collections/sunglasses",
-            "button_style": "m-button--secondary"
+            "label": "Shop Sale",
+            "link": "shopify://collections/sale",
+            "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
-        "button_KGtbnk",
-        "button_FbTjEY",
-        "button_RdMBFz"
+        "button_k3PLAE",
+        "button_3WpaW4"
       ],
-      "name": "Banner - Christmas",
+      "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-sunglasses-womens-dolce_cf63a0e2-97da-420d-9259-9bd62d3c8cb8.png",
-        "image_ratio": "3/2",
+        "image": "shopify://shop_images/lestyle-email-summer-sale.webp",
+        "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/balmain-for-mens",
+        "image_link": "shopify://collections/boss-outlet",
         "image_position": "right",
-        "background_color": "#f1eeed",
-        "text_color": "#222222",
+        "background_color": "#b30505",
+        "text_color": "#ffffff",
         "content_alignment": "center",
-        "title_type": "text",
-        "title_text": "STYLE IN SHADES",
+        "title_type": "image",
+        "title_text": "",
         "title_size": "h2",
-        "title_image_width": 220,
-        "subheader_text": "<p>Shop new collections of sunglasses from Versace, Dolce & Gabbana</p>",
+        "title_image": "shopify://shop_images/summer-sale_78c8a264-e01d-4418-8c4e-66d19f6652f7.png",
+        "title_image_width": 200,
+        "subheader_text": "<p>Save <strong>up to 70%</strong> on Lestyle Outlet and apply code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for an <strong>extra 10% discount</strong></p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -1409,12 +1418,12 @@
     }
   },
   "order": [
-    "split_banner_RNxN7B",
+    "split_banner_hbJTkB",
     "rectangle_buttons_QUnzWX",
     "small_banner_EdWnqy",
     "empty_space_kycKUx",
     "promotion_countdown_timer_Q6WpDW",
-    "split_banner_hbJTkB",
+    "split_banner_RNxN7B",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "custom_card_carousel_LgWiQH",
