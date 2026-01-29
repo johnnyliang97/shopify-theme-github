@@ -302,8 +302,8 @@
           "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-womens-versace-activewear.jpg",
-            "header_text": "Activewear",
-            "subheader_text": "New Year, New Motivations",
+            "header_text": "Womens Activewear",
+            "subheader_text": "Daily Workout Essentials",
             "link": "shopify://collections/womens-activewear",
             "label_text": "",
             "label_color": "#b30505",
