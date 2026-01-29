@@ -1091,12 +1091,21 @@
             "link": "shopify://collections/kids-outlet",
             "button_style": "m-button--white"
           }
+        },
+        "button_zxa7wQ": {
+          "type": "button",
+          "settings": {
+            "label": "Shop All Outlet",
+            "link": "shopify://pages/lestyle-outlet",
+            "button_style": "m-button--white"
+          }
         }
       },
       "block_order": [
         "button_weMcbq",
         "button_YQzV7g",
-        "button_rYaaUn"
+        "button_rYaaUn",
+        "button_zxa7wQ"
       ],
       "name": "Banner - Outlet",
       "settings": {
