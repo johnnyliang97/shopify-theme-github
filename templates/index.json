@@ -147,7 +147,7 @@
         "subheader_text": "<p>Use code <strong>NEW10 </strong>at checkout</p>",
         "subheader_size": "text-small",
         "button_text": "Shop Now",
-        "button_link": "https://www.lestyle.com.au/discount/NEW10",
+        "button_link": "shopify://collections/new-arrivals",
         "button_font_size": 12,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#ffffff",
