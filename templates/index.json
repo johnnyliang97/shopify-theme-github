@@ -15,41 +15,60 @@
         "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Gifts For Her",
+            "label": "Mens",
             "link": "shopify://collections/womens",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_hMH9RV": {
+          "type": "button",
+          "settings": {
+            "label": "Womens",
+            "link": "shopify://collections/womens",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_Xc9cLm": {
+          "type": "button",
+          "settings": {
+            "label": "Kids",
+            "link": "shopify://collections/kids",
             "button_style": "m-button--white"
           }
         },
         "button_3WpaW4": {
           "type": "button",
           "settings": {
-            "label": "Gifts For Him",
-            "link": "shopify://collections/mens",
-            "button_style": "m-button--white"
+            "label": "Shop the New Year Red Edit",
+            "link": "https://www.lestyle.com.au/search?q=red&options%5Bprefix%5D=last&sort_by=relevance&filter.p.vendor=Alexander+McQueen&filter.p.vendor=Balmain&filter.p.vendor=Boss&filter.p.vendor=Dolce+%26+Gabbana&filter.p.vendor=Dsquared2&filter.p.vendor=Fendi&filter.p.vendor=Givenchy&filter.p.vendor=John+Galliano&filter.p.vendor=Kenzo&filter.p.vendor=Lanvin&filter.p.vendor=Marcelo+Burlon&filter.p.vendor=Moschino&filter.p.vendor=Palm+Angels&filter.p.vendor=Philipp+Plein&filter.p.vendor=Roberto+Cavalli&filter.p.vendor=Tom+Ford&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
         "button_k3PLAE",
+        "button_hMH9RV",
+        "button_Xc9cLm",
         "button_3WpaW4"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-valentines-campaign-banner1.jpg",
+        "image": "shopify://shop_images/lestyle-website-banner-cny01.jpg",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/boss-outlet",
         "image_position": "right",
         "background_color": "#f5c7c9",
-        "text_color": "#222222",
+        "background_image": "shopify://shop_images/lestyle-website-banner-cny02.jpg",
+        "text_color": "#ffffff",
         "content_alignment": "center",
         "title_type": "image",
         "title_text": "Valentine's Day",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-valentines-title.png",
+        "title_image": "shopify://shop_images/lestyle-website-banner-cny-title.png",
         "title_image_width": 240,
-        "subheader_text": "<p>For them. For you. For everyone in your world. Find them a gift they’ll love. Use code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for <strong>extra 10% OFF</strong>.</p>",
+        "subheader_text": "<p>Celebrate the prosperity of Chinese New Year with Lestyle Boutique. Use code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for <strong>extra 10% OFF</strong>.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
