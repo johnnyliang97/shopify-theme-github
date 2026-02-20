@@ -191,7 +191,7 @@ if (!customElements.get("m-cart-addons")) {
     }
 
     async handleGiftWithPurchase(code) {
-      if (!code || code.trim().toUpperCase() !== "VEKC") return;
+      if (!code || code.trim().toUpperCase() !== "KEY10") return;
 
       const GIFT_SKU = "VERSACE-KEYCHAIN-REPEAT-CUSTOMER-GIFT";
       const GIFT_HANDLE = "versace-keychain";
