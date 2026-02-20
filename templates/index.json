@@ -278,7 +278,7 @@
         "title_size": "h2",
         "title_image": "shopify://shop_images/lestyle-website-banner-cny-title.png",
         "title_image_width": 240,
-        "subheader_text": "<p>Celebrate the prosperity of Chinese New Year with Lestyle Boutique. Use code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for <strong>extra 10% OFF</strong>.</p>",
+        "subheader_text": "<p>Celebrate the prosperity of Chinese New Year with Lestyle Boutique.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
