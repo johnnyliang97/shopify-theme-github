@@ -20,6 +20,7 @@ if (!customElements.get("m-cart-addons")) {
       this.giftDiscountCode = "VEKC";
       this.giftVariantId = "VERSACE-KEYCHAIN-REPEAT-CUSTOMER-GIFT";
       this.isAddingGift = false;
+      this.discountAppliedKey = "minimog-discount-applied";
     }
 
     connectedCallback() {
@@ -34,12 +35,17 @@ if (!customElements.get("m-cart-addons")) {
       this.rootUrl = window.Shopify.routes.root;
       this.discountCodeKey = "minimog-discount-code";
       this.deliveryCodeKey = "minimog-delivery-code";
+      this.onCartUpdatedListener = this.onCartUpdated.bind(this);
       this.init();
+      document.addEventListener("cart:updated", this.onCartUpdatedListener);
     }
 
     disconnectedCallback() {
       if (this._removeCloseAddonButton) this._removeCloseAddonButton();
       if (this._removeCalcShippingButton) this._removeCalcShippingButton();
+      if (this.onCartUpdatedListener) {
+        document.removeEventListener("cart:updated", this.onCartUpdatedListener);
+      }
     }
 
     init() {
@@ -98,6 +104,7 @@ if (!customElements.get("m-cart-addons")) {
           }
         }
         this.ensureGiftItemForDiscount(code);
+        this.showDiscountNotificationIfNeeded(code);
       }
       if (devliveryTime) {
         const code = localStorage.getItem(this.deliveryCodeKey);
@@ -210,6 +217,7 @@ if (!customElements.get("m-cart-addons")) {
             } else {
               cartDiscountCodeNoti.style.display = "none";
             }
+            this.applyDiscountCode(code);
             this.ensureGiftItemForDiscount(code);
             this.close(event);
           }
@@ -246,6 +254,12 @@ if (!customElements.get("m-cart-addons")) {
       fetch(`${window.MinimogSettings.routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
     }
 
+    onCartUpdated() {
+      const code = localStorage.getItem(this.discountCodeKey);
+      this.ensureGiftItemForDiscount(code);
+      this.showDiscountNotificationIfNeeded(code);
+    }
+
     normalizeDiscountCode(code) {
       return (code || "").trim().toUpperCase();
     }
@@ -262,6 +276,48 @@ if (!customElements.get("m-cart-addons")) {
         new CustomEvent("cart:grouped-sections", { bubbles: true, detail: { sections: sections } })
       );
       return sections;
+    }
+
+    showDiscountNotificationIfNeeded(code) {
+      const normalizedCode = this.normalizeDiscountCode(code);
+      const pendingCode = this.normalizeDiscountCode(localStorage.getItem(this.discountAppliedKey));
+      if (!pendingCode || pendingCode !== normalizedCode) return;
+      this.checkDiscountApplied(normalizedCode)
+        .then((isApplied) => {
+          if (!isApplied) return;
+          window.MinimogTheme.Notification.show({
+            target: this.cartWrapper || document.body,
+            method: "appendChild",
+            type: "success",
+            message: `Discount code ${normalizedCode} applied`,
+            last: 3000,
+            sticky: false,
+          });
+          localStorage.removeItem(this.discountAppliedKey);
+        })
+        .catch(() => {
+          localStorage.removeItem(this.discountAppliedKey);
+        });
+    }
+
+    async checkDiscountApplied(code) {
+      const cart = await fetch(`${this.rootUrl}cart.js`).then((res) => res.json());
+      const hasCartDiscount = (cart.cart_level_discount_applications || []).some((discount) =>
+        this.normalizeDiscountCode(discount.title).includes(code)
+      );
+      if (hasCartDiscount) return true;
+      if (code === this.giftDiscountCode) {
+        return cart.items.some((item) => Number(item.id) === this.getGiftVariantId());
+      }
+      return false;
+    }
+
+    applyDiscountCode(code) {
+      const normalizedCode = this.normalizeDiscountCode(code);
+      if (!normalizedCode) return;
+      localStorage.setItem(this.discountAppliedKey, normalizedCode);
+      const redirectPath = window.location.pathname + window.location.search;
+      window.location.href = `${this.rootUrl}discount/${encodeURIComponent(normalizedCode)}?redirect=${encodeURIComponent(redirectPath)}`;
     }
 
     async ensureGiftItemForDiscount(code) {
@@ -288,6 +344,14 @@ if (!customElements.get("m-cart-addons")) {
         const response = await fetch(`${MinimogSettings.routes.cart_add_url}`, config).then((res) => res.json());
         if (!response.status) {
           window.MinimogEvents.emit(MinimogTheme.pubSubEvents.cartUpdate, { cart: response });
+          window.MinimogTheme.Notification.show({
+            target: this.cartWrapper || document.body,
+            method: "appendChild",
+            type: "success",
+            message: "Gift added to cart",
+            last: 3000,
+            sticky: false,
+          });
         }
       } catch (error) {
         console.error(error);
