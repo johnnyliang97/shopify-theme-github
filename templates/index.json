@@ -9,66 +9,47 @@
  */
 {
   "sections": {
-    "split_banner_RNxN7B": {
+    "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_k3PLAE": {
+        "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Mens",
-            "link": "shopify://collections/womens",
-            "button_style": "m-button--white"
+            "label": "Shop Versace",
+            "link": "shopify://collections/versace",
+            "button_style": "m-button--secondary"
           }
         },
-        "button_hMH9RV": {
+        "button_QKWHqy": {
           "type": "button",
           "settings": {
-            "label": "Womens",
-            "link": "shopify://collections/womens",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_Xc9cLm": {
-          "type": "button",
-          "settings": {
-            "label": "Kids",
-            "link": "shopify://collections/kids",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_3WpaW4": {
-          "type": "button",
-          "settings": {
-            "label": "Shop the New Year Red Edit",
-            "link": "https://www.lestyle.com.au/search?q=red&options%5Bprefix%5D=last&sort_by=relevance&filter.p.vendor=Alexander+McQueen&filter.p.vendor=Balmain&filter.p.vendor=Boss&filter.p.vendor=Dolce+%26+Gabbana&filter.p.vendor=Dsquared2&filter.p.vendor=Fendi&filter.p.vendor=Givenchy&filter.p.vendor=John+Galliano&filter.p.vendor=Kenzo&filter.p.vendor=Lanvin&filter.p.vendor=Marcelo+Burlon&filter.p.vendor=Moschino&filter.p.vendor=Palm+Angels&filter.p.vendor=Philipp+Plein&filter.p.vendor=Roberto+Cavalli&filter.p.vendor=Tom+Ford&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "label": "Find Out More",
+            "link": "shopify://collections",
             "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_k3PLAE",
-        "button_hMH9RV",
-        "button_Xc9cLm",
-        "button_3WpaW4"
+        "button_KGtbnk",
+        "button_QKWHqy"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-website-banner-cny01.jpg",
-        "image_ratio": "4/3",
+        "image": "shopify://shop_images/versace-keychain-01-1.jpg",
+        "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/boss-outlet",
-        "image_position": "right",
-        "background_color": "#f5c7c9",
-        "background_image": "shopify://shop_images/lestyle-website-banner-cny02.jpg",
-        "text_color": "#ffffff",
+        "image_link": "shopify://collections/mens-new-arrivals",
+        "image_position": "left",
+        "background_color": "#666666",
+        "background_image": "shopify://shop_images/1000_F_479687183_BCTi0EEmpYmz5tjgHtvzC6wLdM6Pjn0d.jpg",
+        "text_color": "#222222",
         "content_alignment": "center",
-        "title_type": "image",
-        "title_text": "Valentine's Day",
+        "title_type": "text",
+        "title_text": "Versace Keychain Giveaway",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-website-banner-cny-title.png",
-        "title_image_width": 240,
-        "subheader_text": "<p>Celebrate the prosperity of Chinese New Year with Lestyle Boutique. Use code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for <strong>extra 10% OFF</strong>.</p>",
+        "title_image_width": 220,
+        "subheader_text": "<p>Get a free Versace keychain on your next purchase using code <strong>KEY10</strong>.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -152,6 +133,7 @@
     },
     "small_banner_EdWnqy": {
       "type": "small-banner",
+      "disabled": true,
       "name": "Small Banner",
       "settings": {
         "container": "container",
@@ -237,64 +219,66 @@
         "animations": "inherit"
       }
     },
-    "split_banner_hbJTkB": {
+    "split_banner_RNxN7B": {
       "type": "split-banner",
       "blocks": {
-        "button_KGtbnk": {
+        "button_k3PLAE": {
           "type": "button",
           "settings": {
-            "label": "Shop Versace",
-            "link": "shopify://collections/versace-menswear",
-            "button_style": "m-button--secondary"
+            "label": "Mens",
+            "link": "shopify://collections/womens",
+            "button_style": "m-button--white"
           }
         },
-        "button_FbTjEY": {
+        "button_hMH9RV": {
           "type": "button",
           "settings": {
-            "label": "Shop Palm Angels",
-            "link": "shopify://collections/palm-angels-for-mens",
-            "button_style": "m-button--secondary"
+            "label": "Womens",
+            "link": "shopify://collections/womens",
+            "button_style": "m-button--white"
           }
         },
-        "button_RdMBFz": {
+        "button_Xc9cLm": {
           "type": "button",
           "settings": {
-            "label": "Shop Amiri",
-            "link": "shopify://collections/amiri-for-mens",
-            "button_style": "m-button--secondary"
+            "label": "Kids",
+            "link": "shopify://collections/kids",
+            "button_style": "m-button--white"
           }
         },
-        "button_QKWHqy": {
+        "button_3WpaW4": {
           "type": "button",
           "settings": {
-            "label": "Mens New Arrivals",
-            "link": "shopify://collections/mens-new-arrivals",
+            "label": "Shop the New Year Red Edit",
+            "link": "https://www.lestyle.com.au/search?q=red&options%5Bprefix%5D=last&sort_by=relevance&filter.p.vendor=Alexander+McQueen&filter.p.vendor=Balmain&filter.p.vendor=Boss&filter.p.vendor=Dolce+%26+Gabbana&filter.p.vendor=Dsquared2&filter.p.vendor=Fendi&filter.p.vendor=Givenchy&filter.p.vendor=John+Galliano&filter.p.vendor=Kenzo&filter.p.vendor=Lanvin&filter.p.vendor=Marcelo+Burlon&filter.p.vendor=Moschino&filter.p.vendor=Palm+Angels&filter.p.vendor=Philipp+Plein&filter.p.vendor=Roberto+Cavalli&filter.p.vendor=Tom+Ford&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
             "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_KGtbnk",
-        "button_FbTjEY",
-        "button_RdMBFz",
-        "button_QKWHqy"
+        "button_k3PLAE",
+        "button_hMH9RV",
+        "button_Xc9cLm",
+        "button_3WpaW4"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/Lestyle-mens-new-styles.jpg",
-        "image_ratio": "3/2",
+        "image": "shopify://shop_images/lestyle-website-banner-cny01.jpg",
+        "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/mens-new-arrivals",
-        "image_position": "left",
-        "background_color": "#f8f8f8",
-        "text_color": "#222222",
+        "image_link": "shopify://collections/boss-outlet",
+        "image_position": "right",
+        "background_color": "#f5c7c9",
+        "background_image": "shopify://shop_images/lestyle-website-banner-cny02.jpg",
+        "text_color": "#ffffff",
         "content_alignment": "center",
-        "title_type": "text",
-        "title_text": "New Styles",
+        "title_type": "image",
+        "title_text": "Valentine's Day",
         "title_size": "h2",
-        "title_image_width": 220,
-        "subheader_text": "<p>Shop new menswear collections from Versace, Palm Angels & AMIRI</p>",
+        "title_image": "shopify://shop_images/lestyle-website-banner-cny-title.png",
+        "title_image_width": 240,
+        "subheader_text": "<p>Celebrate the prosperity of Chinese New Year with Lestyle Boutique. Use code <span style=\"text-decoration:underline\"><strong>NEW10</strong></span><strong> </strong>for <strong>extra 10% OFF</strong>.</p>",
         "subheader_size": "text-base",
         "padding_top": 0,
         "padding_bottom": 0
@@ -1446,12 +1430,12 @@
     }
   },
   "order": [
-    "split_banner_RNxN7B",
+    "split_banner_hbJTkB",
     "rectangle_buttons_QUnzWX",
     "small_banner_EdWnqy",
     "empty_space_kycKUx",
     "promotion_countdown_timer_Q6WpDW",
-    "split_banner_hbJTkB",
+    "split_banner_RNxN7B",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "custom_card_carousel_LgWiQH",
