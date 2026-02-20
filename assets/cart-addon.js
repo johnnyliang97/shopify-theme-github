@@ -273,19 +273,16 @@ if (!customElements.get("m-cart-addons")) {
            if (addData.sections && addData.sections['cart-drawer']) {
                const cartDrawer = document.getElementById("MinimogCartDrawer");
                if (cartDrawer) {
+                   const isActive = cartDrawer.classList.contains('m-cart-drawer--active');
                    const parser = new DOMParser();
                    const doc = parser.parseFromString(addData.sections['cart-drawer'], 'text/html');
                    const newDrawerContent = doc.getElementById("MinimogCartDrawer")?.innerHTML;
                    if (newDrawerContent) {
-                       const wasActive = cartDrawer.classList.contains("m-cart-drawer--active");
                        cartDrawer.innerHTML = newDrawerContent;
-                       
-                       if (wasActive) {
-                           cartDrawer.classList.add("m-cart-drawer--active");
-                           const inner = cartDrawer.querySelector(".m-cart-drawer__inner");
+                       // Re-apply active state styles to the new inner element
+                       if (isActive) {
+                           const inner = cartDrawer.querySelector('.m-cart-drawer__inner');
                            if (inner) inner.style.setProperty("--translate-x", "0");
-                       } else {
-                           if (cartDrawer.open) cartDrawer.open();
                        }
                    }
                }
@@ -339,10 +336,7 @@ if (!customElements.get("m-cart-addons")) {
                 });
             }
 
-            // Split codes by comma or space and handle each
-            const codes = code.split(/[\s,]+/).filter(Boolean);
-            codes.forEach(c => this.handleGiftWithPurchase(c));
-            
+            this.handleGiftWithPurchase(code);
             this.close(event);
           }
           if (target.dataset.action === "note") {
