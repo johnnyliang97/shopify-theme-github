@@ -17,10 +17,6 @@ if (!customElements.get("m-cart-addons")) {
         triggerAddonButton: ".m-cart-addon--trigger-button",
         devliveryTime: '[name="attributes[Delivery time]"]',
       };
-      this.giftDiscountCode = "VEKC";
-      this.giftVariantId = "VERSACE-KEYCHAIN-REPEAT-CUSTOMER-GIFT";
-      this.isAddingGift = false;
-      this.discountAppliedKey = "minimog-discount-applied";
     }
 
     connectedCallback() {
@@ -35,17 +31,12 @@ if (!customElements.get("m-cart-addons")) {
       this.rootUrl = window.Shopify.routes.root;
       this.discountCodeKey = "minimog-discount-code";
       this.deliveryCodeKey = "minimog-delivery-code";
-      this.onCartUpdatedListener = this.onCartUpdated.bind(this);
       this.init();
-      document.addEventListener("cart:updated", this.onCartUpdatedListener);
     }
 
     disconnectedCallback() {
       if (this._removeCloseAddonButton) this._removeCloseAddonButton();
       if (this._removeCalcShippingButton) this._removeCalcShippingButton();
-      if (this.onCartUpdatedListener) {
-        document.removeEventListener("cart:updated", this.onCartUpdatedListener);
-      }
     }
 
     init() {
@@ -103,8 +94,6 @@ if (!customElements.get("m-cart-addons")) {
             cartDiscountCodeNoti.style.display = "inline";
           }
         }
-        this.ensureGiftItemForDiscount(code);
-        this.showDiscountNotificationIfNeeded(code);
       }
       if (devliveryTime) {
         const code = localStorage.getItem(this.deliveryCodeKey);
@@ -201,6 +190,66 @@ if (!customElements.get("m-cart-addons")) {
         .catch(console.error);
     }
 
+    async handleGiftWithPurchase(code) {
+      if (!code || code.trim().toUpperCase() !== "VEKC") return;
+
+      const GIFT_SKU = "VERSACE-KEYCHAIN-REPEAT-CUSTOMER-GIFT";
+
+      try {
+        const searchUrl = `${this.rootUrl}search/suggest.json?q=${encodeURIComponent(GIFT_SKU)}&resources[type]=product&resources[limit]=1`;
+        const searchRes = await fetch(searchUrl);
+        const searchData = await searchRes.json();
+
+        const product = searchData.resources.results.products && searchData.resources.results.products[0];
+
+        if (!product) {
+          console.warn(`Gift product with SKU ${GIFT_SKU} not found.`);
+          return;
+        }
+
+        const productHandle = product.url.split("/products/")[1].split("?")[0];
+        const productRes = await fetch(`${this.rootUrl}products/${productHandle}.js`);
+        const productData = await productRes.json();
+
+        const variant = productData.variants.find((v) => v.sku === GIFT_SKU) || productData.variants[0];
+
+        if (!variant) {
+          console.warn(`Variant for SKU ${GIFT_SKU} not found.`);
+          return;
+        }
+
+        const cartRes = await fetch(`${this.rootUrl}cart.js`);
+        const cartData = await cartRes.json();
+        const isItemInCart = cartData.items.some((item) => item.id === variant.id);
+
+        if (!isItemInCart) {
+          const formData = {
+            items: [{
+              id: variant.id,
+              quantity: 1
+            }]
+          };
+
+          await fetch(`${this.rootUrl}cart/add.js`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          document.dispatchEvent(new CustomEvent("cart:refresh", {
+            bubbles: true,
+            detail: {
+              open: true
+            }
+          }));
+        }
+      } catch (error) {
+        console.error("Error handling gift with purchase:", error);
+      }
+    }
+
     saveAddonValue() {
       addEventDelegate({
         event: "click",
@@ -217,8 +266,7 @@ if (!customElements.get("m-cart-addons")) {
             } else {
               cartDiscountCodeNoti.style.display = "none";
             }
-            this.applyDiscountCode(code);
-            this.ensureGiftItemForDiscount(code);
+            this.handleGiftWithPurchase(code);
             this.close(event);
           }
           if (target.dataset.action === "note") {
@@ -252,112 +300,6 @@ if (!customElements.get("m-cart-addons")) {
       const cartNoteValue = this.domNodes.cartNote.value;
       const body = JSON.stringify({ note: cartNoteValue });
       fetch(`${window.MinimogSettings.routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
-    }
-
-    onCartUpdated() {
-      const code = localStorage.getItem(this.discountCodeKey);
-      this.ensureGiftItemForDiscount(code);
-      this.showDiscountNotificationIfNeeded(code);
-    }
-
-    normalizeDiscountCode(code) {
-      return (code || "").trim().toUpperCase();
-    }
-
-    getGiftVariantId() {
-      const variantId = parseInt(this.giftVariantId, 10);
-      if (Number.isNaN(variantId)) return null;
-      return variantId;
-    }
-
-    getSectionsToUpdate() {
-      let sections = [];
-      document.documentElement.dispatchEvent(
-        new CustomEvent("cart:grouped-sections", { bubbles: true, detail: { sections: sections } })
-      );
-      return sections;
-    }
-
-    showDiscountNotificationIfNeeded(code) {
-      const normalizedCode = this.normalizeDiscountCode(code);
-      const pendingCode = this.normalizeDiscountCode(localStorage.getItem(this.discountAppliedKey));
-      if (!pendingCode || pendingCode !== normalizedCode) return;
-      this.checkDiscountApplied(normalizedCode)
-        .then((isApplied) => {
-          if (!isApplied) return;
-          window.MinimogTheme.Notification.show({
-            target: this.cartWrapper || document.body,
-            method: "appendChild",
-            type: "success",
-            message: `Discount code ${normalizedCode} applied`,
-            last: 3000,
-            sticky: false,
-          });
-          localStorage.removeItem(this.discountAppliedKey);
-        })
-        .catch(() => {
-          localStorage.removeItem(this.discountAppliedKey);
-        });
-    }
-
-    async checkDiscountApplied(code) {
-      const cart = await fetch(`${this.rootUrl}cart.js`).then((res) => res.json());
-      const hasCartDiscount = (cart.cart_level_discount_applications || []).some((discount) =>
-        this.normalizeDiscountCode(discount.title).includes(code)
-      );
-      if (hasCartDiscount) return true;
-      if (code === this.giftDiscountCode) {
-        return cart.items.some((item) => Number(item.id) === this.getGiftVariantId());
-      }
-      return false;
-    }
-
-    applyDiscountCode(code) {
-      const normalizedCode = this.normalizeDiscountCode(code);
-      if (!normalizedCode) return;
-      localStorage.setItem(this.discountAppliedKey, normalizedCode);
-      const redirectPath = window.location.pathname + window.location.search;
-      window.location.href = `${this.rootUrl}discount/${encodeURIComponent(normalizedCode)}?redirect=${encodeURIComponent(redirectPath)}`;
-    }
-
-    async ensureGiftItemForDiscount(code) {
-      const normalizedCode = this.normalizeDiscountCode(code);
-      if (normalizedCode !== this.giftDiscountCode) return;
-      if (this.isAddingGift) return;
-      const giftVariantId = this.getGiftVariantId();
-      if (!giftVariantId) return;
-      this.isAddingGift = true;
-      try {
-        const cart = await fetch(`${this.rootUrl}cart.js`).then((res) => res.json());
-        const alreadyInCart = cart.items.some((item) => Number(item.id) === giftVariantId);
-        if (alreadyInCart) return;
-        const sectionsToBundle = this.getSectionsToUpdate();
-        const config = fetchConfig("javascript");
-        config.headers["X-Requested-With"] = "XMLHttpRequest";
-        delete config.headers["Content-Type"];
-        const formData = new FormData();
-        formData.append("id", giftVariantId);
-        formData.append("quantity", 1);
-        formData.append("sections", sectionsToBundle);
-        formData.append("sections_url", window.location.pathname);
-        config.body = formData;
-        const response = await fetch(`${MinimogSettings.routes.cart_add_url}`, config).then((res) => res.json());
-        if (!response.status) {
-          window.MinimogEvents.emit(MinimogTheme.pubSubEvents.cartUpdate, { cart: response });
-          window.MinimogTheme.Notification.show({
-            target: this.cartWrapper || document.body,
-            method: "appendChild",
-            type: "success",
-            message: "Gift added to cart",
-            last: 3000,
-            sticky: false,
-          });
-        }
-      } catch (error) {
-        console.error(error);
-      } finally {
-        this.isAddingGift = false;
-      }
     }
   }
   customElements.define("m-cart-addons", MCartAddons);
