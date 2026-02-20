@@ -332,6 +332,16 @@ if (!customElements.get("m-cart-addons")) {
 
             this.handleGiftWithPurchase(code);
             this.close(event);
+            
+            // Re-open cart drawer if on drawer mode
+            const cartDrawer = document.querySelector('m-cart-drawer');
+            if (cartDrawer && !this.isCartPage) {
+                setTimeout(() => {
+                   if (!cartDrawer.classList.contains('m-cart-drawer--active')) {
+                       cartDrawer.open();
+                   }
+                }, 300);
+            }
           }
           if (target.dataset.action === "note") {
             this.updateCartNote();
