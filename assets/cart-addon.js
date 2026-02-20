@@ -195,8 +195,12 @@ if (!customElements.get("m-cart-addons")) {
 
       const GIFT_VARIANT_ID = 47771253604611;
       
-      // Redirect to cart/add with discount logic
-      window.location.href = `${this.rootUrl}cart/add?id=${GIFT_VARIANT_ID}&quantity=1&discount=${code}`;
+      // 1. Apply discount code to session first via async fetch
+      // This helps Shopify recognize the discount before the redirect
+      fetch(`${this.rootUrl}discount/${code}`).then(() => {
+          // 2. Redirect to cart/add after discount is set in session
+          window.location.href = `${this.rootUrl}cart/add?id=${GIFT_VARIANT_ID}&quantity=1&discount=${code}`;
+      });
     }
 
     saveAddonValue() {
