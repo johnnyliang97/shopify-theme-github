@@ -194,39 +194,46 @@ if (!customElements.get("m-cart-addons")) {
       if (!code || code.trim().toUpperCase() !== "VEKC") return;
 
       const GIFT_SKU = "VERSACE-KEYCHAIN-REPEAT-CUSTOMER-GIFT";
+      const GIFT_HANDLE = "versace-keychain";
       console.log(`[Gift] Checking for gift item: ${GIFT_SKU}`);
 
       try {
-        const searchUrl = `${this.rootUrl}search/suggest.json?q=${encodeURIComponent(GIFT_SKU)}&resources[type]=product&resources[limit]=5&resources[options][fields]=variants.sku,body,title`;
-        const searchRes = await fetch(searchUrl);
-        const searchData = await searchRes.json();
-        
-        console.log("[Gift] Search results:", searchData);
-
-        const products = searchData.resources.results.products;
-        
-        if (!products || products.length === 0) {
-          console.warn(`[Gift] Gift product with SKU ${GIFT_SKU} not found in search.`);
-          return;
-        }
-
         let targetVariantId = null;
         
-        for (const product of products) {
-            const productHandle = product.url.split("/products/")[1].split("?")[0];
-            const productRes = await fetch(`${this.rootUrl}products/${productHandle}.js`);
+        // Fetch product by handle directly
+        try {
+            const productRes = await fetch(`${this.rootUrl}products/${GIFT_HANDLE}.js`);
+            if (!productRes.ok) throw new Error("Product fetch failed");
             const productData = await productRes.json();
             
             const variant = productData.variants.find((v) => v.sku === GIFT_SKU);
             if (variant) {
                 targetVariantId = variant.id;
                 console.log(`[Gift] Found variant ID: ${targetVariantId}`);
-                break;
             }
+        } catch (e) {
+            console.warn(`[Gift] Failed to fetch product by handle ${GIFT_HANDLE}. Falling back to search.`, e);
+             // Search fallback
+             const searchUrl = `${this.rootUrl}search/suggest.json?q=${encodeURIComponent(GIFT_SKU)}&resources[type]=product&resources[limit]=5&resources[options][fields]=variants.sku,body,title`;
+             const searchRes = await fetch(searchUrl);
+             const searchData = await searchRes.json();
+             const products = searchData.resources.results.products;
+             if (products && products.length > 0) {
+                 for (const product of products) {
+                     const productHandle = product.url.split("/products/")[1].split("?")[0];
+                     const productRes = await fetch(`${this.rootUrl}products/${productHandle}.js`);
+                     const productData = await productRes.json();
+                     const variant = productData.variants.find((v) => v.sku === GIFT_SKU);
+                     if (variant) {
+                         targetVariantId = variant.id;
+                         break;
+                     }
+                 }
+             }
         }
 
         if (!targetVariantId) {
-             console.warn(`[Gift] Variant for SKU ${GIFT_SKU} not found in search results.`);
+             console.warn(`[Gift] Variant for SKU ${GIFT_SKU} not found.`);
              return;
         }
 
@@ -235,29 +242,50 @@ if (!customElements.get("m-cart-addons")) {
         const isItemInCart = cartData.items.some((item) => item.id === targetVariantId);
 
         if (!isItemInCart) {
-          const formData = {
-            items: [{
-              id: targetVariantId,
-              quantity: 1
-            }]
-          };
+           // Determine which sections to update
+           const isCartPage = document.body.classList.contains('template-cart') || window.location.pathname.includes('/cart');
+           let sectionsToFetch = ['cart-drawer', 'cart-count'];
+           if (isCartPage) {
+               sectionsToFetch.push('cart-template');
+           }
+           
+           const formData = {
+             items: [{
+               id: targetVariantId,
+               quantity: 1
+             }],
+             sections: sectionsToFetch.join(','),
+             sections_url: window.location.pathname
+           };
+ 
+           const addRes = await fetch(`${this.rootUrl}cart/add.js`, {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json",
+             },
+             body: JSON.stringify(formData),
+           });
+           
+           const addData = await addRes.json();
+           console.log(`[Gift] Added gift item to cart.`);
+           
+           // Update Cart Drawer Manually (to avoid extra fetch)
+           if (addData.sections && addData.sections['cart-drawer']) {
+               const cartDrawer = document.getElementById("MinimogCartDrawer");
+               if (cartDrawer) {
+                   const parser = new DOMParser();
+                   const doc = parser.parseFromString(addData.sections['cart-drawer'], 'text/html');
+                   const newDrawerContent = doc.getElementById("MinimogCartDrawer")?.innerHTML;
+                   if (newDrawerContent) {
+                       cartDrawer.innerHTML = newDrawerContent;
+                   }
+               }
+           }
 
-          await fetch(`${this.rootUrl}cart/add.js`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          });
-          
-          console.log(`[Gift] Added gift item to cart.`);
-
-          document.dispatchEvent(new CustomEvent("cart:refresh", {
-            bubbles: true,
-            detail: {
-              open: true
-            }
-          }));
+           // Update Cart Page via Theme Event
+           if (window.MinimogTheme && window.MinimogTheme.pubSubEvents) {
+                window.MinimogEvents.emit(window.MinimogTheme.pubSubEvents.cartUpdate, { cart: addData });
+           }
           
            window.MinimogTheme.Notification.show({
                 target: document.body,
