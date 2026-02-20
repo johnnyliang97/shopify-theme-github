@@ -193,62 +193,15 @@ if (!customElements.get("m-cart-addons")) {
     async handleGiftWithPurchase(code) {
       if (!code || code.trim().toUpperCase() !== "KEY10") return;
 
-      const GIFT_SKU = "VERSACE-KEYCHAIN-REPEAT-CUSTOMER-GIFT";
-      const GIFT_HANDLE = "versace-keychain";
-      console.log(`[Gift] Checking for gift item: ${GIFT_SKU}`);
+      const GIFT_VARIANT_ID = 47771253604611;
+      console.log(`[Gift] Using Variant ID: ${GIFT_VARIANT_ID}`);
 
-      // Optimization: Start independent fetches in parallel
-      const applyDiscountReq = fetch(`${this.rootUrl}discount/${code}`);
+      // Optimization: Fetch cart state to check if item already exists
       const cartReq = fetch(`${this.rootUrl}cart.js`).then(res => res.json());
-      const productReq = fetch(`${this.rootUrl}products/${GIFT_HANDLE}.js`)
-                          .then(res => {
-                              if (!res.ok) throw new Error("Product fetch failed");
-                              return res.json();
-                          })
-                          .catch(e => {
-                              console.warn(`[Gift] Failed to fetch product by handle ${GIFT_HANDLE}.`, e);
-                              return null;
-                          });
 
       try {
-        const [discountRes, cartData, productData] = await Promise.all([applyDiscountReq, cartReq, productReq]);
-        
-        // Product Lookup Logic
-        let targetVariantId = null;
-        if (productData) {
-            const variant = productData.variants.find((v) => v.sku === GIFT_SKU);
-            if (variant) targetVariantId = variant.id;
-        }
-
-        // Fallback search if handle lookup failed
-        if (!targetVariantId) {
-             console.log(`[Gift] Handle lookup failed, trying search fallback...`);
-             const searchUrl = `${this.rootUrl}search/suggest.json?q=${encodeURIComponent(GIFT_SKU)}&resources[type]=product&resources[limit]=5&resources[options][fields]=variants.sku,body,title`;
-             const searchRes = await fetch(searchUrl);
-             const searchData = await searchRes.json();
-             const products = searchData.resources.results.products;
-             if (products && products.length > 0) {
-                 for (const product of products) {
-                     const productHandle = product.url.split("/products/")[1].split("?")[0];
-                     const pRes = await fetch(`${this.rootUrl}products/${productHandle}.js`);
-                     const pData = await pRes.json();
-                     const variant = pData.variants.find((v) => v.sku === GIFT_SKU);
-                     if (variant) {
-                         targetVariantId = variant.id;
-                         break;
-                     }
-                 }
-             }
-        }
-
-        if (!targetVariantId) {
-             console.warn(`[Gift] Variant for SKU ${GIFT_SKU} not found.`);
-             return;
-        }
-
-        console.log(`[Gift] Found variant ID: ${targetVariantId}`);
-
-        const isItemInCart = cartData.items.some((item) => item.id === targetVariantId);
+        const cartData = await cartReq;
+        const isItemInCart = cartData.items.some((item) => item.id === GIFT_VARIANT_ID);
 
         if (!isItemInCart) {
             // Determine which sections to update
@@ -258,25 +211,19 @@ if (!customElements.get("m-cart-addons")) {
                 sectionsToFetch.push('cart-template');
             }
             
-            const formData = {
-              items: [{
-                id: targetVariantId,
-                quantity: 1
-              }],
-              sections: sectionsToFetch.join(','),
-              sections_url: window.location.pathname
-            };
-  
-            const addRes = await fetch(`${this.rootUrl}cart/add.js`, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
+            // Use query parameters to add item AND apply discount code simultaneously
+            // This is cleaner and faster than separate requests
+            const addUrl = `${this.rootUrl}cart/add?id=${GIFT_VARIANT_ID}&quantity=1&discount=${code}&sections=${sectionsToFetch.join(',')}&sections_url=${window.location.pathname}`;
+            
+            const addRes = await fetch(addUrl, {
+                method: "POST", // POST is safer, though GET often works for permalinks
+                headers: {
+                    "Accept": "application/json"
+                }
             });
             
             const addData = await addRes.json();
-            console.log(`[Gift] Added gift item to cart.`);
+            console.log(`[Gift] Added gift item and applied discount code to cart.`);
             
             // Update Cart Drawer Manually
             if (addData.sections && addData.sections['cart-drawer']) {
@@ -309,7 +256,9 @@ if (!customElements.get("m-cart-addons")) {
                  last: 3000
              });
         } else {
-             console.log(`[Gift] Gift item already in cart.`);
+             // If item is already in cart, just ensure discount is applied
+             console.log(`[Gift] Gift item already in cart. Applying discount only.`);
+             await fetch(`${this.rootUrl}discount/${code}`);
         }
       } catch (error) {
         console.error("[Gift] Error handling gift with purchase:", error);
