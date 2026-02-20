@@ -339,7 +339,10 @@ if (!customElements.get("m-cart-addons")) {
                 });
             }
 
-            this.handleGiftWithPurchase(code);
+            // Split codes by comma or space and handle each
+            const codes = code.split(/[\s,]+/).filter(Boolean);
+            codes.forEach(c => this.handleGiftWithPurchase(c));
+            
             this.close(event);
           }
           if (target.dataset.action === "note") {
