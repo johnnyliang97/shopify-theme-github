@@ -194,75 +194,9 @@ if (!customElements.get("m-cart-addons")) {
       if (!code || code.trim().toUpperCase() !== "KEY10") return;
 
       const GIFT_VARIANT_ID = 47771253604611;
-      console.log(`[Gift] Using Variant ID: ${GIFT_VARIANT_ID}`);
-
-      // Optimization: Fetch cart state to check if item already exists
-      const cartReq = fetch(`${this.rootUrl}cart.js`).then(res => res.json());
-
-      try {
-        const cartData = await cartReq;
-        const isItemInCart = cartData.items.some((item) => item.id === GIFT_VARIANT_ID);
-
-        if (!isItemInCart) {
-            // Determine which sections to update
-            const isCartPage = document.body.classList.contains('template-cart') || window.location.pathname.includes('/cart');
-            let sectionsToFetch = ['cart-drawer', 'cart-count'];
-            if (isCartPage) {
-                sectionsToFetch.push('cart-template');
-            }
-            
-            // Use query parameters to add item AND apply discount code simultaneously
-            // This is cleaner and faster than separate requests
-            const addUrl = `${this.rootUrl}cart/add?id=${GIFT_VARIANT_ID}&quantity=1&discount=${code}&sections=${sectionsToFetch.join(',')}&sections_url=${window.location.pathname}`;
-            
-            const addRes = await fetch(addUrl, {
-                method: "POST", // POST is safer, though GET often works for permalinks
-                headers: {
-                    "Accept": "application/json"
-                }
-            });
-            
-            const addData = await addRes.json();
-            console.log(`[Gift] Added gift item and applied discount code to cart.`);
-            
-            // Update Cart Drawer Manually
-            if (addData.sections && addData.sections['cart-drawer']) {
-                const cartDrawer = document.getElementById("MinimogCartDrawer");
-                if (cartDrawer) {
-                    const isActive = cartDrawer.classList.contains('m-cart-drawer--active');
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(addData.sections['cart-drawer'], 'text/html');
-                    const newDrawerContent = doc.getElementById("MinimogCartDrawer")?.innerHTML;
-                    if (newDrawerContent) {
-                        cartDrawer.innerHTML = newDrawerContent;
-                        if (isActive) {
-                            const inner = cartDrawer.querySelector('.m-cart-drawer__inner');
-                            if (inner) inner.style.setProperty("--translate-x", "0");
-                        }
-                    }
-                }
-            }
- 
-            // Update Cart Page via Theme Event
-            if (window.MinimogTheme && window.MinimogTheme.pubSubEvents) {
-                 window.MinimogEvents.emit(window.MinimogTheme.pubSubEvents.cartUpdate, { cart: addData });
-            }
-           
-            window.MinimogTheme.Notification.show({
-                 target: document.body,
-                 method: "appendChild",
-                 type: "success",
-                 message: "Gift item added to cart!",
-                 last: 3000
-             });
-        } else {
-             // If item is already in cart, just ensure discount is applied
-             console.log(`[Gift] Gift item already in cart. Applying discount only.`);
-             await fetch(`${this.rootUrl}discount/${code}`);
-        }
-      } catch (error) {
-        console.error("[Gift] Error handling gift with purchase:", error);
-      }
+      
+      // Redirect to cart/add with discount logic
+      window.location.href = `${this.rootUrl}cart/add?id=${GIFT_VARIANT_ID}&quantity=1&discount=${code}`;
     }
 
     saveAddonValue() {
