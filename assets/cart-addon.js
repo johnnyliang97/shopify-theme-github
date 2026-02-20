@@ -277,7 +277,16 @@ if (!customElements.get("m-cart-addons")) {
                    const doc = parser.parseFromString(addData.sections['cart-drawer'], 'text/html');
                    const newDrawerContent = doc.getElementById("MinimogCartDrawer")?.innerHTML;
                    if (newDrawerContent) {
+                       const wasActive = cartDrawer.classList.contains("m-cart-drawer--active");
                        cartDrawer.innerHTML = newDrawerContent;
+                       
+                       if (wasActive) {
+                           cartDrawer.classList.add("m-cart-drawer--active");
+                           const inner = cartDrawer.querySelector(".m-cart-drawer__inner");
+                           if (inner) inner.style.setProperty("--translate-x", "0");
+                       } else {
+                           if (cartDrawer.open) cartDrawer.open();
+                       }
                    }
                }
            }
@@ -332,16 +341,6 @@ if (!customElements.get("m-cart-addons")) {
 
             this.handleGiftWithPurchase(code);
             this.close(event);
-            
-            // Re-open cart drawer if on drawer mode
-            const cartDrawer = document.querySelector('m-cart-drawer');
-            if (cartDrawer && !this.isCartPage) {
-                setTimeout(() => {
-                   if (!cartDrawer.classList.contains('m-cart-drawer--active')) {
-                       cartDrawer.open();
-                   }
-                }, 300);
-            }
           }
           if (target.dataset.action === "note") {
             this.updateCartNote();
