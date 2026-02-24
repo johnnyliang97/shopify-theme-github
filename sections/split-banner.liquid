@@ -56,7 +56,7 @@
 
   .split-banner-buttons a {
       padding: 8px 16px !important;
-      font-size: 12px !important;
+      font-size: {{ section.settings.button_font_size }}px !important;
       font-weight: 600 !important;
       line-height: 1.2 !important;
       border-radius: 8px !important;
@@ -344,6 +344,20 @@
             { "value": "h4", "label": "Extra Large" }
         ],
         "default": "text-base"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Font Size",
+      "default": 12
     },
     {
       "type": "header",
