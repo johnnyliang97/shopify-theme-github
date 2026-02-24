@@ -57,7 +57,7 @@
   .split-banner-{{ section.id }} .split-banner-buttons a {
       padding: 8px 16px !important;
       font-size: {{ section.settings.button_font_size }}px !important;
-      font-weight: 600 !important;
+      font-weight: {{ section.settings.button_font_weight }} !important;
       line-height: 1.2 !important;
       border-radius: 8px !important;
   }
@@ -358,6 +358,15 @@
       "unit": "px",
       "label": "Button Font Size",
       "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_font_weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "label": "Button Font Weight",
+      "default": 600
     },
     {
       "type": "header",
