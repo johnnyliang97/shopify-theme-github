@@ -90,7 +90,7 @@
         "subheader_size": "text-small",
         "button_text": "Find Out More",
         "button_link": "shopify://blogs/lestyle-spotlight/exclusive-gift-complimentary-versace-keychain",
-        "button_font_size": 12,
+        "button_font_size": 16,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#222222",
         "button_border_color": "#222222",
@@ -188,7 +188,7 @@
             "link": "shopify://collections/versace-jeans-couture-outlet",
             "label_text": "60% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_YDQNh8": {
@@ -201,7 +201,7 @@
             "link": "shopify://collections/versace-outlet",
             "label_text": "60% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_iLGBxT": {
@@ -214,7 +214,7 @@
             "link": "shopify://collections/moschino-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_wMW4xV": {
@@ -227,7 +227,7 @@
             "link": "shopify://collections/dsquared2-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_hEQNbW": {
@@ -240,7 +240,7 @@
             "link": "shopify://collections/roberto-cavalli-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_tCRygE": {
@@ -253,7 +253,7 @@
             "link": "shopify://collections/balmain-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         }
       },
@@ -427,7 +427,7 @@
         "subheader_size": "text-small",
         "button_text": "Find Out More",
         "button_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay",
-        "button_font_size": 12,
+        "button_font_size": 16,
         "button_bg_color": "rgba(0,0,0,0)",
         "button_text_color": "#00193a",
         "button_border_color": "#00193a",
@@ -448,7 +448,7 @@
             "link": "shopify://collections/outlet-under-500",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_Bwh76T": {
@@ -461,7 +461,7 @@
             "link": "shopify://collections/outlet-under-100",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_WdmBx3": {
@@ -474,7 +474,7 @@
             "link": "shopify://collections/accessories-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_GTfJza": {
@@ -487,7 +487,7 @@
             "link": "shopify://collections/bags-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_hRcxVY": {
@@ -500,7 +500,7 @@
             "link": "shopify://collections/t-shirts-tops-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_36dkwT": {
@@ -513,7 +513,7 @@
             "link": "shopify://collections/dresses-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_Tme8Xb": {
@@ -526,7 +526,7 @@
             "link": "shopify://collections/shirts-outlet",
             "label_text": "70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         }
       },
