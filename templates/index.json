@@ -291,10 +291,10 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-womens-versace-activewear.jpg",
-            "header_text": "Womens Activewear",
-            "subheader_text": "Daily Workout Essentials",
-            "link": "shopify://collections/womens-activewear",
+            "image": "shopify://shop_images/lestyle-model-vjc-womens-dress1.jpg",
+            "header_text": "Dresses",
+            "subheader_text": "For the Glam",
+            "link": "shopify://collections/dresses",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": ""
@@ -326,19 +326,6 @@
             "button_text": ""
           }
         },
-        "card_KJmxxY": {
-          "type": "card",
-          "name": "Card",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-sunglasses-mens-versace.webp",
-            "header_text": "Sunglasses",
-            "subheader_text": "Versace, Dolce & Gabbana",
-            "link": "shopify://collections/sunglasses",
-            "label_text": "New",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
         "card_jVynpa": {
           "type": "card",
           "name": "Card",
@@ -351,14 +338,41 @@
             "label_color": "#b30505",
             "button_text": ""
           }
+        },
+        "card_cfERde": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-womens-versace-activewear.jpg",
+            "header_text": "Womens Activewear",
+            "subheader_text": "Daily Workout Essentials",
+            "link": "shopify://collections/womens-activewear",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_KJmxxY": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-sunglasses-mens-versace.webp",
+            "header_text": "Sunglasses",
+            "subheader_text": "Versace, Dolce & Gabbana",
+            "link": "shopify://collections/sunglasses",
+            "label_text": "New",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
         }
       },
       "block_order": [
         "card_Qc7zEM",
         "card_BfVQWe",
         "card_dtFdem",
-        "card_KJmxxY",
-        "card_jVynpa"
+        "card_jVynpa",
+        "card_cfERde",
+        "card_KJmxxY"
       ],
       "name": "Collections",
       "settings": {
