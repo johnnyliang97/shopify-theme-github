@@ -212,7 +212,7 @@
           "type": "button",
           "settings": {
             "label": "Versace",
-            "link": "",
+            "link": "shopify://collections/versace",
             "button_style": "m-button--secondary"
           }
         },
@@ -220,7 +220,7 @@
           "type": "button",
           "settings": {
             "label": "Versace Jeans Couture",
-            "link": "",
+            "link": "shopify://collections/versace-jeans-couture",
             "button_style": "m-button--secondary"
           }
         },
