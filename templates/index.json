@@ -157,20 +157,6 @@
         "padding_bottom": 36
       }
     },
-    "empty_space_kycKUx": {
-      "type": "empty-space",
-      "name": "Empty space",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "",
-        "show_divider_line": false,
-        "divider_style": "solid",
-        "divider_height": 1,
-        "padding_top": 0,
-        "padding_bottom": 20,
-        "custom_class": ""
-      }
-    },
     "promotion_countdown_timer_Q6WpDW": {
       "type": "promotion-countdown-timer",
       "blocks": {
@@ -311,7 +297,7 @@
             "link": "shopify://collections/womens-activewear",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_BfVQWe": {
@@ -324,7 +310,7 @@
             "link": "shopify://collections/swimwear",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_dtFdem": {
@@ -337,7 +323,7 @@
             "link": "shopify://collections/shorts-for-mens",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_KJmxxY": {
@@ -350,7 +336,7 @@
             "link": "shopify://collections/sunglasses",
             "label_text": "New",
             "label_color": "#c19967",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_jVynpa": {
@@ -363,7 +349,7 @@
             "link": "shopify://collections/lestyle-outlet",
             "label_text": "50-70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         }
       },
@@ -398,6 +384,32 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_EJfrR9": {
+          "type": "card",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
+            "header_text": "Versace Jeans Couture",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_9pRebr": {
+          "type": "card",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-girls-versace-jacket-skirt1.png",
+            "header_text": "Versace",
+            "subheader_text": "",
+            "link": "shopify://collections/versace",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_HpbLmm": {
           "type": "card",
           "name": "Philipp Plein",
@@ -406,9 +418,9 @@
             "header_text": "Philipp Plein",
             "subheader_text": "",
             "link": "shopify://collections/philipp-plein",
-            "label_text": "NEW",
+            "label_text": "",
             "label_color": "#c19967",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_9fYyNd": {
@@ -419,22 +431,9 @@
             "header_text": "Chloe",
             "subheader_text": "",
             "link": "shopify://collections/chloe",
-            "label_text": "NEW",
-            "label_color": "#c19967",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_9pRebr": {
-          "type": "card",
-          "name": "Versace",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.png",
-            "header_text": "Versace",
-            "subheader_text": "",
-            "link": "shopify://collections/versace",
             "label_text": "",
             "label_color": "#c19967",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_KBbgxn": {
@@ -447,7 +446,7 @@
             "link": "shopify://collections/kenzo",
             "label_text": "",
             "label_color": "#c19967",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_GcyLwV": {
@@ -460,20 +459,7 @@
             "link": "shopify://collections/boss",
             "label_text": "",
             "label_color": "#c19967",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_EJfrR9": {
-          "type": "card",
-          "name": "Versace Jeans Couture",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-mens-tshirt-shorts.png",
-            "header_text": "Versace Jeans Couture",
-            "subheader_text": "",
-            "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_eRET9U": {
@@ -486,7 +472,7 @@
             "link": "shopify://collections/fendi",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_EVUnen": {
@@ -499,7 +485,7 @@
             "link": "shopify://collections/dolce-gabbana",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_XcHpVk": {
@@ -525,17 +511,17 @@
             "link": "shopify://collections/amiri",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         }
       },
       "block_order": [
+        "card_EJfrR9",
+        "card_9pRebr",
         "card_HpbLmm",
         "card_9fYyNd",
-        "card_9pRebr",
         "card_KBbgxn",
         "card_GcyLwV",
-        "card_EJfrR9",
         "card_eRET9U",
         "card_EVUnen",
         "card_XcHpVk",
@@ -819,7 +805,7 @@
             "link": "shopify://collections/sneakers",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_bCbiwC": {
@@ -831,7 +817,7 @@
             "link": "shopify://collections/sale",
             "label_text": "Up to 60% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_hdTia7": {
@@ -844,7 +830,7 @@
             "link": "shopify://collections/lestyle-outlet",
             "label_text": "50-70% OFF",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_GPNkT8": {
@@ -857,7 +843,7 @@
             "link": "shopify://collections/bags",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_jQgeEQ": {
@@ -870,7 +856,7 @@
             "link": "shopify://collections/dresses",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_36hpWk": {
@@ -883,7 +869,7 @@
             "link": "shopify://collections/shorts-for-mens",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_tXLUnN": {
@@ -896,7 +882,7 @@
             "link": "shopify://collections/jackets",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         },
         "card_n9YkeK": {
@@ -909,7 +895,7 @@
             "link": "shopify://collections/jewellery",
             "label_text": "",
             "label_color": "#b30505",
-            "button_text": "Shop Now"
+            "button_text": ""
           }
         }
       },
@@ -942,6 +928,20 @@
         "show_pagination": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "empty_space_kycKUx": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
       }
     },
     "small_banner_wLTMK4": {
@@ -1366,7 +1366,8 @@
           "type": "iconbox",
           "settings": {
             "card_color_scheme": "",
-            "image_by_url": "https://www.svgrepo.com/show/448108/question.svg",
+            "image": "shopify://shop_images/question.svg",
+            "image_by_url": "",
             "title": "Online Support",
             "description": "<p>Message us on <a href=\"http://ig.me/m/lestyleoutique\" target=\"_blank\" title=\"Lestyle Instagram DM Contact\">Instagram</a> or <a href=\"https://wa.me/+61492266452\" target=\"_blank\" title=\"https://wa.me/+61492266452\">WhatsApp</a></p>",
             "link": "shopify://pages/contact",
@@ -1433,7 +1434,6 @@
     "split_banner_hbJTkB",
     "rectangle_buttons_QUnzWX",
     "small_banner_EdWnqy",
-    "empty_space_kycKUx",
     "promotion_countdown_timer_Q6WpDW",
     "split_banner_RNxN7B",
     "empty_space_HWbjTK",
@@ -1443,6 +1443,7 @@
     "scrolling_promotion_jjrFyf",
     "small_banner_iAVEqz",
     "custom_card_carousel_m7M9q8",
+    "empty_space_kycKUx",
     "small_banner_wLTMK4",
     "162251092958fcda7c",
     "small_banner_iMR6eU",
