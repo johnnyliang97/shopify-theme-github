@@ -1,0 +1,277 @@
+<style>
+  .floating-chat-bubble-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: inherit;
+  }
+
+  /* Floating Button */
+  .floating-chat-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .floating-chat-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .floating-chat-icon {
+    width: 32px;
+    height: 32px;
+    filter: invert(1); /* Make black SVG white */
+  }
+
+  /* Notification Dot */
+  .notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #ff3b30;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: none; /* Hidden by default, shown via JS */
+  }
+
+  .notification-dot.show {
+    display: block;
+  }
+
+  /* Modal */
+  .chat-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .chat-modal {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 24px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chat-modal.open,
+  .chat-modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .chat-modal.open {
+    transform: translateY(0);
+  }
+
+  /* Profile Card */
+  .chat-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .chat-profile:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .profile-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 2px solid #f0f0f0;
+  }
+
+  .profile-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 4px 0;
+  }
+
+  .profile-role {
+    font-size: 12px;
+    color: #888;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .chat-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+
+  .chat-action-btn:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .social-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+  }
+
+  /* Footer Text */
+  .chat-footer-text {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  /* Close Button (Mobile primarily, but good for UX) */
+  .chat-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #999;
+      line-height: 1;
+      padding: 5px;
+  }
+  .chat-close-btn:hover {
+      color: #333;
+  }
+
+  @media (max-width: 480px) {
+    .chat-modal {
+      right: 20px;
+      left: 20px;
+      width: auto;
+      bottom: 90px;
+    }
+  }
+</style>
+
+<div class="floating-chat-bubble-container">
+  <div class="chat-modal-overlay" id="chatModalOverlay"></div>
+  
+  <div class="chat-modal" id="chatModal">
+    <button class="chat-close-btn" id="chatCloseBtn">&times;</button>
+    
+    <!-- Ivana Profile -->
+    <div class="chat-profile">
+      <img src="https://cdn.shopify.com/s/files/1/0758/6467/0467/files/ivana.jpg?v=1771934790" alt="Ivana" class="profile-image">
+      <h3 class="profile-name">Ivana</h3>
+      <p class="profile-role">Sales Representative</p>
+      <a href="https://ig.me/m/lestyleboutique" target="_blank" class="chat-action-btn">
+        <img src="https://img.icons8.com/?size=100&id=85154&format=png&color=ffffff" alt="Instagram" class="social-icon">
+        Chat Now
+      </a>
+    </div>
+
+    <!-- Steven Profile -->
+    <div class="chat-profile">
+      <img src="https://cdn.shopify.com/s/files/1/0758/6467/0467/files/steven1.jpg?v=1771934816" alt="Steven" class="profile-image">
+      <h3 class="profile-name">Steven</h3>
+      <p class="profile-role">Creative Director</p>
+      <a href="https://wa.me/message/YOUR_WHATSAPP_LINK_HERE" target="_blank" class="chat-action-btn"> <!-- Note: User provided ig.me for both but icon is WhatsApp. Assuming whatsapp link intended or fallback to ig.me as requested literally -->
+        <img src="https://img.icons8.com/?size=100&id=62855&format=png&color=ffffff" alt="WhatsApp" class="social-icon">
+        Chat Now
+      </a>
+    </div>
+
+    <div class="chat-footer-text">
+      Got questions on sizing, styles, or new arrivals? Want to book private appointments after hours? Send us a message now!
+    </div>
+  </div>
+
+  <div class="floating-chat-btn" id="floatingChatBtn">
+    <div class="notification-dot" id="notificationDot"></div>
+    <img src="https://cdn.shopify.com/s/files/1/0758/6467/0467/files/chat-dots-svgrepo-com.svg?v=1771935137" alt="Chat" class="floating-chat-icon">
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var chatBtn = document.getElementById('floatingChatBtn');
+    var chatModal = document.getElementById('chatModal');
+    var overlay = document.getElementById('chatModalOverlay');
+    var closeBtn = document.getElementById('chatCloseBtn');
+    var notificationDot = document.getElementById('notificationDot');
+    var LOCAL_STORAGE_KEY = 'chatBubbleOpened';
+
+    // Check if user has opened the chat before
+    var hasOpened = localStorage.getItem(LOCAL_STORAGE_KEY);
+    
+    if (!hasOpened) {
+      notificationDot.classList.add('show');
+    }
+
+    function toggleModal() {
+      var isOpen = chatModal.classList.contains('open');
+      
+      if (isOpen) {
+        chatModal.classList.remove('open');
+        overlay.classList.remove('open');
+      } else {
+        chatModal.classList.add('open');
+        overlay.classList.add('open');
+        
+        // Mark as opened
+        if (!hasOpened) {
+          localStorage.setItem(LOCAL_STORAGE_KEY, 'true');
+          notificationDot.classList.remove('show');
+          hasOpened = true;
+        }
+      }
+    }
+
+    chatBtn.addEventListener('click', toggleModal);
+    overlay.addEventListener('click', toggleModal);
+    closeBtn.addEventListener('click', toggleModal);
+  });
+</script>
