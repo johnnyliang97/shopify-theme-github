@@ -291,7 +291,7 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-womens-dress1.jpg",
+            "image": "shopify://shop_images/lestyle-model-vjc-womens-dress-1.jpg",
             "header_text": "Dresses",
             "subheader_text": "For the Glam",
             "link": "shopify://collections/dresses",
