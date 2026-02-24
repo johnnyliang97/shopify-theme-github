@@ -51,6 +51,7 @@
         "title_image_width": 220,
         "subheader_text": "<p>Get a free Versace keychain on your next purchase using code <strong>KEY10</strong></p>",
         "subheader_size": "text-base",
+        "button_font_size": 15,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -273,6 +274,7 @@
         "title_image_width": 240,
         "subheader_text": "<p>Explore new collections from Versace and Versace Jeans Couture</p>",
         "subheader_size": "text-base",
+        "button_font_size": 12,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -1150,6 +1152,7 @@
         "title_image_width": 128,
         "subheader_text": "<p>50% to 70% OFF Outlet Sale. Online-Only.</p>",
         "subheader_size": "text-base",
+        "button_font_size": 12,
         "padding_top": 0,
         "padding_bottom": 0
       }
