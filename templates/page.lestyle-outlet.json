@@ -69,6 +69,7 @@
         "title_image_width": 200,
         "subheader_text": "<p>Outlet sale on Hugo Boss is now live.</p>",
         "subheader_size": "text-base",
+        "button_font_size": 15,
         "padding_top": 0,
         "padding_bottom": 0
       }
