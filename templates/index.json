@@ -15,50 +15,59 @@
         "button_eQtft3": {
           "type": "button",
           "settings": {
-            "label": "Versace",
-            "link": "shopify://collections/versace",
+            "label": "Roberto Cavalli",
+            "link": "shopify://collections/roberto-cavalli-kids",
             "button_style": "m-button--white"
           }
         },
         "button_3yfeUK": {
           "type": "button",
           "settings": {
-            "label": "Versace Jeans Couture",
-            "link": "shopify://collections/versace-jeans-couture",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_k3PLAE": {
-          "type": "button",
-          "settings": {
-            "label": "Mens",
-            "link": "https://www.lestyle.com.au/collections/mens?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "label": "Marcelo Burlon",
+            "link": "shopify://collections/marcelo-burlon-kids",
             "button_style": "m-button--white"
           }
         },
         "button_hMH9RV": {
           "type": "button",
           "settings": {
-            "label": "Womens",
-            "link": "https://www.lestyle.com.au/collections/womens?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "label": "Palm Angels",
+            "link": "shopify://collections/palm-angels-kids",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_k3PLAE": {
+          "type": "button",
+          "settings": {
+            "label": "Moschino",
+            "link": "shopify://collections/moschino-kids",
             "button_style": "m-button--white"
           }
         },
         "button_Xc9cLm": {
           "type": "button",
           "settings": {
-            "label": "Kids",
-            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.p.vendor=Versace&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "button_style": "m-button--white"
+            "label": "Shop All Sale",
+            "link": "shopify://collections/sale-kids",
+            "button_style": "m-button--primary"
+          }
+        },
+        "button_jtpDf6": {
+          "type": "button",
+          "settings": {
+            "label": "70% OFF Outlet",
+            "link": "shopify://collections/kids-outlet",
+            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
         "button_eQtft3",
         "button_3yfeUK",
-        "button_k3PLAE",
         "button_hMH9RV",
-        "button_Xc9cLm"
+        "button_k3PLAE",
+        "button_Xc9cLm",
+        "button_jtpDf6"
       ],
       "name": "Banner",
       "settings": {
@@ -66,7 +75,7 @@
         "image": "shopify://shop_images/lestyle-model-cavalli-dresses-girls1.jpg",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "https://www.lestyle.com.au/collections/new-arrivals?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+        "image_link": "shopify://collections/sale-kids",
         "image_position": "left",
         "background_color": "#da3f3f",
         "background_image": "shopify://shop_images/abstract-background-design-hd-dark-clay-red-color_851755-136507.jpg",
@@ -159,6 +168,201 @@
         "button_text_color": "#ffffff",
         "button_font_size": 16,
         "button_font_weight": "500"
+      }
+    },
+    "custom_card_carousel_LgWiQH": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_pBdP9C": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-roberto-cavalli-dress-girls1.png",
+            "header_text": "Roberto Cavalli Kids",
+            "subheader_text": "",
+            "link": "shopify://collections/roberto-cavalli-kids",
+            "label_text": "60% Off",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_cAK9am": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-marcelo-boys-sweatshirt-shorts21.png",
+            "header_text": "Marcelo Burlon Kids",
+            "subheader_text": "",
+            "link": "shopify://collections/marcelo-burlon-kids",
+            "label_text": "50% Off",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_LFnLEQ": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-moschino-kids-boys-girls-hoodie-dress1.png",
+            "header_text": "Moschino Kids",
+            "subheader_text": "",
+            "link": "shopify://collections/moschino-kids",
+            "label_text": "Up to 60% Off",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_XcHpVk": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-palm-angels-boys-tshirt1.png",
+            "header_text": "Palm Angels Kids",
+            "subheader_text": "",
+            "link": "shopify://collections/palm-angels-kids",
+            "label_text": "Up to 40% Off",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_EJfrR9": {
+          "type": "card",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
+            "header_text": "Versace Jeans Couture",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_9pRebr": {
+          "type": "card",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-girls-versace-jacket-skirt1.png",
+            "header_text": "Versace",
+            "subheader_text": "",
+            "link": "shopify://collections/versace",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_HpbLmm": {
+          "type": "card",
+          "name": "Philipp Plein",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-watch_copy.png",
+            "header_text": "Philipp Plein",
+            "subheader_text": "",
+            "link": "shopify://collections/philipp-plein",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_9fYyNd": {
+          "type": "card",
+          "name": "Chloe",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-chloe-kids-dress-bag.png",
+            "header_text": "Chloe",
+            "subheader_text": "",
+            "link": "shopify://collections/chloe",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_KBbgxn": {
+          "type": "card",
+          "name": "Kenzo",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-kenzo-kids-rompers.jpg",
+            "header_text": "Kenzo",
+            "subheader_text": "",
+            "link": "shopify://collections/kenzo",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_GcyLwV": {
+          "type": "card",
+          "name": "Boss",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-boss-kids-01.png",
+            "header_text": "BOSS",
+            "subheader_text": "",
+            "link": "shopify://collections/boss",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_eRET9U": {
+          "type": "card",
+          "name": "Fendi",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-fendi-top.png",
+            "header_text": "Fendi",
+            "subheader_text": "",
+            "link": "shopify://collections/fendi",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_EVUnen": {
+          "type": "card",
+          "name": "Dolce & Gabbana",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
+            "header_text": "Dolce & Gabbana",
+            "subheader_text": "",
+            "link": "shopify://collections/dolce-gabbana",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_pBdP9C",
+        "card_cAK9am",
+        "card_LFnLEQ",
+        "card_XcHpVk",
+        "card_EJfrR9",
+        "card_9pRebr",
+        "card_HpbLmm",
+        "card_9fYyNd",
+        "card_KBbgxn",
+        "card_GcyLwV",
+        "card_eRET9U",
+        "card_EVUnen"
+      ],
+      "name": "Brands",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Featured Brands",
+        "image_ratio_desktop": "100",
+        "image_ratio_mobile": "125",
+        "heading_size": 26,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "400",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
+        "items_per_row": 5,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "small_banner_EdWnqy": {
@@ -400,173 +604,6 @@
         "card_subheader_size": 14,
         "card_subheader_weight": "400",
         "items_per_row": 4,
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "show_navigation": true,
-        "show_pagination": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "custom_card_carousel_LgWiQH": {
-      "type": "custom-card-carousel",
-      "blocks": {
-        "card_EJfrR9": {
-          "type": "card",
-          "name": "Versace Jeans Couture",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
-            "header_text": "Versace Jeans Couture",
-            "subheader_text": "",
-            "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "NEW",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_9pRebr": {
-          "type": "card",
-          "name": "Versace",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-girls-versace-jacket-skirt1.png",
-            "header_text": "Versace",
-            "subheader_text": "",
-            "link": "shopify://collections/versace",
-            "label_text": "NEW",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_HpbLmm": {
-          "type": "card",
-          "name": "Philipp Plein",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-watch_copy.png",
-            "header_text": "Philipp Plein",
-            "subheader_text": "",
-            "link": "shopify://collections/philipp-plein",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_9fYyNd": {
-          "type": "card",
-          "name": "Chloe",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-chloe-kids-dress-bag.png",
-            "header_text": "Chloe",
-            "subheader_text": "",
-            "link": "shopify://collections/chloe",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_KBbgxn": {
-          "type": "card",
-          "name": "Kenzo",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-kenzo-kids-rompers.jpg",
-            "header_text": "Kenzo",
-            "subheader_text": "",
-            "link": "shopify://collections/kenzo",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_GcyLwV": {
-          "type": "card",
-          "name": "Boss",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-boss-kids-01.png",
-            "header_text": "BOSS",
-            "subheader_text": "",
-            "link": "shopify://collections/boss",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_eRET9U": {
-          "type": "card",
-          "name": "Fendi",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-fendi-top.png",
-            "header_text": "Fendi",
-            "subheader_text": "",
-            "link": "shopify://collections/fendi",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
-        },
-        "card_EVUnen": {
-          "type": "card",
-          "name": "Dolce & Gabbana",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
-            "header_text": "Dolce & Gabbana",
-            "subheader_text": "",
-            "link": "shopify://collections/dolce-gabbana",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
-        },
-        "card_XcHpVk": {
-          "type": "card",
-          "name": "Palm Angels",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-palm-angels-mens-sweatshirt.png",
-            "header_text": "Palm Angels",
-            "subheader_text": "",
-            "link": "shopify://collections/palm-angels",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": "Shop Now"
-          }
-        },
-        "card_pBdP9C": {
-          "type": "card",
-          "name": "Amiri",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-mens-amiri-shorts-tshirt_copy.png",
-            "header_text": "Amiri",
-            "subheader_text": "",
-            "link": "shopify://collections/amiri",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "card_EJfrR9",
-        "card_9pRebr",
-        "card_HpbLmm",
-        "card_9fYyNd",
-        "card_KBbgxn",
-        "card_GcyLwV",
-        "card_eRET9U",
-        "card_EVUnen",
-        "card_XcHpVk",
-        "card_pBdP9C"
-      ],
-      "name": "Brands",
-      "settings": {
-        "container_type": "container-fluid",
-        "heading": "Featured Brands",
-        "image_ratio_desktop": "100",
-        "image_ratio_mobile": "125",
-        "heading_size": 26,
-        "heading_weight": "500",
-        "card_header_size": 16,
-        "card_header_weight": "400",
-        "card_subheader_size": 14,
-        "card_subheader_weight": "400",
-        "items_per_row": 5,
         "autoplay": false,
         "autoplay_speed": 5,
         "show_navigation": true,
@@ -1462,12 +1499,12 @@
   "order": [
     "split_banner_RNxN7B",
     "rectangle_buttons_QUnzWX",
+    "custom_card_carousel_LgWiQH",
     "small_banner_EdWnqy",
     "promotion_countdown_timer_Q6WpDW",
     "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
-    "custom_card_carousel_LgWiQH",
     "rich_text_33nCpd",
     "scrolling_promotion_jjrFyf",
     "small_banner_iAVEqz",
