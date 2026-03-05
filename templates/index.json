@@ -9,47 +9,75 @@
  */
 {
   "sections": {
-    "split_banner_hbJTkB": {
+    "split_banner_RNxN7B": {
       "type": "split-banner",
       "blocks": {
-        "button_KGtbnk": {
+        "button_eQtft3": {
           "type": "button",
           "settings": {
-            "label": "Shop Versace",
+            "label": "Versace",
             "link": "shopify://collections/versace",
-            "button_style": "m-button--secondary"
+            "button_style": "m-button--white"
           }
         },
-        "button_QKWHqy": {
+        "button_3yfeUK": {
           "type": "button",
           "settings": {
-            "label": "Find Out More",
-            "link": "shopify://blogs/lestyle-spotlight/exclusive-gift-complimentary-versace-keychain",
-            "button_style": "m-button--primary"
+            "label": "Versace Jeans Couture",
+            "link": "shopify://collections/versace-jeans-couture",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_k3PLAE": {
+          "type": "button",
+          "settings": {
+            "label": "Mens",
+            "link": "https://www.lestyle.com.au/collections/mens?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_hMH9RV": {
+          "type": "button",
+          "settings": {
+            "label": "Womens",
+            "link": "https://www.lestyle.com.au/collections/womens?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_Xc9cLm": {
+          "type": "button",
+          "settings": {
+            "label": "Kids",
+            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.p.vendor=Versace&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
-        "button_KGtbnk",
-        "button_QKWHqy"
+        "button_eQtft3",
+        "button_3yfeUK",
+        "button_k3PLAE",
+        "button_hMH9RV",
+        "button_Xc9cLm"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/versace-keychain-01-1.jpg",
-        "image_ratio": "3/2",
+        "image": "shopify://shop_images/lestyle-model-cavalli-dresses-girls1.jpg",
+        "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://blogs/lestyle-spotlight/exclusive-gift-complimentary-versace-keychain",
+        "image_link": "https://www.lestyle.com.au/collections/new-arrivals?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
         "image_position": "left",
-        "background_color": "#666666",
-        "background_image": "shopify://shop_images/1000_F_479687183_BCTi0EEmpYmz5tjgHtvzC6wLdM6Pjn0d.jpg",
-        "text_color": "#222222",
+        "background_color": "#da3f3f",
+        "background_image": "shopify://shop_images/abstract-background-design-hd-dark-clay-red-color_851755-136507.jpg",
+        "text_color": "#ffffff",
         "content_alignment": "center",
-        "title_type": "text",
-        "title_text": "Versace Keychain Giveaway",
+        "title_type": "image",
+        "title_text": "Up to 60% OFF Kidswear",
         "title_size": "h2",
-        "title_image_width": 220,
-        "subheader_text": "<p>Get a free Versace keychain on your next purchase using code <strong>KEY10</strong></p>",
+        "title_image": "shopify://shop_images/kidswear-flash-sale-title-mar-26_a1c4f2b7-e049-4750-a398-61604390d326.png",
+        "title_image_width": 400,
+        "subheader_text": "<p>Shop Lestyle Flash Sale on designer kidswear now</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -207,73 +235,47 @@
         "animations": "inherit"
       }
     },
-    "split_banner_RNxN7B": {
+    "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_eQtft3": {
+        "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Versace",
+            "label": "Shop Versace",
             "link": "shopify://collections/versace",
             "button_style": "m-button--secondary"
           }
         },
-        "button_3yfeUK": {
+        "button_QKWHqy": {
           "type": "button",
           "settings": {
-            "label": "Versace Jeans Couture",
-            "link": "shopify://collections/versace-jeans-couture",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_k3PLAE": {
-          "type": "button",
-          "settings": {
-            "label": "Mens",
-            "link": "https://www.lestyle.com.au/collections/mens?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_hMH9RV": {
-          "type": "button",
-          "settings": {
-            "label": "Womens",
-            "link": "https://www.lestyle.com.au/collections/womens?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_Xc9cLm": {
-          "type": "button",
-          "settings": {
-            "label": "Kids",
-            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.p.vendor=Versace&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "button_style": "m-button--secondary"
+            "label": "Find Out More",
+            "link": "shopify://blogs/lestyle-spotlight/exclusive-gift-complimentary-versace-keychain",
+            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_eQtft3",
-        "button_3yfeUK",
-        "button_k3PLAE",
-        "button_hMH9RV",
-        "button_Xc9cLm"
+        "button_KGtbnk",
+        "button_QKWHqy"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-vjc-feb-26_71614011-4f06-4926-a608-8148fc281c10.jpg",
-        "image_ratio": "4/3",
+        "image": "shopify://shop_images/versace-keychain-01-1.jpg",
+        "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
-        "image_link": "https://www.lestyle.com.au/collections/new-arrivals?sort_by=created-descending&filter.p.vendor=Versace&filter.p.vendor=Versace+Jeans+Couture&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+        "image_link": "shopify://blogs/lestyle-spotlight/exclusive-gift-complimentary-versace-keychain",
         "image_position": "right",
-        "background_color": "#e7e7de",
+        "background_color": "#666666",
+        "background_image": "shopify://shop_images/1000_F_479687183_BCTi0EEmpYmz5tjgHtvzC6wLdM6Pjn0d.jpg",
         "text_color": "#222222",
         "content_alignment": "center",
         "title_type": "text",
-        "title_text": "Baroque Renaissance",
+        "title_text": "Versace Keychain Giveaway",
         "title_size": "h2",
-        "title_image_width": 240,
-        "subheader_text": "<p>Explore new collections from Versace and Versace Jeans Couture</p>",
+        "title_image_width": 220,
+        "subheader_text": "<p>Get a free Versace keychain on your next purchase using code <strong>KEY10</strong></p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -1458,11 +1460,11 @@
     }
   },
   "order": [
-    "split_banner_hbJTkB",
+    "split_banner_RNxN7B",
     "rectangle_buttons_QUnzWX",
     "small_banner_EdWnqy",
     "promotion_countdown_timer_Q6WpDW",
-    "split_banner_RNxN7B",
+    "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "custom_card_carousel_LgWiQH",
