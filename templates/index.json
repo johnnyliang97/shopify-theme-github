@@ -1039,21 +1039,21 @@
           "type": "tab",
           "settings": {
             "title": "Womens",
-            "collection": "womens"
+            "collection": "womens-new-arrivals"
           }
         },
         "162251092958fcda7c-1": {
           "type": "tab",
           "settings": {
             "title": "Mens",
-            "collection": "mens"
+            "collection": "mens-new-arrivals"
           }
         },
         "tab_yXJ7qg": {
           "type": "tab",
           "settings": {
             "title": "Kids",
-            "collection": "kids"
+            "collection": "kids-new-arrivals"
           }
         },
         "tab_b4bF3E": {
