@@ -146,6 +146,19 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_XcHpVk": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-palm-angels-boys-tshirt1.png",
+            "header_text": "Palm Angels",
+            "subheader_text": "",
+            "link": "shopify://collections/palm-angels",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_pBdP9C": {
           "type": "card",
           "name": "Brand",
@@ -181,19 +194,6 @@
             "subheader_text": "",
             "link": "shopify://collections/moschino-kids",
             "label_text": "Up to 60% Off",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
-        },
-        "card_XcHpVk": {
-          "type": "card",
-          "name": "Brand",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-palm-angels-boys-tshirt1.png",
-            "header_text": "Palm Angels Kids",
-            "subheader_text": "",
-            "link": "shopify://collections/palm-angels-kids",
-            "label_text": "Up to 40% Off",
             "label_color": "#b30505",
             "button_text": ""
           }
@@ -304,10 +304,10 @@
         }
       },
       "block_order": [
+        "card_XcHpVk",
         "card_pBdP9C",
         "card_cAK9am",
         "card_LFnLEQ",
-        "card_XcHpVk",
         "card_EJfrR9",
         "card_9pRebr",
         "card_HpbLmm",
