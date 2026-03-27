@@ -45,7 +45,7 @@
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-banner-casablanca.jpg",
+        "image": "shopify://shop_images/lestyle-banner-casablanca1.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/sale-kids",
@@ -150,10 +150,23 @@
           "type": "card",
           "name": "Brand",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-palm-angels-boys-tshirt1.png",
+            "image": "shopify://shop_images/lestyle-model-palm-angels-hoodie-girls-womens1.webp",
             "header_text": "Palm Angels",
             "subheader_text": "",
             "link": "shopify://collections/palm-angels",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_9pRebr": {
+          "type": "card",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-girls-versace-jacket-skirt1.png",
+            "header_text": "Versace",
+            "subheader_text": "",
+            "link": "shopify://collections/versace",
             "label_text": "NEW",
             "label_color": "#c19967",
             "button_text": ""
@@ -163,12 +176,25 @@
           "type": "card",
           "name": "Brand",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-roberto-cavalli-dress-girls1.png",
-            "header_text": "Roberto Cavalli Kids",
+            "image": "shopify://shop_images/lestyle-model-casablanca-shirt-mens1.jpg",
+            "header_text": "Casablanca",
             "subheader_text": "",
-            "link": "shopify://collections/roberto-cavalli-kids",
-            "label_text": "60% Off",
-            "label_color": "#b30505",
+            "link": "shopify://collections/casablanca",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_EJfrR9": {
+          "type": "card",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
+            "header_text": "Versace Jeans Couture",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture",
+            "label_text": "NEW",
+            "label_color": "#c19967",
             "button_text": ""
           }
         },
@@ -195,32 +221,6 @@
             "link": "shopify://collections/moschino-kids",
             "label_text": "Up to 60% Off",
             "label_color": "#b30505",
-            "button_text": ""
-          }
-        },
-        "card_EJfrR9": {
-          "type": "card",
-          "name": "Versace Jeans Couture",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
-            "header_text": "Versace Jeans Couture",
-            "subheader_text": "",
-            "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "NEW",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_9pRebr": {
-          "type": "card",
-          "name": "Versace",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-girls-versace-jacket-skirt1.png",
-            "header_text": "Versace",
-            "subheader_text": "",
-            "link": "shopify://collections/versace",
-            "label_text": "NEW",
-            "label_color": "#c19967",
             "button_text": ""
           }
         },
@@ -305,11 +305,11 @@
       },
       "block_order": [
         "card_XcHpVk",
+        "card_9pRebr",
         "card_pBdP9C",
+        "card_EJfrR9",
         "card_cAK9am",
         "card_LFnLEQ",
-        "card_EJfrR9",
-        "card_9pRebr",
         "card_HpbLmm",
         "card_9fYyNd",
         "card_KBbgxn",
