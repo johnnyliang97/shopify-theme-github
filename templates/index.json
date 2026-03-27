@@ -159,6 +159,19 @@
             "button_text": ""
           }
         },
+        "card_cAK9am": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-girls-womens-philipp-plein-jacket.webp",
+            "header_text": "Philipp Plein",
+            "subheader_text": "",
+            "link": "shopify://collections/philipp-plein",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_9pRebr": {
           "type": "card",
           "name": "Versace",
@@ -195,19 +208,6 @@
             "link": "shopify://collections/versace-jeans-couture",
             "label_text": "NEW",
             "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_cAK9am": {
-          "type": "card",
-          "name": "Brand",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-marcelo-boys-sweatshirt-shorts21.png",
-            "header_text": "Marcelo Burlon Kids",
-            "subheader_text": "",
-            "link": "shopify://collections/marcelo-burlon-kids",
-            "label_text": "50% Off",
-            "label_color": "#b30505",
             "button_text": ""
           }
         },
@@ -305,10 +305,10 @@
       },
       "block_order": [
         "card_XcHpVk",
+        "card_cAK9am",
         "card_9pRebr",
         "card_pBdP9C",
         "card_EJfrR9",
-        "card_cAK9am",
         "card_LFnLEQ",
         "card_HpbLmm",
         "card_9fYyNd",
