@@ -50,7 +50,7 @@
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/casablanca",
         "image_position": "left",
-        "background_color": "#da3f3f",
+        "background_color": "#666666",
         "background_image": "shopify://shop_images/photo-1635776062360-af423602aff3.jpg",
         "text_color": "#ffffff",
         "content_alignment": "center",
