@@ -15,78 +15,51 @@
         "button_eQtft3": {
           "type": "button",
           "settings": {
-            "label": "Roberto Cavalli",
-            "link": "shopify://collections/roberto-cavalli-kids",
+            "label": "Shop Mens",
+            "link": "shopify://collections/casablanca-for-mens",
             "button_style": "m-button--white"
           }
         },
         "button_3yfeUK": {
           "type": "button",
           "settings": {
-            "label": "Marcelo Burlon",
-            "link": "shopify://collections/marcelo-burlon-kids",
+            "label": "Shop Womens",
+            "link": "shopify://collections/casablanca-womens",
             "button_style": "m-button--white"
           }
         },
         "button_hMH9RV": {
           "type": "button",
           "settings": {
-            "label": "Palm Angels",
-            "link": "shopify://collections/palm-angels-kids",
+            "label": "Shop Now",
+            "link": "shopify://collections/casablanca",
             "button_style": "m-button--white"
-          }
-        },
-        "button_k3PLAE": {
-          "type": "button",
-          "settings": {
-            "label": "Moschino",
-            "link": "shopify://collections/moschino-kids",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_Xc9cLm": {
-          "type": "button",
-          "settings": {
-            "label": "Shop All Sale",
-            "link": "shopify://collections/sale-kids",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_jtpDf6": {
-          "type": "button",
-          "settings": {
-            "label": "70% OFF Outlet",
-            "link": "shopify://collections/kids-outlet",
-            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
         "button_eQtft3",
         "button_3yfeUK",
-        "button_hMH9RV",
-        "button_k3PLAE",
-        "button_Xc9cLm",
-        "button_jtpDf6"
+        "button_hMH9RV"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-cavalli-dresses-girls1.jpg",
+        "image": "shopify://shop_images/lestyle-banner-casablanca.jpg",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/sale-kids",
         "image_position": "left",
         "background_color": "#da3f3f",
-        "background_image": "shopify://shop_images/abstract-background-design-hd-dark-clay-red-color_851755-136507.jpg",
+        "background_image": "shopify://shop_images/photo-1635776062360-af423602aff3.jpg",
         "text_color": "#ffffff",
         "content_alignment": "center",
         "title_type": "image",
-        "title_text": "Up to 60% OFF Kidswear",
+        "title_text": "Casablanca New Collection",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/kidswear-flash-sale-title-mar-26_7f69fe4a-8701-4f0b-abf3-beed88421b5d.png",
-        "title_image_width": 420,
-        "subheader_text": "<p>Shop Lestyle Flash Sale on designer kidswear now</p>",
+        "title_image": "shopify://shop_images/casablanca-title-new.png",
+        "title_image_width": 230,
+        "subheader_text": "<p>Born in Paris, inspired by Morocco. Casablanca new collection has arrived.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
