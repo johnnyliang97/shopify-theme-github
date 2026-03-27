@@ -48,7 +48,7 @@
         "image": "shopify://shop_images/lestyle-banner-casablanca1.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/sale-kids",
+        "image_link": "shopify://collections/casablanca",
         "image_position": "left",
         "background_color": "#da3f3f",
         "background_image": "shopify://shop_images/photo-1635776062360-af423602aff3.jpg",
@@ -146,19 +146,6 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
-        "card_XcHpVk": {
-          "type": "card",
-          "name": "Brand",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-palm-angels-hoodie-girls-womens1.webp",
-            "header_text": "Palm Angels",
-            "subheader_text": "",
-            "link": "shopify://collections/palm-angels",
-            "label_text": "NEW",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
         "card_cAK9am": {
           "type": "card",
           "name": "Brand",
@@ -167,6 +154,19 @@
             "header_text": "Philipp Plein",
             "subheader_text": "",
             "link": "shopify://collections/philipp-plein",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_XcHpVk": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-palm-angels-hoodie-girls-womens1.webp",
+            "header_text": "Palm Angels",
+            "subheader_text": "",
+            "link": "shopify://collections/palm-angels",
             "label_text": "NEW",
             "label_color": "#c19967",
             "button_text": ""
@@ -304,8 +304,8 @@
         }
       },
       "block_order": [
-        "card_XcHpVk",
         "card_cAK9am",
+        "card_XcHpVk",
         "card_9pRebr",
         "card_pBdP9C",
         "card_EJfrR9",
@@ -418,41 +418,33 @@
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Shop Versace",
-            "link": "shopify://collections/versace",
+            "label": "Shop Now",
+            "link": "shopify://collections/palm-angels",
             "button_style": "m-button--secondary"
-          }
-        },
-        "button_QKWHqy": {
-          "type": "button",
-          "settings": {
-            "label": "Find Out More",
-            "link": "shopify://blogs/lestyle-spotlight/exclusive-gift-complimentary-versace-keychain",
-            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_KGtbnk",
-        "button_QKWHqy"
+        "button_KGtbnk"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/versace-keychain-01-1.jpg",
-        "image_ratio": "3/2",
+        "image": "shopify://shop_images/lestyle-banner-palm-angels-junior1.png",
+        "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://blogs/lestyle-spotlight/exclusive-gift-complimentary-versace-keychain",
+        "image_link": "shopify://collections/palm-angels",
         "image_position": "right",
         "background_color": "#666666",
-        "background_image": "shopify://shop_images/1000_F_479687183_BCTi0EEmpYmz5tjgHtvzC6wLdM6Pjn0d.jpg",
+        "background_image": "shopify://shop_images/plufow-le-studio-RuDZy_9gyGA-unsplash1.webp",
         "text_color": "#222222",
         "content_alignment": "center",
-        "title_type": "text",
-        "title_text": "Versace Keychain Giveaway",
+        "title_type": "image",
+        "title_text": "Palm Angels Junior",
         "title_size": "h2",
-        "title_image_width": 220,
-        "subheader_text": "<p>Get a free Versace keychain on your next purchase using code <strong>KEY10</strong></p>",
+        "title_image": "shopify://shop_images/palm-angels-junior-title-new_6500064e-7aa8-43ef-bd78-5f623165f0c7.png",
+        "title_image_width": 260,
+        "subheader_text": "<p>Style with an attitude. Shop Palm Angels Junior collection now.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
