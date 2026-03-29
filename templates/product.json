@@ -22,8 +22,9 @@
     },
     "small_banner_bN6CQH": {
       "type": "small-banner",
-      "disabled": true,
-      "custom_css": [],
+      "custom_css": [
+        ".small-banner-text-content {align-items: center;}"
+      ],
       "name": "Small Banner",
       "settings": {
         "container": "container",
@@ -32,9 +33,9 @@
         "background_overlay_opacity": 50,
         "image_width": 150,
         "text_color": "#ffffff",
-        "header_text": "EXTRA 10% OFF",
+        "header_text": "OUTLET EXTRA 10% OFF",
         "header_size": "h4",
-        "subheader_text": "<p><a href=\"/pages/subscribe\" title=\"Subscribe\">Subscribe to Lestyle email newsletter to get extra 10% OFF all orders</a></p>",
+        "subheader_text": "<p><a href=\"/collections/lestyle-outlet\" title=\"Outlet\">Use code OUTLET10 to enjoy extra 10% Off on Outlet items. Shop the Outlet now.</a></p>",
         "subheader_size": "text-small",
         "button_text": "",
         "button_link": "",
@@ -44,6 +45,14 @@
         "button_border_color": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_liquid_CGcdp7": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "",
+        "custom_class": ""
       }
     },
     "main": {
@@ -412,6 +421,7 @@
   "order": [
     "breadcrumb",
     "small_banner_bN6CQH",
+    "custom_liquid_CGcdp7",
     "main",
     "product-details-tabs",
     "custom_liquid_CHJgEC",
