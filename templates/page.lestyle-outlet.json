@@ -54,10 +54,10 @@
       "name": "Banner - Main",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-boss-kids-01_b5f59001-42a0-4c1f-92b4-dcfe84fec909.png",
+        "image": "shopify://shop_images/lestyle-model-vjc-dress-womens1_0bac73de-9b18-4740-97bc-eb6a3af55e28.png",
         "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/boss-outlet",
+        "image_link": "shopify://collections/lestyle-outlet",
         "image_position": "left",
         "background_color": "#f1f0e4",
         "text_color": "#000000",
@@ -65,11 +65,12 @@
         "title_type": "image",
         "title_text": "50% OFF HUGO BOSS",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/boss-50off.png",
-        "title_image_width": 200,
+        "title_image": "shopify://shop_images/lestyle-outlet-title.png",
+        "title_image_width": 260,
         "subheader_text": "<p>Outlet sale on Hugo Boss is now live.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
+        "button_font_weight": 600,
         "padding_top": 0,
         "padding_bottom": 0
       }
