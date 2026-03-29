@@ -24,7 +24,7 @@
         "text_color": "#ffffff",
         "header_text": "OUTLET EXTRA 10% OFF",
         "header_size": "h4",
-        "subheader_text": "<p><a href=\"/collections/lestyle-outlet\" title=\"Outlet\">Use code OUTLET10 to enjoy extra 10% Off on Outlet items. Shop the Outlet now.</a></p>",
+        "subheader_text": "<p><a href=\"/collections/lestyle-outlet\" title=\"Outlet\">Use code <strong>OUTLET10 </strong>to enjoy extra 10% Off on Outlet items. Shop the Outlet now.</a></p>",
         "subheader_size": "text-small",
         "button_text": "",
         "button_link": "",
