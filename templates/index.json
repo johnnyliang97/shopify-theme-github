@@ -143,6 +143,31 @@
         "button_font_weight": "500"
       }
     },
+    "small_banner_8PfzLF": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#bbbbbb",
+        "background_image": "shopify://shop_images/bg.webp",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/outlet-10.jpg",
+        "image_width": 160,
+        "text_color": "#222222",
+        "header_text": "Extra 10% Off Outlet",
+        "header_size": "h3",
+        "subheader_text": "<p>Use code <strong>OUTLET10 </strong>at cart to get extra 10% Off Outlet items.</p>",
+        "subheader_size": "text-small",
+        "button_text": "Shop Now",
+        "button_link": "shopify://collections/lestyle-outlet",
+        "button_font_size": 15,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#222222",
+        "button_border_color": "#222222",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
@@ -334,32 +359,6 @@
         "autoplay_speed": 5,
         "show_navigation": true,
         "show_pagination": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "small_banner_EdWnqy": {
-      "type": "small-banner",
-      "disabled": true,
-      "name": "Small Banner",
-      "settings": {
-        "container": "container",
-        "background_color": "#b2fce4",
-        "background_image": "shopify://shop_images/blackdriday25-social-blackfridayguide_0360b5fc-e1ab-441d-bc9b-653971308416.png",
-        "background_overlay_opacity": 0,
-        "banner_image": "shopify://shop_images/NEW10.jpg",
-        "image_width": 120,
-        "text_color": "#ffffff",
-        "header_text": "Extra 10% OFF",
-        "header_size": "h3",
-        "subheader_text": "<p>Use code <strong>NEW10 </strong>at checkout</p>",
-        "subheader_size": "text-small",
-        "button_text": "Shop Now",
-        "button_link": "shopify://collections/new-arrivals",
-        "button_font_size": 12,
-        "button_bg_color": "rgba(0,0,0,0)",
-        "button_text_color": "#ffffff",
-        "button_border_color": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1464,8 +1463,8 @@
   "order": [
     "split_banner_RNxN7B",
     "rectangle_buttons_QUnzWX",
+    "small_banner_8PfzLF",
     "custom_card_carousel_LgWiQH",
-    "small_banner_EdWnqy",
     "promotion_countdown_timer_Q6WpDW",
     "split_banner_hbJTkB",
     "empty_space_HWbjTK",
