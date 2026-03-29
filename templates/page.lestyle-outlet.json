@@ -21,18 +21,26 @@
     "split_banner_wymEHz": {
       "type": "split-banner",
       "blocks": {
-        "button_nbWRCV": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/boss-outlet",
-            "button_style": "m-button--primary"
-          }
-        },
         "button_UyCQdG": {
           "type": "button",
           "settings": {
-            "label": "Shop Kids Outlet",
+            "label": "Shop Mens",
+            "link": "shopify://collections/mens-outlet",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_rR8dmH": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "shopify://collections/outlet-womens",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_J37H7P": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Kids",
             "link": "shopify://collections/kids-outlet",
             "button_style": "m-button--secondary"
           }
@@ -47,8 +55,9 @@
         }
       },
       "block_order": [
-        "button_nbWRCV",
         "button_UyCQdG",
+        "button_rR8dmH",
+        "button_J37H7P",
         "button_gbC76k"
       ],
       "name": "Banner - Main",
