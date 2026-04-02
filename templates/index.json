@@ -16,7 +16,7 @@
           "type": "button",
           "settings": {
             "label": "Shop Mens",
-            "link": "shopify://collections/casablanca-for-mens",
+            "link": "shopify://collections/mens",
             "button_style": "m-button--white"
           }
         },
@@ -24,15 +24,23 @@
           "type": "button",
           "settings": {
             "label": "Shop Womens",
-            "link": "shopify://collections/casablanca-womens",
+            "link": "shopify://collections/womens",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_cyUx7b": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Kids",
+            "link": "shopify://collections/kids",
             "button_style": "m-button--white"
           }
         },
         "button_hMH9RV": {
           "type": "button",
           "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/casablanca",
+            "label": "Shop Outlet",
+            "link": "shopify://pages/lestyle-outlet",
             "button_style": "m-button--white"
           }
         }
@@ -40,26 +48,27 @@
       "block_order": [
         "button_eQtft3",
         "button_3yfeUK",
+        "button_cyUx7b",
         "button_hMH9RV"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-banner-casablanca1.png",
+        "image": "shopify://shop_images/lestyle-good-friday-sale.jpg",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/casablanca",
         "image_position": "left",
-        "background_color": "#666666",
-        "background_image": "shopify://shop_images/photo-1635776062360-af423602aff3.jpg",
+        "background_color": "#000000",
+        "background_image": "shopify://shop_images/philip-oroni-Vc1KXF3TF9g-unsplash.jpg",
         "text_color": "#ffffff",
         "content_alignment": "center",
-        "title_type": "image",
-        "title_text": "Casablanca New Collection",
+        "title_type": "text",
+        "title_text": "Good Friday Sale",
         "title_size": "h2",
         "title_image": "shopify://shop_images/casablanca-title-new.png",
         "title_image_width": 230,
-        "subheader_text": "<p>Born in Paris, inspired by Morocco. Casablanca new collection has arrived.</p>",
+        "subheader_text": "<p>Use code <strong>GF20 </strong>at checkout for <strong>20% OFF </strong>sitewide. 24-hour online only event.<br/><em>*T&Cs apply</em></p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -143,29 +152,51 @@
         "button_font_weight": "500"
       }
     },
-    "small_banner_8PfzLF": {
-      "type": "small-banner",
-      "name": "Small Banner",
+    "promotion_countdown_timer_Q6WpDW": {
+      "type": "promotion-countdown-timer",
+      "blocks": {
+        "text_yUP9KE": {
+          "type": "text",
+          "settings": {
+            "text_alignment": "center",
+            "subheading": "",
+            "heading": "Good Friday Sale",
+            "heading_size": "h2",
+            "text": "<p>Use code <strong>GF20 </strong>at checkout for <strong>20% OFF </strong>sitewide.<br/><em>*T&Cs apply</em></p>"
+          }
+        },
+        "countdown_G9V6qf": {
+          "type": "countdown",
+          "settings": {
+            "text_alignment": "center",
+            "time": "2026-04-03 23:59:00"
+          }
+        },
+        "button_jVjieL": {
+          "type": "button",
+          "settings": {
+            "text_alignment": "right",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all",
+            "button_style": "m-button--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_yUP9KE",
+        "countdown_G9V6qf",
+        "button_jVjieL"
+      ],
+      "name": "Promotion countdown timer",
       "settings": {
-        "container": "container",
-        "background_color": "#bbbbbb",
-        "background_image": "shopify://shop_images/bg.webp",
-        "background_overlay_opacity": 0,
-        "banner_image": "shopify://shop_images/outlet-10.jpg",
-        "image_width": 160,
-        "text_color": "#222222",
-        "header_text": "Extra 10% Off Outlet",
-        "header_size": "h3",
-        "subheader_text": "<p>Use code <strong>OUTLET10 </strong>at cart to get extra 10% Off Outlet items.</p>",
-        "subheader_size": "text-small",
-        "button_text": "Shop Now",
-        "button_link": "shopify://collections/lestyle-outlet",
-        "button_font_size": 15,
-        "button_bg_color": "rgba(0,0,0,0)",
-        "button_text_color": "#222222",
-        "button_border_color": "#222222",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "container": "container-fluid",
+        "color_scheme": "dark",
+        "background_in_container": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "custom_card_carousel_LgWiQH": {
@@ -363,52 +394,31 @@
         "padding_bottom": 36
       }
     },
-    "promotion_countdown_timer_Q6WpDW": {
-      "type": "promotion-countdown-timer",
-      "blocks": {
-        "text_yUP9KE": {
-          "type": "text",
-          "settings": {
-            "text_alignment": "left",
-            "subheading": "",
-            "heading": "Boxing Day Sale",
-            "heading_size": "h2",
-            "text": "<p>Use code <strong>BD20 </strong>at checkout for <strong>20% OFF </strong>full-priced item<br/><em>*T&Cs apply</em></p>"
-          }
-        },
-        "countdown_G9V6qf": {
-          "type": "countdown",
-          "settings": {
-            "text_alignment": "center",
-            "time": "2025-12-31 23:59:00"
-          }
-        },
-        "button_jVjieL": {
-          "type": "button",
-          "settings": {
-            "text_alignment": "right",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/sale",
-            "button_style": "m-button--primary",
-            "button_size": "m-button--small"
-          }
-        }
-      },
-      "block_order": [
-        "text_yUP9KE",
-        "countdown_G9V6qf",
-        "button_jVjieL"
+    "small_banner_rqrUmM": {
+      "type": "small-banner",
+      "custom_css": [
+        ".small-banner-text-content {align-items: center;}"
       ],
-      "disabled": true,
-      "name": "Promotion countdown timer",
+      "name": "Small Banner",
       "settings": {
-        "container": "container-fluid",
-        "color_scheme": "dark",
-        "background_in_container": false,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": "",
-        "animations": "inherit"
+        "container": "container",
+        "background_color": "#000000",
+        "background_image": "shopify://shop_images/abstract-background-design-hd-dark-clay-red-color_851755-136507.jpg",
+        "background_overlay_opacity": 0,
+        "image_width": 150,
+        "text_color": "#ffffff",
+        "header_text": "EXTRA 20% OFF",
+        "header_size": "h4",
+        "subheader_text": "<p>Use code <strong>GF20 </strong>to enjoy extra 20% off storewide. One day only.</p>",
+        "subheader_size": "text-small",
+        "button_text": "",
+        "button_link": "",
+        "button_font_size": 14,
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "split_banner_hbJTkB": {
@@ -1463,9 +1473,9 @@
   "order": [
     "split_banner_RNxN7B",
     "rectangle_buttons_QUnzWX",
-    "small_banner_8PfzLF",
-    "custom_card_carousel_LgWiQH",
     "promotion_countdown_timer_Q6WpDW",
+    "custom_card_carousel_LgWiQH",
+    "small_banner_rqrUmM",
     "split_banner_hbJTkB",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",

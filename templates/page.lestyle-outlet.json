@@ -26,7 +26,7 @@
           "settings": {
             "label": "Shop Mens",
             "link": "shopify://collections/mens-outlet",
-            "button_style": "m-button--secondary"
+            "button_style": "m-button--white"
           }
         },
         "button_rR8dmH": {
@@ -34,7 +34,7 @@
           "settings": {
             "label": "Shop Womens",
             "link": "shopify://collections/outlet-womens",
-            "button_style": "m-button--secondary"
+            "button_style": "m-button--white"
           }
         },
         "button_J37H7P": {
@@ -42,7 +42,7 @@
           "settings": {
             "label": "Shop Kids",
             "link": "shopify://collections/kids-outlet",
-            "button_style": "m-button--secondary"
+            "button_style": "m-button--white"
           }
         },
         "button_gbC76k": {
@@ -50,7 +50,7 @@
           "settings": {
             "label": "Shop All Outlet",
             "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--secondary"
+            "button_style": "m-button--white"
           }
         }
       },
@@ -63,20 +63,21 @@
       "name": "Banner - Main",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-vjc-dress-womens1_0bac73de-9b18-4740-97bc-eb6a3af55e28.png",
+        "image": "shopify://shop_images/lestyle-good-friday-sale.jpg",
         "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/lestyle-outlet",
         "image_position": "left",
-        "background_color": "#f1f0e4",
-        "text_color": "#000000",
+        "background_color": "#222222",
+        "background_image": "shopify://shop_images/philip-oroni-Vc1KXF3TF9g-unsplash.jpg",
+        "text_color": "#ffffff",
         "content_alignment": "center",
         "title_type": "image",
-        "title_text": "50% OFF HUGO BOSS",
+        "title_text": "EXTRA 20% OFF",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-outlet-title.png",
-        "title_image_width": 260,
-        "subheader_text": "<p>Shop luxury designer outlet from Versace, Balmain, Givenchy & more top brands</p>",
+        "title_image": "shopify://shop_images/extra-20-off_6afab21e-5dec-4d72-a5e0-489987dad235.png",
+        "title_image_width": 220,
+        "subheader_text": "<p>Shop 50-70% off designer outlet. Use code <strong>GF20</strong> for extra 20% off.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -84,29 +85,51 @@
         "padding_bottom": 0
       }
     },
-    "small_banner_4kNFYW": {
-      "type": "small-banner",
-      "name": "Small Banner",
+    "promotion_countdown_timer_Fh3eRT": {
+      "type": "promotion-countdown-timer",
+      "blocks": {
+        "text_3TWpX7": {
+          "type": "text",
+          "settings": {
+            "text_alignment": "center",
+            "subheading": "",
+            "heading": "Good Friday Sale",
+            "heading_size": "h2",
+            "text": "<p>Use code <strong>GF20 </strong>at checkout for <strong>20% OFF </strong>sitewide.<br/><em>*T&Cs apply</em></p>"
+          }
+        },
+        "countdown_pcbAKM": {
+          "type": "countdown",
+          "settings": {
+            "text_alignment": "center",
+            "time": "2026-04-03 23:59:00"
+          }
+        },
+        "button_rtE9fY": {
+          "type": "button",
+          "settings": {
+            "text_alignment": "right",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all",
+            "button_style": "m-button--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_3TWpX7",
+        "countdown_pcbAKM",
+        "button_rtE9fY"
+      ],
+      "name": "Promotion countdown timer",
       "settings": {
-        "container": "container",
-        "background_color": "#bbbbbb",
-        "background_image": "shopify://shop_images/bg.webp",
-        "background_overlay_opacity": 0,
-        "banner_image": "shopify://shop_images/outlet-10.jpg",
-        "image_width": 160,
-        "text_color": "#222222",
-        "header_text": "Extra 10% Off Outlet",
-        "header_size": "h3",
-        "subheader_text": "<p>Use code <strong>OUTLET10 </strong>at cart to get extra 10% Off Outlet items.</p>",
-        "subheader_size": "text-small",
-        "button_text": "Shop Now",
-        "button_link": "shopify://collections/lestyle-outlet",
-        "button_font_size": 15,
-        "button_bg_color": "rgba(0,0,0,0)",
-        "button_text_color": "#222222",
-        "button_border_color": "#222222",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "container": "container-fluid",
+        "color_scheme": "dark",
+        "background_in_container": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "17601009311f9400d0": {
@@ -295,54 +318,6 @@
         "show_pagination": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "promotion_countdown_timer_9V7ztJ": {
-      "type": "promotion-countdown-timer",
-      "blocks": {
-        "text_zrxin7": {
-          "type": "text",
-          "settings": {
-            "text_alignment": "left",
-            "subheading": "",
-            "heading": "Boxing Day Sale",
-            "heading_size": "h2",
-            "text": ""
-          }
-        },
-        "countdown_Eryen6": {
-          "type": "countdown",
-          "settings": {
-            "text_alignment": "center",
-            "time": "2025-12-31 23:59:00"
-          }
-        },
-        "button_YyqiCL": {
-          "type": "button",
-          "settings": {
-            "text_alignment": "right",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--primary",
-            "button_size": "m-button--small"
-          }
-        }
-      },
-      "block_order": [
-        "text_zrxin7",
-        "countdown_Eryen6",
-        "button_YyqiCL"
-      ],
-      "disabled": true,
-      "name": "Promotion countdown timer",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "dark",
-        "background_in_container": false,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": "",
-        "animations": "inherit"
       }
     },
     "rectangle_buttons_CWpfbw": {
@@ -677,12 +652,11 @@
   "order": [
     "main",
     "split_banner_wymEHz",
-    "small_banner_4kNFYW",
     "17601009311f9400d0",
     "empty_space_iWJHNV",
     "custom_card_carousel_8rkRNX",
-    "promotion_countdown_timer_9V7ztJ",
     "rectangle_buttons_CWpfbw",
+    "promotion_countdown_timer_Fh3eRT",
     "small_banner_rpibD7",
     "custom_card_carousel_fmdyea",
     "rich_text_fBzpK7",

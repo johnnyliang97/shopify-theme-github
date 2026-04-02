@@ -9,7 +9,7 @@
  */
 {
   "sections": {
-    "small_banner_jgiHwQ": {
+    "small_banner_TLh6KE": {
       "type": "small-banner",
       "custom_css": [
         ".small-banner-text-content {align-items: center;}"
@@ -18,13 +18,13 @@
       "settings": {
         "container": "container",
         "background_color": "#000000",
-        "background_image": "shopify://shop_images/bg.webp",
-        "background_overlay_opacity": 50,
+        "background_image": "shopify://shop_images/abstract-background-design-hd-dark-clay-red-color_851755-136507.jpg",
+        "background_overlay_opacity": 0,
         "image_width": 150,
         "text_color": "#ffffff",
-        "header_text": "OUTLET EXTRA 10% OFF",
+        "header_text": "EXTRA 20% OFF",
         "header_size": "h4",
-        "subheader_text": "<p><a href=\"/collections/lestyle-outlet\" title=\"Outlet\">Use code <strong>OUTLET10 </strong>to enjoy extra 10% Off on Outlet items. Shop the Outlet now.</a></p>",
+        "subheader_text": "<p>Use code <strong>GF20 </strong>to enjoy extra 20% off storewide. One day only.</p>",
         "subheader_size": "text-small",
         "button_text": "",
         "button_link": "",
@@ -176,7 +176,7 @@
     }
   },
   "order": [
-    "small_banner_jgiHwQ",
+    "small_banner_TLh6KE",
     "empty_space_49ckiV",
     "1757912485492f9989",
     "empty_space_KPnx6c",
