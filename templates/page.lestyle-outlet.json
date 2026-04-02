@@ -76,60 +76,13 @@
         "title_text": "EXTRA 20% OFF",
         "title_size": "h2",
         "title_image": "shopify://shop_images/extra-20-off_6afab21e-5dec-4d72-a5e0-489987dad235.png",
-        "title_image_width": 220,
+        "title_image_width": 270,
         "subheader_text": "<p>Shop 50-70% off designer outlet. Use code <strong>GF20</strong> for extra 20% off.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "promotion_countdown_timer_Fh3eRT": {
-      "type": "promotion-countdown-timer",
-      "blocks": {
-        "text_3TWpX7": {
-          "type": "text",
-          "settings": {
-            "text_alignment": "center",
-            "subheading": "",
-            "heading": "Good Friday Sale",
-            "heading_size": "h2",
-            "text": "<p>Use code <strong>GF20 </strong>at checkout for <strong>20% OFF </strong>sitewide.<br/><em>*T&Cs apply</em></p>"
-          }
-        },
-        "countdown_pcbAKM": {
-          "type": "countdown",
-          "settings": {
-            "text_alignment": "center",
-            "time": "2026-04-03 23:59:00"
-          }
-        },
-        "button_rtE9fY": {
-          "type": "button",
-          "settings": {
-            "text_alignment": "right",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/all",
-            "button_style": "m-button--primary",
-            "button_size": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_3TWpX7",
-        "countdown_pcbAKM",
-        "button_rtE9fY"
-      ],
-      "name": "Promotion countdown timer",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "dark",
-        "background_in_container": false,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": "",
-        "animations": "inherit"
       }
     },
     "17601009311f9400d0": {
@@ -394,6 +347,53 @@
         "button_text_color": "#ffffff",
         "button_font_size": 16,
         "button_font_weight": "500"
+      }
+    },
+    "promotion_countdown_timer_Fh3eRT": {
+      "type": "promotion-countdown-timer",
+      "blocks": {
+        "text_3TWpX7": {
+          "type": "text",
+          "settings": {
+            "text_alignment": "center",
+            "subheading": "",
+            "heading": "Good Friday Sale",
+            "heading_size": "h2",
+            "text": "<p>Use code <strong>GF20 </strong>at checkout for <strong>20% OFF </strong>sitewide.<br/><em>*T&Cs apply</em></p>"
+          }
+        },
+        "countdown_pcbAKM": {
+          "type": "countdown",
+          "settings": {
+            "text_alignment": "center",
+            "time": "2026-04-03 23:59:00"
+          }
+        },
+        "button_rtE9fY": {
+          "type": "button",
+          "settings": {
+            "text_alignment": "right",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all",
+            "button_style": "m-button--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_3TWpX7",
+        "countdown_pcbAKM",
+        "button_rtE9fY"
+      ],
+      "name": "Promotion countdown timer",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "dark",
+        "background_in_container": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
       }
     },
     "small_banner_rpibD7": {
