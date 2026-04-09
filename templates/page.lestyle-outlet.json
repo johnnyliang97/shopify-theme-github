@@ -1,1 +1,693 @@
-{"sections":{"main":{"type":"page-about-us","disabled":true,"custom_css":[".m-breadcrumb--wrapper {display: none;}"],"name":"Page Title","settings":{}},"split_banner_wymEHz":{"type":"split-banner","blocks":{"button_UyCQdG":{"type":"button","settings":{"label":"Shop Mens","link":"shopify:\/\/collections\/mens-outlet","button_style":"m-button--secondary"}},"button_rR8dmH":{"type":"button","settings":{"label":"Shop Womens","link":"shopify:\/\/collections\/outlet-womens","button_style":"m-button--secondary"}},"button_J37H7P":{"type":"button","settings":{"label":"Shop Kids","link":"shopify:\/\/collections\/kids-outlet","button_style":"m-button--secondary"}},"button_gbC76k":{"type":"button","settings":{"label":"Shop All Outlet","link":"shopify:\/\/collections\/lestyle-outlet","button_style":"m-button--secondary"}}},"block_order":["button_UyCQdG","button_rR8dmH","button_J37H7P","button_gbC76k"],"name":"Banner - Main","settings":{"container":"container-fluid","image":"shopify:\/\/shop_images\/lestyle-model-vjc-dress-womens1_0bac73de-9b18-4740-97bc-eb6a3af55e28.png","image_ratio":"3\/2","image_ratio_mobile":"4\/3","image_link":"shopify:\/\/collections\/lestyle-outlet","image_position":"left","background_color":"#f1f0e4","text_color":"#000000","content_alignment":"center","title_type":"image","title_text":"50% OFF HUGO BOSS","title_size":"h2","title_image":"shopify:\/\/shop_images\/lestyle-outlet-title.png","title_image_width":260,"subheader_text":"<p>Shop luxury designer outlet from Versace, Balmain, Givenchy & more top brands<\/p>","subheader_size":"text-base","button_font_size":15,"button_font_weight":600,"padding_top":0,"padding_bottom":0}},"small_banner_4kNFYW":{"type":"small-banner","name":"Small Banner","settings":{"container":"container","background_color":"#bbbbbb","background_image":"shopify:\/\/shop_images\/bg.webp","background_overlay_opacity":0,"banner_image":"shopify:\/\/shop_images\/outlet-10.jpg","image_width":160,"text_color":"#222222","header_text":"Extra 10% Off Outlet","header_size":"h3","subheader_text":"<p>Use code <strong>OUTLET10 <\/strong>at cart to get extra 10% Off Outlet items.<\/p>","subheader_size":"text-small","button_text":"Shop Now","button_link":"shopify:\/\/collections\/lestyle-outlet","button_font_size":15,"button_bg_color":"rgba(0,0,0,0)","button_text_color":"#222222","button_border_color":"#222222","padding_top":36,"padding_bottom":36}},"17601009311f9400d0":{"type":"_blocks","blocks":{"ai_gen_block_c955ae7_cpG3EC":{"type":"ai_gen_block_c955ae7","settings":{"banner_height_desktop":600,"banner_height_mobile":540,"image_1_desktop":"shopify:\/\/shop_images\/outlet-banner-men-women.jpg","image_1_mobile":"shopify:\/\/shop_images\/outlet-banner-mobile-women.jpg","image_2_desktop":"shopify:\/\/shop_images\/outlet-banner-bag-kids.jpg","image_2_mobile":"shopify:\/\/shop_images\/outlet-banner-mobile-men.jpg","slide_interval":3,"fade_duration":1,"show_overlay":true,"overlay_color":"#000000","overlay_opacity":30,"content_max_width":600,"text_color":"#ffffff","subheader":"OUTLET SALE","subheader_size":16,"subheader_margin":20,"header":"50% - 70% OFF","header_size":80,"header_weight":"500","header_margin":40,"text":"Shop designer outlet sale online","text_size":14,"text_margin":30,"button_1_text":"Men","button_1_link":"shopify:\/\/collections\/mens-outlet","button_primary_bg":"#000000","button_primary_text":"#ffffff","button_primary_hover_bg":"#ffffff","button_primary_hover_text":"#000000","button_2_text":"Women","button_2_link":"shopify:\/\/collections\/womens-outlet","button_secondary_bg":"#000000","button_secondary_text":"#ffffff","button_secondary_hover_bg":"#ffffff","button_secondary_hover_text":"#000000","button_3_text":"Kids","button_3_link":"shopify:\/\/collections\/kids-outlet","button_tertiary_bg":"#000000","button_tertiary_text":"#ffffff","button_tertiary_hover_bg":"#ffffff","button_tertiary_hover_text":"#000000","button_gap":15,"button_padding_vertical":14,"button_padding_horizontal":30,"button_font_size":14,"button_border_radius":4},"blocks":{}}},"block_order":["ai_gen_block_c955ae7_cpG3EC"],"disabled":true,"name":"Banner Section","settings":{}},"empty_space_iWJHNV":{"type":"empty-space","name":"Empty space","settings":{"container":"container-fluid","color_scheme":"","show_divider_line":false,"divider_style":"solid","divider_height":1,"padding_top":0,"padding_bottom":20,"custom_class":""}},"custom_card_carousel_8rkRNX":{"type":"custom-card-carousel","blocks":{"card_nnMrtq":{"type":"card","name":"Versace Jeans Couture","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-shirt-vjc-mens.jpg","header_text":"Versace Jeans Couture","subheader_text":"","link":"shopify:\/\/collections\/versace-jeans-couture-outlet","label_text":"60% OFF","label_color":"#b30505","button_text":""}},"card_YDQNh8":{"type":"card","name":"Versace","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-versace-womens-dress.webp","header_text":"Versace","subheader_text":"","link":"shopify:\/\/collections\/versace-outlet","label_text":"60% OFF","label_color":"#b30505","button_text":""}},"card_iLGBxT":{"type":"card","name":"Moschino","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-mens-moschino-jumper.jpg","header_text":"Moschino","subheader_text":"","link":"shopify:\/\/collections\/moschino-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_wMW4xV":{"type":"card","name":"Dsquared2","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-dsquared2-hoodie.webp","header_text":"Dsquared2","subheader_text":"","link":"shopify:\/\/collections\/dsquared2-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_hEQNbW":{"type":"card","name":"Roberto Cavalli","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-cavalli-mens-tshirt.webp","header_text":"Roberto Cavalli","subheader_text":"","link":"shopify:\/\/collections\/roberto-cavalli-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_tCRygE":{"type":"card","name":"Balmain","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-balmain-kids-dress.webp","header_text":"Balmain","subheader_text":"","link":"shopify:\/\/collections\/balmain-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}}},"block_order":["card_nnMrtq","card_YDQNh8","card_iLGBxT","card_wMW4xV","card_hEQNbW","card_tCRygE"],"name":"Brands","settings":{"container_type":"container-fluid","heading":"Top Brands On Sale","image_ratio_desktop":"125","image_ratio_mobile":"125","heading_size":26,"heading_weight":"500","card_header_size":16,"card_header_weight":"400","card_subheader_size":14,"card_subheader_weight":"400","items_per_row":5,"autoplay":false,"autoplay_speed":5,"show_navigation":true,"show_pagination":false,"padding_top":36,"padding_bottom":36}},"promotion_countdown_timer_9V7ztJ":{"type":"promotion-countdown-timer","blocks":{"text_zrxin7":{"type":"text","settings":{"text_alignment":"left","subheading":"","heading":"Boxing Day Sale","heading_size":"h2","text":""}},"countdown_Eryen6":{"type":"countdown","settings":{"text_alignment":"center","time":"2025-12-31 23:59:00"}},"button_YyqiCL":{"type":"button","settings":{"text_alignment":"right","button_label":"Shop Now","button_link":"shopify:\/\/collections\/lestyle-outlet","button_style":"m-button--primary","button_size":"m-button--small"}}},"block_order":["text_zrxin7","countdown_Eryen6","button_YyqiCL"],"disabled":true,"name":"Promotion countdown timer","settings":{"container":"container-fluid","color_scheme":"dark","background_in_container":false,"padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}},"rectangle_buttons_CWpfbw":{"type":"rectangle-buttons","blocks":{"button_BDTweC":{"type":"button","name":"Mens","settings":{"label":"Shop Mens","link":"shopify:\/\/collections\/mens-outlet","color_overlay":"#000000","overlay_opacity":20,"bg_image":"shopify:\/\/shop_images\/lestyle-model-plein-mens-tshirt-02_876cc5bd-099c-4afd-9567-8df69a3a90a9.png","text_color":"#ffffff"}},"button_wchCGm":{"type":"button","name":"Womens","settings":{"label":"Shop Womens","link":"shopify:\/\/collections\/womens-outlet","color_overlay":"#000000","overlay_opacity":20,"bg_image":"shopify:\/\/shop_images\/lestyle-model-versace-accessories.-womens.jpg","text_color":"#ffffff"}},"button_TFQghR":{"type":"button","name":"Kids","settings":{"label":"Shop Kids","link":"shopify:\/\/collections\/kids-outlet","color_overlay":"#000000","overlay_opacity":20,"bg_image":"shopify:\/\/shop_images\/lestyle-model-fendi-dress-kids-girls_6e0c76ff-723b-4de6-bab6-a9104e8d4ff8.png","text_color":"#ffffff"}},"button_KiF3DH":{"type":"button","name":"Home Collection","settings":{"label":"Shop All","link":"shopify:\/\/collections\/lestyle-outlet","color_overlay":"#000000","overlay_opacity":20,"bg_image":"shopify:\/\/shop_images\/lestyle-model-lestyle-outlet.png","text_color":"#ffffff"}}},"block_order":["button_BDTweC","button_wchCGm","button_TFQghR","button_KiF3DH"],"name":"Menu Buttons","settings":{"container":"container-fluid","padding_top":36,"padding_bottom":36,"desktop_columns":4,"mobile_columns":2,"gap_desktop":10,"gap_mobile":10,"button_height":128,"button_border_radius":0,"color_overlay":"#000000","overlay_opacity":40,"button_text_color":"#ffffff","button_font_size":16,"button_font_weight":"500"}},"small_banner_rpibD7":{"type":"small-banner","name":"Small Banner","settings":{"container":"container","background_color":"#b2fce4","background_image":"shopify:\/\/shop_images\/desktop_bg_afterpay.png","background_overlay_opacity":0,"banner_image":"shopify:\/\/shop_images\/lestyle-afterpay-banner.png","image_width":60,"text_color":"#00193a","header_text":"Buy Now, Pay it in 4","header_size":"h3","subheader_text":"<p>Afterpay is now accepted at Lestyle in-store and online.<\/p>","subheader_size":"text-small","button_text":"Find Out More","button_link":"shopify:\/\/blogs\/lestyle-spotlight\/buy-now-pay-later-with-afterpay","button_font_size":15,"button_bg_color":"rgba(0,0,0,0)","button_text_color":"#00193a","button_border_color":"#00193a","padding_top":36,"padding_bottom":36}},"custom_card_carousel_fmdyea":{"type":"custom-card-carousel","blocks":{"card_enmBYq":{"type":"card","name":"Outlet Under $500","settings":{"image":"shopify:\/\/shop_images\/black-down-velvet-jacket.jpg","header_text":"Outlet Under $500","subheader_text":"Lestyle's curated outlet collections","link":"shopify:\/\/collections\/outlet-under-500","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_Bwh76T":{"type":"card","name":"Outlet Under $100","settings":{"image":"shopify:\/\/shop_images\/lestyle-outlet-under100.jpg","header_text":"Outlet Under $100","subheader_text":"Shop designer pieces at bargain prices","link":"shopify:\/\/collections\/outlet-under-100","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_WdmBx3":{"type":"card","name":"Bags","settings":{"image":"shopify:\/\/shop_images\/lestyle-outlet-accessories.jpg","header_text":"Accessories","subheader_text":"Belts, keychains, phone cases, caps and more","link":"shopify:\/\/collections\/accessories-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_GTfJza":{"type":"card","name":"Bags","settings":{"image":"shopify:\/\/shop_images\/lestyle-outlet-bags.jpg","header_text":"Bags","subheader_text":"Designer bags from Moschino, Roberto Cavalli and more","link":"shopify:\/\/collections\/bags-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_hRcxVY":{"type":"card","name":"T-Shirts & Tops","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-kenzo-kids-long-sleeves.webp","header_text":"T-Shirts & Tops","subheader_text":"Designer tops sale for Men, Women and Kids","link":"shopify:\/\/collections\/t-shirts-tops-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_36dkwT":{"type":"card","name":"Dresses","settings":{"image":"shopify:\/\/shop_images\/lestyle-model-vjc-womens-dress.jpg","header_text":"Dresses","subheader_text":"Desginer dresses for all occasions from Moschino, Versace and more","link":"shopify:\/\/collections\/dresses-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}},"card_Tme8Xb":{"type":"card","name":"Shirts","settings":{"image":"shopify:\/\/shop_images\/download-2024-07-05T115243.661.jpg","header_text":"Shirts","subheader_text":"Shirts with iconic prints from Versace, Roberto Cavalli and more","link":"shopify:\/\/collections\/shirts-outlet","label_text":"70% OFF","label_color":"#b30505","button_text":""}}},"block_order":["card_enmBYq","card_Bwh76T","card_WdmBx3","card_GTfJza","card_hRcxVY","card_36dkwT","card_Tme8Xb"],"name":"Brands","settings":{"container_type":"container-fluid","heading":"Trending Bestsellers","image_ratio_desktop":"125","image_ratio_mobile":"125","heading_size":26,"heading_weight":"500","card_header_size":16,"card_header_weight":"400","card_subheader_size":14,"card_subheader_weight":"400","items_per_row":4,"autoplay":false,"autoplay_speed":5,"show_navigation":true,"show_pagination":false,"padding_top":36,"padding_bottom":36}},"rich_text_fBzpK7":{"type":"rich-text","blocks":{"button_wrXjT8":{"type":"button","settings":{"button_label":"Shop All","button_link":"shopify:\/\/collections\/lestyle-outlet","button_style":"m-button--primary","button_size":"m-button--large"}}},"block_order":["button_wrXjT8"],"name":"Button","settings":{"container":"container","color_scheme":"","content_alignment":"center","padding_top":0,"padding_bottom":52,"custom_class":"","animations":"inherit"}},"featured_collection_eVUk6N":{"type":"featured-collection","name":"Recently Update","settings":{"heading":"Last Chance to Get","heading_size":"h3","subheading":"","description":"","header_alignment":"left","color_scheme":"","container":"container-fluid","collection":"lestyle-outlet","enable_flashsale":false,"show_countdown":false,"product_to_show":6,"items_per_row":4,"item_gap":30,"pcard_layout":"","pcard_image_ratio":"","show_vendor":false,"hide_title":false,"enable_slider":false,"show_pagination":false,"show_navigation":false,"show_button_on_header":true,"button_type":"load","button_text":"Shop more","button_style":"m-button--plain","button_size":"","infinite_load":true,"max_page_load":4,"mobile_disable_slider":true,"use_scroll_mobile":false,"item_gap_mobile":16,"padding_top":50,"padding_bottom":50,"custom_class":"","animations":"inherit"}},"promotion_banner_b8KJm6":{"type":"promotion-banner","name":"Shop Now Button","settings":{"container":"container-fluid","color_scheme":"","heading":"","heading_size":"h2","text":"","content_alignment":"center","banner_url":"shopify:\/\/collections\/lestyle-outlet","button_label":"Shop More","button_style":"m-button--secondary","button_size":"","padding_top":0,"padding_bottom":40,"custom_class":"","animations":"inherit","enable_preload_image":false}},"empty_space_R7QyYa":{"type":"empty-space","name":"Empty space","settings":{"container":"container-fluid","color_scheme":"","show_divider_line":false,"divider_style":"solid","divider_height":1,"padding_top":50,"padding_bottom":50,"custom_class":""}}},"order":["main","split_banner_wymEHz","small_banner_4kNFYW","17601009311f9400d0","empty_space_iWJHNV","custom_card_carousel_8rkRNX","promotion_countdown_timer_9V7ztJ","rectangle_buttons_CWpfbw","small_banner_rpibD7","custom_card_carousel_fmdyea","rich_text_fBzpK7","featured_collection_eVUk6N","promotion_banner_b8KJm6","empty_space_R7QyYa"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-about-us",
+      "disabled": true,
+      "custom_css": [
+        ".m-breadcrumb--wrapper {display: none;}"
+      ],
+      "name": "Page Title",
+      "settings": {}
+    },
+    "split_banner_wymEHz": {
+      "type": "split-banner",
+      "blocks": {
+        "button_UyCQdG": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Mens",
+            "link": "shopify://collections/mens-outlet",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_rR8dmH": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "shopify://collections/outlet-womens",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_J37H7P": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Kids",
+            "link": "shopify://collections/kids-outlet",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_gbC76k": {
+          "type": "button",
+          "settings": {
+            "label": "Shop All Outlet",
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--secondary"
+          }
+        }
+      },
+      "block_order": [
+        "button_UyCQdG",
+        "button_rR8dmH",
+        "button_J37H7P",
+        "button_gbC76k"
+      ],
+      "name": "Banner - Main",
+      "settings": {
+        "container": "container-fluid",
+        "image": "shopify://shop_images/lestyle-model-vjc-dress-womens1_0bac73de-9b18-4740-97bc-eb6a3af55e28.png",
+        "image_ratio": "3/2",
+        "image_ratio_mobile": "4/3",
+        "image_link": "shopify://collections/lestyle-outlet",
+        "image_position": "left",
+        "background_color": "#f1f0e4",
+        "text_color": "#000000",
+        "content_alignment": "center",
+        "title_type": "image",
+        "title_text": "50% OFF HUGO BOSS",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-outlet-title.png",
+        "title_image_width": 260,
+        "subheader_text": "<p>Shop luxury designer outlet from Versace, Balmain, Givenchy & more top brands</p>",
+        "subheader_size": "text-base",
+        "button_font_size": 15,
+        "button_font_weight": 600,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "small_banner_4kNFYW": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#bbbbbb",
+        "background_image": "shopify://shop_images/bg.webp",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/outlet-10.jpg",
+        "image_width": 160,
+        "text_color": "#222222",
+        "header_text": "Extra 10% Off Outlet",
+        "header_size": "h3",
+        "subheader_text": "<p>Use code <strong>OUTLET10 </strong>at cart to get extra 10% Off Outlet items.</p>",
+        "subheader_size": "text-small",
+        "button_text": "Shop Now",
+        "button_link": "shopify://collections/lestyle-outlet",
+        "button_font_size": 15,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#222222",
+        "button_border_color": "#222222",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17601009311f9400d0": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c955ae7_cpG3EC": {
+          "type": "ai_gen_block_c955ae7",
+          "settings": {
+            "banner_height_desktop": 600,
+            "banner_height_mobile": 540,
+            "image_1_desktop": "shopify://shop_images/outlet-banner-men-women.jpg",
+            "image_1_mobile": "shopify://shop_images/outlet-banner-mobile-women.jpg",
+            "image_2_desktop": "shopify://shop_images/outlet-banner-bag-kids.jpg",
+            "image_2_mobile": "shopify://shop_images/outlet-banner-mobile-men.jpg",
+            "slide_interval": 3,
+            "fade_duration": 1,
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "content_max_width": 600,
+            "text_color": "#ffffff",
+            "subheader": "OUTLET SALE",
+            "subheader_size": 16,
+            "subheader_margin": 20,
+            "header": "50% - 70% OFF",
+            "header_size": 80,
+            "header_weight": "500",
+            "header_margin": 40,
+            "text": "Shop designer outlet sale online",
+            "text_size": 14,
+            "text_margin": 30,
+            "button_1_text": "Men",
+            "button_1_link": "shopify://collections/mens-outlet",
+            "button_primary_bg": "#000000",
+            "button_primary_text": "#ffffff",
+            "button_primary_hover_bg": "#ffffff",
+            "button_primary_hover_text": "#000000",
+            "button_2_text": "Women",
+            "button_2_link": "shopify://collections/womens-outlet",
+            "button_secondary_bg": "#000000",
+            "button_secondary_text": "#ffffff",
+            "button_secondary_hover_bg": "#ffffff",
+            "button_secondary_hover_text": "#000000",
+            "button_3_text": "Kids",
+            "button_3_link": "shopify://collections/kids-outlet",
+            "button_tertiary_bg": "#000000",
+            "button_tertiary_text": "#ffffff",
+            "button_tertiary_hover_bg": "#ffffff",
+            "button_tertiary_hover_text": "#000000",
+            "button_gap": 15,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 30,
+            "button_font_size": 14,
+            "button_border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c955ae7_cpG3EC"
+      ],
+      "disabled": true,
+      "name": "Banner Section",
+      "settings": {}
+    },
+    "empty_space_iWJHNV": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
+      }
+    },
+    "custom_card_carousel_8rkRNX": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_nnMrtq": {
+          "type": "card",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-shirt-vjc-mens.jpg",
+            "header_text": "Versace Jeans Couture",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture-outlet",
+            "label_text": "60% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_YDQNh8": {
+          "type": "card",
+          "name": "Versace",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-versace-womens-dress.webp",
+            "header_text": "Versace",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-outlet",
+            "label_text": "60% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_iLGBxT": {
+          "type": "card",
+          "name": "Moschino",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-mens-moschino-jumper.jpg",
+            "header_text": "Moschino",
+            "subheader_text": "",
+            "link": "shopify://collections/moschino-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_wMW4xV": {
+          "type": "card",
+          "name": "Dsquared2",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-dsquared2-hoodie.webp",
+            "header_text": "Dsquared2",
+            "subheader_text": "",
+            "link": "shopify://collections/dsquared2-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_hEQNbW": {
+          "type": "card",
+          "name": "Roberto Cavalli",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-cavalli-mens-tshirt.webp",
+            "header_text": "Roberto Cavalli",
+            "subheader_text": "",
+            "link": "shopify://collections/roberto-cavalli-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_tCRygE": {
+          "type": "card",
+          "name": "Balmain",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-balmain-kids-dress.webp",
+            "header_text": "Balmain",
+            "subheader_text": "",
+            "link": "shopify://collections/balmain-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_nnMrtq",
+        "card_YDQNh8",
+        "card_iLGBxT",
+        "card_wMW4xV",
+        "card_hEQNbW",
+        "card_tCRygE"
+      ],
+      "name": "Brands",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Top Brands On Sale",
+        "image_ratio_desktop": "125",
+        "image_ratio_mobile": "125",
+        "heading_size": 26,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "400",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
+        "items_per_row": 5,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "promotion_countdown_timer_9V7ztJ": {
+      "type": "promotion-countdown-timer",
+      "blocks": {
+        "text_zrxin7": {
+          "type": "text",
+          "settings": {
+            "text_alignment": "left",
+            "subheading": "",
+            "heading": "Boxing Day Sale",
+            "heading_size": "h2",
+            "text": ""
+          }
+        },
+        "countdown_Eryen6": {
+          "type": "countdown",
+          "settings": {
+            "text_alignment": "center",
+            "time": "2025-12-31 23:59:00"
+          }
+        },
+        "button_YyqiCL": {
+          "type": "button",
+          "settings": {
+            "text_alignment": "right",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--primary",
+            "button_size": "m-button--small"
+          }
+        }
+      },
+      "block_order": [
+        "text_zrxin7",
+        "countdown_Eryen6",
+        "button_YyqiCL"
+      ],
+      "disabled": true,
+      "name": "Promotion countdown timer",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "dark",
+        "background_in_container": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "rectangle_buttons_CWpfbw": {
+      "type": "rectangle-buttons",
+      "blocks": {
+        "button_BDTweC": {
+          "type": "button",
+          "name": "Mens",
+          "settings": {
+            "label": "Shop Mens",
+            "link": "shopify://collections/mens-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-02_876cc5bd-099c-4afd-9567-8df69a3a90a9.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_wchCGm": {
+          "type": "button",
+          "name": "Womens",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "shopify://collections/womens-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-versace-accessories.-womens.jpg",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_TFQghR": {
+          "type": "button",
+          "name": "Kids",
+          "settings": {
+            "label": "Shop Kids",
+            "link": "shopify://collections/kids-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-fendi-dress-kids-girls_6e0c76ff-723b-4de6-bab6-a9104e8d4ff8.png",
+            "text_color": "#ffffff"
+          }
+        },
+        "button_KiF3DH": {
+          "type": "button",
+          "name": "Home Collection",
+          "settings": {
+            "label": "Shop All",
+            "link": "shopify://collections/lestyle-outlet",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20,
+            "bg_image": "shopify://shop_images/lestyle-model-lestyle-outlet.png",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_BDTweC",
+        "button_wchCGm",
+        "button_TFQghR",
+        "button_KiF3DH"
+      ],
+      "name": "Menu Buttons",
+      "settings": {
+        "container": "container-fluid",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "desktop_columns": 4,
+        "mobile_columns": 2,
+        "gap_desktop": 10,
+        "gap_mobile": 10,
+        "button_height": 128,
+        "button_border_radius": 0,
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "button_text_color": "#ffffff",
+        "button_font_size": 16,
+        "button_font_weight": "500"
+      }
+    },
+    "small_banner_rpibD7": {
+      "type": "small-banner",
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#b2fce4",
+        "background_image": "shopify://shop_images/desktop_bg_afterpay.png",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-afterpay-banner.png",
+        "image_width": 60,
+        "text_color": "#00193a",
+        "header_text": "Buy Now, Pay it in 4",
+        "header_size": "h3",
+        "subheader_text": "<p>Afterpay is now accepted at Lestyle in-store and online.</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay",
+        "button_font_size": 15,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#00193a",
+        "button_border_color": "#00193a",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_card_carousel_fmdyea": {
+      "type": "custom-card-carousel",
+      "blocks": {
+        "card_enmBYq": {
+          "type": "card",
+          "name": "Outlet Under $500",
+          "settings": {
+            "image": "shopify://shop_images/black-down-velvet-jacket.jpg",
+            "header_text": "Outlet Under $500",
+            "subheader_text": "Lestyle's curated outlet collections",
+            "link": "shopify://collections/outlet-under-500",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_Bwh76T": {
+          "type": "card",
+          "name": "Outlet Under $100",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-outlet-under100.jpg",
+            "header_text": "Outlet Under $100",
+            "subheader_text": "Shop designer pieces at bargain prices",
+            "link": "shopify://collections/outlet-under-100",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_WdmBx3": {
+          "type": "card",
+          "name": "Bags",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-outlet-accessories.jpg",
+            "header_text": "Accessories",
+            "subheader_text": "Belts, keychains, phone cases, caps and more",
+            "link": "shopify://collections/accessories-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_GTfJza": {
+          "type": "card",
+          "name": "Bags",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-outlet-bags.jpg",
+            "header_text": "Bags",
+            "subheader_text": "Designer bags from Moschino, Roberto Cavalli and more",
+            "link": "shopify://collections/bags-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_hRcxVY": {
+          "type": "card",
+          "name": "T-Shirts & Tops",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-kenzo-kids-long-sleeves.webp",
+            "header_text": "T-Shirts & Tops",
+            "subheader_text": "Designer tops sale for Men, Women and Kids",
+            "link": "shopify://collections/t-shirts-tops-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_36dkwT": {
+          "type": "card",
+          "name": "Dresses",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-womens-dress.jpg",
+            "header_text": "Dresses",
+            "subheader_text": "Desginer dresses for all occasions from Moschino, Versace and more",
+            "link": "shopify://collections/dresses-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_Tme8Xb": {
+          "type": "card",
+          "name": "Shirts",
+          "settings": {
+            "image": "shopify://shop_images/download-2024-07-05T115243.661.jpg",
+            "header_text": "Shirts",
+            "subheader_text": "Shirts with iconic prints from Versace, Roberto Cavalli and more",
+            "link": "shopify://collections/shirts-outlet",
+            "label_text": "70% OFF",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_enmBYq",
+        "card_Bwh76T",
+        "card_WdmBx3",
+        "card_GTfJza",
+        "card_hRcxVY",
+        "card_36dkwT",
+        "card_Tme8Xb"
+      ],
+      "name": "Brands",
+      "settings": {
+        "container_type": "container-fluid",
+        "heading": "Trending Bestsellers",
+        "image_ratio_desktop": "125",
+        "image_ratio_mobile": "125",
+        "heading_size": 26,
+        "heading_weight": "500",
+        "card_header_size": 16,
+        "card_header_weight": "400",
+        "card_subheader_size": 14,
+        "card_subheader_weight": "400",
+        "items_per_row": 4,
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "show_navigation": true,
+        "show_pagination": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_fBzpK7": {
+      "type": "rich-text",
+      "blocks": {
+        "button_wrXjT8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop All",
+            "button_link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--primary",
+            "button_size": "m-button--large"
+          }
+        }
+      },
+      "block_order": [
+        "button_wrXjT8"
+      ],
+      "name": "Button",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "featured_collection_eVUk6N": {
+      "type": "featured-collection",
+      "name": "Recently Update",
+      "settings": {
+        "heading": "Last Chance to Get",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "left",
+        "color_scheme": "",
+        "container": "container-fluid",
+        "collection": "lestyle-outlet",
+        "enable_flashsale": false,
+        "show_countdown": false,
+        "product_to_show": 6,
+        "items_per_row": 4,
+        "item_gap": 30,
+        "pcard_layout": "",
+        "pcard_image_ratio": "",
+        "show_vendor": false,
+        "hide_title": false,
+        "enable_slider": false,
+        "show_pagination": false,
+        "show_navigation": false,
+        "show_button_on_header": true,
+        "button_type": "load",
+        "button_text": "Shop more",
+        "button_style": "m-button--plain",
+        "button_size": "",
+        "infinite_load": true,
+        "max_page_load": 4,
+        "mobile_disable_slider": true,
+        "use_scroll_mobile": false,
+        "item_gap_mobile": 16,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "promotion_banner_b8KJm6": {
+      "type": "promotion-banner",
+      "name": "Shop Now Button",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "heading": "",
+        "heading_size": "h2",
+        "text": "",
+        "content_alignment": "center",
+        "banner_url": "shopify://collections/lestyle-outlet",
+        "button_label": "Shop More",
+        "button_style": "m-button--secondary",
+        "button_size": "",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "custom_class": "",
+        "animations": "inherit",
+        "enable_preload_image": false
+      }
+    },
+    "empty_space_R7QyYa": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "split_banner_wymEHz",
+    "small_banner_4kNFYW",
+    "17601009311f9400d0",
+    "empty_space_iWJHNV",
+    "custom_card_carousel_8rkRNX",
+    "promotion_countdown_timer_9V7ztJ",
+    "rectangle_buttons_CWpfbw",
+    "small_banner_rpibD7",
+    "custom_card_carousel_fmdyea",
+    "rich_text_fBzpK7",
+    "featured_collection_eVUk6N",
+    "promotion_banner_b8KJm6",
+    "empty_space_R7QyYa"
+  ]
+}
