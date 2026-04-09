@@ -1,1 +1,186 @@
-{"sections":{"small_banner_jgiHwQ":{"type":"small-banner","custom_css":[".small-banner-text-content {align-items: center;}"],"name":"Small Banner","settings":{"container":"container","background_color":"#000000","background_image":"shopify:\/\/shop_images\/bg.webp","background_overlay_opacity":50,"image_width":150,"text_color":"#ffffff","header_text":"OUTLET EXTRA 10% OFF","header_size":"h4","subheader_text":"<p><a href=\"\/collections\/lestyle-outlet\" title=\"Outlet\">Use code <strong>OUTLET10 <\/strong>to enjoy extra 10% Off on Outlet items. Shop the Outlet now.<\/a><\/p>","subheader_size":"text-small","button_text":"","button_link":"","button_font_size":14,"button_bg_color":"#ffffff","button_text_color":"#000000","button_border_color":"#ffffff","padding_top":36,"padding_bottom":36}},"empty_space_49ckiV":{"type":"empty-space","name":"Empty space","settings":{"container":"container-fluid","color_scheme":"","show_divider_line":false,"divider_style":"solid","divider_height":1,"padding_top":0,"padding_bottom":50,"custom_class":""}},"1757912485492f9989":{"type":"_blocks","blocks":{"ai_gen_block_6c78c60_by99Jq":{"type":"ai_gen_block_6c78c60","settings":{"collection":"{{ closest.collection }}","show_title":true,"show_description":true,"fallback_title":"","fallback_description":"","read_more_text":"Read more","read_less_text":"Read less","container":"container","title_margin":16,"title_size":36,"title_weight":"400","description_size":14,"background_color":"#ffffff","text_color":"#000000","title_color":"#000000","description_color":"#666666","read_more_color":"#000000","read_more_hover_color":"#666666"},"blocks":{}}},"block_order":["ai_gen_block_6c78c60_by99Jq"],"custom_css":[".ai-collection-banner__container-azmxuogjmt1zjtti5baigenblock6c78c60by99jq {padding: 36px 24px;}"],"name":"Collection Banner AI","settings":{}},"empty_space_KPnx6c":{"type":"empty-space","name":"Empty space","settings":{"container":"container-fluid","color_scheme":"","show_divider_line":false,"divider_style":"solid","divider_height":1,"padding_top":0,"padding_bottom":20,"custom_class":""}},"collection-header":{"type":"collection-page-header","disabled":true,"custom_css":[".container-fluid {margin-top: 15px;}"],"settings":{"color_scheme":"default","container":"container-fluid","layout":"without_breadcrumb","image_position":"background","enable_parallax":false,"parallax_direction":"vertical","text_alignment":"center","text_color":"inherit","upper_title":true,"show_desc":true,"collection_all_desc":"{{ collection.description }}","padding_top":36,"padding_bottom":50,"enable_bg_zoom_effect":true}},"main":{"type":"main-collection-product-grid","blocks":{"banner_promotion_KppNc9":{"type":"banner_promotion","settings":{"color_scheme":"dark","text_size":"small","text_color":"white","image":"shopify:\/\/shop_images\/Lestyle_Sidebar_Outlet.webp","link":"shopify:\/\/pages\/lestyle-outlet","content_position":"center_center","content_alignment":"center","title":"Extra 10% Off Outlet","subtitle":"Use Code OUTLET10","button_label":"Shop The Outlet","button_style":"m-button--secondary","button_size":"","button_fixed":false}}},"block_order":["banner_promotion_KppNc9"],"custom_css":[".m-banner-promotion {order: 3 !important; margin-top: 30px; margin-bottom: 0;}",".m-collection-filters-form {margin-bottom: 0;}"],"settings":{"container":"container-fluid","grid_layout":"grid","grid_columns":"4","show_columns_switcher":true,"pagination_limit":12,"paginate_type":"loadmore","show_sorting":true,"show_filter":true,"filters_type":"storefront_filters","sidebar":"leftColumn","sidebar_title":"Filters","limit_height_widget":true,"limit_height":300,"change_product_variant_on_fitlering":true,"show_product_count":true,"collapsed_groups":"Product type, Size, Shop by, Target gender, Availability","color_swatches":"color,colour,couleur,farbe","color_swatches_design":"list"}}},"order":["small_banner_jgiHwQ","empty_space_49ckiV","1757912485492f9989","empty_space_KPnx6c","collection-header","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "small_banner_jgiHwQ": {
+      "type": "small-banner",
+      "custom_css": [
+        ".small-banner-text-content {align-items: center;}"
+      ],
+      "name": "Small Banner",
+      "settings": {
+        "container": "container",
+        "background_color": "#000000",
+        "background_image": "shopify://shop_images/bg.webp",
+        "background_overlay_opacity": 50,
+        "image_width": 150,
+        "text_color": "#ffffff",
+        "header_text": "OUTLET EXTRA 10% OFF",
+        "header_size": "h4",
+        "subheader_text": "<p><a href=\"/collections/lestyle-outlet\" title=\"Outlet\">Use code <strong>OUTLET10 </strong>to enjoy extra 10% Off on Outlet items. Shop the Outlet now.</a></p>",
+        "subheader_size": "text-small",
+        "button_text": "",
+        "button_link": "",
+        "button_font_size": 14,
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "empty_space_49ckiV": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "custom_class": ""
+      }
+    },
+    "1757912485492f9989": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6c78c60_by99Jq": {
+          "type": "ai_gen_block_6c78c60",
+          "settings": {
+            "collection": "{{ closest.collection }}",
+            "show_title": true,
+            "show_description": true,
+            "fallback_title": "",
+            "fallback_description": "",
+            "read_more_text": "Read more",
+            "read_less_text": "Read less",
+            "container": "container",
+            "title_margin": 16,
+            "title_size": 36,
+            "title_weight": "400",
+            "description_size": 14,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "title_color": "#000000",
+            "description_color": "#666666",
+            "read_more_color": "#000000",
+            "read_more_hover_color": "#666666"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6c78c60_by99Jq"
+      ],
+      "custom_css": [
+        ".ai-collection-banner__container-azmxuogjmt1zjtti5baigenblock6c78c60by99jq {padding: 36px 24px;}"
+      ],
+      "name": "Collection Banner AI",
+      "settings": {}
+    },
+    "empty_space_KPnx6c": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "",
+        "show_divider_line": false,
+        "divider_style": "solid",
+        "divider_height": 1,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "custom_class": ""
+      }
+    },
+    "collection-header": {
+      "type": "collection-page-header",
+      "disabled": true,
+      "custom_css": [
+        ".container-fluid {margin-top: 15px;}"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container": "container-fluid",
+        "layout": "without_breadcrumb",
+        "image_position": "background",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "text_alignment": "center",
+        "text_color": "inherit",
+        "upper_title": true,
+        "show_desc": true,
+        "collection_all_desc": "{{ collection.description }}",
+        "padding_top": 36,
+        "padding_bottom": 50,
+        "enable_bg_zoom_effect": true
+      }
+    },
+    "main": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "banner_promotion_KppNc9": {
+          "type": "banner_promotion",
+          "settings": {
+            "color_scheme": "dark",
+            "text_size": "small",
+            "text_color": "white",
+            "image": "shopify://shop_images/Lestyle_Sidebar_Outlet.webp",
+            "link": "shopify://pages/lestyle-outlet",
+            "content_position": "center_center",
+            "content_alignment": "center",
+            "title": "Extra 10% Off Outlet",
+            "subtitle": "Use Code OUTLET10",
+            "button_label": "Shop The Outlet",
+            "button_style": "m-button--secondary",
+            "button_size": "",
+            "button_fixed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner_promotion_KppNc9"
+      ],
+      "custom_css": [
+        ".m-banner-promotion {order: 3 !important; margin-top: 30px; margin-bottom: 0;}",
+        ".m-collection-filters-form {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "grid_layout": "grid",
+        "grid_columns": "4",
+        "show_columns_switcher": true,
+        "pagination_limit": 12,
+        "paginate_type": "loadmore",
+        "show_sorting": true,
+        "show_filter": true,
+        "filters_type": "storefront_filters",
+        "sidebar": "leftColumn",
+        "sidebar_title": "Filters",
+        "limit_height_widget": true,
+        "limit_height": 300,
+        "change_product_variant_on_fitlering": true,
+        "show_product_count": true,
+        "collapsed_groups": "Product type, Size, Shop by, Target gender, Availability",
+        "color_swatches": "color,colour,couleur,farbe",
+        "color_swatches_design": "list"
+      }
+    }
+  },
+  "order": [
+    "small_banner_jgiHwQ",
+    "empty_space_49ckiV",
+    "1757912485492f9989",
+    "empty_space_KPnx6c",
+    "collection-header",
+    "main"
+  ]
+}
