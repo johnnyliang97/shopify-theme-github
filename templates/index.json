@@ -153,6 +153,32 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_EVUnen": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
+            "header_text": "Dolce & Gabbana",
+            "subheader_text": "",
+            "link": "shopify://collections/dolce-gabbana",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_eRET9U": {
+          "type": "card",
+          "name": "Fendi",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-fendi-junior-girls-tops-skirts1.webp",
+            "header_text": "Fendi",
+            "subheader_text": "",
+            "link": "shopify://collections/fendi",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_pBdP9C": {
           "type": "card",
           "name": "Brand",
@@ -174,7 +200,7 @@
             "header_text": "Palm Angels",
             "subheader_text": "",
             "link": "shopify://collections/palm-angels",
-            "label_text": "NEW",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": ""
           }
@@ -187,7 +213,7 @@
             "header_text": "Philipp Plein",
             "subheader_text": "",
             "link": "shopify://collections/philipp-plein",
-            "label_text": "NEW",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": ""
           }
@@ -200,7 +226,7 @@
             "header_text": "Versace",
             "subheader_text": "",
             "link": "shopify://collections/versace",
-            "label_text": "NEW",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": ""
           }
@@ -213,7 +239,7 @@
             "header_text": "Versace Jeans Couture",
             "subheader_text": "",
             "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "NEW",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": ""
           }
@@ -282,35 +308,11 @@
             "label_color": "#c19967",
             "button_text": ""
           }
-        },
-        "card_eRET9U": {
-          "type": "card",
-          "name": "Fendi",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-fendi-top.png",
-            "header_text": "Fendi",
-            "subheader_text": "",
-            "link": "shopify://collections/fendi",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
-        },
-        "card_EVUnen": {
-          "type": "card",
-          "name": "Dolce & Gabbana",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
-            "header_text": "Dolce & Gabbana",
-            "subheader_text": "",
-            "link": "shopify://collections/dolce-gabbana",
-            "label_text": "",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
         }
       },
       "block_order": [
+        "card_EVUnen",
+        "card_eRET9U",
         "card_pBdP9C",
         "card_XcHpVk",
         "card_cAK9am",
@@ -320,9 +322,7 @@
         "card_HpbLmm",
         "card_9fYyNd",
         "card_KBbgxn",
-        "card_GcyLwV",
-        "card_eRET9U",
-        "card_EVUnen"
+        "card_GcyLwV"
       ],
       "name": "Brands",
       "settings": {
