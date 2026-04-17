@@ -179,7 +179,8 @@
   <div class="m-product-card__media">
     <a
       class="m-product-card__link m:block m:w-full"
-      href="{{ product_url }}"
+      href="javascript:void(0)"
+      onclick="document.getElementById('lightbox-{{ section.id }}-{{ product.id }}').showModal()"
       aria-label="{{ product.title | default: 'product title' }}"
     >
       {% if preview_image != blank or first_media_type == 'video' %}
@@ -303,19 +304,11 @@
         render 'countdown-timer', time: metafields_time, separator: false, short_label: true, extra_classes: 'm-product-card__countdown m:hidden'
       endif
     %}
-
-    {%- if sold_out == false -%}
-      <div class="m-product-card__action m:hidden lg:m:block">
-        {% render 'product-card-quick-add-btn',
-          product: product,
-          quick_add_text: quick_add_text,
-          section: section,
-          button_style: 'white',
-          context_collection: context_collection
-        %}
-      </div>
-    {% endif %}
   </div>
+
+  <dialog id="lightbox-{{ section.id }}-{{ product.id }}" class="m-product-lightbox" style="padding: 0; border: none; background: transparent; max-width: 90vw; max-height: 90vh;" onclick="this.close()">
+    <img src="{{ preview_image | image_url: width: 1500 }}" style="max-width: 100vw; max-height: 90vh; object-fit: contain; cursor: zoom-out;" />
+  </dialog>
   <div class="m-product-card__content m:text-{{ pcard_alignment }}">
     <div class="m-product-card__info">
       {%- if show_vendor -%}
@@ -324,7 +317,7 @@
       {% if show_title == true %}
         <h3 class="m-product-card__title">
           <a
-            href="{{ product_url }}"
+            href="javascript:void(0)"
             class="m-product-card__name{% if settings.uppercase_prd_name %} m:uppercase{% endif %}"
           >
             {%- liquid
@@ -350,6 +343,12 @@
             {{ display_title }}
           </a>
         </h3>
+        
+        <div class="m-product-card__action" style="margin-top: 10px; margin-bottom: 10px;">
+          <a href="https://www.lestyle.com.au/cart/add?id={{ product.selected_or_first_available_variant.id }}&quantity=1&discount={{ discount_code }}" class="m-button m-button--primary m:w-full" data-promotion-cart-button data-product-id="{{ product.id }}" data-discount-code="{{ discount_code }}">
+            {{ 'products.product.add_to_cart' | t }}
+          </a>
+        </div>
       {% endif %}
       {% if settings.show_review_badge %}
         <div class="m-product-card__reviews m:text-color-body">
@@ -456,11 +455,6 @@
           {{ product.description | strip_html | truncatewords: 15, '...' }}
         </div>
       {%- endif -%}
-      <div class="m-product-card__action">
-        <a href="https://www.lestyle.com.au/cart/add?id={{ product.selected_or_first_available_variant.id }}&quantity=1&discount={{ discount_code }}" class="m-button m-button--primary m:w-full" data-promotion-cart-button data-product-id="{{ product.id }}" data-discount-code="{{ discount_code }}">
-          {{ 'products.product.add_to_cart' | t }}
-        </a>
-      </div>
     </div>
   </div>
   <input hidden name="id" required value="{{ variant_id }}" data-selected-variant="{{ selected_variant_id }}">

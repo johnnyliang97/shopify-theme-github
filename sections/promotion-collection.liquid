@@ -60,6 +60,9 @@
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+  .m-product-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
 </style>
 {% paginate current_collection.products by product_to_show %}
   <section
