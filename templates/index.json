@@ -153,6 +153,19 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_GcyLwV": {
+          "type": "card",
+          "name": "Boss",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-balmain-sweatshirts-womens-1.jpg",
+            "header_text": "Balmain",
+            "subheader_text": "",
+            "link": "shopify://collections/balmain",
+            "label_text": "New",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_eRET9U": {
           "type": "card",
           "name": "Fendi",
@@ -282,22 +295,10 @@
             "label_color": "#c19967",
             "button_text": ""
           }
-        },
-        "card_GcyLwV": {
-          "type": "card",
-          "name": "Boss",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-boss-kids-01.png",
-            "header_text": "BOSS",
-            "subheader_text": "",
-            "link": "shopify://collections/boss",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
         }
       },
       "block_order": [
+        "card_GcyLwV",
         "card_eRET9U",
         "card_pBdP9C",
         "card_XcHpVk",
@@ -307,8 +308,7 @@
         "card_LFnLEQ",
         "card_HpbLmm",
         "card_9fYyNd",
-        "card_KBbgxn",
-        "card_GcyLwV"
+        "card_KBbgxn"
       ],
       "name": "Brands",
       "settings": {
@@ -385,8 +385,8 @@
         "button_eQtft3": {
           "type": "button",
           "settings": {
-            "label": "Shop Versace Home",
-            "link": "shopify://collections/versace-home-collection",
+            "label": "Find Out More",
+            "link": "shopify://blogs/lestyle-spotlight/free-designer-tie-with-every-order-versace-dolce-gabbana-giveaway",
             "button_style": "m-button--white"
           }
         }
@@ -397,21 +397,21 @@
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-versace-home-plate-021.png",
+        "image": "shopify://shop_images/lestyle-model-tie-giveaway1.webp",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/versace-home-collection",
+        "image_link": "shopify://blogs/lestyle-spotlight/free-designer-tie-with-every-order-versace-dolce-gabbana-giveaway",
         "image_position": "left",
         "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/aoife-glyndwr-P_LD3lGrd5g-unsplash.jpg",
+        "background_image": "shopify://shop_images/white-gray-smooth-grainy-gradient-background-website-header-backdrop-noise-texture-effect.jpg",
         "text_color": "#666666",
         "content_alignment": "flex-start",
         "title_type": "image",
         "title_text": "Casablanca New Collection",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/Frame_43_b1c43601-994f-46bd-8c96-c6ec091d9971.png",
+        "title_image": "shopify://shop_images/lestyle-title-ties-giveaway.png",
         "title_image_width": 280,
-        "subheader_text": "<p>Experience the master craftsmanship with Versace plates and dining accessories.</p>",
+        "subheader_text": "<p>Receive a complimentary Versace or Dolce & Gabbana tie with every order. T&Cs apply.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
