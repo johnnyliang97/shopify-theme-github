@@ -153,19 +153,6 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
-        "card_EVUnen": {
-          "type": "card",
-          "name": "Brand",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-dolce-kids-girls-dress.png",
-            "header_text": "Dolce & Gabbana",
-            "subheader_text": "",
-            "link": "shopify://collections/dolce-gabbana",
-            "label_text": "NEW",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
         "card_eRET9U": {
           "type": "card",
           "name": "Fendi",
@@ -311,7 +298,6 @@
         }
       },
       "block_order": [
-        "card_EVUnen",
         "card_eRET9U",
         "card_pBdP9C",
         "card_XcHpVk",
