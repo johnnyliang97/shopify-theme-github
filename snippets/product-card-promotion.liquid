@@ -310,7 +310,7 @@
     <img src="{{ preview_image | image_url: width: 1500 }}" style="max-width: 100vw; max-height: 90vh; object-fit: contain; cursor: zoom-out;" />
   </dialog>
   <div class="m-product-card__content m:text-{{ pcard_alignment }}">
-    <div class="m-product-card__info">
+    <div class="m-product-card__info" style="display: flex; flex-direction: column;">
       {%- if show_vendor -%}
         <span class="m-product-card__vendor">{{ product.vendor }}</span>
       {%- endif -%}
@@ -344,7 +344,7 @@
           </a>
         </h3>
         
-        <div class="m-product-card__action" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="m-product-card__action" style="margin-top: 10px; margin-bottom: 10px; display: block; opacity: 1; visibility: visible; transform: none;">
           <a href="https://www.lestyle.com.au/cart/add?id={{ product.selected_or_first_available_variant.id }}&quantity=1&discount={{ discount_code }}" class="m-button m-button--primary m:w-full" data-promotion-cart-button data-product-id="{{ product.id }}" data-discount-code="{{ discount_code }}">
             {{ 'products.product.add_to_cart' | t }}
           </a>
