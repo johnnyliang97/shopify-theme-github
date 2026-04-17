@@ -191,16 +191,38 @@ if (!customElements.get("m-cart-addons")) {
     }
 
     async handleGiftWithPurchase(code) {
-      if (!code || code.trim().toUpperCase() !== "KEY10") return;
+      if (!code) return;
+      const upperCode = code.trim().toUpperCase();
 
-      const GIFT_VARIANT_ID = 47771253604611;
+      // Dictionary of promo codes and their corresponding gift variant IDs
+      const PROMO_GIFTS = {
+        "KEY10": 47771253604611
+      };
+
+      const giftVariantId = PROMO_GIFTS[upperCode];
+
+      if (giftVariantId) {
+        // 1. Redirect to cart/add if it's a specific gift promo code
+        window.location.href = `${this.rootUrl}cart/add?id=${giftVariantId}&quantity=1&discount=${code}`;
+        return true;
+      }
       
-      // 1. Apply discount code to session first via async fetch
-      // This helps Shopify recognize the discount before the redirect
-      fetch(`${this.rootUrl}discount/${code}`).then(() => {
-          // 2. Redirect to cart/add after discount is set in session
-          window.location.href = `${this.rootUrl}cart/add?id=${GIFT_VARIANT_ID}&quantity=1&discount=${code}`;
+      // If it's just a regular code, trigger cart update to reflect discount immediately
+      fetch(`${window.MinimogSettings.routes.cart_update_url}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/javascript"
+        },
+        body: JSON.stringify({ attributes: { 'discount': code } })
+      }).then(() => {
+        if (window.MinimogTheme && window.MinimogTheme.cart) {
+          window.MinimogTheme.cart.getCart();
+        } else {
+          window.location.reload();
+        }
       });
+      return false;
     }
 
     saveAddonValue() {
@@ -233,7 +255,7 @@ if (!customElements.get("m-cart-addons")) {
                 } else {
                   alert("Discount code applied successfully!");
                 }
-                this.handleGiftWithPurchase(code);
+                const isGift = this.handleGiftWithPurchase(code);
                 this.close(event);
               });
             } else {
