@@ -214,25 +214,34 @@ if (!customElements.get("m-cart-addons")) {
           if (target.dataset.action === "coupon" && cartDiscountCode) {
             const code = cartDiscountCode.value;
             localStorage.setItem(this.discountCodeKey, code);
-            if (code !== "" && cartDiscountCodeNoti) {
-              cartDiscountCodeNoti.style.display = "inline";
-            } else {
-              cartDiscountCodeNoti.style.display = "none";
-            }
             
-            // Show notification
-            if (code) {
-                window.MinimogTheme.Notification.show({
-                    target: document.body,
-                    method: "appendChild",
-                    type: "success",
-                    message: "Discount code applied successfully",
-                    last: 3000
-                });
+            if (code !== "") {
+              if (cartDiscountCodeNoti) {
+                cartDiscountCodeNoti.style.display = "inline";
+              }
+              
+              // Apply discount to session
+              fetch(`${this.rootUrl}discount/${code}`).then(() => {
+                if (window.MinimogTheme && window.MinimogTheme.Notification) {
+                  window.MinimogTheme.Notification.show({
+                      target: document.body,
+                      method: "appendChild",
+                      type: "success",
+                      message: "Discount code applied successfully",
+                      last: 3000
+                  });
+                } else {
+                  alert("Discount code applied successfully!");
+                }
+                this.handleGiftWithPurchase(code);
+                this.close(event);
+              });
+            } else {
+              if (cartDiscountCodeNoti) {
+                cartDiscountCodeNoti.style.display = "none";
+              }
+              this.close(event);
             }
-
-            this.handleGiftWithPurchase(code);
-            this.close(event);
           }
           if (target.dataset.action === "note") {
             this.updateCartNote();
