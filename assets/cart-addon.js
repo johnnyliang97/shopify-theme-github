@@ -190,24 +190,10 @@ if (!customElements.get("m-cart-addons")) {
         .catch(console.error);
     }
 
-    async handleGiftWithPurchase(code) {
+    refreshCart(code) {
       if (!code) return;
-      const upperCode = code.trim().toUpperCase();
-
-      // Dictionary of promo codes and their corresponding gift variant IDs
-      const PROMO_GIFTS = {
-        "KEY10": 47771253604611
-      };
-
-      const giftVariantId = PROMO_GIFTS[upperCode];
-
-      if (giftVariantId) {
-        // 1. Redirect to cart/add if it's a specific gift promo code
-        window.location.href = `${this.rootUrl}cart/add?id=${giftVariantId}&quantity=1&discount=${code}`;
-        return true;
-      }
       
-      // If it's just a regular code, trigger cart update to reflect discount immediately
+      // Trigger cart update to reflect discount immediately
       fetch(`${window.MinimogSettings.routes.cart_update_url}`, {
         method: "POST",
         headers: {
@@ -222,7 +208,6 @@ if (!customElements.get("m-cart-addons")) {
           window.location.reload();
         }
       });
-      return false;
     }
 
     saveAddonValue() {
@@ -255,7 +240,7 @@ if (!customElements.get("m-cart-addons")) {
                 } else {
                   alert("Discount code applied successfully!");
                 }
-                const isGift = this.handleGiftWithPurchase(code);
+                this.refreshCart(code);
                 this.close(event);
               });
             } else {
