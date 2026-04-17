@@ -24,59 +24,41 @@
         "button_UyCQdG": {
           "type": "button",
           "settings": {
-            "label": "Shop Mens",
-            "link": "shopify://collections/mens-outlet",
+            "label": "Shop Now",
+            "link": "https://www.lestyle.com.au/collections/jackets-outlet?sort_by=most-relevant&filter.p.vendor=Dsquared2&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
             "button_style": "m-button--secondary"
           }
         },
         "button_rR8dmH": {
           "type": "button",
           "settings": {
-            "label": "Shop Womens",
-            "link": "shopify://collections/outlet-womens",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_J37H7P": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Kids",
-            "link": "shopify://collections/kids-outlet",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_gbC76k": {
-          "type": "button",
-          "settings": {
-            "label": "Shop All Outlet",
-            "link": "shopify://collections/lestyle-outlet",
+            "label": "Up to 70% Off Jackets",
+            "link": "https://www.lestyle.com.au/collections/jackets-outlet?filter.v.availability=1&sort_by=most-relevant",
             "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
         "button_UyCQdG",
-        "button_rR8dmH",
-        "button_J37H7P",
-        "button_gbC76k"
+        "button_rR8dmH"
       ],
       "name": "Banner - Main",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-vjc-dress-womens1_0bac73de-9b18-4740-97bc-eb6a3af55e28.png",
-        "image_ratio": "3/2",
+        "image": "shopify://shop_images/lestyle-dsquared2-jackets-outlet.png",
+        "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/lestyle-outlet",
         "image_position": "left",
         "background_color": "#f1f0e4",
         "text_color": "#000000",
-        "content_alignment": "center",
+        "content_alignment": "flex-start",
         "title_type": "image",
-        "title_text": "50% OFF HUGO BOSS",
+        "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-outlet-title.png",
-        "title_image_width": 260,
-        "subheader_text": "<p>Shop luxury designer outlet from Versace, Balmain, Givenchy & more top brands</p>",
+        "title_image": "shopify://shop_images/lestyle-title-dsquared2-jackets-outlet.png",
+        "title_image_width": 280,
+        "subheader_text": "<p>Prepare for the colder months with <strong>70% Off</strong> DSquared2 jackets. Use code <strong>OUTLET10 </strong>for extra 10% off. </p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
