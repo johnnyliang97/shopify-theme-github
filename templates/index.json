@@ -16,7 +16,7 @@
           "type": "button",
           "settings": {
             "label": "Shop Now",
-            "link": "shopify://collections/balmain-kids",
+            "link": "shopify://collections/fendi",
             "button_style": "m-button--white"
           }
         }
@@ -27,21 +27,20 @@
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/balmain-junior-cover1.webp",
+        "image": "shopify://shop_images/lestyle-model-fendi-junior-girls-tops-skirts11.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/balmain-kids",
+        "image_link": "shopify://collections/fendi",
         "image_position": "right",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/alex-lvrs-Md6_qA-BMis-unsplash1.jpg",
+        "background_color": "#ffdcdc",
         "text_color": "#222222",
         "content_alignment": "flex-start",
         "title_type": "image",
-        "title_text": "Palm Angels Junior",
+        "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-balmain-junior-title.png",
-        "title_image_width": 240,
-        "subheader_text": "<p>Balance contemporary comfort with high-fashion credentials through the latest from Balmain Junior. </p>",
+        "title_image": "shopify://shop_images/lestyle-title-fendi-junior.png",
+        "title_image_width": 180,
+        "subheader_text": "<p>Pastel palette meets iconic monogram. Shop the latest junior collection from Fendi.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
