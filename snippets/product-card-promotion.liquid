@@ -298,12 +298,6 @@
     {%- if show_quickview_button or show_wishlist_button or show_compare_button or show_cart_button -%}
     {%- endif -%}
 
-    {% liquid
-      assign metafields_time = product.metafields.global.minimog_countdown
-      if settings.show_countdown and metafields_time != blank
-        render 'countdown-timer', time: metafields_time, separator: false, short_label: true, extra_classes: 'm-product-card__countdown m:hidden'
-      endif
-    %}
   </div>
 
   <dialog id="lightbox-{{ section.id }}-{{ product.id }}" class="m-product-lightbox" style="padding: 0; border: none; background: transparent; max-width: 90vw; max-height: 90vh;" onclick="this.close()">
@@ -344,109 +338,13 @@
           </a>
         </h3>
         
-        <div class="m-product-card__action" style="margin-top: 10px; margin-bottom: 10px; display: block; opacity: 1; visibility: visible; transform: none;">
-          <a href="https://www.lestyle.com.au/cart/add?id={{ product.selected_or_first_available_variant.id }}&quantity=1&discount={{ discount_code }}" class="m-button m-button--primary m:w-full" data-promotion-cart-button data-product-id="{{ product.id }}" data-discount-code="{{ discount_code }}">
-            {{ 'products.product.add_to_cart' | t }}
-          </a>
-        </div>
       {% endif %}
-      {% if settings.show_review_badge %}
-        <div class="m-product-card__reviews m:text-color-body">
-          {% render 'product-reviews-app__badge', product: product %}
-        </div>
-      {% endif %}
-
-      {% if product.has_only_default_variant == false and show_variant_options %}
-        {% render 'product-card-option',
-          product: product,
-          show_variant_options: show_variant_options,
-          pcard_alignment: pcard_alignment,
-          context: context
-        %}
-      {% endif %}
-      {%- if show_inventory and selected_variant.inventory_management != blank -%}
-        {%- liquid
-          assign inventory_threshold = settings.low_inventory_threshold
-          assign show_inventory_count = settings.show_inventory_count
-          assign inventory_visibility = settings.inventory_visibility
-          assign inventory_hide_backordered = settings.inventory_hide_backordered
-
-          assign total = 0
-          assign inventory_policy = ''
-          for variant in product.variants
-            if variant.inventory_quantity > 0
-              assign total = total | plus: variant.inventory_quantity
-            endif
-            if variant.inventory_policy == 'continue'
-              assign inventory_policy = 'continue'
-            endif
-          endfor
-
-          if total <= 0
-            if inventory_policy == 'continue'
-              assign status = 'backordered'
-            elsif product.available
-              assign status = 'instock'
-            else
-              assign status = 'outofstock'
-            endif
-          elsif total <= inventory_threshold
-            assign status = 'low'
-          else
-            assign status = 'normal'
-          endif
-
-          assign show = false
-          if inventory_visibility == 'always'
-            assign show = true
-            if status == 'backordered' and inventory_hide_backordered
-              assign show = false
-            endif
-          else
-            if status == 'low'
-              assign show = true
-            endif
-          endif
-
-          if status == 'outofstock'
-            assign show = false
-          endif
-
-          assign show_inventory_number = true
-          if show_inventory_count == 'never' or total <= 0 or show_inventory_count == 'low_inventory' and status != 'low'
-            assign show_inventory_number = false
-          endif
-        -%}
-        {%- if show == true -%}
-          <div class="m-product-inventory m-product-card__inventory m:text-sm" data-status="{{ status }}">
-            <div class="m-product-inventory__inner">
-              <span class="m-product-inventory__text">
-                <span class="m-product-inventory__pin"></span>
-                <span class="m-product-inventory__status">
-                  {% liquid
-                    case status
-                      when 'backordered'
-                        render 'new-locale', key: 'products.product.backordered'
-                      when 'low'
-                        if show_inventory_number
-                          render 'new-locale', key: 'products.product.inventory_low_quantity_html', param: '{{ quantity }}', value: total
-                        else
-                          render 'new-locale', key: 'products.product.low_stock'
-                        endif
-                      else
-                        if show_inventory_number
-                          render 'new-locale', key: 'products.product.inventory_quantity_html', param: '{{ quantity }}', value: total
-                        else
-                          echo 'products.product.in_stock' | t
-                        endif
-                    endcase
-                  %}
-                </span>
-              </span>
-            </div>
-          </div>
-        {%- endif -%}
-      {%- endif -%}
+    </div>
+    
+    <div style="margin-top: 15px; width: 100%;">
+      <a href="https://www.lestyle.com.au/cart/add?id={{ product.selected_or_first_available_variant.id }}&quantity=1&discount={{ discount_code }}" class="m-button m-button--primary m:w-full" data-promotion-cart-button data-product-id="{{ product.id }}" data-discount-code="{{ discount_code }}" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        {{ 'products.product.add_to_cart' | t }}
+      </a>
     </div>
 
     <div class="m-product-card__content-footer">
