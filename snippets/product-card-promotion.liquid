@@ -282,45 +282,6 @@
       {% endif %}
     </a>
     <div class="m-product-card__tags">
-      {% if settings.show_badge_sale %}
-        {% for tag in product.tags %}
-          {% if tag contains 'tag__' %}
-            {%- liquid
-              assign tag_content = tag | split: '__' | last
-              assign type = tag_content | split: '_' | first
-              assign tag_name = tag_content | split: '_' | last
-              assign color_scheme_class = 'm-gradient m-color-'
-              case type
-                when 'sale':
-                  assign color_scheme_class = color_scheme_class | append: settings.sale_badge_color_scheme
-                when 'new':
-                  assign color_scheme_class = color_scheme_class | append: settings.new_badge_color_scheme
-                when 'hot':
-                  assign color_scheme_class = color_scheme_class | append: settings.hot_badge_color_scheme
-              endcase
-            -%}
-            <span class="m-product-card__tag-name m-product-tag m-product-tag--{{ type }} {{ color_scheme_class }}">
-              {{- tag_name -}}
-            </span>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-      {% assign custom_badge_class = 'm-product-card__tag-name m-product-tag m-product-tag--preorder m-gradient m-color-'
-        | append: settings.preorder_badge_color_scheme
-      %}
-      {% capture foxkit_preorder_badge %}{% render 'foxkit-preorder-badge', product: product, static: true, custom_class: custom_badge_class %}{% endcapture %}
-      {% unless foxkit_preorder_badge contains 'Liquid error' %}
-        {{ foxkit_preorder_badge }}
-      {% endunless %}
-      {% if show_on_sale_badge %}
-        <span class="m-product-card__tag-name m-product-tag m-product-tag--sale m-gradient m-color-{{ settings.sale_badge_color_scheme }}">
-          {%- if settings.on_sale_badge == 'show_text' -%}
-            {{ 'products.product.on_sale' | t }}
-          {%- elsif settings.on_sale_badge == 'show_percentage' -%}
-            {{ discount | append: '%' }}
-          {%- endif -%}
-        </span>
-      {% endif %}
     </div>
     {%- if settings.show_badge_soldout -%}
       <span
@@ -396,9 +357,6 @@
         </div>
       {% endif %}
 
-      <div class="m-product-card__price">
-        {% render 'product-prices', product: product, is_product_card: true %}
-      </div>
       {% if product.has_only_default_variant == false and show_variant_options %}
         {% render 'product-card-option',
           product: product,
