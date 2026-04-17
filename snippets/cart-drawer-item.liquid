@@ -125,9 +125,14 @@
       </a>
     </div>
     <div class="m-cart-item__info m-cart-drawer-item__info">
-      <a href="{{- item.url -}}" class="m-cart-item__title">
-        {{- item.product.title -}}
-      </a>
+      <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px;">
+        <a href="{{- item.url -}}" class="m-cart-item__title">
+          {{- item.product.title -}}
+        </a>
+        {% if item.product.tags contains 'Outlet' %}
+          <span style="background-color: red; color: white; font-weight: bold; text-transform: uppercase; padding: 2px 6px; border-radius: 4px; font-size: 10px; line-height: 1;">OUTLET</span>
+        {% endif %}
+      </div>
 
       <div class="m-cart-drawer-item__variant m:text-color-subtext">
         {%- unless item.product.has_only_default_variant -%}
