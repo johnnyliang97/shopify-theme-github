@@ -62,6 +62,19 @@
       border-radius: 8px !important;
   }
 
+  .split-banner-{{ section.id }} .split-banner-title-image {
+      display: block;
+      width: 100%;
+      max-width: {{ section.settings.title_image_width_desktop }}px;
+      height: auto;
+  }
+
+  .split-banner-{{ section.id }} .split-banner-title-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+  }
+
   /* Desktop layout */
   @media screen and (min-width: 768px) {
       .split-banner-{{ section.id }} .split-banner-wrapper {
@@ -98,6 +111,10 @@
           padding-right: 0 !important;
           margin-left: 0 !important;
           margin-right: 0 !important;
+      }
+
+      .split-banner-{{ section.id }} .split-banner-title-image {
+          max-width: {{ section.settings.title_image_width_mobile }}px;
       }
   }
 {%- endstyle -%}
@@ -139,15 +156,24 @@
         {%- endif -%}
       </div>
       <div class="split-banner-half split-banner-content">
-        {%- if section.settings.title_type == 'text' -%}
+        {%- if section.settings.title_image != blank -%}
+          {%- assign title_image_width_desktop_2x = section.settings.title_image_width_desktop | times: 2 -%}
+          {%- assign title_image_width_mobile_2x = section.settings.title_image_width_mobile | times: 2 -%}
+          {%- assign title_image_render_width = title_image_width_desktop_2x | at_least: title_image_width_mobile_2x -%}
+          {%- assign title_image_render_width = title_image_render_width | at_least: 1200 -%}
+          {%- assign title_image_sizes = '(max-width: 767px) ' | append: section.settings.title_image_width_mobile | append: 'px, ' | append: section.settings.title_image_width_desktop | append: 'px' -%}
+          <div class="split-banner-title-image">
+            {{ section.settings.title_image | image_url: width: title_image_render_width | image_tag:
+              loading: 'lazy',
+              widths: '240, 360, 480, 720, 960, 1200, 1600, 2000',
+              sizes: title_image_sizes,
+              alt: section.settings.title_text | escape
+            }}
+          </div>
+        {%- else -%}
           <h2 class="{{ section.settings.title_size }}" style="color: {{ section.settings.text_color }}; margin: 0;">
             {{ section.settings.title_text }}
           </h2>
-        {%- else -%}
-          {%- if section.settings.title_image != blank -%}
-            {%- assign image_width_2x = section.settings.title_image_width | times: 2 -%}
-            {{ section.settings.title_image | image_url: width: image_width_2x | image_tag: loading: 'lazy', style: 'max-width: 100%; height: auto;', width: section.settings.title_image_width }}
-          {%- endif -%}
         {%- endif -%}
 
         <div class="{{ section.settings.subheader_size }}" style="color: {{ section.settings.text_color }}; margin-top: 1rem;">
@@ -286,16 +312,6 @@
       "content": "Title"
     },
     {
-      "type": "select",
-      "id": "title_type",
-      "label": "Title Type",
-      "options": [
-        { "value": "text", "label": "Text" },
-        { "value": "image", "label": "Image" }
-      ],
-      "default": "text"
-    },
-    {
       "type": "text",
       "id": "title_text",
       "label": "Title Text",
@@ -318,10 +334,24 @@
       "label": "Title Image"
     },
     {
-        "type": "number",
-        "id": "title_image_width",
-        "label": "Title Image Width (px)",
+        "type": "range",
+        "id": "title_image_width_desktop",
+        "label": "Title Image Width Desktop",
+        "min": 80,
+        "max": 1200,
+        "step": 10,
+        "unit": "px",
         "default": 300
+    },
+    {
+        "type": "range",
+        "id": "title_image_width_mobile",
+        "label": "Title Image Width Mobile",
+        "min": 80,
+        "max": 800,
+        "step": 10,
+        "unit": "px",
+        "default": 220
     },
     {
       "type": "header",
