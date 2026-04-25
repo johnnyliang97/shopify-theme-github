@@ -24,7 +24,7 @@
           "type": "button",
           "settings": {
             "label": "Gift Ideas For Mum",
-            "link": "shopify://collections/fendi",
+            "link": "shopify://blogs/lestyle-spotlight/get-your-order-today-with-uber",
             "button_style": "m-button--white"
           }
         },
@@ -178,7 +178,7 @@
             "header_text": "Versace Jeans Couture",
             "subheader_text": "",
             "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "",
+            "label_text": "NEW",
             "label_color": "#c19967",
             "button_text": ""
           }
