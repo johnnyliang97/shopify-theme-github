@@ -15,50 +15,41 @@
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Shop All Gifts",
-            "link": "shopify://collections/womens-new-arrivals",
+            "label": "Shop Boss Outlet",
+            "link": "shopify://collections/boss-outlet",
             "button_style": "m-button--white"
           }
         },
         "button_K87tMK": {
           "type": "button",
           "settings": {
-            "label": "Gift Ideas For Mum",
-            "link": "shopify://blogs/lestyle-spotlight/get-your-order-today-with-uber",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_RF3jzV": {
-          "type": "button",
-          "settings": {
-            "label": "Gift Voucher",
-            "link": "shopify://products/lestyle-voucher",
+            "label": "Shop All Outlet",
+            "link": "shopify://collections/lestyle-outlet",
             "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
         "button_KGtbnk",
-        "button_K87tMK",
-        "button_RF3jzV"
+        "button_K87tMK"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-vjc-versace-dress-bag1.png",
+        "image": "shopify://shop_images/boss-sale-cover.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/womens-new-arrivals",
+        "image_link": "shopify://collections/boss-outlet",
         "image_position": "right",
-        "background_color": "#ffdcdc",
+        "background_color": "#cde4f3",
         "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
         "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-gifts-for-mum_9d96c230-2946-43d2-97a3-e00a14a40dd4.png",
+        "title_image": "shopify://shop_images/boss-sale-title1.png",
         "title_image_width_desktop": 400,
         "title_image_width_mobile": 320,
-        "subheader_text": "<p>Find her a gift she’ll love. Order by Sunday 3 May for express delivery.</p>",
+        "subheader_text": "<p>Up to 70% OFF Limited Outlet Sale is live! Enjoy extra 10% OFF using code <strong>OUTLET10</strong> at checkout.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
