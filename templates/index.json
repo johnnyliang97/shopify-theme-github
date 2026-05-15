@@ -15,16 +15,16 @@
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Shop Boss Outlet",
-            "link": "shopify://collections/boss-outlet",
+            "label": "Versace Belts",
+            "link": "shopify://collections/versace-belts",
             "button_style": "m-button--white"
           }
         },
         "button_K87tMK": {
           "type": "button",
           "settings": {
-            "label": "Shop All Outlet",
-            "link": "shopify://collections/lestyle-outlet",
+            "label": "Outlet Belts",
+            "link": "shopify://collections/belts-outlet",
             "button_style": "m-button--white"
           }
         }
@@ -36,20 +36,20 @@
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/boss-sale-cover.png",
+        "image": "shopify://shop_images/lestyle-model-versace-belt.webp",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/boss-outlet",
+        "image_link": "shopify://collections/versace-belts",
         "image_position": "right",
-        "background_color": "#cde4f3",
+        "background_color": "#e7e7e7",
         "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
         "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/boss-sale-title1.png",
-        "title_image_width_desktop": 400,
-        "title_image_width_mobile": 320,
-        "subheader_text": "<p>Up to 70% OFF Limited Outlet Sale is live! Enjoy extra 10% OFF using code <strong>OUTLET10</strong> at checkout.</p>",
+        "title_image": "shopify://shop_images/lestyle-versace-belts-sale.png",
+        "title_image_width_desktop": 300,
+        "title_image_width_mobile": 240,
+        "subheader_text": "<p>Versace Belts Flash Sale is now live! Enjoy 40% Off all Versace belts. Use code <strong>OUTLET10 </strong>for extra 10% Off Outlet items.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -387,38 +387,47 @@
         "animations": "inherit"
       }
     },
-    "split_banner_RNxN7B": {
+    "split_banner_wePVqr": {
       "type": "split-banner",
       "blocks": {
-        "button_eQtft3": {
+        "button_YgrVUm": {
           "type": "button",
           "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/fragrances",
-            "button_style": "m-button--secondary"
+            "label": "Shop Boss Outlet",
+            "link": "shopify://collections/boss-outlet",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_Pch798": {
+          "type": "button",
+          "settings": {
+            "label": "Shop All Outlet",
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
-        "button_eQtft3"
+        "button_YgrVUm",
+        "button_Pch798"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/IMG_0188.png",
+        "image": "shopify://shop_images/boss-sale-cover.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/fragrances",
-        "image_position": "left",
-        "background_color": "#f5f5f5",
-        "text_color": "#666666",
+        "image_link": "shopify://collections/boss-outlet",
+        "image_position": "right",
+        "background_color": "#cde4f3",
+        "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
         "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-fragrances.png",
-        "title_image_width_desktop": 350,
-        "title_image_width_mobile": 290,
-        "subheader_text": "<p>Receive a complimentary Versace or Dolce & Gabbana tie with every order. T&Cs apply.</p>",
+        "title_image": "shopify://shop_images/boss-sale-title1.png",
+        "title_image_width_desktop": 400,
+        "title_image_width_mobile": 320,
+        "subheader_text": "<p>Up to 70% OFF Limited Outlet Sale is live! Enjoy extra 10% OFF using code <strong>OUTLET10</strong> at checkout.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -1441,7 +1450,7 @@
     "small_banner_8PfzLF",
     "custom_card_carousel_LgWiQH",
     "promotion_countdown_timer_Q6WpDW",
-    "split_banner_RNxN7B",
+    "split_banner_wePVqr",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "rich_text_33nCpd",
