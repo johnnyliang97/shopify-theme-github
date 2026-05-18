@@ -42,7 +42,9 @@ class TagsFilter extends HTMLElement {
     e.preventDefault();
     if (this.preventClick) return;
     this.preventClick = true;
-    const url = tag.querySelector("a").href;
+    const href = tag.querySelector("a").href;
+    const url = new URL(href);
+    url.searchParams.set("filter.v.availability", "1");
     if (url) this.fetchSectionHtml(url);
   };
 
@@ -71,6 +73,7 @@ class TagsFilter extends HTMLElement {
   handleSorting = (value) => {
     if (!value) return;
     updateParam("sort_by", value);
+    updateParam("filter.v.availability", "1");
     this.fetchSectionHtml(window.location.href);
   };
 

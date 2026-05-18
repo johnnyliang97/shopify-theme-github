@@ -35,6 +35,17 @@
   endif
 -%}
 
+<script>
+  if (!Shopify.designMode) {
+    (function () {
+      var url = new URL(window.location.href);
+      if (url.searchParams.get('filter.v.availability') === '1') return;
+      url.searchParams.set('filter.v.availability', '1');
+      window.location.replace(url.toString());
+    })();
+  }
+</script>
+
 <section
   class="facest-filters-section"
   data-section-type="collection-template"
