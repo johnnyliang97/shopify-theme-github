@@ -15,50 +15,41 @@
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Shop All Gifts",
-            "link": "shopify://collections/fendi",
+            "label": "Versace Belts",
+            "link": "shopify://collections/versace-belts",
             "button_style": "m-button--white"
           }
         },
         "button_K87tMK": {
           "type": "button",
           "settings": {
-            "label": "Gift Ideas For Mum",
-            "link": "shopify://collections/fendi",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_RF3jzV": {
-          "type": "button",
-          "settings": {
-            "label": "Gift Voucher",
-            "link": "shopify://collections/fendi",
+            "label": "Outlet Belts",
+            "link": "shopify://collections/belts-outlet",
             "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
         "button_KGtbnk",
-        "button_K87tMK",
-        "button_RF3jzV"
+        "button_K87tMK"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-vjc-versace-dress-bag1.png",
+        "image": "shopify://shop_images/lestyle-model-versace-belt.webp",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/fendi",
+        "image_link": "shopify://collections/versace-belts",
         "image_position": "right",
-        "background_color": "#ffdcdc",
-        "text_color": "#222222",
+        "background_color": "#e7e7e7",
+        "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
-        "title_type": "image",
         "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-gifts-for-mum_9d96c230-2946-43d2-97a3-e00a14a40dd4.png",
-        "title_image_width": 340,
-        "subheader_text": "<p>Find her a gift she’ll love. Order by Sunday 3 May for express delivery.</p>",
+        "title_image": "shopify://shop_images/lestyle-versace-belts-sale.png",
+        "title_image_width_desktop": 300,
+        "title_image_width_mobile": 240,
+        "subheader_text": "<p>Versace Belts Flash Sale is now live! Enjoy 40% Off all Versace belts. Use code <strong>OUTLET10 </strong>for extra 10% Off Outlet items.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -170,6 +161,19 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
+        "card_EJfrR9": {
+          "type": "card",
+          "name": "Versace Jeans Couture",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
+            "header_text": "Versace Jeans Couture",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture",
+            "label_text": "NEW",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_GcyLwV": {
           "type": "card",
           "name": "Boss",
@@ -248,19 +252,6 @@
             "button_text": ""
           }
         },
-        "card_EJfrR9": {
-          "type": "card",
-          "name": "Versace Jeans Couture",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
-            "header_text": "Versace Jeans Couture",
-            "subheader_text": "",
-            "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
         "card_LFnLEQ": {
           "type": "card",
           "name": "Brand",
@@ -315,13 +306,13 @@
         }
       },
       "block_order": [
+        "card_EJfrR9",
         "card_GcyLwV",
         "card_eRET9U",
         "card_pBdP9C",
         "card_XcHpVk",
         "card_cAK9am",
         "card_9pRebr",
-        "card_EJfrR9",
         "card_LFnLEQ",
         "card_HpbLmm",
         "card_9fYyNd",
@@ -396,39 +387,47 @@
         "animations": "inherit"
       }
     },
-    "split_banner_RNxN7B": {
+    "split_banner_wePVqr": {
       "type": "split-banner",
       "blocks": {
-        "button_eQtft3": {
+        "button_YgrVUm": {
           "type": "button",
           "settings": {
-            "label": "Find Out More",
-            "link": "shopify://blogs/lestyle-spotlight/free-designer-tie-with-every-order-versace-dolce-gabbana-giveaway",
+            "label": "Shop Boss Outlet",
+            "link": "shopify://collections/boss-outlet",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_Pch798": {
+          "type": "button",
+          "settings": {
+            "label": "Shop All Outlet",
+            "link": "shopify://collections/lestyle-outlet",
             "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
-        "button_eQtft3"
+        "button_YgrVUm",
+        "button_Pch798"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-tie-giveaway1.webp",
+        "image": "shopify://shop_images/boss-sale-cover.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://blogs/lestyle-spotlight/free-designer-tie-with-every-order-versace-dolce-gabbana-giveaway",
-        "image_position": "left",
-        "background_color": "#f5f5f5",
-        "background_image": "shopify://shop_images/white-gray-smooth-grainy-gradient-background-website-header-backdrop-noise-texture-effect.jpg",
-        "text_color": "#666666",
+        "image_link": "shopify://collections/boss-outlet",
+        "image_position": "right",
+        "background_color": "#cde4f3",
+        "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
-        "title_type": "image",
-        "title_text": "Casablanca New Collection",
+        "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-ties-giveaway.png",
-        "title_image_width": 280,
-        "subheader_text": "<p>Receive a complimentary Versace or Dolce & Gabbana tie with every order. T&Cs apply.</p>",
+        "title_image": "shopify://shop_images/boss-sale-title1.png",
+        "title_image_width_desktop": 400,
+        "title_image_width_mobile": 320,
+        "subheader_text": "<p>Up to 70% OFF Limited Outlet Sale is live! Enjoy extra 10% OFF using code <strong>OUTLET10</strong> at checkout.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -1135,11 +1134,11 @@
         "background_color": "#393939",
         "text_color": "#eeeeee",
         "content_alignment": "center",
-        "title_type": "image",
         "title_text": "Banner Title",
         "title_size": "h2",
         "title_image": "shopify://shop_images/lestyle-outlet-logo.png",
-        "title_image_width": 128,
+        "title_image_width_desktop": 300,
+        "title_image_width_mobile": 220,
         "subheader_text": "<p>50% to 70% OFF Outlet Sale. Online-Only.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
@@ -1451,7 +1450,7 @@
     "small_banner_8PfzLF",
     "custom_card_carousel_LgWiQH",
     "promotion_countdown_timer_Q6WpDW",
-    "split_banner_RNxN7B",
+    "split_banner_wePVqr",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "rich_text_33nCpd",
