@@ -15,41 +15,32 @@
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Versace Belts",
-            "link": "shopify://collections/versace-belts",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_K87tMK": {
-          "type": "button",
-          "settings": {
-            "label": "Outlet Belts",
-            "link": "shopify://collections/belts-outlet",
+            "label": "Shop Now",
+            "link": "shopify://collections/young-versace-sale",
             "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
-        "button_KGtbnk",
-        "button_K87tMK"
+        "button_KGtbnk"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-versace-belt.webp",
+        "image": "shopify://shop_images/Frame_80.webp",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/versace-belts",
-        "image_position": "right",
-        "background_color": "#e7e7e7",
+        "image_link": "shopify://collections/young-versace-sale",
+        "image_position": "left",
+        "background_color": "#e4e4e4",
         "text_color": "#4b4b4b",
-        "content_alignment": "flex-start",
+        "content_alignment": "center",
         "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-versace-belts-sale.png",
-        "title_image_width_desktop": 300,
+        "title_image": "shopify://shop_images/Frame_114.png",
+        "title_image_width_desktop": 370,
         "title_image_width_mobile": 240,
-        "subheader_text": "<p>Versace Belts Flash Sale is now live! Enjoy 40% Off all Versace belts. Use code <strong>OUTLET10 </strong>for extra 10% Off Outlet items.</p>",
+        "subheader_text": "<p>We invite you to discover the Young Versace Sale. Enjoy reductions of up to 50%. </p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -339,6 +330,54 @@
         "padding_bottom": 36
       }
     },
+    "split_banner_VndFMe": {
+      "type": "split-banner",
+      "blocks": {
+        "button_66wrMN": {
+          "type": "button",
+          "settings": {
+            "label": "Versace Belts",
+            "link": "shopify://collections/versace-belts",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_KYtLq3": {
+          "type": "button",
+          "settings": {
+            "label": "Outlet Belts",
+            "link": "shopify://collections/belts-outlet",
+            "button_style": "m-button--white"
+          }
+        }
+      },
+      "block_order": [
+        "button_66wrMN",
+        "button_KYtLq3"
+      ],
+      "name": "Banner",
+      "settings": {
+        "container": "container-fluid",
+        "image": "shopify://shop_images/lestyle-model-versace-belt.webp",
+        "image_ratio": "4/3",
+        "image_ratio_mobile": "4/3",
+        "image_link": "shopify://collections/versace-belts",
+        "image_position": "right",
+        "background_color": "#e7e7e7",
+        "text_color": "#4b4b4b",
+        "content_alignment": "flex-start",
+        "title_text": "",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-versace-belts-sale.png",
+        "title_image_width_desktop": 300,
+        "title_image_width_mobile": 240,
+        "subheader_text": "<p>Versace Belts Flash Sale is now live! Enjoy 40% Off all Versace belts. Use code <strong>OUTLET10 </strong>for extra 10% Off Outlet items.</p>",
+        "subheader_size": "text-base",
+        "button_font_size": 15,
+        "button_font_weight": 600,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "promotion_countdown_timer_Q6WpDW": {
       "type": "promotion-countdown-timer",
       "blocks": {
@@ -385,54 +424,6 @@
         "padding_bottom": 50,
         "custom_class": "",
         "animations": "inherit"
-      }
-    },
-    "split_banner_wePVqr": {
-      "type": "split-banner",
-      "blocks": {
-        "button_YgrVUm": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Boss Outlet",
-            "link": "shopify://collections/boss-outlet",
-            "button_style": "m-button--white"
-          }
-        },
-        "button_Pch798": {
-          "type": "button",
-          "settings": {
-            "label": "Shop All Outlet",
-            "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--white"
-          }
-        }
-      },
-      "block_order": [
-        "button_YgrVUm",
-        "button_Pch798"
-      ],
-      "name": "Banner",
-      "settings": {
-        "container": "container-fluid",
-        "image": "shopify://shop_images/boss-sale-cover.png",
-        "image_ratio": "4/3",
-        "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/boss-outlet",
-        "image_position": "right",
-        "background_color": "#cde4f3",
-        "text_color": "#4b4b4b",
-        "content_alignment": "flex-start",
-        "title_text": "",
-        "title_size": "h2",
-        "title_image": "shopify://shop_images/boss-sale-title1.png",
-        "title_image_width_desktop": 400,
-        "title_image_width_mobile": 320,
-        "subheader_text": "<p>Up to 70% OFF Limited Outlet Sale is live! Enjoy extra 10% OFF using code <strong>OUTLET10</strong> at checkout.</p>",
-        "subheader_size": "text-base",
-        "button_font_size": 15,
-        "button_font_weight": 600,
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "empty_space_HWbjTK": {
@@ -1449,8 +1440,8 @@
     "rectangle_buttons_QUnzWX",
     "small_banner_8PfzLF",
     "custom_card_carousel_LgWiQH",
+    "split_banner_VndFMe",
     "promotion_countdown_timer_Q6WpDW",
-    "split_banner_wePVqr",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "rich_text_33nCpd",
