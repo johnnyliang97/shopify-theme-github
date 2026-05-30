@@ -16,8 +16,8 @@
           "type": "button",
           "settings": {
             "label": "Shop Now",
-            "link": "shopify://collections/young-versace-sale",
-            "button_style": "m-button--white"
+            "link": "shopify://collections/balmain-for-mens",
+            "button_style": "m-button--primary"
           }
         }
       },
@@ -27,20 +27,20 @@
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/Frame_80.webp",
+        "image": "shopify://shop_images/lestyle-cover-balmain-mens-new.webp",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/young-versace-sale",
         "image_position": "left",
-        "background_color": "#e4e4e4",
+        "background_color": "#f5f7fb",
         "text_color": "#4b4b4b",
-        "content_alignment": "center",
+        "content_alignment": "flex-start",
         "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/Frame_114.png",
-        "title_image_width_desktop": 370,
+        "title_image": "shopify://shop_images/lestyle-title-balmain-mens.png",
+        "title_image_width_desktop": 310,
         "title_image_width_mobile": 240,
-        "subheader_text": "<p>We invite you to discover the Young Versace Sale. Enjoy reductions of up to 50%. </p>",
+        "subheader_text": "<p>Shop the new collection from Balmain Mens now.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -167,9 +167,9 @@
         },
         "card_GcyLwV": {
           "type": "card",
-          "name": "Boss",
+          "name": "Brand",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-balmain-sweatshirts-womens-1.jpg",
+            "image": "shopify://shop_images/lestyle-model-mens-balmain-tops-shorts2.png",
             "header_text": "Balmain",
             "subheader_text": "",
             "link": "shopify://collections/balmain",
