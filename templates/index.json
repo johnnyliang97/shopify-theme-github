@@ -336,38 +336,38 @@
         "button_66wrMN": {
           "type": "button",
           "settings": {
-            "label": "Versace Belts",
-            "link": "shopify://collections/versace-belts",
-            "button_style": "m-button--white"
+            "label": "Shop Now",
+            "link": "shopify://collections/moschino-kids",
+            "button_style": "m-button--secondary"
           }
         },
-        "button_KYtLq3": {
+        "button_kNcNXk": {
           "type": "button",
           "settings": {
-            "label": "Outlet Belts",
-            "link": "shopify://collections/belts-outlet",
-            "button_style": "m-button--white"
+            "label": "Kids New Arrivals",
+            "link": "shopify://collections/kids-new-arrivals",
+            "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
         "button_66wrMN",
-        "button_KYtLq3"
+        "button_kNcNXk"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-versace-belt.webp",
+        "image": "shopify://shop_images/lestyle-model-moschino-baby-rompers1.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/versace-belts",
+        "image_link": "shopify://collections/moschino-kids",
         "image_position": "right",
-        "background_color": "#e7e7e7",
+        "background_color": "#fff5ed",
         "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
         "title_text": "",
         "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-versace-belts-sale.png",
+        "title_image": "shopify://shop_images/lestyle-title-moschino-kids-new.png",
         "title_image_width_desktop": 300,
         "title_image_width_mobile": 240,
         "subheader_text": "<p>Versace Belts Flash Sale is now live! Enjoy 40% Off all Versace belts. Use code <strong>OUTLET10 </strong>for extra 10% Off Outlet items.</p>",
