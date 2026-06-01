@@ -152,15 +152,28 @@
     "custom_card_carousel_LgWiQH": {
       "type": "custom-card-carousel",
       "blocks": {
-        "card_EJfrR9": {
+        "card_pBdP9C": {
           "type": "card",
           "name": "Brand",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
-            "header_text": "Versace Jeans Couture",
+            "image": "shopify://shop_images/lestyle-model-givenchy-tshirt-kids-boys_1a3f5f50-96bc-4761-9932-2042ffe6aafc.png",
+            "header_text": "Givenchy",
             "subheader_text": "",
-            "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "NEW",
+            "link": "shopify://collections/givenchy",
+            "label_text": "New",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
+        "card_LFnLEQ": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-girls-kids-moschino-sweatshirt.png",
+            "header_text": "Moschino Kids",
+            "subheader_text": "",
+            "link": "shopify://collections/moschino-kids",
+            "label_text": "New",
             "label_color": "#c19967",
             "button_text": ""
           }
@@ -178,6 +191,19 @@
             "button_text": ""
           }
         },
+        "card_EJfrR9": {
+          "type": "card",
+          "name": "Brand",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
+            "header_text": "Versace Jeans Couture",
+            "subheader_text": "",
+            "link": "shopify://collections/versace-jeans-couture",
+            "label_text": "",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_eRET9U": {
           "type": "card",
           "name": "Fendi",
@@ -186,20 +212,7 @@
             "header_text": "Fendi",
             "subheader_text": "",
             "link": "shopify://collections/fendi",
-            "label_text": "NEW",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_pBdP9C": {
-          "type": "card",
-          "name": "Brand",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-casablanca-shirt-mens1.jpg",
-            "header_text": "Casablanca",
-            "subheader_text": "",
-            "link": "shopify://collections/casablanca",
-            "label_text": "NEW",
+            "label_text": "",
             "label_color": "#c19967",
             "button_text": ""
           }
@@ -242,72 +255,17 @@
             "label_color": "#c19967",
             "button_text": ""
           }
-        },
-        "card_LFnLEQ": {
-          "type": "card",
-          "name": "Brand",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-moschino-kids-boys-girls-hoodie-dress1.png",
-            "header_text": "Moschino Kids",
-            "subheader_text": "",
-            "link": "shopify://collections/moschino-kids",
-            "label_text": "Up to 60% Off",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
-        },
-        "card_HpbLmm": {
-          "type": "card",
-          "name": "Brand",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-watch_copy.png",
-            "header_text": "Philipp Plein",
-            "subheader_text": "",
-            "link": "shopify://collections/philipp-plein",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_9fYyNd": {
-          "type": "card",
-          "name": "Chloe",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-chloe-kids-dress-bag.png",
-            "header_text": "Chloe",
-            "subheader_text": "",
-            "link": "shopify://collections/chloe",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_KBbgxn": {
-          "type": "card",
-          "name": "Kenzo",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-kenzo-kids-rompers.jpg",
-            "header_text": "Kenzo",
-            "subheader_text": "",
-            "link": "shopify://collections/kenzo",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
         }
       },
       "block_order": [
-        "card_EJfrR9",
-        "card_GcyLwV",
-        "card_eRET9U",
         "card_pBdP9C",
+        "card_LFnLEQ",
+        "card_GcyLwV",
+        "card_EJfrR9",
+        "card_eRET9U",
         "card_XcHpVk",
         "card_cAK9am",
-        "card_9pRebr",
-        "card_LFnLEQ",
-        "card_HpbLmm",
-        "card_9fYyNd",
-        "card_KBbgxn"
+        "card_9pRebr"
       ],
       "name": "Brands",
       "settings": {
@@ -447,10 +405,10 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-womens-dress-1.jpg",
-            "header_text": "Dresses",
-            "subheader_text": "For the Glam",
-            "link": "shopify://collections/dresses",
+            "image": "shopify://shop_images/lestyle-model-vjc-mens-jacket.png",
+            "header_text": "Jackets",
+            "subheader_text": "Stylish Warmth",
+            "link": "shopify://collections/jackets",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": ""
@@ -460,12 +418,12 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-swimwear02.jpg",
-            "header_text": "Swimwear",
-            "subheader_text": "Ready for Summer",
-            "link": "shopify://collections/swimwear",
-            "label_text": "",
-            "label_color": "#b30505",
+            "image": "shopify://shop_images/lestyle-model-womens-versace-bathrobe1.webp",
+            "header_text": "Bathrobes",
+            "subheader_text": "Versace, Roberto Cavalli",
+            "link": "shopify://collections/home-collection-bathrobes",
+            "label_text": "Restocked",
+            "label_color": "#c19967",
             "button_text": ""
           }
         },
@@ -473,10 +431,10 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-versace-shorts-mens_copy.webp",
-            "header_text": "Mens Shorts",
-            "subheader_text": "Summer Style",
-            "link": "shopify://collections/shorts-for-mens",
+            "image": "shopify://shop_images/lestyle-model-givenchy-girls-kids-hoodie-pants.png",
+            "header_text": "Teens",
+            "subheader_text": "Sizes Above 12YO",
+            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.v.option.select+size=12+year&filter.v.option.select+size=12%2B+year&filter.v.option.select+size=13+year&filter.v.option.select+size=14+year&filter.v.option.select+size=16+year&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": ""
@@ -1128,8 +1086,8 @@
         "title_text": "Banner Title",
         "title_size": "h2",
         "title_image": "shopify://shop_images/lestyle-outlet-logo.png",
-        "title_image_width_desktop": 300,
-        "title_image_width_mobile": 220,
+        "title_image_width_desktop": 180,
+        "title_image_width_mobile": 150,
         "subheader_text": "<p>50% to 70% OFF Outlet Sale. Online-Only.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
