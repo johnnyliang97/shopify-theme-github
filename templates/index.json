@@ -165,6 +165,19 @@
             "button_text": ""
           }
         },
+        "card_eRET9U": {
+          "type": "card",
+          "name": "Fendi",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-kids-boys-jackets-pants-kenzo1_5b1aa7af-9acc-493e-8f02-99b22cf7fbe5.png",
+            "header_text": "Kenzo",
+            "subheader_text": "",
+            "link": "shopify://collections/kenzo",
+            "label_text": "New",
+            "label_color": "#c19967",
+            "button_text": ""
+          }
+        },
         "card_LFnLEQ": {
           "type": "card",
           "name": "Brand",
@@ -199,19 +212,6 @@
             "header_text": "Versace Jeans Couture",
             "subheader_text": "",
             "link": "shopify://collections/versace-jeans-couture",
-            "label_text": "",
-            "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_eRET9U": {
-          "type": "card",
-          "name": "Fendi",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-fendi-junior-girls-tops-skirts1.webp",
-            "header_text": "Fendi",
-            "subheader_text": "",
-            "link": "shopify://collections/fendi",
             "label_text": "",
             "label_color": "#c19967",
             "button_text": ""
@@ -259,10 +259,10 @@
       },
       "block_order": [
         "card_pBdP9C",
+        "card_eRET9U",
         "card_LFnLEQ",
         "card_GcyLwV",
         "card_EJfrR9",
-        "card_eRET9U",
         "card_XcHpVk",
         "card_cAK9am",
         "card_9pRebr"
