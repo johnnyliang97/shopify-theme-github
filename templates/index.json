@@ -154,7 +154,7 @@
       "blocks": {
         "card_EJfrR9": {
           "type": "card",
-          "name": "Versace Jeans Couture",
+          "name": "Brand",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-vjc-dress-womens21.png",
             "header_text": "Versace Jeans Couture",
@@ -232,7 +232,7 @@
         },
         "card_9pRebr": {
           "type": "card",
-          "name": "Versace",
+          "name": "Brand",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-girls-versace-jacket-skirt1.png",
             "header_text": "Versace",
@@ -258,7 +258,7 @@
         },
         "card_HpbLmm": {
           "type": "card",
-          "name": "Philipp Plein",
+          "name": "Brand",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-plein-mens-tshirt-watch_copy.png",
             "header_text": "Philipp Plein",
