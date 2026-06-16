@@ -39,6 +39,7 @@
     },
     "promotion_collection_MUn8dF": {
       "type": "promotion-collection",
+      "disabled": true,
       "name": "Promotion Collection",
       "settings": {
         "discount_code": "TIE10",
