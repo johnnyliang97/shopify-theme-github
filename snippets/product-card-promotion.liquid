@@ -370,7 +370,7 @@
         >
           {%- if has_size_option -%}
             {%- assign size_option_index = size_option_position | minus: 1 -%}
-            <div class="m-promotion-card__size-options" role="radiogroup" aria-label="Select size">
+            <div class="m-promotion-card__sizes" role="radiogroup" aria-label="Select size">
               {%- for variant in product.variants -%}
                 {%- if variant.available -%}
                   <input
@@ -383,10 +383,7 @@
                       checked
                     {% endif %}
                   >
-                  <label
-                    for="promotion-size-{{ product.id }}-{{ variant.id }}"
-                    class="m-promotion-card__size-label"
-                  >
+                  <label for="promotion-size-{{ product.id }}-{{ variant.id }}" class="m-promotion-card__size-label">
                     {{ variant.options[size_option_index] }}
                   </label>
                 {%- endif -%}
