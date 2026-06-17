@@ -116,6 +116,19 @@
     assign show_compare_button = settings.show_compare_button
   endif
 
+  assign size_option_position = 0
+  for option in product.options_with_values
+    assign option_name = option.name | downcase
+    if option_name contains 'size'
+      assign size_option_position = option.position
+      break
+    endif
+  endfor
+  assign has_size_option = false
+  if size_option_position > 0
+    assign has_size_option = true
+  endif
+
   assign preview_image = product.media[0].preview_image
   if section.settings.change_product_variant_on_fitlering == true and product.selected_variant.image != null
     assign preview_image = product.selected_variant.image
@@ -346,14 +359,49 @@
             {{ display_title }}
           </a>
         </h3>
-        
       {% endif %}
-    </div>
-    
-    <div style="margin-top: 15px; width: 100%;">
-      <a href="https://www.lestyle.com.au/cart/add?id={{ product.selected_or_first_available_variant.id }}&quantity=1&discount={{ discount_code }}" class="m-button m-button--primary m:w-full" data-promotion-cart-button data-product-id="{{ product.id }}" data-discount-code="{{ discount_code }}" style="display: flex; justify-content: center; align-items: center; width: 100%;">
-        {{ 'products.product.add_to_cart' | t }}
-      </a>
+      <div class="m-promotion-card__purchase" style="margin-top: 15px;">
+        <form
+          action="{{ routes.cart_add_url }}"
+          method="get"
+          class="m-promotion-card__form"
+          data-promotion-cart-form
+          data-product-id="{{ product.id }}"
+        >
+          {%- if has_size_option -%}
+            {%- assign size_option_index = size_option_position | minus: 1 -%}
+            <select name="id" class="m-promotion-card__size-select" aria-label="Select size">
+              {%- for variant in product.variants -%}
+                {%- if variant.available -%}
+                  <option
+                    value="{{ variant.id }}"
+                    {% if variant.id == product.selected_or_first_available_variant.id %}
+                      selected
+                    {% endif %}
+                  >
+                    {{ variant.options[size_option_index] }}
+                  </option>
+                {%- endif -%}
+              {%- endfor -%}
+            </select>
+          {%- else -%}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          {%- endif -%}
+
+          <input type="hidden" name="quantity" value="1">
+          {%- if discount_code != blank -%}
+            <input type="hidden" name="discount" value="{{ discount_code }}">
+          {%- endif -%}
+
+          <button
+            type="submit"
+            class="m-button m-button--primary m:w-full m-promotion-card__button"
+            data-promotion-cart-button
+          >
+            {{ 'products.product.add_to_cart' | t }}
+          </button>
+        </form>
+      </div>
     </div>
 
     <div class="m-product-card__content-footer">

@@ -63,6 +63,49 @@
   .m-product-lightbox::backdrop {
     background: rgba(0, 0, 0, 0.8);
   }
+  #m-section--{{ section.id }} .swiper-slide,
+  #m-section--{{ section.id }} .m-product-card {
+    height: 100%;
+  }
+  #m-section--{{ section.id }} .m-product-card {
+    display: flex;
+    flex-direction: column;
+  }
+  #m-section--{{ section.id }} .m-product-card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+  #m-section--{{ section.id }} .m-product-card__info {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+  #m-section--{{ section.id }} .m-promotion-card__purchase {
+    margin-top: auto;
+    width: 100%;
+  }
+  #m-section--{{ section.id }} .m-promotion-card__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  #m-section--{{ section.id }} .m-promotion-card__size-select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    background: #fff;
+    color: inherit;
+  }
+  #m-section--{{ section.id }} .m-promotion-card__button {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
 {% paginate current_collection.products by product_to_show %}
   <section
