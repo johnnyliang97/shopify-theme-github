@@ -16,8 +16,8 @@
           "type": "button",
           "settings": {
             "label": "Shop Now",
-            "link": "shopify://collections/fragrances",
-            "button_style": "m-button--secondary"
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--white"
           }
         }
       },
@@ -27,20 +27,19 @@
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-01.webp",
+        "image": "shopify://shop_images/lestyle-eofy-sale-banner002.gif",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/fragrances",
         "image_position": "left",
-        "background_color": "#F2F2F2",
-        "text_color": "#4b4b4b",
+        "background_color": "#661F16",
+        "text_color": "#FFFFFF",
         "content_alignment": "flex-start",
-        "title_text": "",
-        "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-gift-boxes.png",
+        "title_text": "50-70% Off",
+        "title_size": "h1",
         "title_image_width_desktop": 380,
         "title_image_width_mobile": 320,
-        "subheader_text": "<p>Explore premium fragrance vanity cases and sets from Versace & Moschino.</p>",
+        "subheader_text": "<p>Lestyle Outlet EOFY Sale is now live. Use code <strong>OUTLET10 </strong>for extra 10% Off. T&Cs Apply.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
