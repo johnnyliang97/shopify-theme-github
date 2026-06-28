@@ -9,37 +9,38 @@
  */
 {
   "sections": {
-    "split_banner_hbJTkB": {
+    "split_banner_VndFMe": {
       "type": "split-banner",
       "blocks": {
-        "button_KGtbnk": {
+        "button_66wrMN": {
           "type": "button",
           "settings": {
             "label": "Shop Now",
-            "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--white"
+            "link": "shopify://collections/marcelo-burlon-for-mens",
+            "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_KGtbnk"
+        "button_66wrMN"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-eofy-sale-banner002.gif",
+        "image": "shopify://shop_images/lestyle-model-marcelo-mens_5.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/fragrances",
-        "image_position": "left",
-        "background_color": "#661f16",
-        "text_color": "#ffffff",
+        "image_link": "shopify://collections/versace-kidswear",
+        "image_position": "right",
+        "background_color": "#DDE2E3",
+        "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
-        "title_text": "50—70% Off",
-        "title_size": "h1",
-        "title_image_width_desktop": 380,
+        "title_text": "",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-title-marcelo.png",
+        "title_image_width_desktop": 410,
         "title_image_width_mobile": 320,
-        "subheader_text": "<p>Lestyle Outlet EOFY Sale is now live. Use code <strong>OUTLET10 </strong>for extra 10% Off. T&Cs Apply.</p>",
+        "subheader_text": "<p>Shop the new collections from Marcelo Burlon.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -287,47 +288,37 @@
         "padding_bottom": 36
       }
     },
-    "split_banner_VndFMe": {
+    "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_66wrMN": {
+        "button_KGtbnk": {
           "type": "button",
           "settings": {
             "label": "Shop Now",
-            "link": "shopify://collections/versace-kidswear",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_kNcNXk": {
-          "type": "button",
-          "settings": {
-            "label": "Lestyle Junior",
-            "link": "shopify://collections/kids-new-arrivals",
-            "button_style": "m-button--secondary"
+            "link": "shopify://collections/lestyle-outlet",
+            "button_style": "m-button--white"
           }
         }
       },
       "block_order": [
-        "button_66wrMN",
-        "button_kNcNXk"
+        "button_KGtbnk"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-versace-kids-girls-jackets-skirts.png",
+        "image": "shopify://shop_images/lestyle-eofy-sale-banner002.gif",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/versace-kidswear",
-        "image_position": "right",
-        "background_color": "#fff5ed",
-        "text_color": "#4b4b4b",
+        "image_link": "shopify://collections/fragrances",
+        "image_position": "left",
+        "background_color": "#661f16",
+        "text_color": "#ffffff",
         "content_alignment": "flex-start",
-        "title_text": "",
-        "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-kids-versace.png",
-        "title_image_width_desktop": 410,
+        "title_text": "50—70% Off",
+        "title_size": "h1",
+        "title_image_width_desktop": 380,
         "title_image_width_mobile": 320,
-        "subheader_text": "<p>Shop the new collections from Young Versace.</p>",
+        "subheader_text": "<p>Lestyle Outlet EOFY Sale is now live. Use code <strong>OUTLET10 </strong>for extra 10% Off. T&Cs Apply.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -1393,11 +1384,11 @@
     }
   },
   "order": [
-    "split_banner_hbJTkB",
+    "split_banner_VndFMe",
     "rectangle_buttons_QUnzWX",
     "small_banner_8PfzLF",
     "custom_card_carousel_LgWiQH",
-    "split_banner_VndFMe",
+    "split_banner_hbJTkB",
     "promotion_countdown_timer_Q6WpDW",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
