@@ -32,7 +32,7 @@
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/versace-kidswear",
         "image_position": "right",
-        "background_color": "#DDE2E3",
+        "background_color": "#dde2e3",
         "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
         "title_text": "",
@@ -291,33 +291,52 @@
     "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
+        "button_R4TKBM": {
+          "type": "button",
+          "settings": {
+            "label": "New Arrivals",
+            "link": "shopify://collections/kids",
+            "button_style": "m-button--primary"
+          }
+        },
         "button_KGtbnk": {
           "type": "button",
           "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/lestyle-outlet",
-            "button_style": "m-button--white"
+            "label": "Shop Sale",
+            "link": "shopify://collections/sale-kids",
+            "button_style": "m-button--primary"
+          }
+        },
+        "button_y8fJqh": {
+          "type": "button",
+          "settings": {
+            "label": "Up to 70% OFF",
+            "link": "shopify://collections/kids-outlet",
+            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_KGtbnk"
+        "button_R4TKBM",
+        "button_KGtbnk",
+        "button_y8fJqh"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-eofy-sale-banner002.gif",
+        "image": "shopify://shop_images/lestyle-banner-young-versace.gif",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/fragrances",
+        "image_link": "shopify://collections/kids",
         "image_position": "left",
-        "background_color": "#661f16",
-        "text_color": "#ffffff",
+        "background_color": "#E2E0DF",
+        "text_color": "#1D1D1D",
         "content_alignment": "flex-start",
         "title_text": "50—70% Off",
         "title_size": "h1",
-        "title_image_width_desktop": 380,
-        "title_image_width_mobile": 320,
+        "title_image": "shopify://shop_images/lestyle-title-school-holidays.png",
+        "title_image_width_desktop": 520,
+        "title_image_width_mobile": 460,
         "subheader_text": "<p>Lestyle Outlet EOFY Sale is now live. Use code <strong>OUTLET10 </strong>for extra 10% Off. T&Cs Apply.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
@@ -1384,11 +1403,11 @@
     }
   },
   "order": [
-    "split_banner_VndFMe",
+    "split_banner_hbJTkB",
     "rectangle_buttons_QUnzWX",
     "small_banner_8PfzLF",
     "custom_card_carousel_LgWiQH",
-    "split_banner_hbJTkB",
+    "split_banner_VndFMe",
     "promotion_countdown_timer_Q6WpDW",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
