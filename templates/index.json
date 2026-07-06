@@ -9,38 +9,56 @@
  */
 {
   "sections": {
-    "split_banner_VndFMe": {
+    "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_66wrMN": {
+        "button_R4TKBM": {
           "type": "button",
           "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/marcelo-burlon-for-mens",
-            "button_style": "m-button--secondary"
+            "label": "New Arrivals",
+            "link": "shopify://collections/kids",
+            "button_style": "m-button--primary"
+          }
+        },
+        "button_KGtbnk": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Sale",
+            "link": "shopify://collections/sale-kids",
+            "button_style": "m-button--primary"
+          }
+        },
+        "button_y8fJqh": {
+          "type": "button",
+          "settings": {
+            "label": "Up to 70% OFF",
+            "link": "shopify://collections/kids-outlet",
+            "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_66wrMN"
+        "button_R4TKBM",
+        "button_KGtbnk",
+        "button_y8fJqh"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-marcelo-mens_5.png",
+        "image": "shopify://shop_images/lestyle-banner-young-versace.gif",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/versace-kidswear",
-        "image_position": "right",
-        "background_color": "#dde2e3",
-        "text_color": "#4b4b4b",
+        "image_link": "shopify://collections/kids",
+        "image_position": "left",
+        "background_color": "#e2e0df",
+        "text_color": "#1d1d1d",
         "content_alignment": "flex-start",
-        "title_text": "",
-        "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-marcelo.png",
-        "title_image_width_desktop": 410,
-        "title_image_width_mobile": 320,
-        "subheader_text": "<p>Shop the new collections from Marcelo Burlon.</p>",
+        "title_text": "50—70% Off",
+        "title_size": "h1",
+        "title_image": "shopify://shop_images/lestyle-title-school-holidays.png",
+        "title_image_width_desktop": 520,
+        "title_image_width_mobile": 460,
+        "subheader_text": "<p>Explore Lestyle Junior and Kidswear.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -288,56 +306,38 @@
         "padding_bottom": 36
       }
     },
-    "split_banner_hbJTkB": {
+    "split_banner_VndFMe": {
       "type": "split-banner",
       "blocks": {
-        "button_R4TKBM": {
+        "button_66wrMN": {
           "type": "button",
           "settings": {
-            "label": "New Arrivals",
-            "link": "shopify://collections/kids",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_KGtbnk": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Sale",
-            "link": "shopify://collections/sale-kids",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_y8fJqh": {
-          "type": "button",
-          "settings": {
-            "label": "Up to 70% OFF",
-            "link": "shopify://collections/kids-outlet",
-            "button_style": "m-button--primary"
+            "label": "Shop Now",
+            "link": "shopify://collections/marcelo-burlon-for-mens",
+            "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_R4TKBM",
-        "button_KGtbnk",
-        "button_y8fJqh"
+        "button_66wrMN"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-banner-young-versace.gif",
+        "image": "shopify://shop_images/lestyle-model-marcelo-mens_5.png",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/kids",
-        "image_position": "left",
-        "background_color": "#E2E0DF",
-        "text_color": "#1D1D1D",
+        "image_link": "shopify://collections/versace-kidswear",
+        "image_position": "right",
+        "background_color": "#dde2e3",
+        "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
-        "title_text": "50—70% Off",
-        "title_size": "h1",
-        "title_image": "shopify://shop_images/lestyle-title-school-holidays.png",
-        "title_image_width_desktop": 520,
-        "title_image_width_mobile": 460,
-        "subheader_text": "<p>Lestyle Outlet EOFY Sale is now live. Use code <strong>OUTLET10 </strong>for extra 10% Off. T&Cs Apply.</p>",
+        "title_text": "",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-title-marcelo.png",
+        "title_image_width_desktop": 410,
+        "title_image_width_mobile": 320,
+        "subheader_text": "<p>Shop the new collections from Marcelo Burlon.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
