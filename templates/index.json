@@ -9,6 +9,54 @@
  */
 {
   "sections": {
+    "split_banner_VndFMe": {
+      "type": "split-banner",
+      "blocks": {
+        "button_66wrMN": {
+          "type": "button",
+          "settings": {
+            "label": "Accessories",
+            "link": "shopify://collections/givenchy-accessories",
+            "button_style": "m-button--primary"
+          }
+        },
+        "button_UEmEEF": {
+          "type": "button",
+          "settings": {
+            "label": "Shoes",
+            "link": "shopify://collections/givenchy-shoes",
+            "button_style": "m-button--primary"
+          }
+        }
+      },
+      "block_order": [
+        "button_66wrMN",
+        "button_UEmEEF"
+      ],
+      "name": "Banner",
+      "settings": {
+        "container": "container-fluid",
+        "image": "shopify://shop_images/lestyle-banner-givenchy-acc1.webp",
+        "image_ratio": "4/3",
+        "image_ratio_mobile": "4/3",
+        "image_link": "shopify://collections/givenchy-accessories",
+        "image_position": "right",
+        "background_color": "#F2F2F2",
+        "text_color": "#4b4b4b",
+        "content_alignment": "flex-start",
+        "title_text": "",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-title-lestyle-acc.png",
+        "title_image_width_desktop": 320,
+        "title_image_width_mobile": 270,
+        "subheader_text": "<p>Discover iconic urban luxury with the latest Givenchy arrivals, featuring premium knit beanies, signature scarves, and sleek footwear.</p>",
+        "subheader_size": "text-base",
+        "button_font_size": 15,
+        "button_font_weight": 600,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "rectangle_buttons_QUnzWX": {
       "type": "rectangle-buttons",
       "blocks": {
@@ -299,45 +347,6 @@
         "title_image_width_desktop": 520,
         "title_image_width_mobile": 460,
         "subheader_text": "<p>Explore Lestyle Junior and Kidswear.</p>",
-        "subheader_size": "text-base",
-        "button_font_size": 15,
-        "button_font_weight": 600,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "split_banner_VndFMe": {
-      "type": "split-banner",
-      "blocks": {
-        "button_66wrMN": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/marcelo-burlon-for-mens",
-            "button_style": "m-button--secondary"
-          }
-        }
-      },
-      "block_order": [
-        "button_66wrMN"
-      ],
-      "name": "Banner",
-      "settings": {
-        "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-marcelo-mens_5.png",
-        "image_ratio": "4/3",
-        "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/versace-kidswear",
-        "image_position": "right",
-        "background_color": "#dde2e3",
-        "text_color": "#4b4b4b",
-        "content_alignment": "flex-start",
-        "title_text": "",
-        "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-marcelo.png",
-        "title_image_width_desktop": 410,
-        "title_image_width_mobile": 320,
-        "subheader_text": "<p>Shop the new collections from Marcelo Burlon.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
