@@ -12,5 +12,12 @@
     "market": "europe"
   },
   "parent": "index.json",
-  "sections": {}
+  "sections": {
+    "small_banner_wLTMK4": {
+      "settings": {
+        "subheader_text": "<p>Enjoy free express shipping on orders over A$500*.</p>"
+      },
+      "blocks": {}
+    }
+  }
 }

@@ -8,20 +8,15 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "index.json",
   "context": {
-    "market": "new-zealand"
+    "market": "united-states"
   },
+  "parent": "index.json",
   "sections": {
     "small_banner_wLTMK4": {
       "settings": {
         "subheader_text": "<p>Enjoy free express shipping on orders over A$500*.</p>"
       },
-      "blocks": {}
-    },
-    "small_banner_iMR6eU": {
-      "disabled": true,
-      "settings": {},
       "blocks": {}
     }
   }

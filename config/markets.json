@@ -20,6 +20,9 @@
     },
     "united-states": {
       "parent": "@default"
+    },
+    "europe": {
+      "parent": "@default"
     }
   }
 }

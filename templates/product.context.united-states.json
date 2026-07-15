@@ -72,6 +72,17 @@
         "shipping_VBJFtx",
         "trust_badge_NyBMd4"
       ]
+    },
+    "small_banner_fyMBaW": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "small_banner_TE9wDT": {
+      "settings": {
+        "subheader_text": "<p>Enjoy free express shipping on orders over A$500*.</p>"
+      },
+      "blocks": {}
     }
   }
 }
