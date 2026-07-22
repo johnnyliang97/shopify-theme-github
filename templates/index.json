@@ -36,7 +36,7 @@
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-model-jackets-womens.gif",
+        "image": "shopify://shop_images/lestyle-banner-amiri-mens.jpg",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
         "image_link": "shopify://collections/designer-jackets-sale",
@@ -46,7 +46,7 @@
         "content_alignment": "flex-start",
         "title_text": "",
         "title_size": "h1",
-        "title_image": "shopify://shop_images/lestyle-title-winter-jackets.png",
+        "title_image": "shopify://shop_images/lestyle-title-amiri-mens.png",
         "title_image_width_desktop": 280,
         "title_image_width_mobile": 240,
         "subheader_text": "<p>Elevate your winter wardrobe. Explore designer jacket sale from Givenchy, Versace, Moschino and more. T&Cs Apply.<br/><br/></p>",
