@@ -16,22 +16,13 @@
           "type": "button",
           "settings": {
             "label": "Shop Now",
-            "link": "shopify://collections/designer-jackets-sale",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_y8fJqh": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Outlet",
-            "link": "shopify://collections/jackets-outlet",
+            "link": "shopify://collections/amiri-for-mens",
             "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_R4TKBM",
-        "button_y8fJqh"
+        "button_R4TKBM"
       ],
       "name": "Banner",
       "settings": {
@@ -39,17 +30,17 @@
         "image": "shopify://shop_images/lestyle-banner-amiri-mens.jpg",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/designer-jackets-sale",
+        "image_link": "shopify://collections/amiri-for-mens",
         "image_position": "left",
-        "background_color": "#e2e0df",
+        "background_color": "#D9D9D9",
         "text_color": "#1d1d1d",
         "content_alignment": "flex-start",
         "title_text": "",
         "title_size": "h1",
         "title_image": "shopify://shop_images/lestyle-title-amiri-mens.png",
-        "title_image_width_desktop": 280,
-        "title_image_width_mobile": 240,
-        "subheader_text": "<p>Elevate your winter wardrobe. Explore designer jacket sale from Givenchy, Versace, Moschino and more. T&Cs Apply.<br/><br/></p>",
+        "title_image_width_desktop": 210,
+        "title_image_width_mobile": 180,
+        "subheader_text": "<p>Explore new arrivals from AMIRI Mens<br/></p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
