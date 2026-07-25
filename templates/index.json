@@ -9,38 +9,47 @@
  */
 {
   "sections": {
-    "split_banner_hbJTkB": {
+    "split_banner_VndFMe": {
       "type": "split-banner",
       "blocks": {
-        "button_R4TKBM": {
+        "button_66wrMN": {
           "type": "button",
           "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/amiri-for-mens",
-            "button_style": "m-button--primary"
+            "label": "Shop Mens",
+            "link": "shopify://collections/versace-jeans-couture-for-mens",
+            "button_style": "m-button--secondary"
+          }
+        },
+        "button_UEmEEF": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Womens",
+            "link": "shopify://collections/versace-jeans-couture-for-womens",
+            "button_style": "m-button--secondary"
           }
         }
       },
       "block_order": [
-        "button_R4TKBM"
+        "button_66wrMN",
+        "button_UEmEEF"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-banner-amiri-mens.jpg",
+        "image": "shopify://shop_images/lestyle-banner-vjc-new.gif",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/amiri-for-mens",
-        "image_position": "left",
-        "background_color": "#D9D9D9",
-        "text_color": "#1d1d1d",
+        "image_link": "shopify://collections/versace-jeans-couture",
+        "image_position": "right",
+        "background_color": "#f2f2f2",
+        "text_color": "#4b4b4b",
         "content_alignment": "flex-start",
         "title_text": "",
-        "title_size": "h1",
-        "title_image": "shopify://shop_images/lestyle-title-amiri-mens.png",
-        "title_image_width_desktop": 210,
-        "title_image_width_mobile": 180,
-        "subheader_text": "<p>Explore new arrivals from AMIRI Mens<br/></p>",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-title-vjc-new.png",
+        "title_image_width_desktop": 400,
+        "title_image_width_mobile": 320,
+        "subheader_text": "<p>Iconic baroque prints and bold silhouettes define this season's collection. Discover the new collections.</p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -288,47 +297,38 @@
         "padding_bottom": 36
       }
     },
-    "split_banner_VndFMe": {
+    "split_banner_hbJTkB": {
       "type": "split-banner",
       "blocks": {
-        "button_66wrMN": {
+        "button_R4TKBM": {
           "type": "button",
           "settings": {
-            "label": "Accessories",
-            "link": "shopify://collections/givenchy-accessories",
-            "button_style": "m-button--primary"
-          }
-        },
-        "button_UEmEEF": {
-          "type": "button",
-          "settings": {
-            "label": "Shoes",
-            "link": "shopify://collections/givenchy-shoes",
+            "label": "Shop Now",
+            "link": "shopify://collections/amiri-for-mens",
             "button_style": "m-button--primary"
           }
         }
       },
       "block_order": [
-        "button_66wrMN",
-        "button_UEmEEF"
+        "button_R4TKBM"
       ],
       "name": "Banner",
       "settings": {
         "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-banner-givenchy-acc1.webp",
+        "image": "shopify://shop_images/lestyle-banner-amiri-mens.jpg",
         "image_ratio": "4/3",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/givenchy-accessories",
-        "image_position": "right",
-        "background_color": "#f2f2f2",
-        "text_color": "#4b4b4b",
+        "image_link": "shopify://collections/amiri-for-mens",
+        "image_position": "left",
+        "background_color": "#d9d9d9",
+        "text_color": "#1d1d1d",
         "content_alignment": "flex-start",
         "title_text": "",
-        "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-lestyle-acc.png",
-        "title_image_width_desktop": 320,
-        "title_image_width_mobile": 270,
-        "subheader_text": "<p>Discover iconic urban luxury with the latest Givenchy arrivals, featuring premium knit beanies, signature scarves, and sleek footwear.</p>",
+        "title_size": "h1",
+        "title_image": "shopify://shop_images/lestyle-title-amiri-mens.png",
+        "title_image_width_desktop": 210,
+        "title_image_width_mobile": 180,
+        "subheader_text": "<p>Explore new arrivals from AMIRI Mens<br/></p>",
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
@@ -1394,11 +1394,11 @@
     }
   },
   "order": [
-    "split_banner_hbJTkB",
+    "split_banner_VndFMe",
     "rectangle_buttons_QUnzWX",
     "small_banner_8PfzLF",
     "custom_card_carousel_LgWiQH",
-    "split_banner_VndFMe",
+    "split_banner_hbJTkB",
     "promotion_countdown_timer_Q6WpDW",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
