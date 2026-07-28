@@ -16,13 +16,6 @@
     "annoucement": {
       "settings": {},
       "blocks": {
-        "item_dGj4GU": {
-          "disabled": false,
-          "settings": {
-            "message": "Free shipping on orders over A$500",
-            "message_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping"
-          }
-        },
         "item_BkHLV": {
           "type": "item",
           "disabled": false,
@@ -33,7 +26,6 @@
         }
       },
       "block_order": [
-        "item_dGj4GU",
         "item_BkHLV"
       ]
     }
