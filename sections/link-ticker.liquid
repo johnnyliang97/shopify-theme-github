@@ -118,8 +118,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     #m-section--{{ section.id }} .m-link-ticker__track {
-      animation: none;
-      transform: none;
+      animation-duration: calc(var(--ticker-duration) * 1.75);
     }
   }
 
