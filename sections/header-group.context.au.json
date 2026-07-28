@@ -1,1 +1,57 @@
-{"parent":"header-group.json","context":{"market":"au"},"sections":{"annoucement":{"settings":{},"blocks":{"item_dGj4GU":{"disabled":false,"settings":{"message":"Free shipping on orders over $300","message_link":""}},"item_PJWcM":{"type":"item","disabled":false,"settings":{"message":"Free click & collect","message_link":""}},"item_Agfxy":{"type":"item","disabled":false,"settings":{"message":"Afterpay available now","message_link":"shopify:\/\/blogs\/lestyle-spotlight\/buy-now-pay-later-with-afterpay"}}},"block_order":["item_dGj4GU","item_PJWcM","item_Agfxy"]}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "au"
+  },
+  "sections": {
+    "annoucement": {
+      "settings": {},
+      "blocks": {
+        "item_HNhYx": {
+          "type": "item",
+          "disabled": false,
+          "settings": {
+            "message": "Free shipping for all orders from $250+",
+            "message_link": ""
+          }
+        },
+        "item_PJWcM": {
+          "type": "item",
+          "disabled": false,
+          "settings": {
+            "message": "Free click & collect",
+            "message_link": ""
+          }
+        },
+        "item_Agfxy": {
+          "type": "item",
+          "disabled": false,
+          "settings": {
+            "message": "Afterpay available now",
+            "message_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay"
+          }
+        },
+        "item_z7GFqM": {
+          "settings": {
+            "message": "Extra 10% off outlet with OUTLET10"
+          }
+        }
+      },
+      "block_order": [
+        "item_z7GFqM",
+        "item_HNhYx",
+        "item_PJWcM",
+        "item_Agfxy"
+      ]
+    }
+  }
+}

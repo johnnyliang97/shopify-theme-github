@@ -16,12 +16,18 @@
     "annoucement": {
       "settings": {},
       "blocks": {
-        "item_dGj4GU": {
+        "item_r6CtV": {
+          "type": "item",
+          "disabled": false,
           "settings": {
-            "message": "Extra 10% OFF Outlet Items with OUTLET10"
+            "message": "Free shipping on orders over A$500",
+            "message_link": ""
           }
         }
-      }
+      },
+      "block_order": [
+        "item_r6CtV"
+      ]
     }
   }
 }

@@ -14,17 +14,16 @@
     "annoucement": {
       "type": "annoucement",
       "blocks": {
-        "item_dGj4GU": {
+        "item_z7GFqM": {
           "type": "item",
-          "disabled": true,
           "settings": {
-            "message": "Code BD20 for 20% OFF",
-            "message_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay"
+            "message": "Extra 10% off outlet items with OUTLET10",
+            "message_link": "shopify://blogs/lestyle-spotlight/save-even-more-use-code-outlet10-for-an-extra-10-off-our-outlet-sale"
           }
         }
       },
       "block_order": [
-        "item_dGj4GU"
+        "item_z7GFqM"
       ],
       "custom_css": [
         ".m-announcement-bar__container {--container-width: 600px;}"
