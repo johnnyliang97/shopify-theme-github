@@ -15,38 +15,45 @@
         "tab_iUFWPP": {
           "type": "tab",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-womens5.jpg",
-            "heading": "Heading",
-            "subheading": "Subheading",
-            "link": "shopify://collections/versace-jeans-couture",
-            "link_text": ""
+            "image": "shopify://shop_images/lestyle-model-vjc-mens_1.webp",
+            "heading": "Mens",
+            "subheading": "Explore Versace Jeans Couture new collection",
+            "link": "shopify://collections/versace-jeans-couture"
           }
         },
         "tab_FRQYjz": {
           "type": "tab",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-mens5.jpg",
-            "heading": "Heading",
-            "subheading": "Subheading",
-            "link": "",
-            "link_text": ""
+            "image": "shopify://shop_images/lestyle-model-vjc-womens6.jpg",
+            "heading": "Womens",
+            "subheading": "Explore Versace Jeans Couture new collection",
+            "link": ""
           }
         },
         "tab_kH7myU": {
           "type": "tab",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-womens4.jpg",
-            "heading": "Heading",
-            "subheading": "Subheading",
-            "link": "",
-            "link_text": ""
+            "image": "shopify://shop_images/lestyle-model-kenzo-kids-girls-dresses.png",
+            "heading": "Junior",
+            "subheading": "Shop new collections from Versace, Givenchy, Kenzo and more",
+            "link": ""
+          }
+        },
+        "tab_HPLbrd": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-home-collection-versace-tableware.webp",
+            "heading": "Home Collection",
+            "subheading": "Designer homeware from Versace, Roberto Cavalli, Dolce & Gabbana",
+            "link": ""
           }
         }
       },
       "block_order": [
         "tab_iUFWPP",
         "tab_FRQYjz",
-        "tab_kH7myU"
+        "tab_kH7myU",
+        "tab_HPLbrd"
       ],
       "name": "Dynamic Tabbed Content",
       "settings": {
@@ -56,131 +63,7 @@
         "transition_speed": 300,
         "tab_height_desktop": 520,
         "text_color": "#ffffff",
-        "overlay_opacity": 0
-      }
-    },
-    "split_banner_VndFMe": {
-      "type": "split-banner",
-      "blocks": {
-        "button_66wrMN": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Mens",
-            "link": "shopify://collections/versace-jeans-couture-for-mens",
-            "button_style": "m-button--secondary"
-          }
-        },
-        "button_UEmEEF": {
-          "type": "button",
-          "settings": {
-            "label": "Shop Womens",
-            "link": "shopify://collections/versace-jeans-couture-for-womens",
-            "button_style": "m-button--secondary"
-          }
-        }
-      },
-      "block_order": [
-        "button_66wrMN",
-        "button_UEmEEF"
-      ],
-      "name": "Banner",
-      "settings": {
-        "container": "container-fluid",
-        "image": "shopify://shop_images/lestyle-banner-vjc-new.gif",
-        "image_ratio": "4/3",
-        "image_ratio_mobile": "4/3",
-        "image_link": "shopify://collections/versace-jeans-couture",
-        "image_position": "right",
-        "background_color": "#f2f2f2",
-        "text_color": "#4b4b4b",
-        "content_alignment": "flex-start",
-        "title_text": "",
-        "title_size": "h2",
-        "title_image": "shopify://shop_images/lestyle-title-vjc-new.png",
-        "title_image_width_desktop": 400,
-        "title_image_width_mobile": 320,
-        "subheader_text": "<p>Iconic baroque prints and bold silhouettes define this season's collection. Discover the new collections.</p>",
-        "subheader_size": "text-base",
-        "button_font_size": 15,
-        "button_font_weight": 600,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rectangle_buttons_QUnzWX": {
-      "type": "rectangle-buttons",
-      "blocks": {
-        "button_KJxkfR": {
-          "type": "button",
-          "name": "Mens",
-          "settings": {
-            "label": "Shop Mens",
-            "link": "shopify://collections/mens",
-            "color_overlay": "#000000",
-            "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/lestyle-model-versace-shorts-vjc-shirt-mens_e598c56f-8d7e-4a30-aef2-6a3a9a7f56d2.png",
-            "text_color": "#ffffff"
-          }
-        },
-        "button_jHJEeQ": {
-          "type": "button",
-          "name": "Womens",
-          "settings": {
-            "label": "Shop Womens",
-            "link": "shopify://collections/womens",
-            "color_overlay": "#000000",
-            "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/Instagram_post_-_1_c75c4feb-a82e-4f5f-a5f3-51789f269430.png",
-            "text_color": "#ffffff"
-          }
-        },
-        "button_rzHgTz": {
-          "type": "button",
-          "name": "Kids",
-          "settings": {
-            "label": "Shop Kids",
-            "link": "shopify://collections/kids",
-            "color_overlay": "#000000",
-            "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/lestyle-model-chloe-kenzo-kids.png",
-            "text_color": "#ffffff"
-          }
-        },
-        "button_FUdTgg": {
-          "type": "button",
-          "name": "Home Collection",
-          "settings": {
-            "label": "Shop Home Collection",
-            "link": "shopify://collections/home-collection",
-            "color_overlay": "#000000",
-            "overlay_opacity": 20,
-            "bg_image": "shopify://shop_images/90_ZPCSET009-ZCOP0105_Z7011_24_I-600x750.webp",
-            "text_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "button_KJxkfR",
-        "button_jHJEeQ",
-        "button_rzHgTz",
-        "button_FUdTgg"
-      ],
-      "name": "Menu Buttons",
-      "settings": {
-        "container": "container-fluid",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "desktop_columns": 4,
-        "mobile_columns": 2,
-        "gap_desktop": 10,
-        "gap_mobile": 10,
-        "button_height": 128,
-        "button_border_radius": 0,
-        "color_overlay": "#000000",
-        "overlay_opacity": 40,
-        "button_text_color": "#ffffff",
-        "button_font_size": 16,
-        "button_font_weight": "500"
+        "overlay_opacity": 10
       }
     },
     "promotion_countdown_timer_Q6WpDW": {
@@ -811,8 +694,6 @@
   },
   "order": [
     "dynamic_tabbed_content_rqLHh3",
-    "split_banner_VndFMe",
-    "rectangle_buttons_QUnzWX",
     "promotion_countdown_timer_Q6WpDW",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
