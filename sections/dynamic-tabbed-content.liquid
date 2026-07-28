@@ -1,0 +1,385 @@
+{%- liquid
+  assign container = section.settings.container
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
+
+  assign tab_count = section.blocks.size | at_least: 1
+  assign overlay_alpha = section.settings.overlay_opacity | times: 0.01
+-%}
+
+{%- style -%}
+  #m-section--{{ section.id }} {
+    --dtc-transition: {{ section.settings.transition_speed }}ms;
+    --dtc-min-tab-width: {{ section.settings.min_tab_width }}px;
+    --dtc-tab-height-desktop: {{ section.settings.tab_height_desktop }}px;
+    --dtc-overlay-opacity: {{ overlay_alpha }};
+    --dtc-text-color: {{ section.settings.text_color }};
+    --dtc-text-padding: 20px;
+  }
+
+  #m-section--{{ section.id }} .dtc {
+    width: 100%;
+  }
+
+  #m-section--{{ section.id }} .dtc__list {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #m-section--{{ section.id }} .dtc__tab {
+    position: relative;
+    flex: 1 1 0;
+    min-width: var(--dtc-min-tab-width);
+    height: var(--dtc-tab-height-desktop);
+    outline: none;
+    transition: flex-grow var(--dtc-transition) ease, flex-basis var(--dtc-transition) ease;
+    will-change: flex-grow;
+  }
+
+  #m-section--{{ section.id }} .dtc__tab:focus-visible {
+    box-shadow: 0 0 0 2px rgba(var(--color-foreground), 0.25);
+  }
+
+  #m-section--{{ section.id }} .dtc__list:hover .dtc__tab,
+  #m-section--{{ section.id }} .dtc__list:focus-within .dtc__tab {
+    flex-grow: 1;
+  }
+
+  #m-section--{{ section.id }} .dtc__tab.is-expanded {
+    flex-grow: 2;
+  }
+
+  #m-section--{{ section.id }} .dtc__panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+  }
+
+  #m-section--{{ section.id }} .dtc__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #m-section--{{ section.id }} .dtc__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: translateZ(0);
+  }
+
+  #m-section--{{ section.id }} .dtc__panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, var(--dtc-overlay-opacity));
+    z-index: 1;
+  }
+
+  #m-section--{{ section.id }} .dtc__content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: var(--dtc-text-padding);
+    color: var(--dtc-text-color);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  #m-section--{{ section.id }} .dtc__heading {
+    margin: 0;
+    line-height: 1.1;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  #m-section--{{ section.id }} .dtc__subheading {
+    margin: 0;
+    line-height: 1.35;
+    font-size: 16px;
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+    transition: opacity 200ms ease, transform 200ms ease;
+    transition-delay: 0ms;
+    max-width: 520px;
+  }
+
+  #m-section--{{ section.id }} .dtc__tab.is-expanded .dtc__subheading {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-delay: 150ms;
+  }
+
+  #m-section--{{ section.id }} .dtc__cta {
+    margin-top: 4px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #m-section--{{ section.id }} .dtc__list {
+      flex-direction: column;
+      overflow: visible;
+    }
+
+    #m-section--{{ section.id }} .dtc__tab {
+      width: 100%;
+      min-width: 0;
+      height: auto;
+      min-height: 300px;
+    }
+
+    #m-section--{{ section.id }} .dtc__subheading {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+{%- endstyle -%}
+
+<section id="m-section--{{ section.id }}" class="m-section">
+  <div class="{{ container }}">
+    <div class="dtc">
+      <div class="dtc__list" role="tablist" aria-label="{{ section.settings.aria_label | escape }}">
+        {%- for block in section.blocks -%}
+          {%- assign tab_id = 'dtc-tab-' | append: section.id | append: '-' | append: block.id -%}
+          {%- assign panel_id = 'dtc-panel-' | append: section.id | append: '-' | append: block.id -%}
+          <div
+            class="dtc__tab"
+            role="tab"
+            id="{{ tab_id }}"
+            aria-controls="{{ panel_id }}"
+            aria-selected="false"
+            tabindex="0"
+            data-index="{{ forloop.index0 }}"
+            {{ block.shopify_attributes }}
+          >
+            <div class="dtc__panel" role="tabpanel" id="{{ panel_id }}" aria-labelledby="{{ tab_id }}">
+              <div class="dtc__bg">
+                {%- if block.settings.image != blank -%}
+                  {%- assign desktop_sizes = '(min-width: 769px) calc(100vw / ' | append: tab_count | append: '), 100vw' -%}
+                  {{ block.settings.image | image_url: width: 2000 | image_tag:
+                    loading: 'lazy',
+                    widths: '360, 540, 720, 900, 1200, 1500, 1800, 2000',
+                    sizes: desktop_sizes,
+                    alt: block.settings.heading | escape
+                  }}
+                {%- endif -%}
+              </div>
+              <div class="dtc__content">
+                {%- if block.settings.heading != blank -%}
+                  <div class="dtc__heading">{{ block.settings.heading }}</div>
+                {%- endif -%}
+                {%- if block.settings.subheading != blank -%}
+                  <div class="dtc__subheading">{{ block.settings.subheading }}</div>
+                {%- endif -%}
+                <div class="dtc__cta">
+                  <a
+                    class="m-button m-button--primary"
+                    {% if block.settings.link != blank %}
+                      href="{{ block.settings.link }}"
+                    {% else %}
+                      aria-disabled="true"
+                    {% endif %}
+                  >
+                    {{ block.settings.link_text }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    const root = document.getElementById('m-section--{{ section.id }}');
+    if (!root) return;
+    const tablist = root.querySelector('.dtc__list');
+    if (!tablist) return;
+    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+    if (!tabs.length) return;
+
+    const clear = () => {
+      tabs.forEach((tab) => {
+        tab.classList.remove('is-expanded');
+        tab.setAttribute('aria-selected', 'false');
+      });
+    };
+
+    const setActive = (index) => {
+      tabs.forEach((tab, i) => {
+        const active = i === index;
+        tab.classList.toggle('is-expanded', active);
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+    };
+
+    const focusTab = (index) => {
+      const next = tabs[index];
+      if (next) next.focus();
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('mouseenter', () => setActive(index));
+      tab.addEventListener('focus', () => setActive(index));
+      tab.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const nextIndex = (index + 1) % tabs.length;
+          setActive(nextIndex);
+          focusTab(nextIndex);
+        }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          const nextIndex = (index - 1 + tabs.length) % tabs.length;
+          setActive(nextIndex);
+          focusTab(nextIndex);
+        }
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          clear();
+          tab.blur();
+        }
+      });
+    });
+
+    tablist.addEventListener('mouseleave', () => clear());
+    tablist.addEventListener('focusout', (e) => {
+      const next = e.relatedTarget;
+      if (!next || !tablist.contains(next)) clear();
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Dynamic Tabbed Content",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container-fluid",
+      "options": [
+        { "value": "container-fluid", "label": "Default" },
+        { "value": "w-full", "label": "Full width" },
+        { "value": "container", "label": "Use container box" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "ARIA label",
+      "default": "Tabbed content"
+    },
+    {
+      "type": "range",
+      "id": "min_tab_width",
+      "label": "Minimum tab width",
+      "min": 80,
+      "max": 400,
+      "step": 5,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "transition_speed",
+      "label": "Transition speed",
+      "min": 300,
+      "max": 800,
+      "step": 25,
+      "unit": "ms",
+      "default": 300
+    },
+    {
+      "type": "range",
+      "id": "tab_height_desktop",
+      "label": "Tab height (desktop)",
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "default": 520
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "default": 35
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "Subheading"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link text",
+          "default": "Shop now"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dynamic Tabbed Content",
+      "blocks": [
+        { "type": "tab" },
+        { "type": "tab" },
+        { "type": "tab" }
+      ]
+    }
+  ]
+}
+{% endschema %}
