@@ -183,9 +183,12 @@
     }
 
     #m-section--{{ section.id }} .dtc__tab {
+      flex-grow: 1 !important;
       width: 100%;
       min-width: 0;
       height: auto;
+      transition: none;
+      will-change: auto;
     }
 
     #m-section--{{ section.id }} .dtc__panel {
@@ -204,9 +207,38 @@
 
     #m-section--{{ section.id }} .dtc__heading {
       transform: none;
+      transition: none;
     }
 
     #m-section--{{ section.id }} .dtc__subheading {
+      max-height: none;
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    #m-section--{{ section.id }} .dtc__tab:hover,
+    #m-section--{{ section.id }} .dtc__tab:focus,
+    #m-section--{{ section.id }} .dtc__tab:focus-within,
+    #m-section--{{ section.id }} .dtc__tab.is-expanded {
+      flex-grow: 1 !important;
+    }
+
+    #m-section--{{ section.id }} .dtc__tab:hover .dtc__panel::before,
+    #m-section--{{ section.id }} .dtc__tab:focus-within .dtc__panel::before,
+    #m-section--{{ section.id }} .dtc__tab.is-expanded .dtc__panel::before {
+      opacity: 1;
+    }
+
+    #m-section--{{ section.id }} .dtc__tab:hover .dtc__heading,
+    #m-section--{{ section.id }} .dtc__tab:focus-within .dtc__heading,
+    #m-section--{{ section.id }} .dtc__tab.is-expanded .dtc__heading {
+      transform: none;
+    }
+
+    #m-section--{{ section.id }} .dtc__tab:hover .dtc__subheading,
+    #m-section--{{ section.id }} .dtc__tab:focus-within .dtc__subheading,
+    #m-section--{{ section.id }} .dtc__tab.is-expanded .dtc__subheading {
       max-height: none;
       opacity: 1;
       transform: none;
