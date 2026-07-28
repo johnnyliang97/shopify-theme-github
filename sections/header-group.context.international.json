@@ -20,7 +20,7 @@
           "type": "item",
           "disabled": false,
           "settings": {
-            "message": "Free shipping on orders over A$500+",
+            "message": "Free shipping for orders over A$500+",
             "message_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping"
           }
         }
