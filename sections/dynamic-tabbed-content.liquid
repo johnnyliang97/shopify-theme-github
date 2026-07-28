@@ -2,6 +2,10 @@
   assign container = section.settings.container
   assign tab_count = section.blocks.size | at_least: 1
   assign overlay_alpha = section.settings.overlay_opacity | times: 0.01
+
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
 -%}
 
 {%- style -%}
@@ -42,11 +46,12 @@
   #m-section--{{ section.id }} .dtc__tab {
     position: relative;
     flex: 1 1 0%;
+    flex-grow: 1;
     min-width: var(--dtc-min-tab-width);
     height: var(--dtc-tab-height-desktop);
     outline: none;
-    transition: flex var(--dtc-transition) ease;
-    will-change: flex;
+    transition: flex-grow var(--dtc-transition) ease;
+    will-change: flex-grow;
     display: block;
     text-decoration: none;
     color: inherit;
@@ -56,13 +61,14 @@
     box-shadow: 0 0 0 2px rgba(var(--color-foreground), 0.25);
   }
 
-  #m-section--{{ section.id }} .dtc__list:hover .dtc__tab,
-  #m-section--{{ section.id }} .dtc__list:focus-within .dtc__tab {
-    flex: 1 1 0%;
+  #m-section--{{ section.id }} .dtc__tab.is-expanded {
+    flex-grow: 2;
   }
 
-  #m-section--{{ section.id }} .dtc__tab.is-expanded {
-    flex: 2 1 0%;
+  #m-section--{{ section.id }} .dtc__tab:hover,
+  #m-section--{{ section.id }} .dtc__tab:focus,
+  #m-section--{{ section.id }} .dtc__tab:focus-within {
+    flex-grow: 2;
   }
 
   #m-section--{{ section.id }} .dtc__panel {
@@ -135,6 +141,13 @@
     transition-delay: 150ms;
   }
 
+  #m-section--{{ section.id }} .dtc__tab:hover .dtc__subheading,
+  #m-section--{{ section.id }} .dtc__tab:focus-within .dtc__subheading {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-delay: 150ms;
+  }
+
   @media screen and (max-width: 768px) {
     #m-section--{{ section.id }} .dtc__list {
       flex-direction: column;
@@ -144,6 +157,10 @@
     #m-section--{{ section.id }} .dtc__tab {
       width: 100%;
       min-width: 0;
+      height: auto;
+    }
+
+    #m-section--{{ section.id }} .dtc__panel {
       height: auto;
       min-height: 300px;
     }
