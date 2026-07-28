@@ -20,10 +20,18 @@
             "message": "Extra 10% off outlet with OUTLET10",
             "message_link": "shopify://blogs/lestyle-spotlight/save-even-more-use-code-outlet10-for-an-extra-10-off-our-outlet-sale"
           }
+        },
+        "item_NfNRRc": {
+          "type": "item",
+          "settings": {
+            "message": "Afterpay available now",
+            "message_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay"
+          }
         }
       },
       "block_order": [
-        "item_z7GFqM"
+        "item_z7GFqM",
+        "item_NfNRRc"
       ],
       "custom_css": [
         ".m-announcement-bar__container {--container-width: 600px;}"

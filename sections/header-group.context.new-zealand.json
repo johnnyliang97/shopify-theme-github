@@ -16,17 +16,18 @@
     "annoucement": {
       "settings": {},
       "blocks": {
-        "item_VXg7J": {
+        "item_CArmA": {
           "type": "item",
           "disabled": false,
           "settings": {
-            "message": "Afterpay available now",
-            "message_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay"
+            "message": "Free shipping on orders over A$500+",
+            "message_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping"
           }
         }
       },
       "block_order": [
-        "item_VXg7J"
+        "item_z7GFqM",
+        "item_CArmA"
       ]
     }
   }
