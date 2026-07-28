@@ -12,5 +12,16 @@
     "market": "europe"
   },
   "parent": "header-group.json",
-  "sections": {}
+  "sections": {
+    "annoucement": {
+      "settings": {},
+      "blocks": {
+        "item_dGj4GU": {
+          "settings": {
+            "message": "Extra 10% OFF Outlet Items with OUTLET10"
+          }
+        }
+      }
+    }
+  }
 }
