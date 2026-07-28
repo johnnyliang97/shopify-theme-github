@@ -391,8 +391,8 @@
         "subheader_size": "text-base",
         "button_font_size": 15,
         "button_font_weight": 600,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "empty_space_nf4tkg": {
@@ -450,7 +450,7 @@
           "type": "button",
           "settings": {
             "label": "Get Direction",
-            "link": "shopify://collections/mens-outlet",
+            "link": "https://www.google.com/maps/dir//Le%20Style%20Boutique,%20136%20Little%20Collins%20St,%20Melbourne%20VIC%203000?_kx=pJplwezUd6TK8nyW23E9MA.S2PeRu",
             "button_style": "m-button--white"
           }
         },
@@ -458,7 +458,7 @@
           "type": "button",
           "settings": {
             "label": "2025 Milan Buying Vlog",
-            "link": "shopify://collections/outlet-womens",
+            "link": "shopify://blogs/lestyle-spotlight/behind-the-buy-milan-2025",
             "button_style": "m-button--white"
           }
         }
@@ -467,13 +467,13 @@
         "button_nikdFN",
         "button_kwjLNy"
       ],
-      "name": "Banner - Outlet",
+      "name": "Banner",
       "settings": {
         "container": "container-fluid",
         "image": "shopify://shop_images/lestyle-storefront.webp",
         "image_ratio": "3/2",
         "image_ratio_mobile": "4/3",
-        "image_link": "shopify://pages/lestyle-outlet",
+        "image_link": "shopify://blogs/lestyle-spotlight/behind-the-buy-milan-2025",
         "image_position": "left",
         "background_color": "#000000",
         "background_image": "shopify://shop_images/lestyle-storefront1.webp",
@@ -488,8 +488,8 @@
         "subheader_size": "text-sm",
         "button_font_size": 15,
         "button_font_weight": 600,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "rich_text_LpREz9": {
