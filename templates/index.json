@@ -60,8 +60,8 @@
         "container": "w-full",
         "aria_label": "Tabbed content",
         "min_tab_width": 120,
-        "transition_speed": 300,
-        "tab_height_desktop": 520,
+        "transition_speed": 450,
+        "tab_height_desktop": 60,
         "text_color": "#ffffff",
         "overlay_opacity": 10
       }
