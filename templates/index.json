@@ -66,6 +66,139 @@
         "overlay_opacity": 10
       }
     },
+    "link_ticker_bFDXYi": {
+      "type": "link-ticker",
+      "blocks": {
+        "link_znEX9L": {
+          "type": "link",
+          "settings": {
+            "label": "Alexander McQueen",
+            "link": "shopify://collections/versace"
+          }
+        },
+        "link_LG7hAT": {
+          "type": "link",
+          "settings": {
+            "label": "Versace Jeans Couture",
+            "link": "shopify://collections/versace-jeans-couture"
+          }
+        },
+        "link_7JXmgG": {
+          "type": "link",
+          "settings": {
+            "label": "Philipp Plein",
+            "link": "shopify://collections/philipp-plein"
+          }
+        },
+        "link_hNitNx": {
+          "type": "link",
+          "settings": {
+            "label": "Fendi",
+            "link": "shopify://collections/fendi"
+          }
+        },
+        "link_RRKWq9": {
+          "type": "link",
+          "settings": {
+            "label": "Balmain",
+            "link": "shopify://collections/balmain"
+          }
+        },
+        "link_Uqyh6d": {
+          "type": "link",
+          "settings": {
+            "label": "Moschino",
+            "link": "shopify://collections/moschino"
+          }
+        },
+        "link_zCn93G": {
+          "type": "link",
+          "settings": {
+            "label": "Givenchy",
+            "link": "shopify://collections/givenchy"
+          }
+        },
+        "link_4NxRUt": {
+          "type": "link",
+          "settings": {
+            "label": "Roberto Cavalli",
+            "link": "shopify://collections/roberto-cavalli"
+          }
+        },
+        "link_jHBWht": {
+          "type": "link",
+          "settings": {
+            "label": "Dolce & Gabbana",
+            "link": "shopify://collections/dolce-gabbana"
+          }
+        },
+        "link_j6jxxb": {
+          "type": "link",
+          "settings": {
+            "label": "Dsquared2",
+            "link": "shopify://collections/dsquared2"
+          }
+        },
+        "link_PEhVHp": {
+          "type": "link",
+          "settings": {
+            "label": "Palm Angels",
+            "link": "shopify://collections/palm-angels"
+          }
+        },
+        "link_JitGiJ": {
+          "type": "link",
+          "settings": {
+            "label": "Amiri",
+            "link": "shopify://collections/amiri"
+          }
+        },
+        "link_JWCH6c": {
+          "type": "link",
+          "settings": {
+            "label": "Marcelo Burlon",
+            "link": "shopify://collections/marcelo-burlon"
+          }
+        },
+        "link_JyMbm7": {
+          "type": "link",
+          "settings": {
+            "label": "Boss",
+            "link": "shopify://collections/boss"
+          }
+        }
+      },
+      "block_order": [
+        "link_znEX9L",
+        "link_LG7hAT",
+        "link_7JXmgG",
+        "link_hNitNx",
+        "link_RRKWq9",
+        "link_Uqyh6d",
+        "link_zCn93G",
+        "link_4NxRUt",
+        "link_jHBWht",
+        "link_j6jxxb",
+        "link_PEhVHp",
+        "link_JitGiJ",
+        "link_JWCH6c",
+        "link_JyMbm7"
+      ],
+      "name": "Link ticker",
+      "settings": {
+        "container": "w-full",
+        "aria_label": "Link ticker",
+        "direction": "left",
+        "speed": 50,
+        "item_gap": 120,
+        "item_gap_mobile": 60,
+        "text_size": 12,
+        "text_size_mobile": 13,
+        "color_scheme": "scheme-f18c59ce-62bf-4d70-9c03-c41f1fdb8f53",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "promotion_countdown_timer_Q6WpDW": {
       "type": "promotion-countdown-timer",
       "blocks": {
@@ -743,6 +876,7 @@
   },
   "order": [
     "dynamic_tabbed_content_rqLHh3",
+    "link_ticker_bFDXYi",
     "promotion_countdown_timer_Q6WpDW",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
