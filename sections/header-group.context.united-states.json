@@ -12,5 +12,24 @@
     "market": "united-states"
   },
   "parent": "header-group.json",
-  "sections": {}
+  "sections": {
+    "annoucement": {
+      "settings": {},
+      "blocks": {
+        "item_pP9TV": {
+          "type": "item",
+          "disabled": false,
+          "settings": {
+            "message": "Free shipping for orders from A$500+",
+            "message_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping"
+          }
+        }
+      },
+      "block_order": [
+        "item_pP9TV",
+        "item_z7GFqM",
+        "item_NfNRRc"
+      ]
+    }
+  }
 }
