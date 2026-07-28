@@ -16,14 +16,6 @@
     "annoucement": {
       "settings": {},
       "blocks": {
-        "item_BkHLV": {
-          "type": "item",
-          "disabled": false,
-          "settings": {
-            "message": "Afterpay available now",
-            "message_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay"
-          }
-        },
         "item_4i9jd": {
           "type": "item",
           "disabled": false,
@@ -34,9 +26,9 @@
         }
       },
       "block_order": [
+        "item_4i9jd",
         "item_z7GFqM",
-        "item_BkHLV",
-        "item_4i9jd"
+        "item_NfNRRc"
       ]
     }
   }
