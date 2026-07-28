@@ -9,6 +9,56 @@
  */
 {
   "sections": {
+    "dynamic_tabbed_content_rqLHh3": {
+      "type": "dynamic-tabbed-content",
+      "blocks": {
+        "tab_iUFWPP": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-womens5.jpg",
+            "heading": "Heading",
+            "subheading": "Subheading",
+            "link": "",
+            "link_text": ""
+          }
+        },
+        "tab_FRQYjz": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-mens5.jpg",
+            "heading": "Heading",
+            "subheading": "Subheading",
+            "link": "",
+            "link_text": ""
+          }
+        },
+        "tab_kH7myU": {
+          "type": "tab",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-vjc-womens4.jpg",
+            "heading": "Heading",
+            "subheading": "Subheading",
+            "link": "",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_iUFWPP",
+        "tab_FRQYjz",
+        "tab_kH7myU"
+      ],
+      "name": "Dynamic Tabbed Content",
+      "settings": {
+        "container": "w-full",
+        "aria_label": "Tabbed content",
+        "min_tab_width": 120,
+        "transition_speed": 300,
+        "tab_height_desktop": 520,
+        "text_color": "#ffffff",
+        "overlay_opacity": 0
+      }
+    },
     "split_banner_VndFMe": {
       "type": "split-banner",
       "blocks": {
@@ -760,6 +810,7 @@
     }
   },
   "order": [
+    "dynamic_tabbed_content_rqLHh3",
     "split_banner_VndFMe",
     "rectangle_buttons_QUnzWX",
     "promotion_countdown_timer_Q6WpDW",
