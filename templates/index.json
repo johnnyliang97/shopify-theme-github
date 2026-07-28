@@ -189,7 +189,7 @@
         "container": "w-full",
         "aria_label": "Link ticker",
         "direction": "left",
-        "speed": 50,
+        "speed": 80,
         "item_gap": 120,
         "item_gap_mobile": 60,
         "text_size": 12,
