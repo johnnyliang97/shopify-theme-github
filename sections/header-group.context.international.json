@@ -23,10 +23,20 @@
             "message": "Afterpay available now",
             "message_link": "shopify://blogs/lestyle-spotlight/buy-now-pay-later-with-afterpay"
           }
+        },
+        "item_4i9jd": {
+          "type": "item",
+          "disabled": false,
+          "settings": {
+            "message": "Free shipping on orders over A$500+",
+            "message_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping"
+          }
         }
       },
       "block_order": [
-        "item_BkHLV"
+        "item_z7GFqM",
+        "item_BkHLV",
+        "item_4i9jd"
       ]
     }
   }
