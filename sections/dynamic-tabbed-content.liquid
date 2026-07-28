@@ -1,9 +1,5 @@
 {%- liquid
   assign container = section.settings.container
-  if container == 'w-full'
-    assign container = 'container-full'
-  endif
-
   assign tab_count = section.blocks.size | at_least: 1
   assign overlay_alpha = section.settings.overlay_opacity | times: 0.01
 -%}
@@ -22,6 +18,21 @@
     width: 100%;
   }
 
+  #m-section--{{ section.id }} .dtc__container {
+    width: 100%;
+  }
+
+  {%- if section.settings.container == 'w-full' -%}
+    #m-section--{{ section.id }} .dtc__container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  {%- endif -%}
+
   #m-section--{{ section.id }} .dtc__list {
     display: flex;
     width: 100%;
@@ -30,12 +41,15 @@
 
   #m-section--{{ section.id }} .dtc__tab {
     position: relative;
-    flex: 1 1 0;
+    flex: 1 1 0%;
     min-width: var(--dtc-min-tab-width);
     height: var(--dtc-tab-height-desktop);
     outline: none;
-    transition: flex-grow var(--dtc-transition) ease, flex-basis var(--dtc-transition) ease;
-    will-change: flex-grow;
+    transition: flex var(--dtc-transition) ease;
+    will-change: flex;
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
 
   #m-section--{{ section.id }} .dtc__tab:focus-visible {
@@ -44,11 +58,11 @@
 
   #m-section--{{ section.id }} .dtc__list:hover .dtc__tab,
   #m-section--{{ section.id }} .dtc__list:focus-within .dtc__tab {
-    flex-grow: 1;
+    flex: 1 1 0%;
   }
 
   #m-section--{{ section.id }} .dtc__tab.is-expanded {
-    flex-grow: 2;
+    flex: 2 1 0%;
   }
 
   #m-section--{{ section.id }} .dtc__panel {
@@ -121,10 +135,6 @@
     transition-delay: 150ms;
   }
 
-  #m-section--{{ section.id }} .dtc__cta {
-    margin-top: 4px;
-  }
-
   @media screen and (max-width: 768px) {
     #m-section--{{ section.id }} .dtc__list {
       flex-direction: column;
@@ -147,13 +157,13 @@
 {%- endstyle -%}
 
 <section id="m-section--{{ section.id }}" class="m-section">
-  <div class="{{ container }}">
+  <div class="{{ container }} dtc__container">
     <div class="dtc">
       <div class="dtc__list" role="tablist" aria-label="{{ section.settings.aria_label | escape }}">
         {%- for block in section.blocks -%}
           {%- assign tab_id = 'dtc-tab-' | append: section.id | append: '-' | append: block.id -%}
           {%- assign panel_id = 'dtc-panel-' | append: section.id | append: '-' | append: block.id -%}
-          <div
+          <a
             class="dtc__tab"
             role="tab"
             id="{{ tab_id }}"
@@ -161,6 +171,12 @@
             aria-selected="false"
             tabindex="0"
             data-index="{{ forloop.index0 }}"
+            {% if block.settings.link != blank %}
+              href="{{ block.settings.link }}"
+            {% else %}
+              href="#"
+              aria-disabled="true"
+            {% endif %}
             {{ block.shopify_attributes }}
           >
             <div class="dtc__panel" role="tabpanel" id="{{ panel_id }}" aria-labelledby="{{ tab_id }}">
@@ -182,21 +198,9 @@
                 {%- if block.settings.subheading != blank -%}
                   <div class="dtc__subheading">{{ block.settings.subheading }}</div>
                 {%- endif -%}
-                <div class="dtc__cta">
-                  <a
-                    class="m-button m-button--primary"
-                    {% if block.settings.link != blank %}
-                      href="{{ block.settings.link }}"
-                    {% else %}
-                      aria-disabled="true"
-                    {% endif %}
-                  >
-                    {{ block.settings.link_text }}
-                  </a>
-                </div>
               </div>
             </div>
-          </div>
+          </a>
         {%- endfor -%}
       </div>
     </div>
@@ -235,6 +239,11 @@
     tabs.forEach((tab, index) => {
       tab.addEventListener('mouseenter', () => setActive(index));
       tab.addEventListener('focus', () => setActive(index));
+      tab.addEventListener('click', (e) => {
+        if (tab.getAttribute('aria-disabled') === 'true') {
+          e.preventDefault();
+        }
+      });
       tab.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
           e.preventDefault();
@@ -361,12 +370,6 @@
           "type": "url",
           "id": "link",
           "label": "Link"
-        },
-        {
-          "type": "text",
-          "id": "link_text",
-          "label": "Link text",
-          "default": "Shop now"
         }
       ]
     }
