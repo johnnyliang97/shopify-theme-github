@@ -1,16 +1,4 @@
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
   .split-banner-{{ section.id }} {
     background-color: {{ section.settings.background_color }};
     {%- if section.settings.background_image != blank -%}
@@ -20,15 +8,29 @@
       background-repeat: no-repeat;
     {%- endif -%}
     --image-ratio: {{ section.settings.image_ratio | default: '1/1' | replace: '/', ' / ' }};
+    --split-banner-padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --split-banner-padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
   
+  @media screen and (min-width: 750px) {
+    .split-banner-{{ section.id }} {
+      --split-banner-padding-top: {{ section.settings.padding_top }}px;
+      --split-banner-padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .split-banner-{{ section.id }} .split-banner-wrapper {
+      padding-top: var(--split-banner-padding-top);
+      padding-bottom: var(--split-banner-padding-bottom);
+  }
+
   .split-banner-{{ section.id }} .split-banner-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: {{ section.settings.content_alignment }};
       text-align: {{ section.settings.content_alignment | replace: 'flex-start', 'left' | replace: 'flex-end', 'right' }};
-      padding: 2rem;
+      padding: 0 2rem;
       box-sizing: border-box;
   }
   
@@ -75,6 +77,36 @@
       height: auto;
   }
 
+  .split-banner-{{ section.id }} .split-banner-subheader {
+      color: {{ section.settings.text_color }};
+      margin-top: 1rem;
+  }
+
+  .split-banner-{{ section.id }} .split-banner-subheader p {
+      margin: 0;
+      font: inherit;
+  }
+
+  .split-banner-{{ section.id }} .split-banner-subheader--text-sm {
+      font-size: 14px;
+      line-height: 1.5;
+  }
+
+  .split-banner-{{ section.id }} .split-banner-subheader--text-base {
+      font-size: 16px;
+      line-height: 1.6;
+  }
+
+  .split-banner-{{ section.id }} .split-banner-subheader--text-lg {
+      font-size: 20px;
+      line-height: 1.6;
+  }
+
+  .split-banner-{{ section.id }} .split-banner-subheader--h4 {
+      font-size: 24px;
+      line-height: 1.35;
+  }
+
   /* Desktop layout */
   @media screen and (min-width: 768px) {
       .split-banner-{{ section.id }} .split-banner-wrapper {
@@ -116,6 +148,27 @@
       .split-banner-{{ section.id }} .split-banner-title-image {
           max-width: {{ section.settings.title_image_width_mobile }}px;
       }
+
+      .split-banner-{{ section.id }} .split-banner-content {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+      }
+
+      .split-banner-{{ section.id }} .split-banner-subheader--text-sm {
+          font-size: 13px;
+      }
+
+      .split-banner-{{ section.id }} .split-banner-subheader--text-base {
+          font-size: 15px;
+      }
+
+      .split-banner-{{ section.id }} .split-banner-subheader--text-lg {
+          font-size: 18px;
+      }
+
+      .split-banner-{{ section.id }} .split-banner-subheader--h4 {
+          font-size: 22px;
+      }
   }
 {%- endstyle -%}
 
@@ -126,7 +179,7 @@
   {%- assign container_class = 'w-full' -%}
 {%- endif -%}
 
-<div class="split-banner-{{ section.id }} section-{{ section.id }}-padding">
+<div class="split-banner-{{ section.id }}">
   <div class="{{ container_class }} split-banner-container">
     <div class="split-banner-wrapper">
       <div class="split-banner-half split-banner-image-container">
@@ -176,7 +229,7 @@
           </h2>
         {%- endif -%}
 
-        <div class="{{ section.settings.subheader_size }}" style="color: {{ section.settings.text_color }}; margin-top: 1rem;">
+        <div class="split-banner-subheader split-banner-subheader--{{ section.settings.subheader_size }}">
           {{ section.settings.subheader_text }}
         </div>
 
