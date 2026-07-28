@@ -1,0 +1,380 @@
+{% liquid
+  assign container = section.settings.container
+  if container == 'w-full'
+    assign container = 'container-full'
+  endif
+
+  assign classes = 'm-section m-link-ticker-section m-gradient'
+  assign classes = classes | append: ' m-color-' | append: section.settings.color_scheme
+%}
+
+<style>
+  #m-section--{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --ticker-gap: {{ section.settings.item_gap }}px;
+    --ticker-gap-mobile: {{ section.settings.item_gap_mobile }}px;
+    --ticker-font-size: {{ section.settings.text_size }}px;
+    --ticker-font-size-mobile: {{ section.settings.text_size_mobile }}px;
+    --ticker-duration: 30s;
+    --ticker-distance: 0px;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    min-width: max-content;
+    animation: m-link-ticker-scroll var(--ticker-duration) linear infinite;
+    will-change: transform;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker[data-direction="right"] .m-link-ticker__track {
+    animation-direction: reverse;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker:hover .m-link-ticker__track,
+  #m-section--{{ section.id }} .m-link-ticker:focus-within .m-link-ticker__track,
+  #m-section--{{ section.id }} .m-link-ticker.is-paused .m-link-ticker__track {
+    animation-play-state: paused;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__group {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: max-content;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__item {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__item::after {
+    content: "\00b7";
+    display: inline-block;
+    margin: 0 calc(var(--ticker-gap-mobile) / 2);
+    font-family: var(--font-stack-header);
+    font-size: var(--ticker-font-size-mobile);
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0.75;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__link {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(var(--color-foreground));
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-stack-header);
+    font-size: var(--ticker-font-size-mobile);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    transition: opacity 0.2s ease;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__link:hover,
+  #m-section--{{ section.id }} .m-link-ticker__link:focus-visible {
+    opacity: 0.7;
+  }
+
+  #m-section--{{ section.id }} .m-link-ticker__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  #m-section--{{ section.id }} .container-full {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    #m-section--{{ section.id }} .m-link-ticker__item::after {
+      margin: 0 calc(var(--ticker-gap) / 2);
+      font-size: var(--ticker-font-size);
+    }
+
+    #m-section--{{ section.id }} .m-link-ticker__link {
+      font-size: var(--ticker-font-size);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #m-section--{{ section.id }} .m-link-ticker__track {
+      animation: none;
+      transform: none;
+    }
+  }
+
+  @keyframes m-link-ticker-scroll {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(calc(-1 * var(--ticker-distance)), 0, 0);
+    }
+  }
+</style>
+
+<section
+  id="m-section--{{ section.id }}"
+  class="{{ classes }}"
+  data-section-type="link-ticker"
+  data-section-id="{{ section.id }}"
+>
+  <div class="{{ container }} m-section-py">
+    <m-link-ticker
+      class="m-link-ticker"
+      data-speed="{{ section.settings.speed }}"
+      data-direction="{{ section.settings.direction }}"
+      role="region"
+      aria-label="{{ section.settings.aria_label | escape }}"
+    >
+      <div class="m-link-ticker__viewport">
+        <div class="m-link-ticker__track" aria-live="off">
+          <div class="m-link-ticker__group" data-base-group role="list">
+            {% for block in section.blocks %}
+              {% if block.settings.label != blank %}
+                <div class="m-link-ticker__item" role="listitem" {{ block.shopify_attributes }}>
+                  {% if block.settings.link != blank %}
+                    <a class="m-link-ticker__link" href="{{ block.settings.link }}">
+                      {{ block.settings.label }}
+                    </a>
+                  {% else %}
+                    <span class="m-link-ticker__link" aria-disabled="true">
+                      {{ block.settings.label }}
+                    </span>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </m-link-ticker>
+  </div>
+</section>
+
+<script>
+  if (!customElements.get('m-link-ticker')) {
+    class MLinkTicker extends HTMLElement {
+      connectedCallback() {
+        this.viewport = this.querySelector('.m-link-ticker__viewport');
+        this.track = this.querySelector('.m-link-ticker__track');
+        this.baseGroup = this.querySelector('[data-base-group]');
+        this.speed = parseFloat(this.dataset.speed) || 80;
+
+        if (!this.viewport || !this.track || !this.baseGroup) return;
+
+        this.handleResize = this.build.bind(this);
+        this.resizeObserver = new ResizeObserver(this.handleResize);
+        this.resizeObserver.observe(this);
+
+        this.intersectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            this.classList.toggle('is-paused', !entry.isIntersecting);
+          });
+        });
+        this.intersectionObserver.observe(this);
+
+        this.build();
+      }
+
+      disconnectedCallback() {
+        if (this.resizeObserver) this.resizeObserver.disconnect();
+        if (this.intersectionObserver) this.intersectionObserver.disconnect();
+      }
+
+      build() {
+        this.track.querySelectorAll('[data-clone="true"]').forEach((node) => node.remove());
+
+        const viewportWidth = this.viewport.clientWidth;
+        const groupWidth = this.baseGroup.scrollWidth;
+
+        if (!viewportWidth || !groupWidth) return;
+
+        const cloneCopies = Math.max(1, Math.ceil(viewportWidth / groupWidth) + 1);
+
+        for (let index = 0; index < cloneCopies; index++) {
+          const clone = this.baseGroup.cloneNode(true);
+          clone.setAttribute('data-clone', 'true');
+          clone.setAttribute('aria-hidden', 'true');
+          clone.querySelectorAll('a').forEach((link) => {
+            link.setAttribute('tabindex', '-1');
+          });
+          this.track.appendChild(clone);
+        }
+
+        const duration = groupWidth / this.speed;
+        this.style.setProperty('--ticker-distance', groupWidth + 'px');
+        this.style.setProperty('--ticker-duration', Math.max(duration, 8) + 's');
+      }
+    }
+
+    customElements.define('m-link-ticker', MLinkTicker);
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Link ticker",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "w-full",
+      "options": [
+        { "value": "container-fluid", "label": "Default" },
+        { "value": "w-full", "label": "Full width" },
+        { "value": "container", "label": "Use container box" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "ARIA label",
+      "default": "Link ticker"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Speed",
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px/s",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Item gap",
+      "min": 16,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "item_gap_mobile",
+      "label": "Item gap mobile",
+      "min": 8,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size mobile",
+      "min": 10,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Link ticker",
+      "blocks": [
+        { "type": "link", "settings": { "label": "New arrivals" } },
+        { "type": "link", "settings": { "label": "Outlet" } },
+        { "type": "link", "settings": { "label": "Best sellers" } },
+        { "type": "link", "settings": { "label": "Shop dresses" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
