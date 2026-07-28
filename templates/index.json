@@ -476,6 +476,7 @@
         "image_link": "shopify://pages/lestyle-outlet",
         "image_position": "left",
         "background_color": "#000000",
+        "background_image": "shopify://shop_images/lestyle-storefront1.webp",
         "text_color": "#b7b7b7",
         "content_alignment": "flex-start",
         "title_text": "Banner Title",
