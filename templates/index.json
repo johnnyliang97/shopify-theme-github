@@ -135,10 +135,23 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-vjc-mens-jacket.png",
-            "header_text": "Jackets",
-            "subheader_text": "Stylish Warmth",
-            "link": "shopify://collections/jackets",
+            "image": "shopify://shop_images/lestyle-givenchy-accessories_1.webp",
+            "header_text": "Givenchy Accessories",
+            "subheader_text": "Winter Essentials",
+            "link": "shopify://collections/givenchy-accessories",
+            "label_text": "",
+            "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_dtFdem": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-givenchy-girls-kids-hoodie-pants.png",
+            "header_text": "Teens",
+            "subheader_text": "Sizes Above 12YO",
+            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.v.option.select+size=12+year&filter.v.option.select+size=12%2B+year&filter.v.option.select+size=13+year&filter.v.option.select+size=14+year&filter.v.option.select+size=16+year&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": ""
@@ -154,19 +167,6 @@
             "link": "shopify://collections/home-collection-bathrobes",
             "label_text": "",
             "label_color": "#c19967",
-            "button_text": ""
-          }
-        },
-        "card_dtFdem": {
-          "type": "card",
-          "name": "Card",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-model-givenchy-girls-kids-hoodie-pants.png",
-            "header_text": "Teens",
-            "subheader_text": "Sizes Above 12YO",
-            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.v.option.select+size=12+year&filter.v.option.select+size=12%2B+year&filter.v.option.select+size=13+year&filter.v.option.select+size=14+year&filter.v.option.select+size=16+year&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
-            "label_text": "",
-            "label_color": "#b30505",
             "button_text": ""
           }
         },
@@ -212,8 +212,8 @@
       },
       "block_order": [
         "card_Qc7zEM",
-        "card_BfVQWe",
         "card_dtFdem",
+        "card_BfVQWe",
         "card_jVynpa",
         "card_cfERde",
         "card_KJmxxY"
