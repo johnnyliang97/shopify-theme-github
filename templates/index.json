@@ -443,6 +443,54 @@
         "animations": "inherit"
       }
     },
+    "split_banner_p3LYq4": {
+      "type": "split-banner",
+      "blocks": {
+        "button_nikdFN": {
+          "type": "button",
+          "settings": {
+            "label": "Get Direction",
+            "link": "shopify://collections/mens-outlet",
+            "button_style": "m-button--white"
+          }
+        },
+        "button_kwjLNy": {
+          "type": "button",
+          "settings": {
+            "label": "2025 Milan Buying Vlog",
+            "link": "shopify://collections/outlet-womens",
+            "button_style": "m-button--white"
+          }
+        }
+      },
+      "block_order": [
+        "button_nikdFN",
+        "button_kwjLNy"
+      ],
+      "name": "Banner - Outlet",
+      "settings": {
+        "container": "container-fluid",
+        "image": "shopify://shop_images/lestyle-storefront.webp",
+        "image_ratio": "3/2",
+        "image_ratio_mobile": "4/3",
+        "image_link": "shopify://pages/lestyle-outlet",
+        "image_position": "left",
+        "background_color": "#000000",
+        "text_color": "#B7B7B7",
+        "content_alignment": "flex-start",
+        "title_text": "Banner Title",
+        "title_size": "h2",
+        "title_image": "shopify://shop_images/lestyle-title-lestyle.png",
+        "title_image_width_desktop": 260,
+        "title_image_width_mobile": 270,
+        "subheader_text": "<p>Founded in Melbourne, Lestyle Boutique is a premium luxury designer outlet curating high-end European fashion and accessories. With a flagship boutique on Little Collins Street and a growing online presence, we bring Versace, Balmain, Givenchy, Moschino, and more.</p>",
+        "subheader_size": "text-base",
+        "button_font_size": 15,
+        "button_font_weight": 600,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_LpREz9": {
       "type": "rich-text",
       "blocks": {
@@ -569,29 +617,6 @@
         "custom_class": ""
       }
     },
-    "newsletter_feY3gE": {
-      "type": "newsletter",
-      "name": "Newsletter",
-      "settings": {
-        "container": "w-full",
-        "color_scheme": "footer",
-        "form_layout": "vertical",
-        "form_design": "2",
-        "heading": "Stay up to date with all fashion news<br> and exclusive offers",
-        "description": "",
-        "text_size": "h2",
-        "email_placeholder": "Enter your email",
-        "submit_button": "Subscribe",
-        "text_color": "inherit",
-        "show_icon": false,
-        "icon_img_width": "30",
-        "show_agreement": false,
-        "padding_top": 80,
-        "padding_bottom": 50,
-        "custom_class": "",
-        "animations": "inherit"
-      }
-    },
     "16225125199f82d8fe": {
       "type": "icon-box",
       "blocks": {
@@ -690,6 +715,29 @@
         "custom_class": "m-icon-box--small",
         "animations": "inherit"
       }
+    },
+    "newsletter_feY3gE": {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "settings": {
+        "container": "w-full",
+        "color_scheme": "footer",
+        "form_layout": "vertical",
+        "form_design": "2",
+        "heading": "Stay up to date with all fashion news<br> and exclusive offers",
+        "description": "",
+        "text_size": "h2",
+        "email_placeholder": "Enter your email",
+        "submit_button": "Subscribe",
+        "text_color": "inherit",
+        "show_icon": false,
+        "icon_img_width": "30",
+        "show_agreement": false,
+        "padding_top": 80,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
     }
   },
   "order": [
@@ -702,11 +750,12 @@
     "split_banner_n4Tr8e",
     "empty_space_nf4tkg",
     "blog_posts_ayEFnz",
+    "split_banner_p3LYq4",
     "rich_text_LpREz9",
     "rectangle_buttons_znmUJd",
     "custom_content_X6za8h",
     "empty_space_UrwbCX",
-    "newsletter_feY3gE",
-    "16225125199f82d8fe"
+    "16225125199f82d8fe",
+    "newsletter_feY3gE"
   ]
 }
