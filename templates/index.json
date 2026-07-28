@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/lestyle-model-vjc-mens_1.webp",
             "heading": "Mens",
             "subheading": "Explore Versace Jeans Couture new collection",
-            "link": "shopify://collections/versace-jeans-couture"
+            "link": "shopify://collections/mens"
           }
         },
         "tab_FRQYjz": {
@@ -27,7 +27,7 @@
             "image": "shopify://shop_images/lestyle-model-vjc-womens7.jpg",
             "heading": "Womens",
             "subheading": "Explore Versace Jeans Couture new collection",
-            "link": ""
+            "link": "shopify://collections/womens"
           }
         },
         "tab_kH7myU": {
@@ -36,7 +36,7 @@
             "image": "shopify://shop_images/lestyle-model-kenzo-kids-girls-dresses.png",
             "heading": "Junior",
             "subheading": "Shop new collections from Versace, Givenchy, Kenzo and more",
-            "link": ""
+            "link": "shopify://collections/kids"
           }
         },
         "tab_HPLbrd": {
@@ -45,7 +45,7 @@
             "image": "shopify://shop_images/lestyle-home-collection-versace-tableware.webp",
             "heading": "Home Collection",
             "subheading": "Designer homeware from Versace, Roberto Cavalli, Dolce & Gabbana",
-            "link": ""
+            "link": "shopify://collections/home-collection"
           }
         }
       },
