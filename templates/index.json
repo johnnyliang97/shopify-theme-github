@@ -33,7 +33,7 @@
         "tab_kH7myU": {
           "type": "tab",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-kenzo-kids-girls-dresses.png",
+            "image": "shopify://shop_images/lestyle-model-versace-kids-hoodie.webp",
             "heading": "Junior",
             "subheading": "Shop new collections from Versace, Givenchy, Kenzo and more",
             "link": "shopify://collections/kids"
@@ -42,7 +42,7 @@
         "tab_HPLbrd": {
           "type": "tab",
           "settings": {
-            "image": "shopify://shop_images/lestyle-home-collection-versace-tableware.webp",
+            "image": "shopify://shop_images/lestyle-model-bathrobe-towel-versace_1.webp",
             "heading": "Home Collection",
             "subheading": "Designer homeware from Versace, Roberto Cavalli, Dolce & Gabbana",
             "link": "shopify://collections/home-collection"
@@ -281,7 +281,7 @@
           "type": "card",
           "name": "Card",
           "settings": {
-            "image": "shopify://shop_images/lestyle-model-givenchy-girls-kids-hoodie-pants.png",
+            "image": "shopify://shop_images/lestyle-model-versace-kids-dresses-skirts.webp",
             "header_text": "Teens",
             "subheader_text": "Sizes Above 12YO",
             "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.v.option.select+size=12+year&filter.v.option.select+size=12%2B+year&filter.v.option.select+size=13+year&filter.v.option.select+size=14+year&filter.v.option.select+size=16+year&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
