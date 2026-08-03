@@ -95,12 +95,8 @@ class CollectionFiltersForm extends HTMLElement {
   };
 
   renderPage = (searchParams, updateURLHash = true) => {
-    const params = new URLSearchParams(searchParams);
-    params.set('filter.v.availability', '1');
-    const modifiedSearchParams = params.toString();
-
     this.loading.start();
-    const _url = `${window.location.pathname}?section_id=${this.sectionId}&${modifiedSearchParams}`;
+    const _url = `${window.location.pathname}?section_id=${this.sectionId}&${searchParams}`;
     const cachedResult = cachedFiltersResult.find(({ url }) => url === _url);
     const renderFunc = cachedResult ? this.renderSectionFromCache : this.renderSectionFromFetch;
     renderFunc(_url)
@@ -111,7 +107,7 @@ class CollectionFiltersForm extends HTMLElement {
       })
       .catch(console.error);
 
-    if (updateURLHash) this.updateURLHash(modifiedSearchParams);
+    if (updateURLHash) this.updateURLHash(searchParams);
   };
 
   renderSectionFromFetch = (url) => {
