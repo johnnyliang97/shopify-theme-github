@@ -91,6 +91,26 @@
     --align-items: {{ section.settings.vertical_alignment }};
     {% if bg_image != blank %}--bg-image: url({{ bg_image | image_url }});{% endif %}
   }
+  {% if section.settings.container == 'w-full' %}
+    {% if bg_image == blank or img_pos == 'background' %}
+      .m-collection-page-header--{{ section.id }} .container-full {
+        padding-inline: 0;
+      }
+      .m-collection-page-header--{{ section.id }} .container-full .m-collection-page-header__inner {
+        width: 100%;
+        max-width: calc(var(--fluid-container-width, 1620px) + var(--fluid-container-offset, 60px) * 2);
+        margin-inline: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      @media screen and (min-width: 1280px) {
+        .m-collection-page-header--{{ section.id }} .container-full .m-collection-page-header__inner {
+          padding-left: var(--fluid-container-offset, 60px);
+          padding-right: var(--fluid-container-offset, 60px);
+        }
+      }
+    {% endif %}
+  {% endif %}
 {%- endstyle -%}
 
 <div class="{{ main_classes }}" data-section-type="collection-header" data-section-id="{{ section.id }}">
