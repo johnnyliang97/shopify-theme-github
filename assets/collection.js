@@ -186,13 +186,53 @@ class Collection {
 
     window.localStorage.setItem(this.STORAGE_KEY, col);
     this.activeCol = col;
+    this.positionGridPromotions();
+  };
+
+  positionGridPromotions = () => {
+    const { productContainer } = this.domNodes;
+    if (!productContainer) return;
+    const promotions = Array.from(productContainer.querySelectorAll("[data-grid-promotion]"));
+    if (!promotions.length) return;
+
+    const activeColumns = this.activeCol || this.initialCol;
+    const columns = window.innerWidth < 768 ? Math.min(activeColumns, 2) : activeColumns;
+    const span = Math.min(2, columns);
+    productContainer.style.setProperty("--collection-grid-columns", columns);
+    // Reuse the random choice when resizing, while aligning to the new row width.
+    promotions.forEach((promotion) => promotion.remove());
+    promotions.forEach((promotion) => {
+      if (!promotion.dataset.placementRandom) promotion.dataset.placementRandom = Math.random();
+      const items = Array.from(productContainer.children);
+      const candidates = [];
+      const lastPromotionIndex = items.reduce((last, item, index) => item.matches("[data-grid-promotion]") ? index : last, -1);
+      let slots = 0;
+      items.forEach((item, index) => {
+        const column = slots % columns;
+        if (index > lastPromotionIndex && item.matches(".m-product-item") && (column === 0 || column === columns - span)) {
+          candidates.push(index);
+        }
+        const itemSpan = item.matches("[data-grid-promotion]") ? span : 1;
+        if (column + itemSpan > columns) slots += columns - column;
+        slots += itemSpan;
+      });
+      // Prefer a position after at least one product when there is room.
+      const amongProducts = candidates.filter((index) => index > 0);
+      const positions = amongProducts.length ? amongProducts : candidates;
+      const index = positions[Math.floor(Number(promotion.dataset.placementRandom) * positions.length)] ?? items.length;
+      productContainer.insertBefore(promotion, items[index] || null);
+    });
   };
 
   updateViewByScreen = () => {
-    if (this.activeCol === 1) return; // List layout
+    if (this.activeCol === 1) {
+      this.positionGridPromotions();
+      return; // List layout
+    }
     const device = this.getDeviceByScreenSize();
     const maxCol = this.MAX_COL_BY_SCREEN_SIZE[device];
     if (maxCol < this.activeCol) this.toggleView(maxCol);
+    else this.positionGridPromotions();
   };
 
   getDeviceByScreenSize = () => {

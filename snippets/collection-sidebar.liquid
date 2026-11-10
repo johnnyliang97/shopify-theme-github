@@ -63,25 +63,27 @@
                   </div>
                 </div>
               {% when 'banner_promotion' %}
-                {{ 'component-image-card.css' | asset_url | stylesheet_tag }} 
-                <div class="m-banner-promotion m-filter--widget"
-                  style="order: {{ forloop.index }}"
-                >
-                  {% render 'image-card', 
-                    block: block, 
-                    index: forloop.index,
-                    color_scheme: block.settings.color_scheme,
-                    stack_on_mobile: false,
-                    image_card_class: 'm-hover-box m-hover-box--scale-up',
-                    animated: animated, 
-                    animation_effect: animation_effect
-                  %}
-                </div>
+                {% unless promotions_in_grid %}
+                  {{ 'component-image-card.css' | asset_url | stylesheet_tag }}
+                  <div class="m-banner-promotion m-filter--widget"
+                    style="order: {{ forloop.index }}"
+                  >
+                    {% render 'image-card',
+                      block: block,
+                      index: forloop.index,
+                      color_scheme: block.settings.color_scheme,
+                      stack_on_mobile: false,
+                      image_card_class: 'm-hover-box m-hover-box--scale-up',
+                      animated: animated,
+                      animation_effect: animation_effect
+                    %}
+                  </div>
+                {% endunless %}
             {% endcase %}
           {%- endfor -%}
           {% render 'storefront-filters', section: section, results: collection %}
         {%- else -%}
-          {% render 'filter-by-tags', section: section %}
+          {% render 'filter-by-tags', section: section, promotions_in_grid: promotions_in_grid %}
         {%- endif -%}
       </div>
     </div>

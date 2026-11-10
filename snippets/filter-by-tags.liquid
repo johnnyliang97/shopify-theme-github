@@ -184,18 +184,20 @@
           </div>
         {% endif %}
       {% when 'banner_promotion' %}
-        {{ 'component-image-card.css' | asset_url | stylesheet_tag }} 
-        <div class="m-banner-promotion m-filter--widget">
-          {% render 'image-card', 
-            block: block, 
-            index: forloop.index,
-            color_scheme: block.settings.color_scheme,
-            stack_on_mobile: false,
-            image_card_class: 'm-hover-box m-hover-box--scale-up',
-            animated: animated, 
-            animation_effect: animation_effect
-          %}
-        </div>
+        {% unless promotions_in_grid %}
+          {{ 'component-image-card.css' | asset_url | stylesheet_tag }}
+          <div class="m-banner-promotion m-filter--widget">
+            {% render 'image-card',
+              block: block,
+              index: forloop.index,
+              color_scheme: block.settings.color_scheme,
+              stack_on_mobile: false,
+              image_card_class: 'm-hover-box m-hover-box--scale-up',
+              animated: animated,
+              animation_effect: animation_effect
+            %}
+          </div>
+        {% endunless %}
     {% endcase %}
   {% endfor %}
 </collection-tags-filters>

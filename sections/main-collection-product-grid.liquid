@@ -7,6 +7,10 @@
 {%- endif -%}
 {%- liquid
   assign initial_column = section.settings.grid_columns
+  assign promotions_in_grid = false
+  if template.name == 'collection' and template.suffix == blank
+    assign promotions_in_grid = true
+  endif
   if section.settings.grid_layout == 'list'
     assign initial_column = 1
   endif
@@ -34,6 +38,10 @@
     assign vendors = collection.products | map: 'vendor' | uniq
   endif
 -%}
+{%- if promotions_in_grid -%}
+  {{ 'component-image-card.css' | asset_url | stylesheet_tag }}
+  {{ 'collection-grid-promotion.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
 
 <section
   class="facest-filters-section"
@@ -53,6 +61,7 @@
     <div class="m-collection--wrapper {% if section.settings.show_filter %}m-sidebar--{{ section.settings.sidebar }}{% endif %}">
       {%- render 'collection-sidebar',
         show_filter: show_filter,
+        promotions_in_grid: promotions_in_grid,
         animated: animated,
         animation_effect: animation_effect
       -%}
@@ -83,7 +92,25 @@
               class="m-collection-products m:flex m:flex-wrap m-cols-{{ initial_column }}"
               data-total-pages="{{ paginate.pages }}"
               data-product-container
+              style="--collection-grid-columns: {{ initial_column }};"
             >
+              {%- if promotions_in_grid -%}
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'banner_promotion' -%}
+                    <div class="m-collection-grid-promotion" data-grid-promotion {{ block.shopify_attributes }}>
+                      {%- render 'image-card',
+                        block: block,
+                        index: forloop.index,
+                        color_scheme: block.settings.color_scheme,
+                        stack_on_mobile: false,
+                        image_card_class: 'm-hover-box m-hover-box--scale-up',
+                        animated: animated,
+                        animation_effect: animation_effect
+                      -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
               {%- for product in collection.products -%}
                 <div class="m-product-item m:w-6/12 md:m:w-4/12">
                   {% liquid
