@@ -1,4 +1,6 @@
 {{ 'collection-header.css' | asset_url | stylesheet_tag }}
+{{ 'collection-description.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'collection-description.js' | asset_url }}" defer="defer"></script>
 {% liquid
   assign text_alignment = section.settings.text_alignment
   assign bg_image = section.settings.bg_image
@@ -149,9 +151,28 @@
             {{ collection.title }}
           </h1>
           {% if section.settings.show_desc and collection_desc != blank %}
-            <div class="m-collection-page-header__description rte {{ desc_color }}{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}">
-              {{ collection_desc }}
-            </div>
+            <collection-description
+              class="m-collection-page-header__description {{ desc_color }}{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}"
+              data-collapsed-lines="{{ section.settings.description_collapsed_lines | default: 3 }}"
+            >
+              <div id="CollectionDescription-{{ section.id }}" class="m-collection-description__content rte" data-description-content>
+                {{ collection_desc }}
+              </div>
+              {% if section.settings.enable_description_toggle %}
+                <button
+                  type="button"
+                  class="m-collection-description__toggle"
+                  data-description-toggle
+                  data-read-more="{{ section.settings.description_read_more | escape }}"
+                  data-show-less="{{ section.settings.description_show_less | escape }}"
+                  aria-controls="CollectionDescription-{{ section.id }}"
+                  aria-expanded="false"
+                  hidden
+                >
+                  {{ section.settings.description_read_more }}
+                </button>
+              {% endif %}
+            </collection-description>
           {% endif %}
         </div>
       </div>
@@ -350,6 +371,33 @@
       "id": "show_desc",
       "label": "Show description",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_description_toggle",
+      "label": "Enable Read more / Show less",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "description_collapsed_lines",
+      "label": "Description lines before Read more",
+      "default": 3,
+      "min": 2,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "type": "text",
+      "id": "description_read_more",
+      "label": "Read more label",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "description_show_less",
+      "label": "Show less label",
+      "default": "Show less"
     },
     {
       "type": "richtext",

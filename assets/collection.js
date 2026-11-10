@@ -226,6 +226,32 @@ class Collection {
       const index = positions[Math.floor(Number(promotion.dataset.placementRandom) * positions.length)] ?? items.length;
       productContainer.insertBefore(promotion, items[index] || null);
     });
+    this.balancePromotionRow();
+  };
+
+  balancePromotionRow = () => {
+    const { productContainer } = this.domNodes;
+    if (!productContainer) return;
+    const products = productContainer.querySelectorAll(".m-product-item");
+    products.forEach((product) => product.classList.remove("m-product-item--fill-row"));
+    if (!this.responsiveGrid || this.activeCol !== 4 || !productContainer.querySelector("[data-grid-promotion]")) return;
+
+    // A two-card promotion can leave two products at the end of a four-column grid.
+    let slots = 0;
+    let lastRow = [];
+    Array.from(productContainer.children).forEach((item) => {
+      const span = item.matches("[data-grid-promotion]") ? 2 : 1;
+      const column = slots % 4;
+      if (column === 0 || column + span > 4) {
+        if (column + span > 4) slots += 4 - column;
+        lastRow = [];
+      }
+      lastRow.push(item);
+      slots += span;
+    });
+    if (slots % 4 === 2 && lastRow.length === 2 && lastRow.every((item) => item.matches(".m-product-item"))) {
+      lastRow.forEach((product) => product.classList.add("m-product-item--fill-row"));
+    }
   };
 
   updateViewByScreen = () => {
@@ -296,6 +322,7 @@ class Collection {
   };
 
   initProducts = () => {
+    this.balancePromotionRow();
     MinimogTheme.CompareProduct && MinimogTheme.CompareProduct.setCompareButtonsState();
     MinimogTheme.Wishlist && MinimogTheme.Wishlist.setWishlistButtonsState();
   };

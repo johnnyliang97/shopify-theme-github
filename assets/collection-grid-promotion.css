@@ -13,6 +13,11 @@
     max-width: 25%;
   }
 
+  .facest-filters-section[data-responsive-grid="true"] .m-collection-products > .m-product-item--fill-row {
+    width: 50%;
+    max-width: 50%;
+  }
+
   .facest-filters-section[data-responsive-grid="true"] .m-collection-products > .m-collection-grid-promotion {
     width: 50%;
   }
