@@ -49,7 +49,7 @@
         "image_position": "background",
         "enable_parallax": false,
         "parallax_direction": "vertical",
-        "text_alignment": "center",
+        "text_alignment": "left",
         "text_color": "inherit",
         "upper_title": false,
         "show_desc": true,
