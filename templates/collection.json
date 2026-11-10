@@ -39,12 +39,10 @@
     },
     "collection-header": {
       "type": "collection-page-header",
-      "custom_css": [
-        ".container-fluid {margin-top: 15px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "default",
-        "container": "container-fluid",
+        "container": "w-full",
         "layout": "without_breadcrumb",
         "image_position": "background",
         "enable_parallax": false,
@@ -58,8 +56,8 @@
         "description_read_more": "More",
         "description_show_less": "Less",
         "collection_all_desc": "{{ collection.description }}",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
         "enable_bg_zoom_effect": true
       }
     },
