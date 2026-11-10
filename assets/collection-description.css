@@ -2,18 +2,30 @@ collection-description {
   display: block;
 }
 
-.m-collection-description__content {
+.m-collection-description__content,
+.m-collection-description__preview {
   line-height: 1.6;
 }
 
-.m-collection-description__content.is-collapsed {
-  max-height: var(--description-collapsed-height);
-  overflow: hidden;
+.m-collection-description__content[hidden],
+.m-collection-description__preview[hidden] {
+  display: none;
+}
+
+.m-collection-description__tail {
+  white-space: nowrap;
+}
+
+.m-collection-description__fade {
+  display: inline-block;
+  -webkit-mask-image: linear-gradient(to right, #000, transparent);
+  mask-image: linear-gradient(to right, #000, transparent);
 }
 
 .m-collection-description__toggle {
   display: inline-block;
-  margin-top: 8px;
+  margin: 0;
+  margin-inline-start: 0.4em;
   padding: 0;
   border: 0;
   background: none;
@@ -22,6 +34,7 @@ collection-description {
   text-decoration: underline;
   text-underline-offset: 3px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .m-collection-description__toggle[hidden] {

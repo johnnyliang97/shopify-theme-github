@@ -6,9 +6,17 @@
     assign show_columns_switcher = false
   endif
   assign sort_by = results.sort_by | default: results.default_sort_by
+  assign sort_by_name = 'collections.sorting.title' | t
+  assign removed_sorts = 'manual,best-selling,title-ascending,title-descending,created-ascending' | split: ','
   for option in results.sort_options
+    if template.name == 'collection' and removed_sorts contains option.value
+      continue
+    endif
     if option.value == sort_by
       assign sort_by_name = option.name | escape
+      if template.name == 'collection' and option.value == 'created-descending'
+        assign sort_by_name = 'Newest first'
+      endif
       break
     endif
   endfor
@@ -40,17 +48,7 @@
             <m-select-component>
               {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
               <select name="sort_by" aria-describedby="a11y-refresh-page-message" class="js-selectNative">
-                {%- for option in results.sort_options -%}
-                  <option
-                    value="{{ option.value | escape }}"
-                    {% if option.value == sort_by %}
-                      selected="selected"
-                    {% endif %}
-                    data-index="{{ forloop.index0 }}"
-                  >
-                    {{ option.name | escape }}
-                  </option>
-                {%- endfor -%}
+                {%- render 'product-sort-options', results: results, format: 'native' -%}
               </select>
               <div class="m-select-custom js-selectCustom" aria-hidden="true">
                 <div class="m-select-custom--trigger">
@@ -62,11 +60,7 @@
                   </span>
                 </div>
                 <div class="m-select-custom--options m-select-custom--options-{{ pos }}">
-                  {%- for option in results.sort_options -%}
-                    <div class="m-select-custom--option" data-value="{{ option.value | escape }}">
-                      {{ option.name | escape }}
-                    </div>
-                  {%- endfor -%}
+                  {%- render 'product-sort-options', results: results, format: 'custom' -%}
                 </div>
               </div>
             </m-select-component>

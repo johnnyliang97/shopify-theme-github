@@ -1,3 +1,7 @@
+.m-collection-products > [data-grid-buffered] {
+  display: none;
+}
+
 .facest-filters-section[data-responsive-grid="true"] .m-collection-products > .m-product-item {
   width: 50%;
   max-width: 50%;
@@ -11,11 +15,6 @@
   .facest-filters-section[data-responsive-grid="true"] .m-collection-products > .m-product-item {
     width: 25%;
     max-width: 25%;
-  }
-
-  .facest-filters-section[data-responsive-grid="true"] .m-collection-products > .m-product-item--fill-row {
-    width: 50%;
-    max-width: 50%;
   }
 
   .facest-filters-section[data-responsive-grid="true"] .m-collection-products > .m-collection-grid-promotion {

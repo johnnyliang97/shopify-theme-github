@@ -153,7 +153,7 @@
           {% if section.settings.show_desc and collection_desc != blank %}
             <collection-description
               class="m-collection-page-header__description {{ desc_color }}{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}"
-              data-collapsed-lines="{{ section.settings.description_collapsed_lines | default: 3 }}"
+              data-collapsed-lines="{{ section.settings.description_collapsed_lines | default: 2 }}"
             >
               <div id="CollectionDescription-{{ section.id }}" class="m-collection-description__content rte" data-description-content>
                 {{ collection_desc }}
@@ -375,14 +375,14 @@
     {
       "type": "checkbox",
       "id": "enable_description_toggle",
-      "label": "Enable Read more / Show less",
+      "label": "Enable More / Less",
       "default": true
     },
     {
       "type": "range",
       "id": "description_collapsed_lines",
-      "label": "Description lines before Read more",
-      "default": 3,
+      "label": "Description lines before More",
+      "default": 2,
       "min": 2,
       "max": 8,
       "step": 1
@@ -390,14 +390,14 @@
     {
       "type": "text",
       "id": "description_read_more",
-      "label": "Read more label",
-      "default": "Read more"
+      "label": "More label",
+      "default": "More"
     },
     {
       "type": "text",
       "id": "description_show_less",
-      "label": "Show less label",
-      "default": "Show less"
+      "label": "Less label",
+      "default": "Less"
     },
     {
       "type": "richtext",

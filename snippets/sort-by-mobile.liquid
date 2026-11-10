@@ -8,15 +8,7 @@
       </span>
       <span class="m-sortby-mobile--title">{{ 'collections.sorting.title' | t }}</span>
       <ul class="m-sortby-mobile--list">
-        {% for option in results.sort_options %}
-          <li
-            class="m-sortby-mobile--item{% if option.value == results.sort_by %} active{% endif %}"
-            data-value="{{ option.value }}"
-            data-index="{{ forloop.index0 }}"
-          >
-            <span>{{ option.name }}</span>
-          </li>
-        {% endfor %}
+        {%- render 'product-sort-options', results: results, format: 'mobile' -%}
       </ul>
     </div>
   </div>

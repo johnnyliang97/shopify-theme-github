@@ -1,0 +1,31 @@
+{%- liquid
+  assign sort_by = results.sort_by | default: results.default_sort_by
+  assign removed_sorts = 'manual,best-selling,title-ascending,title-descending,created-ascending' | split: ','
+  assign restrict_sorts = false
+  if template.name == 'collection'
+    assign restrict_sorts = true
+  endif
+-%}
+{%- if format == 'native' and restrict_sorts and removed_sorts contains sort_by -%}
+  <option value="{{ sort_by | escape }}" selected="selected" disabled>{{ 'collections.sorting.title' | t }}</option>
+{%- endif -%}
+{%- for option in results.sort_options -%}
+  {%- if restrict_sorts and removed_sorts contains option.value -%}
+    {%- continue -%}
+  {%- endif -%}
+  {%- capture label -%}
+    {%- if restrict_sorts and option.value == 'created-descending' -%}
+      Newest first
+    {%- else -%}
+      {{- option.name | escape -}}
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- case format -%}
+    {%- when 'native' -%}
+      <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %} data-index="{{ forloop.index0 }}">{{ label }}</option>
+    {%- when 'custom' -%}
+      <div class="m-select-custom--option" data-value="{{ option.value | escape }}">{{ label }}</div>
+    {%- when 'mobile' -%}
+      <li class="m-sortby-mobile--item{% if option.value == sort_by %} active{% endif %}" data-value="{{ option.value | escape }}" data-index="{{ forloop.index0 }}"><span>{{ label }}</span></li>
+  {%- endcase -%}
+{%- endfor -%}

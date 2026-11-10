@@ -23,6 +23,8 @@ class Collection {
     this.isDesignMode = MinimogSettings.design_mode;
 
     this.currentPage = 1;
+    this.pendingProducts = [];
+    this.loadingProducts = false;
     this.paginationType; // "paginate" | "loadmore" | "infinite"
     this.totalPages;
     this.totalProducts;
@@ -73,7 +75,13 @@ class Collection {
     this.view = section.dataset.view;
     // TODO: get from URL Search Params
     this.activeCol = null;
-    this.currentPage = 1;
+    this.currentPage = Number(productContainer?.dataset.currentPage) || 1;
+    this.pendingProducts = productContainer ? Array.from(productContainer.querySelectorAll("[data-grid-buffered]")) : [];
+    this.pendingProducts.forEach((product) => {
+      product.remove();
+      product.removeAttribute("data-grid-buffered");
+    });
+    this.loadingProducts = false;
     this.initialCol = Number(section.dataset.initialColumn);
     this.responsiveGrid = section.dataset.responsiveGrid === "true";
     this.cachedCol = this.responsiveGrid ? this.initialCol : Number(window.localStorage.getItem(this.STORAGE_KEY)) || this.initialCol;
@@ -226,32 +234,6 @@ class Collection {
       const index = positions[Math.floor(Number(promotion.dataset.placementRandom) * positions.length)] ?? items.length;
       productContainer.insertBefore(promotion, items[index] || null);
     });
-    this.balancePromotionRow();
-  };
-
-  balancePromotionRow = () => {
-    const { productContainer } = this.domNodes;
-    if (!productContainer) return;
-    const products = productContainer.querySelectorAll(".m-product-item");
-    products.forEach((product) => product.classList.remove("m-product-item--fill-row"));
-    if (!this.responsiveGrid || this.activeCol !== 4 || !productContainer.querySelector("[data-grid-promotion]")) return;
-
-    // A two-card promotion can leave two products at the end of a four-column grid.
-    let slots = 0;
-    let lastRow = [];
-    Array.from(productContainer.children).forEach((item) => {
-      const span = item.matches("[data-grid-promotion]") ? 2 : 1;
-      const column = slots % 4;
-      if (column === 0 || column + span > 4) {
-        if (column + span > 4) slots += 4 - column;
-        lastRow = [];
-      }
-      lastRow.push(item);
-      slots += span;
-    });
-    if (slots % 4 === 2 && lastRow.length === 2 && lastRow.every((item) => item.matches(".m-product-item"))) {
-      lastRow.forEach((product) => product.classList.add("m-product-item--fill-row"));
-    }
   };
 
   updateViewByScreen = () => {
@@ -299,30 +281,40 @@ class Collection {
 
   loadMoreProducts = () => {
     const nextPage = this.currentPage + 1;
-    if (nextPage > this.totalPages) return;
+    if (this.loadingProducts || nextPage > this.totalPages) return;
 
     const { productContainer, loadMoreBtn } = this.domNodes;
+    this.loadingProducts = true;
     this.toggleLoading(true);
     fetchSection(this.sectionId, { fromCache: true, params: { page: nextPage } })
       .then((productGridHTML) => {
-        const productNodes = productGridHTML.querySelectorAll("[data-product-container] .m-product-item");
-        productNodes.forEach((prodNode) => productContainer.appendChild(prodNode));
-        this.initProducts();
-      })
-      .catch((err) => console.error(`Failed to load more products.`, err))
-      .finally(() => {
-        MinimogEvents.emit("ON_PRODUCT_LIST_UPDATED");
-        this.toggleLoading(false);
+        const productNodes = [...this.pendingProducts, ...productGridHTML.querySelectorAll("[data-product-container] .m-product-item")];
+        const promotionCount = productContainer.querySelectorAll("[data-grid-promotion]").length;
+        const slots = productContainer.querySelectorAll(".m-product-item").length + productNodes.length + promotionCount * 2;
+        // Keep complete rows between batches, then reveal every remaining product on the final page.
+        const reserve = this.responsiveGrid && promotionCount && nextPage < this.totalPages ? slots % 4 : 0;
+        const visibleCount = productNodes.length - reserve;
+        this.pendingProducts = productNodes.slice(visibleCount);
+        productNodes.slice(0, visibleCount).forEach((prodNode) => {
+          prodNode.removeAttribute("data-grid-buffered");
+          productContainer.appendChild(prodNode);
+        });
         this.currentPage = nextPage;
+        this.initProducts();
+        MinimogEvents.emit("ON_PRODUCT_LIST_UPDATED");
         if (nextPage >= this.totalPages) {
           loadMoreBtn.parentNode.remove();
           this.infiniteLoadingObserver && this.infiniteLoadingObserver.unobserve(loadMoreBtn);
         }
+      })
+      .catch((err) => console.error(`Failed to load more products.`, err))
+      .finally(() => {
+        this.toggleLoading(false);
+        this.loadingProducts = false;
       });
   };
 
   initProducts = () => {
-    this.balancePromotionRow();
     MinimogTheme.CompareProduct && MinimogTheme.CompareProduct.setCompareButtonsState();
     MinimogTheme.Wishlist && MinimogTheme.Wishlist.setWishlistButtonsState();
   };

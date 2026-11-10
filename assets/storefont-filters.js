@@ -47,9 +47,8 @@ class CollectionFiltersForm extends HTMLElement {
   initSorting = () => {
     const { sortingInToolbar } = this.domNodes;
     if (!this.enableSorting || !sortingInToolbar) return;
-    sortingInToolbar.selectedIndex = sortingInToolbar.querySelector("option[selected]").dataset.index;
     sortingInToolbar.addEventListener("change", () => {
-      this.handleSorting(sortingInToolbar.selectedIndex);
+      this.handleSorting(sortingInToolbar.value);
     });
 
     this.listeners = [
@@ -61,16 +60,16 @@ class CollectionFiltersForm extends HTMLElement {
             option.classList.add("active");
             this.activeSortingOption = option;
             MinimogTheme.Collection.closeMobileSorting();
-            this.handleSorting(option.dataset.index);
+            this.handleSorting(option.dataset.value);
           }
         },
       }),
     ];
   };
 
-  handleSorting = (sortingOptionIndex) => {
+  handleSorting = (sortingValue) => {
     const { filtersForm, sortingInForm } = this.domNodes;
-    sortingInForm.selectedIndex = Number(sortingOptionIndex) || 0;
+    sortingInForm.value = sortingValue;
     filtersForm.dispatchEvent(new Event("input"));
   };
 

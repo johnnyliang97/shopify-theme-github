@@ -15,19 +15,8 @@
     {%- endif -%}
     {%- if st.show_sorting -%}
       <div class="m:hidden" data-form-sorting>
-        {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
         <select name="sort_by" aria-describedby="a11y-refresh-page-message">
-          {%- for option in results.sort_options -%}
-            <option
-              value="{{ option.value | escape }}"
-              {% if option.value == sort_by %}
-                selected="selected"
-              {% endif %}
-              data-index="{{ forloop.index0 }}"
-            >
-              {{ option.name | escape }}
-            </option>
-          {%- endfor -%}
+          {%- render 'product-sort-options', results: results, format: 'native' -%}
         </select>
       </div>
     {%- endif -%}

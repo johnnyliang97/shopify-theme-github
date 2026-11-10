@@ -91,6 +91,22 @@
           endif
         -%}
         {%- paginate collection.products by section.settings.pagination_limit -%}
+          {%- liquid
+            assign visible_product_limit = section.settings.pagination_limit
+            if responsive_grid and section.settings.paginate_type != 'paginate' and paginate.current_page < paginate.pages
+              assign promotion_count = 0
+              for block in section.blocks
+                if block.type == 'banner_promotion'
+                  assign promotion_count = promotion_count | plus: 1
+                endif
+              endfor
+              if promotion_count > 0
+                assign promotion_slots = promotion_count | times: 2
+                assign trailing_slots = visible_product_limit | plus: promotion_slots | modulo: 4
+                assign visible_product_limit = visible_product_limit | minus: trailing_slots
+              endif
+            endif
+          -%}
           {%- if collection.products.size == 0 -%}
             <div class="m-collection--empty m:flex m:flex-col m:w-full m:items-center">
               <span>{%- render 'icon', name: 'empty-collection', fill: '#9a9a9a' -%}</span>
@@ -100,6 +116,7 @@
             <div
               class="m-collection-products m:flex m:flex-wrap m-cols-{{ initial_column }}"
               data-total-pages="{{ paginate.pages }}"
+              data-current-page="{{ paginate.current_page }}"
               data-product-container
               style="--collection-grid-columns: {{ initial_column }};"
             >
@@ -121,7 +138,7 @@
                 {%- endfor -%}
               {%- endif -%}
               {%- for product in collection.products -%}
-                <div class="m-product-item m:w-6/12 md:m:w-4/12">
+                <div class="m-product-item m:w-6/12 md:m:w-4/12"{% if forloop.index > visible_product_limit %} data-grid-buffered{% endif %}>
                   {% liquid
                     case settings.pcard_layout
                       when '1'
