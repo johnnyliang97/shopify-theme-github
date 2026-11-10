@@ -58,8 +58,8 @@
         "description_read_more": "More",
         "description_show_less": "Less",
         "collection_all_desc": "{{ collection.description }}",
-        "padding_top": 36,
-        "padding_bottom": 50,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "enable_bg_zoom_effect": true
       }
     },
