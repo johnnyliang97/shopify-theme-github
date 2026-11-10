@@ -1,0 +1,40 @@
+.m-header .m-topbar a[href*="facebook"] {
+  order: 2;
+}
+
+.m-header .social-media-links {
+  column-gap: 30px;
+}
+
+.m-header .m-mega-menu {
+  background-color: #ffffff;
+  border-top: 1px solid #f5f5f5;
+}
+
+.m-header .m-sub-menu--level-1 .m-menu__link {
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.m-header .m-sub-menu--level-1 .m-menu__link:hover {
+  color: #757575;
+}
+
+.m-header .m-sub-menu--level-2 .m-menu__link {
+  font-weight: normal;
+  text-transform: inherit;
+}
+
+.m-header .m-menu__arrow {
+  display: none;
+}
+
+.m-header .m-menu__item--mega .m-sub-menu__item--level-1 > .m-menu__link {
+  padding-left: 10.5px;
+}
+
+.m-header .m-header__main .m-menu {
+  --main-link-px: 12px;
+  --main-link-py: 12px;
+}
