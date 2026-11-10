@@ -634,7 +634,7 @@
         "main_menu": "mega-menu",
         "secondary_menu": "",
         "mobile_menu": "",
-        "uppercase_parent_level": true,
+        "uppercase_parent_level": false,
         "show_menu_column_divider": true,
         "search": "show_icon",
         "show_account_icon": true,
