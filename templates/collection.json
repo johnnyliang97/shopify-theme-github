@@ -154,7 +154,7 @@
         "container": "container-fluid",
         "grid_layout": "grid",
         "grid_columns": "4",
-        "show_columns_switcher": true,
+        "show_columns_switcher": false,
         "pagination_limit": 12,
         "paginate_type": "loadmore",
         "show_sorting": true,

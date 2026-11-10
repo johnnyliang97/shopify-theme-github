@@ -1,6 +1,10 @@
 {%- assign st = section.settings -%}
 
 {%- liquid
+  assign show_columns_switcher = st.show_columns_switcher
+  if responsive_grid
+    assign show_columns_switcher = false
+  endif
   assign sort_by = results.sort_by | default: results.default_sort_by
   for option in results.sort_options
     if option.value == sort_by
@@ -29,7 +33,7 @@
         </button>
       {% endif %}
     </div>
-    {%- if st.show_sorting or st.show_columns_switcher -%}
+    {%- if st.show_sorting or show_columns_switcher -%}
       <div class="m-toolbar--right m:flex m:flex-1 m:items-center m:justify-end md:m:justify-between">
         {% if st.show_sorting %}
           <div class="m-toolbar--sortby m:hidden md:m:block" data-toolbar-sorting>
@@ -68,7 +72,7 @@
             </m-select-component>
           </div>
         {% endif %}
-        {% if st.show_columns_switcher %}
+        {% if show_columns_switcher %}
           <div class="m-toolbar--column-switcher m:flex">
             <button class="m:flex m-tooltip m-tooltip--top" data-column="1" aria-label="1-column">
               <svg

@@ -8,11 +8,18 @@
 {%- liquid
   assign initial_column = section.settings.grid_columns
   assign promotions_in_grid = false
+  assign responsive_grid = false
+  assign show_columns_switcher = section.settings.show_columns_switcher
   if template.name == 'collection' and template.suffix == blank
     assign promotions_in_grid = true
+    assign responsive_grid = true
+    assign show_columns_switcher = false
   endif
   if section.settings.grid_layout == 'list'
     assign initial_column = 1
+  endif
+  if responsive_grid
+    assign initial_column = 4
   endif
 
   assign show_filter = section.settings.show_filter
@@ -51,7 +58,8 @@
   data-filters-position="{{ section.settings.sidebar }}"
   data-enable-filters="{{ section.settings.show_filter }}"
   data-enable-sorting="{{ section.settings.show_sorting }}"
-  data-show-col-switchers="{{ section.settings.show_columns_switcher }}"
+  data-show-col-switchers="{{ show_columns_switcher }}"
+  data-responsive-grid="{{ responsive_grid }}"
   data-pagination-type="{{ section.settings.paginate_type }}"
   data-product-count="{{ collection.products.size }}"
   data-initial-column="{{ initial_column }}"
@@ -69,6 +77,7 @@
         {%- render 'collection-page-toolbar',
           section: section,
           results: collection,
+          responsive_grid: responsive_grid,
           animated: animated,
           animation_effect: animation_effect
         -%}

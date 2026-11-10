@@ -75,8 +75,9 @@ class Collection {
     this.activeCol = null;
     this.currentPage = 1;
     this.initialCol = Number(section.dataset.initialColumn);
-    this.cachedCol = Number(window.localStorage.getItem(this.STORAGE_KEY)) || this.initialCol;
-    this.showColSwitchers = section.dataset.showColSwitchers === "true";
+    this.responsiveGrid = section.dataset.responsiveGrid === "true";
+    this.cachedCol = this.responsiveGrid ? this.initialCol : Number(window.localStorage.getItem(this.STORAGE_KEY)) || this.initialCol;
+    this.showColSwitchers = !this.responsiveGrid && section.dataset.showColSwitchers === "true";
     // Filters data
     this.enableFilters = section.dataset.enableFilters === "true";
     this.enableSorting = section.dataset.enableSorting === "true";
@@ -85,13 +86,15 @@ class Collection {
   };
 
   initGridView = () => {
-    this.toggleView(this.isDesignMode ? this.initialCol : this.cachedCol);
+    if (!this.responsiveGrid) this.toggleView(this.isDesignMode ? this.initialCol : this.cachedCol);
     this.updateViewByScreen();
-    addEventDelegate({
-      selector: this.selectors.cols[0],
-      context: this.domNodes.toolbar,
-      handler: (e, colNode) => this.toggleView(Number(colNode.dataset.column)),
-    });
+    if (this.showColSwitchers) {
+      addEventDelegate({
+        selector: this.selectors.cols[0],
+        context: this.domNodes.toolbar,
+        handler: (e, colNode) => this.toggleView(Number(colNode.dataset.column)),
+      });
+    }
     this.initLoadMore();
     if (!this.sideEffectEventsAdded) {
       window.addEventListener("resize", debounce(this.updateViewByScreen, 500));
@@ -164,6 +167,7 @@ class Collection {
 
   toggleView = (col) => {
     if (!col || this.view === "search") return;
+    if (this.responsiveGrid) col = window.innerWidth >= 1024 ? 4 : 2;
     const { cols, productContainer } = this.domNodes;
     if (!productContainer) return;
     // Resize image product card
@@ -184,7 +188,7 @@ class Collection {
     productContainer.classList.remove(`m-cols-${activeCol}`);
     productContainer.classList.add(`m-cols-${col}`);
 
-    window.localStorage.setItem(this.STORAGE_KEY, col);
+    if (!this.responsiveGrid) window.localStorage.setItem(this.STORAGE_KEY, col);
     this.activeCol = col;
     this.positionGridPromotions();
   };
@@ -225,6 +229,12 @@ class Collection {
   };
 
   updateViewByScreen = () => {
+    if (this.responsiveGrid) {
+      const columns = window.innerWidth >= 1024 ? 4 : 2;
+      if (columns !== this.activeCol) this.toggleView(columns);
+      else this.positionGridPromotions();
+      return;
+    }
     if (this.activeCol === 1) {
       this.positionGridPromotions();
       return; // List layout
