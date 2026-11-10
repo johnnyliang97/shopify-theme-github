@@ -149,10 +149,7 @@
       "block_order": [
         "banner_promotion_KppNc9"
       ],
-      "custom_css": [
-        ".m-banner-promotion {order: 3 !important; margin-top: 30px; margin-bottom: 0;}",
-        ".m-collection-filters-form {margin-bottom: 0;}"
-      ],
+      "custom_css": [],
       "settings": {
         "container": "container-fluid",
         "grid_layout": "grid",
