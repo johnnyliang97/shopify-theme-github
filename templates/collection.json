@@ -51,7 +51,7 @@
         "parallax_direction": "vertical",
         "text_alignment": "center",
         "text_color": "inherit",
-        "upper_title": true,
+        "upper_title": false,
         "show_desc": true,
         "collection_all_desc": "{{ collection.description }}",
         "padding_top": 36,
