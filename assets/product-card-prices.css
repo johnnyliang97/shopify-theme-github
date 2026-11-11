@@ -41,3 +41,15 @@
   font-weight: 400;
   line-height: 1.4;
 }
+
+.m-price__badges--plain {
+  flex-basis: 100%;
+}
+
+.m-price__discount-text {
+  color: #ff1734;
+  font-family: var(--font-stack-header);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4;
+}

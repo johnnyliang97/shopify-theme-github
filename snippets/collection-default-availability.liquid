@@ -1,0 +1,26 @@
+{%- if template.name == 'collection' and request.design_mode == false -%}
+  {%- assign availability_filter = collection.filters | where: 'param_name', 'filter.v.availability' | first -%}
+  {%- if availability_filter != blank -%}
+    <script>
+      (() => {
+        const availabilityParam = 'filter.v.availability';
+        window.MinimogCollectionDefaults = {
+          withAvailability(searchParams) {
+            const params = new URLSearchParams(searchParams);
+            if (!params.has(availabilityParam)) {
+              params.set(availabilityParam, '1');
+              params.delete('page');
+            }
+            return params.toString();
+          }
+        };
+
+        const url = new URL(window.location.href);
+        if (!url.searchParams.has(availabilityParam)) {
+          url.search = window.MinimogCollectionDefaults.withAvailability(url.search);
+          window.location.replace(url.href);
+        }
+      })();
+    </script>
+  {%- endif -%}
+{%- endif -%}

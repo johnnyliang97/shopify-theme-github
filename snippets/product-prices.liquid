@@ -50,6 +50,10 @@
   endif
 
   assign sale_badge_type = sale_badge_type | default: 'percentage'
+  assign show_plain_percentage = false
+  if plain_percentage and sale_badge_type == 'percentage'
+    assign show_plain_percentage = true
+  endif
   assign card_discount = 0
   if is_product_card and compare_at_price > price
     assign card_discount = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price
@@ -132,7 +136,7 @@
   </div>
 
   {% if show_sale_badge %}
-    <div class="m-price__badges">
+    <div class="m-price__badges{% if show_plain_percentage %} m-price__badges--plain{% endif %}">
       {% if show_sale_badge %}
         {% liquid
           assign save_amount = 0
@@ -148,6 +152,9 @@
               assign discount_percent = 5
             endif
             assign discount = discount_percent | append: '% OFF'
+            if show_plain_percentage
+              assign discount = discount_percent | prepend: '-' | append: '%'
+            endif
           elsif sale_badge_type == 'fixed_amount'
             if settings.currency_code_enabled
               assign discount = save_amount | money_with_currency
@@ -157,7 +164,7 @@
           endif
         %}
         <div class="m-price__badge-sale" data-type="{{ sale_badge_type }}">
-          <span class="m-product-tag m-product-tag--sale m-gradient m-color-{{ settings.sale_badge_color_scheme }}">
+          <span class="{% if show_plain_percentage %}m-price__discount-text{% else %}m-product-tag m-product-tag--sale m-gradient m-color-{{ settings.sale_badge_color_scheme }}{% endif %}">
             {% unless sale_badge_type == 'text' %}
               {{ discount }}
             {% else %}

@@ -247,6 +247,13 @@ class CollectionFiltersForm extends HTMLElement {
   };
 
   renderPage = (searchParams, updateURLHash = true) => {
+    if (this.view === "collection" && window.MinimogCollectionDefaults) {
+      const defaultSearchParams = window.MinimogCollectionDefaults.withAvailability(searchParams);
+      if (!updateURLHash && defaultSearchParams !== searchParams) {
+        history.replaceState({ searchParams: defaultSearchParams }, "", `${window.location.pathname}?${defaultSearchParams}${window.location.hash}`);
+      }
+      searchParams = defaultSearchParams;
+    }
     this.loading.start();
     const _url = `${window.location.pathname}?section_id=${this.sectionId}&${searchParams}`;
     const cachedResult = cachedFiltersResult.find(({ url }) => url === _url);

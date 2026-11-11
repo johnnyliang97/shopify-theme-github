@@ -75,6 +75,11 @@ class TagsFilter extends HTMLElement {
   };
 
   fetchSectionHtml(url) {
+    if (window.MinimogCollectionDefaults) {
+      const collectionUrl = new URL(url, window.location.href);
+      collectionUrl.search = window.MinimogCollectionDefaults.withAvailability(collectionUrl.search);
+      url = collectionUrl.href;
+    }
     this.loading.start();
     fetch(url)
       .then((res) => {
