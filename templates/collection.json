@@ -81,10 +81,29 @@
             "button_size": "m-button--small",
             "button_fixed": false
           }
+        },
+        "banner_promotion_yD3t3V": {
+          "type": "banner_promotion",
+          "settings": {
+            "color_scheme": "dark",
+            "text_size": "small",
+            "text_color": "white",
+            "image": "shopify://shop_images/lestyle-model-girls-balmain-2_4c7de375-6338-47d7-8e8e-6024c1a4965e.png",
+            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.v.option.select+size=12+year&filter.v.option.select+size=12%2B+year&filter.v.option.select+size=13+year&filter.v.option.select+size=14+year&filter.v.option.select+size=16+year&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "content_position": "center_center",
+            "content_alignment": "center",
+            "title": "Explore Lestyle Junior",
+            "subtitle": "Teen Sizes Above 12YO",
+            "button_label": "Shop Now",
+            "button_style": "m-button--link",
+            "button_size": "m-button--small",
+            "button_fixed": false
+          }
         }
       },
       "block_order": [
-        "banner_promotion_KppNc9"
+        "banner_promotion_KppNc9",
+        "banner_promotion_yD3t3V"
       ],
       "custom_css": [],
       "settings": {
