@@ -23,6 +23,8 @@
         assign li_class = 'm-menu__item'
         assign is_mega = true
         assign stretch_width = false
+        assign block_type = ''
+        assign dropdown_container = section.settings.container
 
         assign title_handle = link.title | handleize
         assign has_mega_item = false
@@ -269,8 +271,17 @@
 
       {% liquid
         assign has_child = false
+        assign block_type = block_type | strip
+        assign has_nested_links = false
+        for childlink in link.links
+          if childlink.links != blank
+            assign has_nested_links = true
+            break
+          endif
+        endfor
+        assign menu_rows = link.links.size | plus: 1 | divided_by: 2
 
-        if has_mega_item == false
+        if has_mega_item == false and link.links == blank
           assign is_mega = false
         endif
 
@@ -312,7 +323,10 @@
           >
             <div class="m-mega-menu__container{% if is_mega %} {{ dropdown_container | default: 'container' }}{% endif %}">
               <div class="m-mega-menu__inner{% if stretch_width == true %} m-mega-menu__inner--stretch-width{% endif %}">
-                <ul class="m-sub-menu m-sub-menu--level-1{% if is_mega and block_type == blank %} m:w-full m:flex-1{% endif %}">
+                <ul
+                  class="m-sub-menu m-sub-menu--level-1{% if has_nested_links %} m-sub-menu--grouped{% else %} m-sub-menu--flat{% endif %}{% if is_mega and block_type == blank %} m:w-full m:flex-1{% endif %}"
+                  style="--menu-rows: {{ menu_rows }};"
+                >
                   {% for childlink in link.links %}
                     <li class="m-sub-menu__item m-sub-menu__item--level-1">
                       <a href="{{ childlink.url }}" class="m-menu__link">

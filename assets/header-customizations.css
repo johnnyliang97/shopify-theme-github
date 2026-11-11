@@ -38,3 +38,64 @@
   --main-link-px: 12px;
   --main-link-py: 12px;
 }
+
+@media screen and (min-width: 1024px) {
+  .m-header .m-menu__item .m-mega-menu {
+    border-top: 0;
+    box-shadow: none;
+  }
+
+  .m-header .m-menu__item--mega .m-mega-menu__inner {
+    align-items: flex-start;
+    padding-block: 32px 40px;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu--level-1 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 48px;
+    margin-inline: 0;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu--flat {
+    grid-template-rows: repeat(var(--menu-rows), auto);
+    grid-auto-flow: column;
+    row-gap: 0;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu__item--level-1 {
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu__item--level-1 > .m-menu__link {
+    padding: 8px 0;
+    color: #222222;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu--flat .m-menu__link {
+    text-transform: none;
+  }
+
+  .m-header .m-menu__item--mega .m-mega-menu__column {
+    margin-top: 20px;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu--level-2 .m-menu__link {
+    padding: 8px 0;
+    color: #222222;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: none;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu .m-menu__link:hover {
+    color: #757575;
+    background: transparent;
+  }
+}
