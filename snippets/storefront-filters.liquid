@@ -112,6 +112,7 @@
                           <input
                             type="checkbox"
                             name="{{ value.param_name }}"
+                            data-filter-label="{{ value.label | escape }}"
                             value="{{ value.value }}"
                             class="m:visually-hidden"
                             id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
@@ -145,6 +146,7 @@
                           <input
                             type="checkbox"
                             name="{{ value.param_name }}"
+                            data-filter-label="{{ value.label | escape }}"
                             value="{{ value.value }}"
                             class="m:visually-hidden"
                             id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
@@ -193,6 +195,7 @@
                         <input
                           type="checkbox"
                           name="{{ value.param_name }}"
+                          data-filter-label="{{ value.label | escape }}"
                           value="{{ value.value }}"
                           class="m:visually-hidden"
                           id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
@@ -228,6 +231,7 @@
                         <input
                           type="checkbox"
                           name="{{ value.param_name }}"
+                          data-filter-label="{{ value.label | escape }}"
                           value="{{ value.value }}"
                           id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
                           {% if value.active %}
@@ -273,6 +277,7 @@
             <div class="m-filter--widget-content m-accordion--item-content" {{ acc_content_style }}>
               <price-range
                 class="m-facets-price"
+                data-currency="{{ cart.currency.symbol | escape }}"
                 style="--from: {{ lower_bound_progress | default: 0 }}%; --to: {{ higher_bound_progress | default: 100 }}%;"
               >
                 <div class="m-facets-price--ranges">

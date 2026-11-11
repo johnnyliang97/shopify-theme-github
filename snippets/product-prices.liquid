@@ -27,16 +27,40 @@
     assign money_price_max = price_max | money_with_currency
   endif
 
+  if is_product_card
+    assign display_price = price | divided_by: 100.0 | ceil | times: 100
+    assign display_compare_at_price = compare_at_price | default: 0 | divided_by: 100.0 | ceil | times: 100
+    assign display_price_min = price_min | divided_by: 100.0 | ceil | times: 100
+    assign display_price_max = price_max | divided_by: 100.0 | ceil | times: 100
+    assign money_price = display_price | money_without_trailing_zeros
+    assign money_compare_at_price = display_compare_at_price | money_without_trailing_zeros
+    assign money_price_min = display_price_min | money_without_trailing_zeros
+    assign money_price_max = display_price_max | money_without_trailing_zeros
+    if settings.currency_code_enabled
+      assign currency_code = cart.currency.iso_code | default: shop.currency
+      assign money_price = money_price | append: ' ' | append: currency_code
+      assign money_compare_at_price = money_compare_at_price | append: ' ' | append: currency_code
+      assign money_price_min = money_price_min | append: ' ' | append: currency_code
+      assign money_price_max = money_price_max | append: ' ' | append: currency_code
+    endif
+  endif
+
   if target == product and product.price_varies and settings.pcard_show_lowest_prices
     assign money_price = 'products.product.from_text_html' | t: price: money_price
   endif
 
   assign sale_badge_type = sale_badge_type | default: 'percentage'
+  assign card_discount = 0
+  if is_product_card and compare_at_price > price
+    assign card_discount = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price
+    assign card_discount = card_discount | divided_by: 5.0 | round | times: 5 | at_least: 5
+  endif
 -%}
 
 <div
   class="
     m-price m:inline-flex m:items-center m:flex-wrap
+    {%- if is_product_card %} m-price--card{% endif -%}
     {%- if alignment %} m-price--{{ alignment }}{% endif -%}
     {%- if price_class %} {{ price_class }}{% endif -%}
     {%- if available == false %} m-price--sold-out {% endif -%}
@@ -72,7 +96,9 @@
     {%- unless target.price_varies == false and target.compare_at_price_varies %}
       <span class="m:visually-hidden m:visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <s class="m-price-item m-price-item--regular">
-        {% if settings.currency_code_enabled %}
+        {% if is_product_card %}
+          {{ money_compare_at_price }}
+        {% elsif settings.currency_code_enabled %}
           {{ compare_at_price | money_with_currency }}
         {% else %}
           {{ compare_at_price | money }}
@@ -80,6 +106,9 @@
       </s>
     {%- endunless -%}
   </div>
+  {% if is_product_card %}
+    <span class="m-price__card-discount" data-card-discount>-{{ card_discount }}%</span>
+  {% endif %}
   <div class="m-price__unit-wrapper{% if selected_variant.unit_price_measurement == nil %} m:hidden{% endif %}">
     <span class="m:visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
     <div class="m-price__unit">

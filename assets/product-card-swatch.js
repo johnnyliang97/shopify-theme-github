@@ -247,6 +247,9 @@ if (!customElements.get("pcard-swatch")) {
       };
 
       const moneyFormat = window.MinimogSettings.money_format;
+      const wholeMoneyFormat = moneyFormat.replace(/\{\{\s*amount\s*\}\}/, "{{amount_no_decimals}}")
+        .replace(/\{\{\s*amount_with_comma_separator\s*\}\}/, "{{amount_no_decimals_with_comma_separator}}");
+      const formatCardMoney = (cents) => formatMoney(Math.ceil(cents / 100) * 100, wholeMoneyFormat);
 
       const { priceWrapper, salePrice, unitPrice, compareAtPrice } = this.domNodes;
       const { compare_at_price, price, unit_price_measurement } = variant;
@@ -266,12 +269,17 @@ if (!customElements.get("pcard-swatch")) {
       }
 
       priceWrapper && priceWrapper.classList.remove("visibility-hidden");
-      if (salePrice) salePrice.innerHTML = formatMoney(price, moneyFormat);
+      if (salePrice) salePrice.innerHTML = formatCardMoney(price);
+      const cardDiscount = priceWrapper && priceWrapper.querySelector("[data-card-discount]");
+      if (cardDiscount) {
+        const percentage = onSale ? Math.max(5, Math.round(((compare_at_price - price) * 100 / compare_at_price) / 5) * 5) : 0;
+        cardDiscount.textContent = `-${percentage}%`;
+      }
 
       if (compareAtPrice && compareAtPrice.length && compare_at_price > price) {
-        compareAtPrice.forEach((item) => (item.innerHTML = formatMoney(compare_at_price, moneyFormat)));
+        compareAtPrice.forEach((item) => (item.innerHTML = formatCardMoney(compare_at_price)));
       } else {
-        compareAtPrice.forEach((item) => (item.innerHTML = formatMoney(price, moneyFormat)));
+        compareAtPrice.forEach((item) => (item.innerHTML = formatCardMoney(price)));
       }
 
       if (unit_price_measurement && unitPrice && this.currentVariant) {

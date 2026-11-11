@@ -50,21 +50,15 @@
     assign sold_out = true
   endif
 
-  assign discount = ''
   assign compare_at_price = product.compare_at_price
   assign price = product.price
   assign on_sale = false
   if compare_at_price > price
     assign on_sale = true
-    assign discount = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price
-    assign discount = discount | divided_by: 5.0 | round | times: 5
-    if discount < 5
-      assign discount = 5
-    endif
   endif
 
   assign show_on_sale_badge = false
-  if settings.on_sale_badge != 'hide' and on_sale
+  if settings.on_sale_badge == 'show_text' and on_sale
     assign show_on_sale_badge = true
   endif
 
@@ -315,8 +309,6 @@
         <span class="m-product-card__tag-name m-product-tag m-product-tag--sale m-gradient m-color-{{ settings.sale_badge_color_scheme }}">
           {%- if settings.on_sale_badge == 'show_text' -%}
             {{ 'products.product.on_sale' | t }}
-          {%- elsif settings.on_sale_badge == 'show_percentage' -%}
-            {{ discount | append: '%' }}
           {%- endif -%}
         </span>
       {% endif %}

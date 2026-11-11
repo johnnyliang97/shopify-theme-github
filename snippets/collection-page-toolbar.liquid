@@ -39,6 +39,10 @@
       endif
     endfor
   endif
+  assign collection_title = results.title | default: collection.title | downcase
+  if collection_title contains 'new arrivals'
+    assign show_sale_toggle = false
+  endif
   assign removed_sorts = 'manual,best-selling,title-ascending,title-descending,created-ascending' | split: ','
   for option in results.sort_options
     if template.name == 'collection' and removed_sorts contains option.value
@@ -75,7 +79,8 @@
 {%- capture quick_tag_buttons -%}
   {%- assign quick_tag_count = 0 -%}
   {%- for value in quick_tag_values -%}
-    {%- if value.value == 'Sale' or value.count == 0 -%}
+    {%- assign normalized_tag = value.value | strip | downcase -%}
+    {%- if value.value == 'Sale' or normalized_tag == 'all' or value.active or value.count == 0 -%}
       {%- continue -%}
     {%- endif -%}
     <button
@@ -118,7 +123,7 @@
           </svg>
         </button>
       {% endif %}
-      {% if show_sale_toggle %}
+      {% if show_sale_toggle or quick_tag_buttons != blank %}
         <div class="{% if responsive_grid %}m-toolbar--quick-filters{% else %}md:m:hidden{% endif %}">{{ sale_button }}{{ quick_tag_buttons }}</div>
       {% endif %}
     </div>

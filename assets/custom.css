@@ -1,1 +1,39 @@
+/* Sale prices on product cards. */
+.m-price--card .m-price__card-discount {
+  display: none;
+}
 
+.m-price--card.m-price--on-sale {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  text-align: left;
+}
+
+.m-price--card.m-price--on-sale .m-price__sale,
+.m-product-card__content .m-price--card.m-price--on-sale .m-price__sale {
+  justify-content: flex-start;
+  gap: 4px 10px;
+}
+
+.m-price--card .m-price__sale .m-price-item--regular {
+  order: 1;
+  color: #777777;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.m-price--card .m-price__sale .m-price-item--sale {
+  order: 2;
+  color: #ff1734;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.m-price--card.m-price--on-sale .m-price__card-discount {
+  display: block;
+  color: #ff1734;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4;
+}

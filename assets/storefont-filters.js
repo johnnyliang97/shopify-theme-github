@@ -25,6 +25,7 @@ class CollectionFiltersForm extends HTMLElement {
     this.debouncedOnSubmit = debounce((evt) => this.onSubmitHandler(evt), 500);
     this.domNodes.filtersForm.addEventListener("input", (event) => {
       this.syncTagToggles();
+      this.syncRefineFacets();
       if (this.refineDraft) return;
       this.debouncedOnSubmit(event);
     });
@@ -121,6 +122,7 @@ class CollectionFiltersForm extends HTMLElement {
         range, from: range.style.getPropertyValue("--from"), to: range.style.getPropertyValue("--to")
       }));
       this.syncRefineSorting();
+      this.syncRefineFacets();
     };
     const cancel = () => {
       this.refineDraft?.forEach(({ input, value, checked }) => {
@@ -135,6 +137,7 @@ class CollectionFiltersForm extends HTMLElement {
       this.refineRangeStyles = null;
       this.syncRefineSorting();
       this.syncTagToggles();
+      this.syncRefineFacets();
     };
     const resize = () => {
       if (this.refineDraft && window.innerWidth >= 768) MinimogTheme.Collection.closeSidebarFilter();
@@ -162,6 +165,57 @@ class CollectionFiltersForm extends HTMLElement {
       }
     });
     this.syncRefineSorting();
+    this.syncRefineFacets();
+  };
+
+  syncRefineFacets = () => {
+    const wrapper = this.domNodes.section.querySelector("[data-refine-facets]");
+    if (!wrapper) return;
+    const items = wrapper.querySelector("[data-refine-facet-items]");
+    const template = wrapper.querySelector("[data-refine-facet-template]");
+    const form = this.domNodes.filtersForm;
+    items.replaceChildren();
+    const removals = [];
+    const addFacet = (label, remove) => {
+      const button = template.content.firstElementChild.cloneNode(true);
+      button.querySelector("[data-refine-facet-label]").textContent = label;
+      button.addEventListener("click", () => {
+        remove();
+        form.dispatchEvent(new Event("input"));
+      });
+      items.append(button);
+      removals.push(remove);
+    };
+    form.querySelectorAll('input[type="checkbox"][name^="filter."]:checked').forEach((input) => {
+      addFacet(input.dataset.filterLabel || input.value, () => { input.checked = false; });
+    });
+    form.querySelectorAll("price-range").forEach((price) => {
+      const min = price.querySelector('input[name="filter.v.price.gte"]');
+      const max = price.querySelector('input[name="filter.v.price.lte"]');
+      if (!min || !max || (!min.value && !max.value)) return;
+      const currency = price.dataset.currency || "";
+      addFacet(`${currency}${min.value || min.placeholder} – ${currency}${max.value || max.placeholder}`, () => {
+        min.value = "";
+        max.value = "";
+        price.querySelectorAll('input[type="range"]').forEach((range, index) => {
+          range.value = index === 0 ? range.min : range.max;
+        });
+        const ranges = price.querySelector(".m-facets-price--ranges");
+        ranges?.style.setProperty("--from", "0%");
+        ranges?.style.setProperty("--to", "100%");
+      });
+    });
+    if (removals.length) {
+      const clear = document.createElement("button");
+      clear.type = "button";
+      clear.className = "m-active-facets--item m-active-facets--item-remove-all m-active-facets--remove-all";
+      clear.textContent = wrapper.dataset.clearLabel;
+      clear.addEventListener("click", () => {
+        removals.forEach((remove) => remove());
+        form.dispatchEvent(new Event("input"));
+      });
+      items.append(clear);
+    }
   };
 
   syncRefineSorting = () => {
