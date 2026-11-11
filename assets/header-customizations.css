@@ -97,7 +97,7 @@
 
 .m-header .m-mega-banner--outside .m-mega-banner__button {
   position: relative;
-  z-index: 2;
+  z-index: 7;
   display: inline-block;
   margin-top: 14px;
   padding: 0;
