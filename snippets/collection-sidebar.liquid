@@ -44,9 +44,6 @@
               <div>{% render 'product-sort-options', results: collection, format: 'refine' %}</div>
             </details>
           {% endif %}
-          {% if show_filter %}
-            <h4 class="m-refine--filters-title m-filter--widget-title h5 md:m:hidden">{{ sidebar_title | default: 'Filters' }}</h4>
-          {% endif %}
       {% endif %}
       <div class="m-filter--wrapper{% if storefront_filters_enabled %} m:flex m:flex-col m-storefront--enabled{% endif %}">
         {%- if st.filters_type == 'storefront_filters' -%}

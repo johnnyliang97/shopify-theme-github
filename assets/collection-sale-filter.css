@@ -266,10 +266,6 @@
     margin: 0;
   }
 
-  .m-refine--filters-title {
-    padding: 0 20px;
-  }
-
   .m-refine--footer {
     flex-shrink: 0;
     padding: 16px 20px;

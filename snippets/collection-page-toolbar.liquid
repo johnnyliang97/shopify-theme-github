@@ -80,7 +80,8 @@
   {%- assign quick_tag_count = 0 -%}
   {%- for value in quick_tag_values -%}
     {%- assign normalized_tag = value.value | strip | downcase -%}
-    {%- if value.value == 'Sale' or normalized_tag == 'all' or value.active or value.count == 0 -%}
+    {%- assign normalized_tag_label = value.label | strip | downcase -%}
+    {%- if value.value == 'Sale' or normalized_tag == 'all' or normalized_tag_label == 'all' or value.active or value.count == 0 -%}
       {%- continue -%}
     {%- endif -%}
     <button
