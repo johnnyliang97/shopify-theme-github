@@ -264,29 +264,29 @@
     "custom_card_carousel_HeykPg": {
       "type": "custom-card-carousel",
       "blocks": {
-        "card_Qc7zEM": {
-          "type": "card",
-          "name": "Card",
-          "settings": {
-            "image": "shopify://shop_images/lestyle-givenchy-scarves-beanies_1.webp",
-            "header_text": "Givenchy Accessories",
-            "subheader_text": "Winter Essentials",
-            "link": "shopify://collections/givenchy-accessories",
-            "label_text": "40% OFF",
-            "label_color": "#b30505",
-            "button_text": ""
-          }
-        },
         "card_dtFdem": {
           "type": "card",
           "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-kids-dresses-skirts.webp",
-            "header_text": "Teens",
-            "subheader_text": "Sizes Above 12YO",
+            "header_text": "Lestyle Junior",
+            "subheader_text": "Teen Sizes Above 12YO",
             "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.v.option.select+size=12+year&filter.v.option.select+size=12%2B+year&filter.v.option.select+size=13+year&filter.v.option.select+size=14+year&filter.v.option.select+size=16+year&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
             "label_text": "",
             "label_color": "#b30505",
+            "button_text": ""
+          }
+        },
+        "card_Qc7zEM": {
+          "type": "card",
+          "name": "Card",
+          "settings": {
+            "image": "shopify://shop_images/lestyle-model-mens1-dsquared2_1.webp",
+            "header_text": "Mens New Arrivals",
+            "subheader_text": "Marcelo Burlon, Dsquared2, Gran Sasso and more",
+            "link": "shopify://collections/mens-new-arrivals",
+            "label_text": "New",
+            "label_color": "#c19967",
             "button_text": ""
           }
         },
@@ -344,8 +344,8 @@
         }
       },
       "block_order": [
-        "card_Qc7zEM",
         "card_dtFdem",
+        "card_Qc7zEM",
         "card_BfVQWe",
         "card_jVynpa",
         "card_cfERde",
