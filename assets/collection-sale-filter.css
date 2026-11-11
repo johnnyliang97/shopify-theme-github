@@ -1,3 +1,7 @@
+[data-responsive-grid="true"] #CollectionProductGrid {
+  min-width: 0;
+}
+
 .m-collection-toolbar--with-sale .m-toolbar--left {
   align-items: center;
   gap: 12px;
@@ -17,10 +21,12 @@
   align-items: center;
   gap: 12px;
   min-width: 0;
+  flex: 1;
 }
 
 .m-collection-toolbar--grouped .m-sidebar--open {
   margin-right: 0;
+  flex-shrink: 0;
 }
 
 .m-collection-toolbar--grouped .m-toolbar--right {
@@ -33,6 +39,18 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.m-toolbar--quick-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.m-toolbar--quick-filters .m-collection-sale-toggle {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .m-refine--body {
@@ -86,7 +104,19 @@
   }
 }
 
+.m-collection-sale-toggle[data-sale-filter-toggle][aria-pressed="true"],
+.m-collection-sale-toggle[data-sale-filter-toggle][aria-pressed="true"]:hover {
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  font-weight: 700;
+  border-width: 2px;
+}
+
 @media screen and (max-width: 767px) {
+  .facest-filters-section[data-view="collection"] #CollectionProductGrid > .m-active-facets {
+    display: none;
+  }
+
   .m-collection-toolbar--with-sale .m-toolbar--left {
     flex-wrap: wrap;
   }

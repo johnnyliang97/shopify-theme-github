@@ -3,6 +3,19 @@
 {%- liquid
   assign show_columns_switcher = st.show_columns_switcher
   assign sidebar_position = sidebar_position | default: st.sidebar
+  assign active_filter_count = 0
+  if st.filters_type == 'tags_filter'
+    assign active_filter_count = current_tags.size
+  else
+    for filter in results.filters
+      assign active_filter_count = active_filter_count | plus: filter.active_values.size
+      if filter.type == 'price_range'
+        if filter.min_value.value != nil or filter.max_value.value != nil
+          assign active_filter_count = active_filter_count | plus: 1
+        endif
+      endif
+    endfor
+  endif
   if responsive_grid
     assign show_columns_switcher = false
   endif
@@ -10,10 +23,14 @@
   assign sort_by_name = 'collections.sorting.title' | t
   assign show_sale_toggle = false
   assign sale_value = blank
+  assign quick_tag_values = blank
   if template.name == 'collection' and st.filters_type == 'storefront_filters' and st.show_sorting
     assign show_sale_toggle = true
     for filter in results.filters
       if filter.param_name == 'filter.p.tag'
+        if responsive_grid
+          assign quick_tag_values = filter.values | sort: 'count' | reverse
+        endif
         assign sale_value = filter.values | where: 'value', 'Sale' | first
         if sale_value == blank
           assign sale_value = filter.active_values | where: 'value', 'Sale' | first
@@ -55,16 +72,38 @@
     </button>
   {%- endcapture -%}
 {%- endif -%}
+{%- capture quick_tag_buttons -%}
+  {%- assign quick_tag_count = 0 -%}
+  {%- for value in quick_tag_values -%}
+    {%- if value.value == 'Sale' or value.count == 0 -%}
+      {%- continue -%}
+    {%- endif -%}
+    <button
+      type="button"
+      class="m-collection-sale-toggle m-collection-tag-toggle"
+      data-tag-filter-toggle
+      data-filter-param="{{ value.param_name | escape }}"
+      data-filter-value="{{ value.value | escape }}"
+      aria-pressed="{% if value.active %}true{% else %}false{% endif %}"
+    >
+      {{- value.label | escape -}}
+    </button>
+    {%- assign quick_tag_count = quick_tag_count | plus: 1 -%}
+    {%- if quick_tag_count == 5 -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
 <div class="m-collection-toolbar{% if show_sale_toggle %} m-collection-toolbar--with-sale{% endif %}{% if responsive_grid %} m-collection-toolbar--grouped{% endif %}{% if mobile_refine %} m-collection-toolbar--refine{% endif %}">
   <div class="m-collection-toolbar--wrapper">
     <div class="m-toolbar--left m:flex{% unless sidebar_position == 'fixed' %} xl:m:hidden{% endunless %}">
       {%- if st.show_filter or mobile_refine and st.show_sorting -%}
         <button type="button" class="m-sidebar--open m:flex m:items-center{% unless st.show_filter %} md:m:hidden{% endunless %}">
           {% if mobile_refine %}
-            <span class="md:m:hidden">Refine</span>
-            <span class="m:hidden md:m:block">{{ 'collections.toolbar.show_filter' | t }}</span>
+            <span class="md:m:hidden">Refine{% if active_filter_count > 0 %} ({{ active_filter_count }}){% endif %}</span>
+            <span class="m:hidden md:m:block">Filters{% if active_filter_count > 0 %} ({{ active_filter_count }}){% endif %}</span>
           {% else %}
-            <span>{{ 'collections.toolbar.show_filter' | t }}</span>
+            <span>Filters{% if active_filter_count > 0 %} ({{ active_filter_count }}){% endif %}</span>
           {% endif %}
           <svg class="m-svg-icon--small" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"/>
@@ -80,7 +119,7 @@
         </button>
       {% endif %}
       {% if show_sale_toggle %}
-        <div class="{% if responsive_grid %}m-toolbar--quick-filters{% else %}md:m:hidden{% endif %}">{{ sale_button }}</div>
+        <div class="{% if responsive_grid %}m-toolbar--quick-filters{% else %}md:m:hidden{% endif %}">{{ sale_button }}{{ quick_tag_buttons }}</div>
       {% endif %}
     </div>
     {%- if st.show_sorting or show_columns_switcher -%}

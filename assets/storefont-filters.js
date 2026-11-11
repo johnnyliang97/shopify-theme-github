@@ -24,13 +24,13 @@ class CollectionFiltersForm extends HTMLElement {
     this.setData();
     this.debouncedOnSubmit = debounce((evt) => this.onSubmitHandler(evt), 500);
     this.domNodes.filtersForm.addEventListener("input", (event) => {
-      this.syncSaleToggle();
+      this.syncTagToggles();
       if (this.refineDraft) return;
       this.debouncedOnSubmit(event);
     });
     this.setLoadingTarget();
     this.initSorting();
-    this.initSaleToggle();
+    this.initTagToggles();
     this.initRefine();
     window.addEventListener("popstate", this.onHistoryChange);
   }
@@ -79,26 +79,26 @@ class CollectionFiltersForm extends HTMLElement {
     filtersForm.dispatchEvent(new Event("input"));
   };
 
-  getSaleInput = (button) => {
+  getTagInput = (button) => {
     return Array.from(this.domNodes.filtersForm.elements).find(
       (input) => input.name === button.dataset.filterParam && input.value === button.dataset.filterValue
     );
   };
 
-  syncSaleToggle = () => {
-    this.saleButtons?.forEach((button) => {
-      const input = this.getSaleInput(button);
+  syncTagToggles = () => {
+    this.tagButtons?.forEach((button) => {
+      const input = this.getTagInput(button);
       button.setAttribute("aria-pressed", input?.checked ? "true" : "false");
       button.disabled = !input || (input.disabled && !input.checked);
     });
   };
 
-  initSaleToggle = () => {
-    this.saleButtons = this.domNodes.section.querySelectorAll("[data-sale-filter-toggle]");
-    this.syncSaleToggle();
-    this.saleButtons.forEach((button) => {
+  initTagToggles = () => {
+    this.tagButtons = this.domNodes.section.querySelectorAll("[data-sale-filter-toggle], [data-tag-filter-toggle]");
+    this.syncTagToggles();
+    this.tagButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        const input = this.getSaleInput(button);
+        const input = this.getTagInput(button);
         if (!input || button.disabled) return;
         input.checked = !input.checked;
         this.domNodes.filtersForm.dispatchEvent(new Event("input"));
@@ -134,7 +134,7 @@ class CollectionFiltersForm extends HTMLElement {
       this.refineDraft = null;
       this.refineRangeStyles = null;
       this.syncRefineSorting();
-      this.syncSaleToggle();
+      this.syncTagToggles();
     };
     const resize = () => {
       if (this.refineDraft && window.innerWidth >= 768) MinimogTheme.Collection.closeSidebarFilter();
