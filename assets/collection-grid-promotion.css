@@ -41,6 +41,19 @@
   padding-bottom: 0;
 }
 
+.m-collection-grid-promotion .m-image-card__img {
+  position: relative;
+}
+
+.m-collection-grid-promotion .m-image-card__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
 .m-collection-grid-promotion .m-image-card__content {
   padding: 24px;
 }
