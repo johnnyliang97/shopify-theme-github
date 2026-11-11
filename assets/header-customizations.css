@@ -39,6 +39,97 @@
   --main-link-py: 12px;
 }
 
+.m-header .m-mega-banner__image {
+  aspect-ratio: 4 / 3;
+  border-radius: 0;
+}
+
+.m-header .m-mega-banner__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.m-header .m-mega-banner__title {
+  color: var(--mega-banner-title-color, #222222);
+}
+
+.m-header .m-mega-banner__description {
+  color: var(--mega-banner-subtitle-color, #757575);
+}
+
+.m-header .m-mega-banner__button {
+  color: var(--mega-banner-button-color, #222222);
+}
+
+.m-header .m-mega-banner--outside {
+  height: auto;
+  color: #222222;
+  text-align: left;
+}
+
+.m-header .m-mega-banner--outside .m-mega-banner__inner {
+  margin-top: 12px;
+}
+
+.m-header .m-mega-banner--outside .m-mega-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.m-header .m-mega-banner--outside .m-mega-banner__title {
+  order: 2;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.m-header .m-mega-banner--outside .m-mega-banner__description {
+  order: 1;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.m-header .m-mega-banner--outside .m-mega-banner__button {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 14px;
+  padding: 0;
+  min-height: 0;
+  border: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.m-header .m-mega-banner--outside .m-mega-banner__button::before,
+.m-header .m-mega-banner--outside .m-mega-banner__button::after {
+  display: none;
+}
+
+.m-header .m-menu-mobile .m-mega-banner--outside .m-mega-banner__title {
+  order: 1;
+  font-size: 20px;
+  text-transform: none;
+}
+
+.m-header .m-menu-mobile .m-mega-banner--outside .m-mega-banner__description {
+  order: 2;
+  color: var(--mega-banner-title-color, #222222);
+}
+
+.m-header .m-menu-mobile .m-mega-banner--outside .m-mega-banner__button {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   .m-header .m-menu__item .m-mega-menu {
     border-top: 0;

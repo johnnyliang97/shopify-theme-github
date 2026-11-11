@@ -1,0 +1,63 @@
+{%- liquid
+  assign banner_style = block.settings.banner_style | default: 'outside'
+  assign title_color = block.settings.title_color
+  assign subtitle_color = block.settings.subtitle_color
+  assign button_color = block.settings.button_text_color
+  if banner_style == 'outside'
+    assign title_brightness = title_color | color_brightness
+    assign subtitle_brightness = subtitle_color | color_brightness
+    assign button_brightness = button_color | color_brightness
+    if title_color == blank or title_brightness > 180
+      assign title_color = '#222222'
+    endif
+    if subtitle_color == blank or subtitle_brightness > 160
+      assign subtitle_color = '#757575'
+    endif
+    if button_color == blank or button_brightness > 180
+      assign button_color = '#222222'
+    endif
+  endif
+  assign image_sizes = '(min-width: 1024px) 33vw, calc(100vw - 32px)'
+  if mobile
+    assign image_sizes = 'calc(100vw - 32px)'
+  endif
+-%}
+{%- if block.settings.banner_image != blank -%}
+  <div
+    class="m-mega-banner m-mega-banner--{{ banner_style }}{% if block.settings.banner_title == blank and block.settings.banner_desc == blank and block.settings.banner_button_text == blank %} m-mega-banner--no-content{% endif %}"
+    style="--mega-banner-title-color: {{ title_color }}; --mega-banner-subtitle-color: {{ subtitle_color }}; --mega-banner-button-color: {{ button_color }};"
+  >
+    {%- if block.settings.banner_link != blank -%}
+      <a href="{{ block.settings.banner_link }}" class="m-hidden-link">
+        <span class="m:visually-hidden">{{ block.settings.banner_title | default: shop.name | escape }}</span>
+      </a>
+    {%- endif -%}
+    <div class="m-mega-banner__image">
+      {{
+        block.settings.banner_image
+        | image_url: width: 1500
+        | image_tag:
+          loading: 'lazy',
+          widths: '360, 533, 720, 940, 1066, 1500',
+          sizes: image_sizes,
+          class: 'm-mega-banner__img',
+          alt: block.settings.banner_image.alt
+      }}
+    </div>
+    <div class="m-mega-banner__inner">
+      <div class="m-mega-banner__content">
+        {%- if block.settings.banner_title != blank -%}
+          <h4 class="m-mega-banner__title">{{ block.settings.banner_title | escape }}</h4>
+        {%- endif -%}
+        {%- if block.settings.banner_desc != blank -%}
+          <p class="m-mega-banner__description">{{ block.settings.banner_desc | escape }}</p>
+        {%- endif -%}
+      </div>
+      {%- if block.settings.banner_link != blank and block.settings.banner_button_text != blank -%}
+        <a href="{{ block.settings.banner_link }}" class="m-mega-banner__button m-button m-button--link">
+          {{ block.settings.banner_button_text | escape }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
