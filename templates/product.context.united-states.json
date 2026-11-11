@@ -13,6 +13,17 @@
   },
   "parent": "product.json",
   "sections": {
+    "small_banner_TE9wDT": {
+      "settings": {
+        "subheader_text": "<p>Enjoy free express shipping on orders over A$500*.</p>"
+      },
+      "blocks": {}
+    },
+    "small_banner_fyMBaW": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
     "main": {
       "disabled": false,
       "settings": {},
@@ -60,6 +71,7 @@
         "badge_ChqgGj",
         "title",
         "price",
+        "custom_liquid_FDrmG9",
         "variant_picker",
         "custom_liquid_UpQgkt",
         "buy_buttons",
@@ -71,17 +83,6 @@
         "shipping_VBJFtx",
         "trust_badge_NyBMd4"
       ]
-    },
-    "small_banner_TE9wDT": {
-      "settings": {
-        "subheader_text": "<p>Enjoy free express shipping on orders over A$500*.</p>"
-      },
-      "blocks": {}
-    },
-    "small_banner_fyMBaW": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
     }
   }
 }
