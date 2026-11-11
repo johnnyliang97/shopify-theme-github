@@ -61,6 +61,7 @@
 
 .m-header .m-mega-banner__button {
   color: var(--mega-banner-button-color, #222222);
+  font-size: 14px;
 }
 
 .m-header .m-mega-banner--outside {
@@ -99,11 +100,11 @@
   position: relative;
   z-index: 7;
   display: inline-block;
-  margin-top: 14px;
+  margin-top: 10px;
   padding: 0;
   min-height: 0;
   border: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   text-decoration: underline;
@@ -117,13 +118,14 @@
 
 .m-header .m-menu-mobile .m-mega-banner--outside .m-mega-banner__title {
   order: 1;
+  color: rgb(var(--color-foreground, 255, 255, 255));
   font-size: 20px;
   text-transform: none;
 }
 
 .m-header .m-menu-mobile .m-mega-banner--outside .m-mega-banner__description {
   order: 2;
-  color: var(--mega-banner-title-color, #222222);
+  color: rgba(var(--color-foreground, 255, 255, 255), 0.75);
 }
 
 .m-header .m-menu-mobile .m-mega-banner--outside .m-mega-banner__button {
@@ -139,6 +141,21 @@
   .m-header .m-menu__item--mega .m-mega-menu__inner {
     align-items: flex-start;
     padding-block: 32px 40px;
+  }
+
+  .m-header .m-menu__item--mega .m-mega-menu__inner--with-banner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+    gap: 32px;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .m-header .m-menu__item--mega .m-mega-menu__inner--with-banner > .m-sub-menu--level-1,
+  .m-header .m-menu__item--mega .m-mega-menu__inner--with-banner > .m-mega-menu__content {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
   }
 
   .m-header .m-menu__item--mega .m-sub-menu--level-1 {
@@ -162,8 +179,19 @@
     border: 0;
   }
 
+  .m-header .m-menu__item--mega .m-sub-menu--grouped {
+    display: block;
+    column-count: 2;
+    column-gap: 32px;
+  }
+
+  .m-header .m-menu__item--mega .m-sub-menu--grouped > .m-sub-menu__item--level-1 {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
   .m-header .m-menu__item--mega .m-sub-menu__item--level-1 > .m-menu__link {
-    padding: 8px 0;
+    padding: 6px 0;
     color: #222222;
     font-weight: 400;
     line-height: 1.5;
@@ -174,11 +202,11 @@
   }
 
   .m-header .m-menu__item--mega .m-mega-menu__column {
-    margin-top: 20px;
+    margin-top: 12px;
   }
 
   .m-header .m-menu__item--mega .m-sub-menu--level-2 .m-menu__link {
-    padding: 8px 0;
+    padding: 6px 0;
     color: #222222;
     font-weight: 400;
     line-height: 1.5;

@@ -7,6 +7,20 @@
   endif
   assign sort_by = results.sort_by | default: results.default_sort_by
   assign sort_by_name = 'collections.sorting.title' | t
+  assign show_sale_toggle = false
+  assign sale_value = blank
+  if template.name == 'collection' and st.filters_type == 'storefront_filters' and st.show_sorting
+    assign show_sale_toggle = true
+    for filter in results.filters
+      if filter.param_name == 'filter.p.tag'
+        assign sale_value = filter.values | where: 'value', 'Sale' | first
+        if sale_value == blank
+          assign sale_value = filter.active_values | where: 'value', 'Sale' | first
+        endif
+        break
+      endif
+    endfor
+  endif
   assign removed_sorts = 'manual,best-selling,title-ascending,title-descending,created-ascending' | split: ','
   for option in results.sort_options
     if template.name == 'collection' and removed_sorts contains option.value
@@ -21,7 +35,26 @@
     endif
   endfor
 -%}
-<div class="m-collection-toolbar">
+{%- if show_sale_toggle -%}
+  {%- capture sale_button -%}
+    <button
+      type="button"
+      class="m-collection-sale-toggle"
+      data-sale-filter-toggle
+      data-filter-param="filter.p.tag"
+      data-filter-value="Sale"
+      aria-pressed="{% if sale_value.active %}true{% else %}false{% endif %}"
+      {% if sale_value == blank %}
+        disabled
+      {% elsif sale_value.count == 0 and sale_value.active == false %}
+        disabled
+      {% endif %}
+    >
+      Sale
+    </button>
+  {%- endcapture -%}
+{%- endif -%}
+<div class="m-collection-toolbar{% if show_sale_toggle %} m-collection-toolbar--with-sale{% endif %}">
   <div class="m-collection-toolbar--wrapper">
     <div class="m-toolbar--left m:flex{% unless st.sidebar == 'fixed' %} xl:m:hidden{% endunless %}">
       {%- if st.show_filter -%}
@@ -39,6 +72,9 @@
             <path d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"/>
           </svg>
         </button>
+      {% endif %}
+      {% if show_sale_toggle %}
+        <div class="md:m:hidden">{{ sale_button }}</div>
       {% endif %}
     </div>
     {%- if st.show_sorting or show_columns_switcher -%}
@@ -65,6 +101,9 @@
               </div>
             </m-select-component>
           </div>
+        {% endif %}
+        {% if show_sale_toggle %}
+          <div class="m:hidden md:m:block">{{ sale_button }}</div>
         {% endif %}
         {% if show_columns_switcher %}
           <div class="m-toolbar--column-switcher m:flex">

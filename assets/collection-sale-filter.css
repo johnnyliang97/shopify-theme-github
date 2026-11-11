@@ -1,0 +1,57 @@
+.m-collection-toolbar--with-sale .m-toolbar--left {
+  align-items: center;
+  gap: 12px;
+}
+
+.m-collection-toolbar--with-sale .m-toolbar--right {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.m-collection-sale-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 16px;
+  border: 1px solid #c19967;
+  border-radius: 6px;
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.m-collection-sale-toggle[aria-pressed="true"] {
+  background: #c19967;
+  color: #000000;
+}
+
+.m-collection-sale-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.m-collection-sale-toggle:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+@media (hover: hover) {
+  .m-collection-sale-toggle:not(:disabled):hover {
+    background: #c19967;
+    color: #000000;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .m-collection-toolbar--with-sale .m-toolbar--left {
+    flex-wrap: wrap;
+  }
+
+  .m-collection-sale-toggle {
+    min-height: 40px;
+    padding-inline: 12px;
+  }
+}

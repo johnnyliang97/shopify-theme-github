@@ -23,9 +23,13 @@ class CollectionFiltersForm extends HTMLElement {
     this.domNodes = queryDomNodes(this.selectors);
     this.setData();
     this.debouncedOnSubmit = debounce((evt) => this.onSubmitHandler(evt), 500);
-    this.domNodes.filtersForm.addEventListener("input", this.debouncedOnSubmit.bind(this));
+    this.domNodes.filtersForm.addEventListener("input", (event) => {
+      this.syncSaleToggle();
+      this.debouncedOnSubmit(event);
+    });
     this.setLoadingTarget();
     this.initSorting();
+    this.initSaleToggle();
     window.addEventListener("popstate", this.onHistoryChange);
   }
 
@@ -73,6 +77,33 @@ class CollectionFiltersForm extends HTMLElement {
     filtersForm.dispatchEvent(new Event("input"));
   };
 
+  getSaleInput = (button) => {
+    return Array.from(this.domNodes.filtersForm.elements).find(
+      (input) => input.name === button.dataset.filterParam && input.value === button.dataset.filterValue
+    );
+  };
+
+  syncSaleToggle = () => {
+    this.saleButtons?.forEach((button) => {
+      const input = this.getSaleInput(button);
+      button.setAttribute("aria-pressed", input?.checked ? "true" : "false");
+      button.disabled = !input || (input.disabled && !input.checked);
+    });
+  };
+
+  initSaleToggle = () => {
+    this.saleButtons = this.domNodes.section.querySelectorAll("[data-sale-filter-toggle]");
+    this.syncSaleToggle();
+    this.saleButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const input = this.getSaleInput(button);
+        if (!input || button.disabled) return;
+        input.checked = !input.checked;
+        this.domNodes.filtersForm.dispatchEvent(new Event("input"));
+      });
+    });
+  };
+
   setLoadingTarget = () => {
     const screen = window.innerWidth < 768 ? "mobile" : "desktop";
     const { productGridContainer } = this.domNodes;
@@ -88,8 +119,8 @@ class CollectionFiltersForm extends HTMLElement {
     this.renderPage(searchParams);
   }
 
-  onHistoryChange = (event) => {
-    const searchParams = event.state?.searchParams || "";
+  onHistoryChange = () => {
+    const searchParams = new URLSearchParams(window.location.search).toString();
     this.renderPage(searchParams, false);
   };
 

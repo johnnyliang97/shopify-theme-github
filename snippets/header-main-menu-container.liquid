@@ -24,6 +24,7 @@
         assign is_mega = true
         assign stretch_width = false
         assign block_type = ''
+        assign mega_content_type = ''
         assign dropdown_container = section.settings.container
 
         assign title_handle = link.title | handleize
@@ -47,6 +48,7 @@
         {% if menu_title == title_handle %}
           {% liquid
             assign has_mega_item = true
+            assign mega_content_type = block.type
             if block.settings.container == 'inherit'
               assign dropdown_container = section.settings.container
             else
@@ -288,7 +290,7 @@
             style="--total-columns: {{ link.links.size }}"
           >
             <div class="m-mega-menu__container{% if is_mega %} {{ dropdown_container | default: 'container' }}{% endif %}">
-              <div class="m-mega-menu__inner{% if stretch_width == true %} m-mega-menu__inner--stretch-width{% endif %}">
+              <div class="m-mega-menu__inner{% if stretch_width == true %} m-mega-menu__inner--stretch-width{% endif %}{% if mega_content_type == 'banner' and block_type != blank %} m-mega-menu__inner--with-banner{% endif %}">
                 <ul
                   class="m-sub-menu m-sub-menu--level-1{% if has_nested_links %} m-sub-menu--grouped{% else %} m-sub-menu--flat{% endif %}{% if is_mega and block_type == blank %} m:w-full m:flex-1{% endif %}"
                   style="--menu-rows: {{ menu_rows }};"
