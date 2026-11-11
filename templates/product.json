@@ -29,7 +29,7 @@
       "settings": {
         "container": "container",
         "background_color": "#000000",
-        "background_image": "shopify://shop_images/bg.webp",
+        "background_image": "shopify://shop_images/blurry-abstract-photo-of-glass-bottles.jpg",
         "background_overlay_opacity": 50,
         "image_width": 150,
         "text_color": "#ffffff",
