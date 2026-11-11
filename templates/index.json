@@ -269,9 +269,9 @@
           "name": "Card",
           "settings": {
             "image": "shopify://shop_images/lestyle-model-versace-kids-dresses-skirts.webp",
-            "header_text": "Lestyle Junior",
-            "subheader_text": "Teen Sizes Above 12YO",
-            "link": "https://www.lestyle.com.au/collections/kids?sort_by=created-descending&filter.v.option.select+size=12+year&filter.v.option.select+size=12%2B+year&filter.v.option.select+size=13+year&filter.v.option.select+size=14+year&filter.v.option.select+size=16+year&filter.v.price.gte=&filter.v.price.lte=&filter.v.availability=1",
+            "header_text": "Teens",
+            "subheader_text": "Sizes from 12 year",
+            "link": "shopify://collections/teens",
             "label_text": "",
             "label_color": "#b30505",
             "button_text": ""
