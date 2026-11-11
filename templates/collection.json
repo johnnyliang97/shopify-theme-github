@@ -70,15 +70,15 @@
             "color_scheme": "dark",
             "text_size": "small",
             "text_color": "white",
-            "image": "shopify://shop_images/Lestyle_Sidebar_Outlet.webp",
+            "image": "shopify://shop_images/lestyle-model-karl-lagerfeld-mens.png",
             "link": "shopify://pages/lestyle-outlet",
             "content_position": "center_center",
             "content_alignment": "center",
-            "title": "Extra 10% Off Outlet",
-            "subtitle": "Use Code OUTLET10",
+            "title": "Up to 70% Off",
+            "subtitle": "Use Code <b>OUTLET10</b>",
             "button_label": "Shop The Outlet",
-            "button_style": "m-button--secondary",
-            "button_size": "",
+            "button_style": "m-button--link",
+            "button_size": "m-button--small",
             "button_fixed": false
           }
         }
