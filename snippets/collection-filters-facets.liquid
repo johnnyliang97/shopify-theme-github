@@ -11,6 +11,9 @@
   {%- assign has_filters = false -%}
   {%- for filter in results.filters -%}
     {%- liquid 
+      if template.name == 'collection' and filter.param_name == 'filter.v.availability'
+        continue
+      endif
       if filter.active_values.size > 0
         assign has_filters = true
       endif

@@ -187,6 +187,7 @@ class CollectionFiltersForm extends HTMLElement {
       removals.push(remove);
     };
     form.querySelectorAll('input[type="checkbox"][name^="filter."]:checked').forEach((input) => {
+      if (this.view === "collection" && input.name === "filter.v.availability") return;
       addFacet(input.dataset.filterLabel || input.value, () => { input.checked = false; });
     });
     form.querySelectorAll("price-range").forEach((price) => {

@@ -8,6 +8,9 @@
     assign active_filter_count = current_tags.size
   else
     for filter in results.filters
+      if template.name == 'collection' and filter.param_name == 'filter.v.availability'
+        continue
+      endif
       assign active_filter_count = active_filter_count | plus: filter.active_values.size
       if filter.type == 'price_range'
         if filter.min_value.value != nil or filter.max_value.value != nil
