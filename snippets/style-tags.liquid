@@ -198,8 +198,10 @@
 {%- endif -%}
 <link rel="stylesheet" href="{{ 'custom-style.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'product-card-prices.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'custom-style.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'custom.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'product-card-prices.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- style -%}
   {%- if custom_css != blank -%}
