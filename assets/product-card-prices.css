@@ -43,7 +43,7 @@
 }
 
 .m-price__badges--plain {
-  flex-basis: 100%;
+  flex: 0 0 auto;
 }
 
 .m-price__discount-text {
