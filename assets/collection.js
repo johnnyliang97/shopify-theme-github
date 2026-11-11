@@ -84,6 +84,7 @@ class Collection {
     this.loadingProducts = false;
     this.initialCol = Number(section.dataset.initialColumn);
     this.responsiveGrid = section.dataset.responsiveGrid === "true";
+    this.mobileRefine = section.dataset.mobileRefine === "true";
     this.cachedCol = this.responsiveGrid ? this.initialCol : Number(window.localStorage.getItem(this.STORAGE_KEY)) || this.initialCol;
     this.showColSwitchers = !this.responsiveGrid && section.dataset.showColSwitchers === "true";
     // Filters data
@@ -110,7 +111,7 @@ class Collection {
   };
 
   initFilters = () => {
-    if (!this.enableFilters) return;
+    if (!this.enableFilters && !(this.mobileRefine && this.enableSorting)) return;
     const { sidebar, openSidebar, closeSidebar } = this.domNodes;
     window.requestAnimationFrame(this.initAccordions);
     openSidebar.addEventListener("click", this.openSidebarFilter);
@@ -119,7 +120,7 @@ class Collection {
   };
 
   initMobileSorting = () => {
-    if (!this.enableSorting) return;
+    if (!this.enableSorting || this.mobileRefine) return;
     const { openSorting, closeSorting, sortingWrapper } = this.mbSortingNodes;
     openSorting.addEventListener("click", this.openMobileSorting);
     closeSorting.addEventListener("click", this.closeMobileSorting);
@@ -154,22 +155,62 @@ class Collection {
 
   openSidebarFilter = () => {
     const { sidebar, sidebarContent, section } = this.domNodes;
+    if (this.mobileRefine && window.innerWidth < 768) {
+      section.dispatchEvent(new CustomEvent("collection:refine-open"));
+      this.refineFocus = document.activeElement;
+      this.refineBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      sidebar.setAttribute("role", "dialog");
+      sidebar.setAttribute("aria-modal", "true");
+      sidebar.setAttribute("aria-label", "Refine");
+      document.addEventListener("keydown", this.handleRefineKeydown);
+    }
     sidebar.style.display = "block";
     window.requestAnimationFrame(() => {
       sidebar.style.setProperty("--m-bg-opacity", "0.5");
       sidebarContent.style.setProperty("--m-translate-x", "0");
       this.accordions && this.accordions.setContentHeight();
+      if (this.mobileRefine && window.innerWidth < 768) this.domNodes.closeSidebar.focus();
     });
     section.classList.add("sidebar-open");
   };
 
   closeSidebarFilter = () => {
     const { sidebar, sidebarContent, section } = this.domNodes;
+    if (this.refineFocus) {
+      section.dispatchEvent(new CustomEvent("collection:refine-cancel"));
+      document.body.style.overflow = this.refineBodyOverflow;
+      sidebar.removeAttribute("role");
+      sidebar.removeAttribute("aria-modal");
+      sidebar.removeAttribute("aria-label");
+      document.removeEventListener("keydown", this.handleRefineKeydown);
+      this.refineFocus.focus();
+      this.refineFocus = null;
+    }
     section.classList.remove("sidebar-open");
     if (window.innerWidth < 1280 || sidebar.dataset.type === "fixed") {
       sidebarContent.style.setProperty("--m-translate-x", "-100%");
       sidebar.style.removeProperty("--m-bg-opacity");
       setTimeout(() => sidebar.style.removeProperty("display"), 300);
+    }
+  };
+
+  handleRefineKeydown = (event) => {
+    if (event.key === "Escape") {
+      this.closeSidebarFilter();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(this.domNodes.sidebarContent.querySelectorAll(
+      'button:not(:disabled), input:not(:disabled), select:not(:disabled), a[href], [tabindex="0"]'
+    )).filter((element) => element.getClientRects().length > 0);
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last?.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first?.focus();
     }
   };
 

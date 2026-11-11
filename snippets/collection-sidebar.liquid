@@ -7,17 +7,29 @@
 %}
 
 {%- if st.show_filter or st.show_sorting -%}
-  {%- assign position = st.sidebar -%}
+  {%- assign position = sidebar_position | default: st.sidebar -%}
   {%- assign sidebar_title = st.sidebar_title -%}
 
-  <div class="m-sidebar{% unless show_filter %} m:hidden{% endunless %}{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}" data-type="{{ position }}">
+  <div class="m-sidebar{% if mobile_refine %} m-sidebar--refine{% unless show_filter %} m-sidebar--sorting-only{% endunless %}{% elsif show_filter != true %} m:hidden{% endif %}{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}" data-type="{{ position }}">
     <div class="m-sidebar--content{% if sidebar_title == blank %} m-sidebar--blank-title{% endif %}">
       {%- if sidebar_title != blank -%}
         <h3 class="m-sidebar--title">{{ sidebar_title }}</h3>
       {%- endif -%}
-      <div class="m-sidebar--close{% if position != 'fixed' %} xl:m:hidden{% endif %}">
+      <button type="button" aria-label="Close filters" class="m-sidebar--close{% if position != 'fixed' %} xl:m:hidden{% endif %}">
         <svg class="m-svg-icon--large" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </div>
+      </button>
+      {% if mobile_refine %}
+        <div class="m-refine--body">
+          {% if st.show_sorting %}
+            <fieldset class="m-refine--sorting md:m:hidden">
+              <legend class="m-filter--widget-title h5">{{ 'collections.sorting.title' | t }}</legend>
+              {% render 'product-sort-options', results: collection, format: 'refine' %}
+            </fieldset>
+          {% endif %}
+          {% if show_filter %}
+            <h4 class="m-refine--filters-title m-filter--widget-title h5 md:m:hidden">{{ sidebar_title | default: 'Filters' }}</h4>
+          {% endif %}
+      {% endif %}
       <div class="m-filter--wrapper{% if storefront_filters_enabled %} m:flex m:flex-col m-storefront--enabled{% endif %}">
         {%- if st.filters_type == 'storefront_filters' -%}
           {%- for block in section.blocks -%}
@@ -86,6 +98,12 @@
           {% render 'filter-by-tags', section: section, promotions_in_grid: promotions_in_grid %}
         {%- endif -%}
       </div>
+      {% if mobile_refine %}
+        </div>
+        <div class="m-refine--footer md:m:hidden">
+          <button type="button" class="m-button m-button--primary" data-refine-apply>Show Results</button>
+        </div>
+      {% endif %}
     </div>
   </div>
 {%- endif -%}

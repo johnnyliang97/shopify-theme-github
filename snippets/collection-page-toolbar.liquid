@@ -2,6 +2,7 @@
 
 {%- liquid
   assign show_columns_switcher = st.show_columns_switcher
+  assign sidebar_position = sidebar_position | default: st.sidebar
   if responsive_grid
     assign show_columns_switcher = false
   endif
@@ -54,18 +55,23 @@
     </button>
   {%- endcapture -%}
 {%- endif -%}
-<div class="m-collection-toolbar{% if show_sale_toggle %} m-collection-toolbar--with-sale{% endif %}">
+<div class="m-collection-toolbar{% if show_sale_toggle %} m-collection-toolbar--with-sale{% endif %}{% if responsive_grid %} m-collection-toolbar--grouped{% endif %}{% if mobile_refine %} m-collection-toolbar--refine{% endif %}">
   <div class="m-collection-toolbar--wrapper">
-    <div class="m-toolbar--left m:flex{% unless st.sidebar == 'fixed' %} xl:m:hidden{% endunless %}">
-      {%- if st.show_filter -%}
-        <button class="m-sidebar--open m:flex m:items-center">
-          <span>{{ 'collections.toolbar.show_filter' | t }}</span>
+    <div class="m-toolbar--left m:flex{% unless sidebar_position == 'fixed' %} xl:m:hidden{% endunless %}">
+      {%- if st.show_filter or mobile_refine and st.show_sorting -%}
+        <button type="button" class="m-sidebar--open m:flex m:items-center{% unless st.show_filter %} md:m:hidden{% endunless %}">
+          {% if mobile_refine %}
+            <span class="md:m:hidden">Refine</span>
+            <span class="m:hidden md:m:block">{{ 'collections.toolbar.show_filter' | t }}</span>
+          {% else %}
+            <span>{{ 'collections.toolbar.show_filter' | t }}</span>
+          {% endif %}
           <svg class="m-svg-icon--small" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"/>
           </svg>
         </button>
       {%- endif -%}
-      {% if st.show_sorting %}
+      {% if st.show_sorting and mobile_refine != true %}
         <button class="m-sortby--open md:m:hidden m:flex m:items-center">
           <span data-sortby-option>{{ sort_by_name }}</span>
           <svg class="m-svg-icon--small" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -74,7 +80,7 @@
         </button>
       {% endif %}
       {% if show_sale_toggle %}
-        <div class="md:m:hidden">{{ sale_button }}</div>
+        <div class="{% if responsive_grid %}m-toolbar--quick-filters{% else %}md:m:hidden{% endif %}">{{ sale_button }}</div>
       {% endif %}
     </div>
     {%- if st.show_sorting or show_columns_switcher -%}
@@ -102,7 +108,7 @@
             </m-select-component>
           </div>
         {% endif %}
-        {% if show_sale_toggle %}
+        {% if show_sale_toggle and responsive_grid != true %}
           <div class="m:hidden md:m:block">{{ sale_button }}</div>
         {% endif %}
         {% if show_columns_switcher %}

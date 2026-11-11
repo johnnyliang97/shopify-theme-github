@@ -25,11 +25,13 @@ class CollectionFiltersForm extends HTMLElement {
     this.debouncedOnSubmit = debounce((evt) => this.onSubmitHandler(evt), 500);
     this.domNodes.filtersForm.addEventListener("input", (event) => {
       this.syncSaleToggle();
+      if (this.refineDraft) return;
       this.debouncedOnSubmit(event);
     });
     this.setLoadingTarget();
     this.initSorting();
     this.initSaleToggle();
+    this.initRefine();
     window.addEventListener("popstate", this.onHistoryChange);
   }
 
@@ -55,7 +57,7 @@ class CollectionFiltersForm extends HTMLElement {
       this.handleSorting(sortingInToolbar.value);
     });
 
-    this.listeners = [
+    this.listeners.push(
       addEventDelegate({
         selector: ".m-sortby-mobile--content li",
         handler: (e, option) => {
@@ -68,7 +70,7 @@ class CollectionFiltersForm extends HTMLElement {
           }
         },
       }),
-    ];
+    );
   };
 
   handleSorting = (sortingValue) => {
@@ -104,6 +106,70 @@ class CollectionFiltersForm extends HTMLElement {
     });
   };
 
+  initRefine = () => {
+    const { section, filtersForm } = this.domNodes;
+    if (section.dataset.mobileRefine !== "true") return;
+    this.refineSortInputs = section.querySelectorAll("[data-refine-sort]");
+    this.refineSortInputs.forEach((input) => {
+      input.addEventListener("change", () => this.handleSorting(input.value));
+    });
+    const open = () => {
+      this.refineDraft = Array.from(filtersForm.elements).map((input) => ({
+        input, value: input.value, checked: input.checked
+      }));
+      this.refineRangeStyles = Array.from(filtersForm.querySelectorAll(".m-facets-price--ranges")).map((range) => ({
+        range, from: range.style.getPropertyValue("--from"), to: range.style.getPropertyValue("--to")
+      }));
+      this.syncRefineSorting();
+    };
+    const cancel = () => {
+      this.refineDraft?.forEach(({ input, value, checked }) => {
+        input.value = value;
+        if (typeof checked === "boolean") input.checked = checked;
+      });
+      this.refineRangeStyles?.forEach(({ range, from, to }) => {
+        range.style.setProperty("--from", from);
+        range.style.setProperty("--to", to);
+      });
+      this.refineDraft = null;
+      this.refineRangeStyles = null;
+      this.syncRefineSorting();
+      this.syncSaleToggle();
+    };
+    const resize = () => {
+      if (this.refineDraft && window.innerWidth >= 768) MinimogTheme.Collection.closeSidebarFilter();
+    };
+    section.addEventListener("collection:refine-open", open);
+    section.addEventListener("collection:refine-cancel", cancel);
+    window.addEventListener("resize", resize);
+    this.listeners.push(() => {
+      section.removeEventListener("collection:refine-open", open);
+      section.removeEventListener("collection:refine-cancel", cancel);
+      window.removeEventListener("resize", resize);
+    });
+    section.querySelector("[data-refine-apply]")?.addEventListener("click", (event) => {
+      this.refineDraft = null;
+      this.refineRangeStyles = null;
+      MinimogTheme.Collection.closeSidebarFilter();
+      this.onSubmitHandler(event);
+    });
+    filtersForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (this.refineDraft) {
+        section.querySelector("[data-refine-apply]")?.click();
+      } else {
+        this.debouncedOnSubmit(event);
+      }
+    });
+    this.syncRefineSorting();
+  };
+
+  syncRefineSorting = () => {
+    this.refineSortInputs?.forEach((input) => {
+      input.checked = input.value === this.domNodes.sortingInForm?.value;
+    });
+  };
+
   setLoadingTarget = () => {
     const screen = window.innerWidth < 768 ? "mobile" : "desktop";
     const { productGridContainer } = this.domNodes;
@@ -114,12 +180,14 @@ class CollectionFiltersForm extends HTMLElement {
 
   onSubmitHandler(event) {
     event.preventDefault();
+    if (this.refineDraft) return;
     const formData = new FormData(this.domNodes.filtersForm);
     const searchParams = new URLSearchParams(formData).toString();
     this.renderPage(searchParams);
   }
 
   onHistoryChange = () => {
+    if (this.refineDraft) MinimogTheme.Collection.closeSidebarFilter();
     const searchParams = new URLSearchParams(window.location.search).toString();
     this.renderPage(searchParams, false);
   };

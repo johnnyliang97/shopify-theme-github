@@ -11,10 +11,12 @@
   assign promotions_in_grid = false
   assign responsive_grid = false
   assign show_columns_switcher = section.settings.show_columns_switcher
+  assign sidebar_position = section.settings.sidebar
   if template.name == 'collection' and template.suffix == blank
     assign promotions_in_grid = true
     assign responsive_grid = true
     assign show_columns_switcher = false
+    assign sidebar_position = 'fixed'
   endif
   if section.settings.grid_layout == 'list'
     assign initial_column = 1
@@ -24,6 +26,10 @@
   endif
 
   assign show_filter = section.settings.show_filter
+  assign mobile_refine = false
+  if responsive_grid and section.settings.filters_type == 'storefront_filters'
+    assign mobile_refine = true
+  endif
   if section.settings.filters_type == 'storefront_filters' and collection.filters.size == 0
     assign show_filter = false
   endif
@@ -56,20 +62,23 @@
   data-section-type="collection-template"
   data-section-id="{{ section.id }}"
   data-filters-type="{{ section.settings.filters_type }}"
-  data-filters-position="{{ section.settings.sidebar }}"
+  data-filters-position="{{ sidebar_position }}"
   data-enable-filters="{{ section.settings.show_filter }}"
   data-enable-sorting="{{ section.settings.show_sorting }}"
   data-show-col-switchers="{{ show_columns_switcher }}"
   data-responsive-grid="{{ responsive_grid }}"
+  data-mobile-refine="{{ mobile_refine }}"
   data-pagination-type="{{ section.settings.paginate_type }}"
   data-product-count="{{ collection.products.size }}"
   data-initial-column="{{ initial_column }}"
   data-view="{{ template.name }}"
 >
   <div class="{{ container }}">
-    <div class="m-collection--wrapper {% if section.settings.show_filter %}m-sidebar--{{ section.settings.sidebar }}{% endif %}">
+    <div class="m-collection--wrapper {% if section.settings.show_filter or mobile_refine %}m-sidebar--{{ sidebar_position }}{% endif %}">
       {%- render 'collection-sidebar',
         show_filter: show_filter,
+        sidebar_position: sidebar_position,
+        mobile_refine: mobile_refine,
         promotions_in_grid: promotions_in_grid,
         animated: animated,
         animation_effect: animation_effect
@@ -79,6 +88,8 @@
           section: section,
           results: collection,
           responsive_grid: responsive_grid,
+          sidebar_position: sidebar_position,
+          mobile_refine: mobile_refine,
           animated: animated,
           animation_effect: animation_effect
         -%}
@@ -186,7 +197,7 @@
       </div>
     </div>
   </div>
-  {% if section.settings.show_sorting %}
+  {% if section.settings.show_sorting and mobile_refine != true %}
     {%- render 'sort-by-mobile', results: collection -%}
   {% endif %}
 </section>
