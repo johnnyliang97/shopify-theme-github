@@ -32,7 +32,8 @@
 .ls-size-guide__details a { text-decoration: underline; text-underline-offset: 3px; }
 .ls-size-guide__help { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px; margin-top: 8px; border: 1px solid #e4d6c4; border-radius: 8px; background: #fcfaf7; }
 .ls-size-guide__help p { margin: 4px 0 0; font-size: 12px; color: #666; }
-.ls-size-guide__help a { flex-shrink: 0; border: 1px solid #222; border-radius: 6px; padding: 10px 14px; color: #222; font-size: 13px; font-weight: 600; }
+.ls-size-guide__help a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex-shrink: 0; border: 1px solid #222; border-radius: 6px; padding: 10px 14px; color: #222; font-size: 13px; font-weight: 600; }
+.ls-size-guide__help a svg { flex-shrink: 0; }
 .ls-size-guide button:focus-visible, .ls-size-guide a:focus-visible, .ls-size-guide summary:focus-visible, .ls-size-guide__table-wrap:focus-visible { outline: 2px solid #89683e; outline-offset: 3px; }
 @media (hover: hover) {
   .ls-size-guide__trigger:hover { color: #89683e; }
