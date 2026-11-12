@@ -16,8 +16,9 @@
         alt="Afterpay — shop now and pay in four instalments"
         loading="lazy"
       >
-      <form action="{{ routes.cart_url }}" method="post">
-        <button class="ap-popup__checkout" type="submit" name="checkout">Continue to checkout</button>
+      <form action="{{ routes.cart_add_url }}" method="post" data-checkout-url="{{ routes.root_url }}checkout">
+        <button class="ap-popup__checkout" type="submit">Continue to checkout</button>
+        <p class="ap-popup__error" role="alert" hidden></p>
       </form>
     </div>
   </dialog>

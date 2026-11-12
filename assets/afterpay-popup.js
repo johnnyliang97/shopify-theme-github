@@ -29,6 +29,52 @@ if (!customElements.get("afterpay-popup")) {
         }
       };
       this.onCloseClick = () => this.dialog.close();
+      this.checkoutForm = this.querySelector("form");
+      this.onCheckout = async (event) => {
+        event.preventDefault();
+        const button = this.checkoutForm.querySelector("button");
+        if (button.disabled) return;
+        const error = this.querySelector(".ap-popup__error");
+        error.hidden = true;
+        const label = button.textContent;
+
+        try {
+          const productForm = this.product.querySelector("product-form.m-product-form--main");
+          const form = productForm?.querySelector("form");
+          if (!form || form.querySelector('[name="add"]')?.disabled) {
+            throw new Error("Please select an available size or option before continuing to checkout.");
+          }
+          if (!form.checkValidity() ||
+              (typeof validateForm === "function" && validateForm(form.closest(".m-main-product--info"))?.length)) {
+            throw new Error("Please complete the required product details before continuing to checkout.");
+          }
+          const data = productForm.getFormData ? productForm.getFormData() : new FormData(form);
+          if (!data.get("id")) {
+            throw new Error("Please select a size or option before continuing to checkout.");
+          }
+
+          button.disabled = true;
+          button.textContent = "Continuing…";
+          const response = await fetch(this.checkoutForm.action, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: data,
+          });
+          const result = await response.json();
+          if (!response.ok || result.status) {
+            throw new Error(typeof result.description === "string" ? result.description :
+              "This item could not be added. Please check your selected size and quantity.");
+          }
+          window.location.assign(this.checkoutForm.dataset.checkoutUrl);
+        } catch (failure) {
+          error.textContent = failure instanceof TypeError ?
+            "Unable to connect. Please try again." : failure.message;
+          error.hidden = false;
+        } finally {
+          button.disabled = false;
+          button.textContent = label;
+        }
+      };
 
       this.enhanceLogos = () => {
         this.product.querySelectorAll(".ap-mini-banner a.ap-logo").forEach((link) => {
@@ -48,6 +94,7 @@ if (!customElements.get("afterpay-popup")) {
       this.dialog.addEventListener("close", this.onClose);
       this.dialog.addEventListener("click", this.onBackdropClick);
       this.querySelector(".ap-popup__close").addEventListener("click", this.onCloseClick);
+      this.checkoutForm.addEventListener("submit", this.onCheckout);
     }
 
     disconnectedCallback() {
@@ -60,6 +107,7 @@ if (!customElements.get("afterpay-popup")) {
       this.dialog?.removeEventListener("close", this.onClose);
       this.dialog?.removeEventListener("click", this.onBackdropClick);
       this.querySelector(".ap-popup__close")?.removeEventListener("click", this.onCloseClick);
+      this.checkoutForm?.removeEventListener("submit", this.onCheckout);
     }
   });
 }

@@ -18,6 +18,10 @@
   cursor: pointer;
 }
 
+.m-main-product .main-product__block-custom_liquid:has(.ap-mini-banner) {
+  margin-top: 12px;
+}
+
 .main-product__block-custom_liquid button.ap-logo:focus-visible,
 .ap-popup button:focus-visible {
   outline: 2px solid currentColor;
@@ -98,6 +102,18 @@ dialog.ap-popup {
 
 .ap-popup__checkout:hover {
   background: #333333;
+}
+
+.ap-popup__checkout:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.ap-popup__error {
+  margin: 12px 0 0;
+  color: #c62828;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 @media screen and (max-width: 480px) {
