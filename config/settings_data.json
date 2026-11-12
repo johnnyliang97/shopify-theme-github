@@ -105,11 +105,6 @@
         "disabled": false,
         "settings": {}
       },
-      "3322588378562147075": {
-        "type": "shopify://apps/marsello-loyalty-email-sms/blocks/widget/2f8afca8-ebe2-41cc-a30f-c0ab7d4ac8be",
-        "disabled": false,
-        "settings": {}
-      },
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
