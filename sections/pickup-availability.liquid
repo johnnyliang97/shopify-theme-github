@@ -3,38 +3,46 @@
 {%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
 {%- if pick_up_availabilities.size > 0 -%}
-  <pickup-availability-preview class="m-pickup-availability__preview m:display-flex">
-    {%- liquid
-      assign closest_location = pick_up_availabilities.first
-    -%}
+  {%- assign closest_location = pick_up_availabilities.first -%}
+  <pickup-availability-preview class="m-pickup-availability__preview m:display-flex{% if closest_location.available %} m-local-fulfillment{% endif %}">
     {% if closest_location.available %}
-      <svg
-        class="m-svg-icon"
-        aria-hidden="true"
-        focusable="false"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 20 20"
+      <button
+        type="button"
+        id="ShowPickupAvailabilityDrawer"
+        class="m-pickup-availability__button m-local-fulfillment__row m-local-fulfillment__pickup"
+        aria-haspopup="dialog"
+        aria-label="Pickup available in Melbourne CBD. View store information"
       >
-        <path fill="#108043" stroke="#fff" d="M16.136 6.979h0l.003-.004a1.499 1.499 0 00-2.275-1.954l-5.945 6.777-1.858-1.859A1.499 1.499 0 103.94 12.06l2.999 3s0 0 0 0c.289.29.675.44 1.1.439h.019a1.5 1.5 0 001.08-.522l6.998-7.998z"/>
-      </svg>
-    {% endif %}
-    <div class="m-pickup-availability__info">
-      {%- if closest_location.available -%}
-        {%- render 'new-locale', key: 'products.product.pickup_availability.pick_up_available_at_html', param: '{{ location_name }}', value: closest_location.location.name -%}
-        <p class="m:text-color-subtext">{{ closest_location.pick_up_time }}</p>
-        <button
-          id="ShowPickupAvailabilityDrawer"
-          class="m-pickup-availability__button m-button m-button--link"
-          aria-haspopup="dialog"
-        >
-          {%- if pick_up_availabilities.size == 1 -%}
-            {%- render 'new-locale', key: 'products.product.pickup_availability.view_store_info' -%}
-          {%- else -%}
-            {%- render 'new-locale', key: 'products.product.pickup_availability.check_other_stores' -%}
-          {%- endif -%}
-        </button>
-      {%- else -%}
+        <svg class="m-local-fulfillment__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span>Pickup available in Melbourne CBD</span>
+        <svg class="m-local-fulfillment__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="m9 6 6 6-6 6"/>
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="m-local-fulfillment__row m-local-fulfillment__uber"
+        data-drawer-target="Drawer-Uber-Delivery"
+        aria-haspopup="dialog"
+        aria-controls="Drawer-Uber-Delivery"
+        aria-expanded="false"
+      >
+        <svg class="m-local-fulfillment__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 5h11v12H3V5Zm11 4h4l3 4v4h-7"/>
+          <path d="M14 13h7"/>
+          <circle cx="7" cy="18" r="2"/>
+          <circle cx="18" cy="18" r="2"/>
+        </svg>
+        <span>Uber same-day delivery in Melbourne</span>
+        <svg class="m-local-fulfillment__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="m9 6 6 6-6 6"/>
+        </svg>
+      </button>
+    {% else %}
+      <div class="m-pickup-availability__info">
         <p>
           {%- render 'new-locale', key: 'products.product.pickup_availability.pick_up_unavailable_at_html', param: '{{ location_name }}', value: closest_location.location.name -%}
         </p>
@@ -47,8 +55,8 @@
             {%- render 'new-locale', key: 'products.product.pickup_availability.check_other_stores' -%}
           </button>
         {%- endif -%}
-      {%- endif -%}
-    </div>
+      </div>
+    {% endif %}
   </pickup-availability-preview>
 
   <pickup-availability-drawer
@@ -135,4 +143,7 @@
       </div>
     </div>
   </pickup-availability-drawer>
+  {% if closest_location.available %}
+    {% render 'uber-delivery-drawer', product: product_variant.product %}
+  {% endif %}
 {%- endif -%}

@@ -3,6 +3,133 @@
   Write your custom CSS below
 {% endcomment %}
 
+.m-main-product .m-local-fulfillment {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.m-local-fulfillment .m-local-fulfillment__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  border: 0;
+  background: transparent;
+  color: #555555;
+  font-family: var(--font-stack-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.m-local-fulfillment .m-local-fulfillment__pickup {
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.m-local-fulfillment__uber {
+  cursor: pointer;
+}
+
+.m-local-fulfillment__pickup:hover,
+.m-local-fulfillment__uber:hover {
+  background: #f7f7f7;
+  color: #111111;
+}
+
+.m-local-fulfillment__pickup:focus-visible,
+.m-local-fulfillment__uber:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: -3px;
+}
+
+.m-local-fulfillment__row span {
+  flex: 1;
+  min-width: 0;
+}
+
+.m-local-fulfillment .m-local-fulfillment__icon,
+.m-local-fulfillment .m-local-fulfillment__arrow {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: #111111;
+}
+
+.m-local-fulfillment .m-local-fulfillment__arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.m-uber-delivery-drawer__product {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.m-uber-delivery-drawer__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.m-uber-delivery-drawer__actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.m-uber-delivery-drawer__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #111111;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.m-uber-delivery-drawer__action--call {
+  background: #111111;
+  color: #ffffff;
+}
+
+.m-uber-delivery-drawer__action--whatsapp {
+  border-color: #25d366;
+  background: #25d366;
+}
+
+.m-uber-delivery-drawer__action:hover {
+  border-color: #111111;
+  background: #eeeeee;
+  color: #111111;
+}
+
+.m-uber-delivery-drawer__action:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 .main-product__block-custom_liquid .ap-mini-banner,
 .installment-shoppay shopify-payment-terms {
   font-family: var(--font-stack-body);

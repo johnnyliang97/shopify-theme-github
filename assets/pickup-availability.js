@@ -51,8 +51,7 @@ if (!customElements.get("pickup-availability")) {
     }
 
     renderPreview(sectionInnerHTML) {
-      const drawer = document.querySelector("#Drawer-Pickup-Availability");
-      if (drawer) drawer.remove();
+      document.querySelectorAll("#Drawer-Pickup-Availability, #Drawer-Uber-Delivery").forEach((drawer) => drawer.remove());
       if (!sectionInnerHTML.querySelector("pickup-availability-preview")) {
         this.innerHTML = "";
         this.removeAttribute("available");
@@ -62,15 +61,16 @@ if (!customElements.get("pickup-availability")) {
       this.innerHTML = sectionInnerHTML.querySelector("pickup-availability-preview").outerHTML;
       this.setAttribute("available", "");
 
-      document.body.appendChild(sectionInnerHTML.querySelector("#Drawer-Pickup-Availability"));
+      sectionInnerHTML.querySelectorAll("pickup-availability-drawer").forEach((drawer) => {
+        document.body.appendChild(drawer);
+      });
 
-      const button = this.querySelector("button");
-
-      if (button) {
-        button.addEventListener("click", (e) => {
-          document.querySelector("#Drawer-Pickup-Availability").openDrawer();
+      this.querySelectorAll(".m-pickup-availability__button, [data-drawer-target]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.drawerTarget || "Drawer-Pickup-Availability";
+          document.getElementById(target)?.openDrawer(button);
         });
-      }
+      });
     }
   }
 
@@ -91,32 +91,62 @@ if (!customElements.get("pickup-availability-drawer")) {
         this.closeDrawer();
       });
 
-      document.body.addEventListener("click", (e) => {
-        if (e.target.classList.contains("m-drawer__wrapper")) this.closeDrawer();
-      });
+      this.onBackdropClick = (e) => {
+        if (e.target === this.drawerWapper) this.closeDrawer();
+      };
+      this.onKeydown = (e) => {
+        if (e.key === "Escape" && this.isOpen) {
+          e.preventDefault();
+          this.closeDrawer();
+        }
+      };
     }
 
-    openDrawer() {
+    connectedCallback() {
+      document.body.addEventListener("click", this.onBackdropClick);
+      document.addEventListener("keydown", this.onKeydown);
+    }
+
+    disconnectedCallback() {
+      document.body.removeEventListener("click", this.onBackdropClick);
+      document.removeEventListener("keydown", this.onKeydown);
+      clearTimeout(this.closeTimer);
+      if (this.isOpen) {
+        if (typeof removeTrapFocus === "function") removeTrapFocus();
+        if (!this.wasScrollLocked) document.documentElement.classList.remove("prevent-scroll");
+      }
+    }
+
+    openDrawer(trigger = document.activeElement) {
+      clearTimeout(this.closeTimer);
+      if (!this.isOpen) this.wasScrollLocked = document.documentElement.classList.contains("prevent-scroll");
+      this.isOpen = true;
+      this.trigger = trigger;
+      this.trigger?.setAttribute("aria-expanded", "true");
+      document.documentElement.classList.add("prevent-scroll");
       if (window.innerWidth < 770) {
-        document.documentElement.classList.add("prevent-scroll");
         this.drawerWapper.classList.add("mobile");
       }
       this.drawerWapper.classList.remove("m:hidden");
       requestAnimationFrame(() => {
+        if (!this.isOpen || !this.isConnected) return;
         this.drawerWapper.style.setProperty("--m-bg-opacity", "0.5");
         this.drawerContent.style.setProperty("--m-translate-x", "0");
-        // this.drawerContent.classList.remove('translate-x-full')
+        if (typeof trapFocus === "function") trapFocus(this.drawerContent, this.drawerClose);
       });
     }
 
     closeDrawer() {
+      if (!this.isOpen) return;
+      this.isOpen = false;
+      this.trigger?.setAttribute("aria-expanded", "false");
+      if (typeof removeTrapFocus === "function") removeTrapFocus(this.trigger?.isConnected ? this.trigger : null);
+      if (!this.wasScrollLocked) document.documentElement.classList.remove("prevent-scroll");
       this.drawerWapper.style.setProperty("--m-bg-opacity", "0");
       this.drawerContent.style.setProperty("--m-translate-x", "100%");
-      // this.drawerContent?.classList.add('translate-x-full')
-      setTimeout(() => {
+      this.closeTimer = setTimeout(() => {
         this.drawerWapper.classList.add("m:hidden");
         this.drawerWapper.classList.remove("mobile");
-        document.documentElement.classList.remove("prevent-scroll");
       }, 300);
     }
   }
