@@ -1,4 +1,6 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-payment-terms.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'afterpay-popup.js' | asset_url }}" defer="defer"></script>
 {% if section.settings.show_zoom_button %}
   {{ 'photoswipe.css' | asset_url | stylesheet_tag }}
   {{ 'component-photoswipe.css' | asset_url | stylesheet_tag }}
@@ -179,6 +181,7 @@
       {{ product.metafields.foxecom-bs-kit.variant-images.value | json }}
     </script>
   {%- endif -%}
+  {% render 'afterpay-popup', section: section %}
 </product-info>
 {%- if section.settings.show_zoom_button -%}
   <script src="{{ 'photoswipe.js' | asset_url }}" defer="defer"></script>

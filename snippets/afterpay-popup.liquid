@@ -1,0 +1,24 @@
+<afterpay-popup>
+  <dialog class="ap-popup" aria-labelledby="AfterpayTitle-{{ section.id }}">
+    <div class="ap-popup__header">
+      <button class="ap-popup__close" type="button" aria-label="Close Afterpay details" autofocus>
+        <svg viewBox="0 0 20 20" width="24" height="24" aria-hidden="true">
+          <circle cx="10" cy="10" r="10" fill="#f1f1f1"/>
+          <path d="m7 7 6 6m0-6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="ap-popup__content">
+      <h2 id="AfterpayTitle-{{ section.id }}" class="ap-popup__title">Pay in 4 with Afterpay</h2>
+      <img
+        class="ap-popup__image"
+        src="https://cdn.shopify.com/s/files/1/0758/6467/0467/files/afterpay-banner.jpg?v=1794442792"
+        alt="Afterpay — shop now and pay in four instalments"
+        loading="lazy"
+      >
+      <form action="{{ routes.cart_url }}" method="post">
+        <button class="ap-popup__checkout" type="submit" name="checkout">Continue to checkout</button>
+      </form>
+    </div>
+  </dialog>
+</afterpay-popup>
