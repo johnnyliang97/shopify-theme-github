@@ -1,0 +1,113 @@
+{%- liquid
+  assign has_size = false
+  for option in product.options_with_values
+    assign option_name = option.name | downcase
+    if option_name contains 'size' or option_name contains 'age'
+      assign has_size = true
+    endif
+  endfor
+  assign guide_id = 'SizeGuide-' | append: section.id | append: '-' | append: block.id
+  assign default_group = 'men'
+  assign tags_lower = product.tags | join: '|' | downcase | split: '|'
+  assign title_lower = product.title | downcase
+  if tags_lower contains 'womens' or tags_lower contains 'women'
+    assign default_group = 'women'
+  endif
+  if tags_lower contains 'kids' or tags_lower contains 'children'
+    assign default_group = 'kids'
+    for option in product.options_with_values
+      assign option_name = option.name | downcase
+      if option_name contains 'size' or option_name contains 'age'
+        assign selected_size = option.selected_value | downcase
+        if selected_size contains 'year'
+          assign selected_age = selected_size | remove: 'years' | remove: 'year' | remove: '+' | strip | plus: 0
+          if selected_age >= 10
+            assign default_group = 'teens'
+          endif
+        endif
+      endif
+    endfor
+  endif
+  if tags_lower contains 'teens' or title_lower contains 'teen'
+    assign default_group = 'teens'
+  endif
+  assign groups = 'men|women|kids|teens' | split: '|'
+  assign labels = 'Men|Women|Kids|Teens' | split: '|'
+-%}
+{%- if has_size and product.gift_card? == false -%}
+  <lestyle-size-guide class="ls-size-guide" data-default-group="{{ default_group }}">
+    <button type="button" class="ls-size-guide__trigger" aria-haspopup="dialog" aria-controls="{{ guide_id }}" data-size-guide-open>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="3" y="7" width="18" height="10" rx="1"></rect>
+        <path d="M7 7v5m4-5v3m4-3v5m4-5v3"></path>
+      </svg>
+      <span>Size guide</span>
+    </button>
+    <p class="ls-size-guide__store">
+      Not sure?
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=136%20Little%20Collins%20Street%2C%20Melbourne%20VIC%203000%2C%20Australia" target="_blank" rel="noopener" aria-label="Try in store at 136 Little Collins Street, Melbourne — open Google Maps">Try in store.</a>
+    </p>
+    <dialog id="{{ guide_id }}" class="ls-size-guide__dialog" aria-labelledby="{{ guide_id }}-title" aria-describedby="{{ guide_id }}-intro">
+      <div class="ls-size-guide__header">
+        <div>
+          <h2 id="{{ guide_id }}-title">Size guide</h2>
+        </div>
+        <button type="button" class="ls-size-guide__close" aria-label="Close size guide" data-size-guide-close autofocus>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+        </button>
+      </div>
+      <div class="ls-size-guide__body">
+        <p id="{{ guide_id }}-intro" class="ls-size-guide__intro">Sizes and fit vary by brand and style; check the product details or ask us for help.</p>
+        <div class="ls-size-guide__tabs" role="tablist" aria-label="Size guide category">
+          {%- for group in groups -%}
+            <button type="button" role="tab" id="{{ guide_id }}-tab-{{ group }}" aria-controls="{{ guide_id }}-panel-{{ group }}" aria-selected="{% if group == default_group %}true{% else %}false{% endif %}" tabindex="{% if group == default_group %}0{% else %}-1{% endif %}" data-size-group="{{ group }}">{{ labels[forloop.index0] }}</button>
+          {%- endfor -%}
+        </div>
+        {%- for group in groups -%}
+          <div role="tabpanel" id="{{ guide_id }}-panel-{{ group }}" aria-labelledby="{{ guide_id }}-tab-{{ group }}" data-size-panel="{{ group }}"{% unless group == default_group %} hidden{% endunless %}>
+            {%- case group -%}
+              {%- when 'men' -%}
+                {% render 'size-guide-table', title: 'Clothing · Italian size conversion', headers: 'Size|IT / EU|UK / US chest', rows: 'XS|44|34;S|46|36;M|48|38;L|50|40;XL|52|42;XXL|54|44;XXXL|56|46;4XL|58|48' %}
+                <p class="ls-size-guide__note">Adult clothing and footwear conversions below use Versace as a reference. Other designers may use different conversions.</p>
+                {% render 'size-guide-table', title: 'Denim · waist label conversion', headers: 'Waist label (in)|Equivalent (cm)', rows: '28|71.1;30|76.2;32|81.3;34|86.4;36|91.4;38|96.5' %}
+                <p class="ls-size-guide__note">Denim values convert the waist size label, not the actual garment measurement.</p>
+                {% render 'size-guide-table', title: 'Footwear · size conversion', headers: 'EU / IT|UK|US', rows: '38|4|5;39|5|6;40|6|7;41|7|8;42|8|9;43|9|10;44|10|11;45|11|12;46|12|13;47|13|14;48|14|15' %}
+              {%- when 'women' -%}
+                {% render 'size-guide-table', title: 'Clothing · Italian size conversion', headers: 'Size|IT|AU / UK|US', rows: 'XXS|36|4|0;XS|38|6|2;S|40|8|4;M|42|10|6;L|44|12|8;XL|46|14|10;XXL|48|16|12;XXXL|50|18|14;4XL|52|20|16' %}
+                <p class="ls-size-guide__note">Adult clothing and footwear conversions below use Versace as a reference. Other designers may use different conversions.</p>
+                {% render 'size-guide-table', title: 'Footwear · size conversion', headers: 'EU / IT|UK|US', rows: '35|2|5;36|3|6;37|4|7;38|5|8;39|6|9;40|7|10;41|8|11;42|9|12' %}
+              {%- when 'kids' -%}
+                {% render 'size-guide-table', title: 'Clothing · age & height guide', headers: 'Age label|Approx. height (cm)', rows: '0–3 months|62;3–6 months|68;6–9 months|74;9–12 months|80;1 year|86;2 years|92;3 years|98;4 years|104;5 years|110;6 years|116;7 years|122;8 years|128;9 years|134' %}
+                <p class="ls-size-guide__note">Height is a general guide, not a garment measurement. Choose by the child’s height rather than age alone. For 10 years and above, see Teens.</p>
+                {% render 'size-guide-table', title: 'Footwear · children’s size conversion', headers: 'EU|UK child|US child / youth', rows: '22|5|6;23|6|7;24|7|8;25|8|9;26|8½|9½;27|9|10;28|10|11;29|10½|11½;30|11½|12½;31|12½|13½;32|13|1Y;33|1|2Y' %}
+              {%- when 'teens' -%}
+                {% render 'size-guide-table', title: 'Clothing · age & height guide', headers: 'Age label|Approx. height (cm)', rows: '10 years|140;11 years|146;12 years|152;13 years|158;14 years|164;15 years|170;16 years|174' %}
+                <p class="ls-size-guide__note">Labels such as “12+ years” vary by designer. Use height as a starting point and contact us to confirm fit. Youth sizes do not automatically match adult sizes.</p>
+                {% render 'size-guide-table', title: 'Footwear · youth size conversion', headers: 'EU|UK youth|US youth', rows: '34|2|3Y;35|2½|3½Y;36|3|4Y;37|4|5Y;38|5|6Y;39|6|7Y;40|7|8Y' %}
+            {%- endcase -%}
+          </div>
+        {%- endfor -%}
+        <details class="ls-size-guide__details">
+          <summary>How to measure</summary>
+          <ul>
+            <li><strong>Chest / bust:</strong> Measure around the fullest part, keeping the tape level.</li>
+            <li><strong>Waist:</strong> Measure around your natural waist without pulling the tape tight.</li>
+            <li><strong>Hips:</strong> Measure around the widest part of your hips.</li>
+            <li><strong>Height:</strong> Stand barefoot and measure from the floor to the top of the head.</li>
+            <li><strong>Feet:</strong> Measure both feet standing, from heel to longest toe. Ask us for the brand’s foot-length chart and use the larger measurement.</li>
+          </ul>
+        </details>
+        <details class="ls-size-guide__details">
+          <summary>About these tables</summary>
+          <p>Adult conversions reference <a href="https://www.versace.com/au/en/size-guide-mensclothing.html" target="_blank" rel="noopener">Versace’s size guides</a>. Children’s height and shoe conversions reference <a href="https://www.childrensalon.com/size-guide" target="_blank" rel="noopener">Childrensalon’s general guide</a>. These are reference conversions, not measurements for this specific product.</p>
+        </details>
+        <div class="ls-size-guide__help">
+          <div><strong>Need help choosing?</strong><p>Ask our Melbourne team about this item.</p></div>
+          {%- capture fit_message -%}{{ shop.url }}{{ product.url }}
+Hi, could you help me choose the right size for this product?{%- endcapture -%}
+          <a href="https://wa.me/61492266452?text={{ fit_message | url_encode }}" target="_blank" rel="noopener">Ask about fit <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </dialog>
+  </lestyle-size-guide>
+{%- endif -%}

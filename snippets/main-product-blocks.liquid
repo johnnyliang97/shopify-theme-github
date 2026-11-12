@@ -310,11 +310,19 @@
         </m-visitiors-counter>
         <script src="{{ 'visitors-counter.js' | asset_url }}" defer="defer"></script>
       {%- when 'variant_picker' -%}
+        {% liquid
+          assign show_lestyle_size_guide = true
+          if is_featured
+            assign show_lestyle_size_guide = false
+          endif
+        %}
         {% render 'product-variant-picker',
           product: product,
           section: section,
+          block: block,
           size_title: size_title,
-          product_form_id: product_form_id
+          product_form_id: product_form_id,
+          show_lestyle_size_guide: show_lestyle_size_guide
         %}
       {%- when 'buy_buttons' -%}
         {% liquid

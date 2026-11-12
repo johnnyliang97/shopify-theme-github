@@ -1,0 +1,28 @@
+{%- assign table_headers = headers | split: '|' -%}
+{%- assign table_rows = rows | split: ';' -%}
+<div class="ls-size-guide__table-wrap" role="region" aria-label="{{ title | escape }}" tabindex="0">
+  <table class="ls-size-guide__table">
+    <caption>{{ title }}</caption>
+    <thead>
+      <tr>
+        {%- for heading in table_headers -%}
+          <th scope="col">{{ heading }}</th>
+        {%- endfor -%}
+      </tr>
+    </thead>
+    <tbody>
+      {%- for row in table_rows -%}
+        {%- assign cells = row | split: '|' -%}
+        <tr>
+          {%- for cell in cells -%}
+            {%- if forloop.first -%}
+              <th scope="row">{{ cell }}</th>
+            {%- else -%}
+              <td>{{ cell }}</td>
+            {%- endif -%}
+          {%- endfor -%}
+        </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+</div>

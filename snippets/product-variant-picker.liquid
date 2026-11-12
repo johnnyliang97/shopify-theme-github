@@ -82,7 +82,7 @@
               <span class="option-label--title">{{ option_label }}:</span>
               <span class="option-label--selected">{{ option.selected_value }}</span>
             </label>
-            {% if is_size %}
+            {% if is_size and show_lestyle_size_guide != true %}
               <button data-open-sizeguide class="foxkit-sizechart-button m:inline-flex m:items-center m:hidden">
                 <svg
                   class="m-svg-icon--large"
@@ -117,6 +117,9 @@
       </div>
     {%- endfor -%}
   {%- endunless -%}
+  {% if show_lestyle_size_guide %}
+    {% render 'product-size-guide', product: product, section: section, block: block %}
+  {% endif %}
   <script type="application/json" data-selected-variant>
     {{ product.selected_or_first_available_variant | json }}
   </script>

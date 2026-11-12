@@ -1,4 +1,6 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
+{{ 'product-size-guide.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-size-guide.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-payment-terms.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'afterpay-popup.js' | asset_url }}" defer="defer"></script>
 {% if section.settings.show_zoom_button %}
