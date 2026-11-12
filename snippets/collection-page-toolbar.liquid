@@ -43,7 +43,7 @@
     endfor
   endif
   assign collection_title = results.title | default: collection.title | downcase
-  if collection_title contains 'new arrivals'
+  if collection_title contains 'new arrivals' or collection_title contains 'sale' or collection_title contains 'outlet'
     assign show_sale_toggle = false
   endif
   assign removed_sorts = 'manual,best-selling,title-ascending,title-descending,created-ascending' | split: ','
