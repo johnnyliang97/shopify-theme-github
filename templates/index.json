@@ -9,6 +9,56 @@
  */
 {
   "sections": {
+    "promotion_countdown_timer_Q6WpDW": {
+      "type": "promotion-countdown-timer",
+      "blocks": {
+        "text_yUP9KE": {
+          "type": "text",
+          "settings": {
+            "text_alignment": "left",
+            "subheading": "30% - 50% off everything*",
+            "heading": "BLACK FRIDAY",
+            "heading_size": "h2",
+            "text": "<p>Shop our <strong>BIGGEST SALE</strong> of the year</p>"
+          }
+        },
+        "countdown_G9V6qf": {
+          "type": "countdown",
+          "settings": {
+            "text_alignment": "center",
+            "time": "2026-11-30 23:59:00"
+          }
+        },
+        "button_jVjieL": {
+          "type": "button",
+          "settings": {
+            "text_alignment": "right",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/lestyle",
+            "button_style": "m-button--primary",
+            "button_size": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_yUP9KE",
+        "countdown_G9V6qf",
+        "button_jVjieL"
+      ],
+      "name": "Promotion countdown timer",
+      "settings": {
+        "container": "container-fluid",
+        "color_scheme": "badge-new",
+        "background_in_container": false,
+        "background_image": "shopify://shop_images/black-friday-banner-26_1.webp",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
     "dynamic_tabbed_content_rqLHh3": {
       "type": "dynamic-tabbed-content",
       "blocks": {
@@ -197,53 +247,6 @@
         "color_scheme": "scheme-f18c59ce-62bf-4d70-9c03-c41f1fdb8f53",
         "padding_top": 20,
         "padding_bottom": 20
-      }
-    },
-    "promotion_countdown_timer_Q6WpDW": {
-      "type": "promotion-countdown-timer",
-      "blocks": {
-        "text_yUP9KE": {
-          "type": "text",
-          "settings": {
-            "text_alignment": "left",
-            "subheading": "30% - 50% off storewide",
-            "heading": "BLACK FRIDAY",
-            "heading_size": "h2",
-            "text": "<p>Shop our <strong>BIGGEST SALE</strong> of the year</p>"
-          }
-        },
-        "countdown_G9V6qf": {
-          "type": "countdown",
-          "settings": {
-            "text_alignment": "center",
-            "time": "2026-11-30 23:59:00"
-          }
-        },
-        "button_jVjieL": {
-          "type": "button",
-          "settings": {
-            "text_alignment": "right",
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/lestyle",
-            "button_style": "m-button--primary",
-            "button_size": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_yUP9KE",
-        "countdown_G9V6qf",
-        "button_jVjieL"
-      ],
-      "name": "Promotion countdown timer",
-      "settings": {
-        "container": "container-fluid",
-        "color_scheme": "badge-new",
-        "background_in_container": false,
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "custom_class": "",
-        "animations": "inherit"
       }
     },
     "empty_space_HWbjTK": {
