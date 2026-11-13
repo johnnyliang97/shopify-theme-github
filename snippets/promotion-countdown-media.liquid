@@ -1,0 +1,51 @@
+{% comment %}
+  Decorative background. A selected image doubles as a poster and reduced-motion fallback.
+{% endcomment %}
+{% if image != blank or video != blank %}
+  {%- liquid
+    assign poster = image | default: video.preview_image
+    assign loading = 'lazy'
+    if section.index == 1
+      assign loading = 'eager'
+    endif
+    assign poster_position = poster.presentation.focal_point | default: '50% 50%'
+    assign poster_style = 'object-position: ' | append: poster_position
+    if poster != blank
+      assign poster_url = poster | image_url: width: 1500
+    endif
+  -%}
+  <div
+    class="m-promotion-countdown-timer__media{% if mobile %} m-promotion-countdown-timer__media--mobile{% elsif mobile_override %} m-promotion-countdown-timer__media--desktop{% endif %}"
+    aria-hidden="true"
+  >
+    {% if poster != blank %}
+      {{
+        poster
+        | image_url: width: 2400
+        | image_tag:
+          widths: '375, 550, 750, 1100, 1500, 2000, 2400',
+          sizes: '100vw',
+          loading: loading,
+          alt: '',
+          style: poster_style,
+          class: 'm-promotion-countdown-timer__media-image'
+      }}
+    {% endif %}
+    {% if video != blank %}
+      {{
+        video
+        | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          playsinline: true,
+          controls: false,
+          preload: 'none',
+          poster: poster_url,
+          image_size: '1500x',
+          class: 'm-promotion-countdown-timer__media-video'
+      }}
+    {% endif %}
+    <div class="m-promotion-countdown-timer__media-overlay"></div>
+  </div>
+{% endif %}

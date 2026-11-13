@@ -1,4 +1,5 @@
 {{ 'promotion-countdown-timer.css' | asset_url | stylesheet_tag }}
+{{ 'promotion-countdown-media.css' | asset_url | stylesheet_tag }}
 {% liquid
   assign animation_effect = settings.animations
   assign animated = false
@@ -10,21 +11,43 @@
   endif
 
   assign background_in_container = section.settings.background_in_container
+  assign has_mobile_media = false
+  if section.settings.background_image_mobile != blank or section.settings.background_video_mobile != blank
+    assign has_mobile_media = true
+  endif
 %}
+{%- capture background_media -%}
+  {% render 'promotion-countdown-media',
+    image: section.settings.background_image,
+    video: section.settings.background_video,
+    mobile_override: has_mobile_media
+  %}
+  {% if has_mobile_media %}
+    {% render 'promotion-countdown-media',
+      image: section.settings.background_image_mobile,
+      video: section.settings.background_video_mobile,
+      mobile: true
+    %}
+  {% endif %}
+{%- endcapture -%}
 {%- style -%}
   #m-section-{{ section.id }} {
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     --column-gap: 30px;
     --row-gap-mobile: 24px;
+    --countdown-overlay-color: {{ section.settings.overlay_color }};
+    --countdown-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
   }
 {%- endstyle -%}
 <section
   id="m-section-{{ section.id }}"
   class="m-section m-promotion-countdown-timer{% unless background_in_container %} m-gradient m-color-{{ section.settings.color_scheme }}{% endunless %} {{ section.settings.custom_class }}"
 >
-  <div class="{{ section.settings.container }} m-section-my">
+  {% unless background_in_container %}{{ background_media }}{% endunless %}
+  <div class="{{ section.settings.container }} m-section-my m-promotion-countdown-timer__container">
     <div class="m-promotion-countdown-timer__wrapper m:flex m:items-center m-section-py{% if background_in_container %} m-gradient m-color-{{ section.settings.color_scheme }} m:blocks-radius{% endif %}">
+      {% if background_in_container %}{{ background_media }}{% endif %}
       {% if section.blocks.size > 0 %}
         {%- for block in section.blocks -%}
           {% case block.type %}
@@ -124,6 +147,50 @@
       "id": "background_in_container",
       "label": "Use background in container",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Media background"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image",
+      "info": "Also used as the video poster. Choose a color scheme that keeps text readable over your media."
+    },
+    {
+      "type": "video",
+      "id": "background_video",
+      "label": "Background video",
+      "info": "Plays muted on a loop. Video takes priority over the image."
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Mobile background image",
+      "info": "Optional. Overrides desktop media on screens below 768px."
+    },
+    {
+      "type": "video",
+      "id": "background_video_mobile",
+      "label": "Mobile background video",
+      "info": "Optional. Takes priority over the mobile image. Leave both mobile fields empty to use desktop media."
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 35
     },
     {
       "type": "header",

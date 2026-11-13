@@ -1,0 +1,60 @@
+.m-promotion-countdown-timer,
+.m-promotion-countdown-timer__wrapper {
+  position: relative;
+  isolation: isolate;
+}
+
+.m-promotion-countdown-timer__container,
+.m-promotion-countdown-timer__wrapper > .m\:column {
+  position: relative;
+  z-index: 1;
+}
+
+.m-promotion-countdown-timer__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.m-promotion-countdown-timer__media-image,
+.m-promotion-countdown-timer__media-video,
+.m-promotion-countdown-timer__media-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.m-promotion-countdown-timer__media-image,
+.m-promotion-countdown-timer__media-video {
+  display: block;
+  object-fit: cover;
+}
+
+.m-promotion-countdown-timer__media-overlay {
+  background: var(--countdown-overlay-color, #000);
+  opacity: var(--countdown-overlay-opacity, 0.35);
+}
+
+.m-promotion-countdown-timer__media--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .m-promotion-countdown-timer__media--desktop {
+    display: none;
+  }
+
+  .m-promotion-countdown-timer__media--mobile {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m-promotion-countdown-timer__media-video {
+    display: none;
+  }
+}
