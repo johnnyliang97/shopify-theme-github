@@ -206,17 +206,17 @@
           "type": "text",
           "settings": {
             "text_alignment": "left",
-            "subheading": "",
-            "heading": "Boxing Day Sale",
+            "subheading": "30% - 50% off storewide",
+            "heading": "BLACK FRIDAY",
             "heading_size": "h2",
-            "text": "<p>Use code <strong>BD20 </strong>at checkout for <strong>20% OFF </strong>full-priced item<br/><em>*T&Cs apply</em></p>"
+            "text": "<p>Shop our <strong>BIGGEST SALE</strong> of the year</p>"
           }
         },
         "countdown_G9V6qf": {
           "type": "countdown",
           "settings": {
             "text_alignment": "center",
-            "time": "2025-12-31 23:59:00"
+            "time": "2026-11-30 23:59:00"
           }
         },
         "button_jVjieL": {
@@ -224,9 +224,9 @@
           "settings": {
             "text_alignment": "right",
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/sale",
+            "button_link": "shopify://collections/lestyle",
             "button_style": "m-button--primary",
-            "button_size": "m-button--small"
+            "button_size": ""
           }
         }
       },
@@ -235,11 +235,10 @@
         "countdown_G9V6qf",
         "button_jVjieL"
       ],
-      "disabled": true,
       "name": "Promotion countdown timer",
       "settings": {
         "container": "container-fluid",
-        "color_scheme": "dark",
+        "color_scheme": "badge-new",
         "background_in_container": false,
         "padding_top": 50,
         "padding_bottom": 50,
@@ -875,9 +874,9 @@
     }
   },
   "order": [
+    "promotion_countdown_timer_Q6WpDW",
     "dynamic_tabbed_content_rqLHh3",
     "link_ticker_bFDXYi",
-    "promotion_countdown_timer_Q6WpDW",
     "empty_space_HWbjTK",
     "custom_card_carousel_HeykPg",
     "empty_space_kycKUx",
