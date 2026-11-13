@@ -27,7 +27,6 @@
       min-height: 0 !important;
       margin: 0 !important;
       padding: 36px 7px 12px !important;
-      border: 1px solid #c19967 !important;
       border-right: 0 !important;
       border-radius: 8px 0 0 8px !important;
       background: #222 !important;
