@@ -39,6 +39,28 @@
     --countdown-overlay-color: {{ section.settings.overlay_color }};
     --countdown-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
   }
+  {% for block in section.blocks %}
+    {% if block.type == 'text' %}
+      {% assign subheading_size = block.settings.subheading_size | default: 'h5' %}
+      {% assign subheading_mobile_scale = 1 %}
+      {% if subheading_size == 'h6' %}
+        {% assign subheading_mobile_scale = 0.875 %}
+      {% endif %}
+      #m-section-{{ section.id }} .m-richtext__subtitle {
+        font-size: calc(var(--font-{{ subheading_size }}-mobile) * {{ subheading_mobile_scale }} / var(--font-base-size) * 1rem);
+      }
+      @media screen and (min-width: 768px) {
+        #m-section-{{ section.id }} .m-richtext__subtitle {
+          font-size: calc(var(--font-{{ subheading_size }}-tablet, var(--font-{{ subheading_size }}-mobile)) * {{ subheading_mobile_scale }} / var(--font-base-size) * 1rem);
+        }
+      }
+      @media screen and (min-width: 1280px) {
+        #m-section-{{ section.id }} .m-richtext__subtitle {
+          font-size: calc(var(--font-{{ subheading_size }}-desktop) / var(--font-base-size) * 1rem);
+        }
+      }
+    {% endif %}
+  {% endfor %}
 {%- endstyle -%}
 <section
   id="m-section-{{ section.id }}"
@@ -55,7 +77,7 @@
               <div class="m-promotion-countdown-timer__text m:column m-richtext m:text-center lg:m:text-{{ block.settings.text_alignment }} m:flex-1">
                 {%- if block.settings.subheading != blank -%}
                   <p
-                    class="m-richtext__subtitle h5{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}"
+                    class="m-richtext__subtitle m:text-color-subtext {{ block.settings.subheading_size | default: 'h5' }}{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}"
                   >
                     {{ block.settings.subheading }}
                   </p>
@@ -76,7 +98,10 @@
                 {% endif %}
               </div>
             {%- when 'countdown' -%}
-              <div class="m-promotion-countdown-timer__countdown m:column m:display-flex m:justify-center lg:m:justify-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }} m:flex-1{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}">
+              <div
+                class="m-promotion-countdown-timer__countdown m:column m:display-flex m:justify-center lg:m:justify-{{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }} m:flex-1{% if animated %} m-scroll-trigger animate--{{ animation_effect }}{% endif %}"
+                style="--countdown-digit-size: {{ block.settings.countdown_size | default: 36 }}px;"
+              >
                 {% render 'countdown-timer', time: block.settings.time %}
               </div>
             {%- when 'button' -%}
@@ -290,6 +315,30 @@
           "label": "Subheading"
         },
         {
+          "type": "select",
+          "id": "subheading_size",
+          "label": "Subheading size",
+          "default": "h5",
+          "options": [
+            {
+              "value": "h6",
+              "label": "Small"
+            },
+            {
+              "value": "h5",
+              "label": "Medium"
+            },
+            {
+              "value": "h4",
+              "label": "Large"
+            },
+            {
+              "value": "h3",
+              "label": "Extra large"
+            }
+          ]
+        },
+        {
           "type": "text",
           "id": "heading",
           "label": "Heading",
@@ -349,6 +398,17 @@
           "label": "End time",
           "default": "2023-12-26 23:00:00",
           "info": "Date format: YYYY-MM-DD HH:MM:ss"
+        },
+        {
+          "type": "range",
+          "id": "countdown_size",
+          "label": "Countdown timer size",
+          "info": "Adjusts the size of the digits and separators.",
+          "min": 12,
+          "max": 72,
+          "step": 2,
+          "unit": "px",
+          "default": 36
         }
       ]
     },
