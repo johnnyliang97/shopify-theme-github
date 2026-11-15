@@ -67,6 +67,7 @@
         "banner_promotion_KppNc9": {
           "type": "banner_promotion",
           "settings": {
+            "hide_url_contains": "",
             "color_scheme": "dark",
             "text_size": "small",
             "text_color": "white",
@@ -74,7 +75,7 @@
             "link": "shopify://collections/lestyle-outlet",
             "content_position": "center_center",
             "content_alignment": "center",
-            "title": "CRAVING FOR MORE?",
+            "title": "LUXURY FOR LESS",
             "subtitle": "Up to <b>70% Off</b>",
             "button_label": "Shop Outlet",
             "button_style": "m-button--link",
@@ -85,6 +86,7 @@
         "banner_promotion_yD3t3V": {
           "type": "banner_promotion",
           "settings": {
+            "hide_url_contains": "",
             "color_scheme": "dark",
             "text_size": "small",
             "text_color": "white",
