@@ -1,6 +1,7 @@
 {%- assign st = section.settings -%}
 {% liquid
   assign storefront_filters_enabled = false
+  assign promotion_url_path = request.path | downcase
   if st.filters_type == 'storefront_filters' 
     assign storefront_filters_enabled = true
   endif
@@ -90,6 +91,12 @@
                   </div>
                 </div>
               {% when 'banner_promotion' %}
+                {% liquid
+                  assign hide_url_contains = block.settings.hide_url_contains | strip | downcase
+                  if hide_url_contains != blank and promotion_url_path contains hide_url_contains
+                    continue
+                  endif
+                %}
                 {% unless promotions_in_grid %}
                   {{ 'component-image-card.css' | asset_url | stylesheet_tag }}
                   <div class="m-banner-promotion m-filter--widget"

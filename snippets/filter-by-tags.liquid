@@ -1,4 +1,5 @@
 {% liquid
+  assign promotion_url_path = request.path | downcase
   if current_tags != blank
     assign current_arr = ''
     assign new_current_arr = ''
@@ -184,6 +185,12 @@
           </div>
         {% endif %}
       {% when 'banner_promotion' %}
+        {% liquid
+          assign hide_url_contains = block.settings.hide_url_contains | strip | downcase
+          if hide_url_contains != blank and promotion_url_path contains hide_url_contains
+            continue
+          endif
+        %}
         {% unless promotions_in_grid %}
           {{ 'component-image-card.css' | asset_url | stylesheet_tag }}
           <div class="m-banner-promotion m-filter--widget">

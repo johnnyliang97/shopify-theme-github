@@ -8,6 +8,7 @@
 {%- endif -%}
 {%- liquid
   assign initial_column = section.settings.grid_columns
+  assign promotion_url_path = request.path | downcase
   assign promotions_in_grid = false
   assign responsive_grid = false
   assign show_columns_switcher = section.settings.show_columns_switcher
@@ -109,6 +110,10 @@
               assign promotion_count = 0
               for block in section.blocks
                 if block.type == 'banner_promotion'
+                  assign hide_url_contains = block.settings.hide_url_contains | strip | downcase
+                  if hide_url_contains != blank and promotion_url_path contains hide_url_contains
+                    continue
+                  endif
                   assign promotion_count = promotion_count | plus: 1
                 endif
               endfor
@@ -135,6 +140,12 @@
               {%- if promotions_in_grid -%}
                 {%- for block in section.blocks -%}
                   {%- if block.type == 'banner_promotion' -%}
+                    {%- liquid
+                      assign hide_url_contains = block.settings.hide_url_contains | strip | downcase
+                      if hide_url_contains != blank and promotion_url_path contains hide_url_contains
+                        continue
+                      endif
+                    -%}
                     <div class="m-collection-grid-promotion" data-grid-promotion {{ block.shopify_attributes }}>
                       {%- render 'image-card',
                         block: block,
@@ -650,6 +661,12 @@
         {
           "type": "header",
           "content": "General"
+        },
+        {
+          "type": "text",
+          "id": "hide_url_contains",
+          "label": "Hide when URL contains",
+          "info": "Matches the URL path, ignoring capitalization. Example: new-arrivals. Leave blank to always show."
         },
         {
           "type": "color_scheme",
