@@ -17,6 +17,7 @@
           "settings": {
             "text_alignment": "left",
             "subheading": "30% - 50% off everything*",
+            "subheading_size": "h5",
             "heading": "BLACK FRIDAY",
             "heading_size": "h2",
             "text": "<p>Shop our <strong>BIGGEST SALE</strong> of the year</p>"
@@ -26,7 +27,8 @@
           "type": "countdown",
           "settings": {
             "text_alignment": "center",
-            "time": "2026-11-30 23:59:00"
+            "time": "2026-11-30 23:59:00",
+            "countdown_size": 36
           }
         },
         "button_jVjieL": {
@@ -619,7 +621,7 @@
         "title_image": "shopify://shop_images/lestyle-title-lestyle.png",
         "title_image_width_desktop": 260,
         "title_image_width_mobile": 270,
-        "subheader_text": "<p>Founded in Melbourne, Lestyle Boutique is a premium luxury designer outlet curating high-end European fashion and accessories. With a flagship boutique on Little Collins Street and a growing online presence, we bring Versace, Balmain, Givenchy, Moschino, and more.</p>",
+        "subheader_text": "<p>Founded in Melbourne, Lestyle Boutique is a premium luxury designer outlet curating authentic high-end European fashion and accessories. With a flagship boutique on Little Collins Street and a growing online presence, we bring Versace, Balmain, Givenchy, Moschino, and more.</p>",
         "subheader_size": "text-sm",
         "button_font_size": 15,
         "button_font_weight": 600,
