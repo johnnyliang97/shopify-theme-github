@@ -67,7 +67,7 @@
         "banner_promotion_KppNc9": {
           "type": "banner_promotion",
           "settings": {
-            "hide_url_contains": "",
+            "hide_url_contains": "outlet",
             "color_scheme": "dark",
             "text_size": "small",
             "text_color": "white",
@@ -86,7 +86,7 @@
         "banner_promotion_yD3t3V": {
           "type": "banner_promotion",
           "settings": {
-            "hide_url_contains": "",
+            "hide_url_contains": "teens",
             "color_scheme": "dark",
             "text_size": "small",
             "text_color": "white",
