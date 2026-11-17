@@ -426,6 +426,67 @@
         "custom_class": "m-icon-box--small",
         "animations": "inherit"
       }
+    },
+    "faq_3zcNWw": {
+      "type": "faq",
+      "blocks": {
+        "question_EtfJNh": {
+          "type": "question",
+          "settings": {
+            "question": "How do I choose the right size?",
+            "answer": "<p>Add your size guide and fit advice here.</p>",
+            "open": true
+          }
+        },
+        "question_UTtfRk": {
+          "type": "question",
+          "settings": {
+            "question": "What are the shipping options?",
+            "answer": "<p>Add your shipping destinations, delivery times, and costs here.</p>",
+            "open": false
+          }
+        },
+        "question_Wj7Rzj": {
+          "type": "question",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>Add your return conditions and instructions here.</p>",
+            "open": false
+          }
+        },
+        "question_a6FVz4": {
+          "type": "question",
+          "settings": {
+            "question": "How can I contact you?",
+            "answer": "<p>Add your contact details and customer service hours here.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "question_EtfJNh",
+        "question_UTtfRk",
+        "question_Wj7Rzj",
+        "question_a6FVz4"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "container": "container",
+        "color_scheme": "",
+        "content_width": 880,
+        "subheading": "",
+        "subheading_size": 16,
+        "heading": "Frequently asked questions",
+        "heading_size": "h2",
+        "description": "",
+        "header_alignment": "left",
+        "single_open": false,
+        "question_size": 18,
+        "answer_size": 16,
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "custom_class": ""
+      }
     }
   },
   "order": [
@@ -438,6 +499,7 @@
     "custom_liquid_zrgkke",
     "small_banner_TE9wDT",
     "small_banner_fyMBaW",
+    "faq_3zcNWw",
     "product-recommendations",
     "recent-viewed-products",
     "icon_box_VnzpGn"
