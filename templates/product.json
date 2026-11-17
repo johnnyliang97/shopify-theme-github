@@ -232,55 +232,6 @@
         "custom_class": ""
       }
     },
-    "small_banner_TE9wDT": {
-      "type": "small-banner",
-      "name": "Uber Delivery",
-      "settings": {
-        "container": "container",
-        "background_color": "#b89b6f",
-        "background_overlay_opacity": 0,
-        "banner_image": "shopify://shop_images/lestyle-shopping-bag.jpg",
-        "image_width": 80,
-        "text_color": "#ffffff",
-        "header_text": "Make it Free Shipping",
-        "header_size": "h3",
-        "subheader_text": "<p>Enjoy free express shipping Australia-wide on orders over $300*</p>",
-        "subheader_size": "text-small",
-        "button_text": "Find Out More",
-        "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
-        "button_font_size": 15,
-        "button_bg_color": "rgba(0,0,0,0)",
-        "button_text_color": "#ffffff",
-        "button_border_color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "small_banner_fyMBaW": {
-      "type": "small-banner",
-      "name": "Uber",
-      "settings": {
-        "container": "container",
-        "background_color": "#3c3c3c",
-        "background_image": "shopify://shop_images/luxury-dark-grey-and-black-color-gradient-background-texture-abstract-pattern-design-illustration-element-for-artwork-wallpaper-template-banner-poster-cover-decoration-backdrop-produc.jpg",
-        "background_overlay_opacity": 0,
-        "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
-        "image_width": 80,
-        "text_color": "#ffffff",
-        "header_text": "Same Day Delivery in Melbourne",
-        "header_size": "h3",
-        "subheader_text": "<p>Uber Local Delivery is available in Melbourne and surrounding suburbs*</p>",
-        "subheader_size": "text-small",
-        "button_text": "Find Out More",
-        "button_link": "",
-        "button_font_size": 15,
-        "button_bg_color": "rgba(0,0,0,0)",
-        "button_text_color": "#ffffff",
-        "button_border_color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "faq_3zcNWw": {
       "type": "faq",
       "blocks": {
@@ -358,6 +309,55 @@
         "padding_top": 52,
         "padding_bottom": 52,
         "custom_class": ""
+      }
+    },
+    "small_banner_TE9wDT": {
+      "type": "small-banner",
+      "name": "Uber Delivery",
+      "settings": {
+        "container": "container",
+        "background_color": "#b89b6f",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-shopping-bag.jpg",
+        "image_width": 80,
+        "text_color": "#ffffff",
+        "header_text": "Make it Free Shipping",
+        "header_size": "h3",
+        "subheader_text": "<p>Enjoy free express shipping Australia-wide on orders over $300*</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
+        "button_font_size": 15,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "small_banner_fyMBaW": {
+      "type": "small-banner",
+      "name": "Uber",
+      "settings": {
+        "container": "container",
+        "background_color": "#3c3c3c",
+        "background_image": "shopify://shop_images/luxury-dark-grey-and-black-color-gradient-background-texture-abstract-pattern-design-illustration-element-for-artwork-wallpaper-template-banner-poster-cover-decoration-backdrop-produc.jpg",
+        "background_overlay_opacity": 0,
+        "banner_image": "shopify://shop_images/lestyle-uber-delivery.png",
+        "image_width": 80,
+        "text_color": "#ffffff",
+        "header_text": "Same Day Delivery in Melbourne",
+        "header_size": "h3",
+        "subheader_text": "<p>Uber Local Delivery is available in Melbourne and surrounding suburbs*</p>",
+        "subheader_size": "text-small",
+        "button_text": "Find Out More",
+        "button_link": "",
+        "button_font_size": 15,
+        "button_bg_color": "rgba(0,0,0,0)",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product-recommendations": {
@@ -517,9 +517,9 @@
     "product-details-tabs",
     "custom_liquid_CHJgEC",
     "custom_liquid_zrgkke",
+    "faq_3zcNWw",
     "small_banner_TE9wDT",
     "small_banner_fyMBaW",
-    "faq_3zcNWw",
     "product-recommendations",
     "recent-viewed-products",
     "icon_box_Bf7XKa"
