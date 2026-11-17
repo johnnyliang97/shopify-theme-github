@@ -47,6 +47,7 @@
         "countdown_G9V6qf",
         "button_jVjieL"
       ],
+      "disabled": true,
       "name": "Promotion countdown timer",
       "settings": {
         "container": "container-fluid",
