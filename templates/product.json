@@ -284,40 +284,58 @@
     "faq_3zcNWw": {
       "type": "faq",
       "blocks": {
+        "question_tMNrV8": {
+          "type": "question",
+          "settings": {
+            "question": "Can I arrange same-day delivery in Melbourne?",
+            "answer": "<p>Same-day delivery via Uber is available in metropolitan Melbourne, Monday to Friday during standard business hours, subject to availability. Contact our team before placing your order to confirm availability and the delivery fee.</p>",
+            "open": false
+          }
+        },
+        "question_GyL874": {
+          "type": "question",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Yes, we ship to selected international destinations via FedEx Express. Delivery typically takes 2–7 business days, depending on your location and customs clearance. Shipping costs are calculated at checkout or quoted separately for certain destinations. See our <a href=\"https://checkout.shopify.com/75864670467/policies/37248729347.html?locale=en\">Shipping policy</a> for details.</p>",
+            "open": false
+          }
+        },
         "question_EtfJNh": {
           "type": "question",
           "settings": {
             "question": "How do I choose the right size?",
-            "answer": "<p>Add your size guide and fit advice here.</p>",
+            "answer": "<p>Sizing and fit can vary between designers. Check the product description for available sizing details. For help before ordering, email <a href=\"mailto:customercare@lestyle.com.au\">customercare@lestyle.com.au</a> with the product name and your sizing questions.</p>",
             "open": true
           }
         },
         "question_UTtfRk": {
           "type": "question",
           "settings": {
-            "question": "What are the shipping options?",
-            "answer": "<p>Add your shipping destinations, delivery times, and costs here.</p>",
+            "question": "What are the delivery options within Australia?",
+            "answer": "<p>Our published shipping policy lists FedEx Express delivery, with delivery generally taking 1–2 business days for most metropolitan areas after dispatch. Regional and remote deliveries may take longer, and delays can occur during peak sale periods. Please refer to our <a href=\"https://checkout.shopify.com/75864670467/policies/37248729347.html?locale=en\">Shipping policy</a> for full details.</p>",
             "open": false
           }
         },
         "question_Wj7Rzj": {
           "type": "question",
           "settings": {
-            "question": "What is your return policy?",
-            "answer": "<p>Add your return conditions and instructions here.</p>",
+            "question": "What should I know about returns?",
+            "answer": "<p>Please read our <a href=\"https://checkout.shopify.com/75864670467/policies/37248794883.html?locale=en\">Refund policy</a> before purchasing to check item eligibility, return-request deadlines and conditions. If you need help with a return or an issue with your order, email <a href=\"mailto:customercare@lestyle.com.au\">customercare@lestyle.com.au</a>.</p>",
             "open": false
           }
         },
         "question_a6FVz4": {
           "type": "question",
           "settings": {
-            "question": "How can I contact you?",
-            "answer": "<p>Add your contact details and customer service hours here.</p>",
+            "question": "How can I contact Lestyle Boutique?",
+            "answer": "<p>Email <a href=\"mailto:customercare@lestyle.com.au\">customercare@lestyle.com.au</a> or call 0423 185 118 for help with products, sizing or your order. You can also visit us at 136 Little Collins Street, Melbourne VIC 3000.</p>",
             "open": false
           }
         }
       },
       "block_order": [
+        "question_tMNrV8",
+        "question_GyL874",
         "question_EtfJNh",
         "question_UTtfRk",
         "question_Wj7Rzj",
