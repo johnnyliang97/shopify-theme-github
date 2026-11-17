@@ -23,6 +23,32 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "main": {
+      "settings": {},
+      "blocks": {
+        "buy_buttons": {
+          "settings": {
+            "show_pickup_delivery": false
+          }
+        }
+      }
+    },
+    "faq_3zcNWw": {
+      "settings": {},
+      "blocks": {
+        "question_GyL874": {
+          "settings": {
+            "question": "Do you ship to NZ?"
+          }
+        }
+      },
+      "block_order": [
+        "question_GyL874",
+        "question_EtfJNh",
+        "question_Wj7Rzj",
+        "question_a6FVz4"
+      ]
     }
   }
 }

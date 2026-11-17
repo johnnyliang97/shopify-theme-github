@@ -13,9 +13,16 @@
     "market": "au"
   },
   "sections": {
-    "main": {
+    "faq_3zcNWw": {
       "settings": {},
-      "blocks": {}
+      "blocks": {},
+      "block_order": [
+        "question_tMNrV8",
+        "question_EtfJNh",
+        "question_UTtfRk",
+        "question_Wj7Rzj",
+        "question_a6FVz4"
+      ]
     }
   }
 }

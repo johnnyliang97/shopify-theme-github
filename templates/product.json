@@ -91,6 +91,7 @@
           "settings": {
             "show_quantity_selector": true,
             "show_atc_button": true,
+            "show_pickup_delivery": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
@@ -303,7 +304,6 @@
         "heading_size": "h2",
         "description": "",
         "header_alignment": "left",
-        "single_open": false,
         "question_size": 18,
         "answer_size": 16,
         "padding_top": 52,
