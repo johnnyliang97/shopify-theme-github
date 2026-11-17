@@ -247,7 +247,7 @@
           "type": "question",
           "settings": {
             "question": "Do you ship internationally?",
-            "answer": "<p>Yes, we ship to selected international destinations via FedEx Express. Delivery typically takes 2–7 business days, depending on your location and customs clearance. Shipping costs are calculated at checkout or quoted separately for certain destinations. See our <a href=\"https://checkout.shopify.com/75864670467/policies/37248729347.html?locale=en\">Shipping policy</a> for details.</p>",
+            "answer": "<p>Yes, we ship to selected international destinations via DHL. Delivery typically takes 2–7 business days, depending on your location and customs clearance. Shipping costs are calculated at checkout or quoted separately for certain destinations. See our <a href=\"https://checkout.shopify.com/75864670467/policies/37248729347.html?locale=en\">Shipping policy</a> for details.</p>",
             "open": false
           }
         },
@@ -255,7 +255,7 @@
           "type": "question",
           "settings": {
             "question": "How do I choose the right size?",
-            "answer": "<p>Sizing and fit can vary between designers. Check the product description for available sizing details. For help before ordering, email <a href=\"mailto:customercare@lestyle.com.au\">customercare@lestyle.com.au</a> with the product name and your sizing questions.</p>",
+            "answer": "<p>Sizing and fit can vary between designers. Check the product description or size guide for available sizing details. For help before ordering, email <a href=\"mailto:customercare@lestyle.com.au\">customercare@lestyle.com.au</a> with the product name and your sizing questions.</p>",
             "open": true
           }
         },
@@ -263,7 +263,7 @@
           "type": "question",
           "settings": {
             "question": "What are the delivery options within Australia?",
-            "answer": "<p>Our published shipping policy lists FedEx Express delivery, with delivery generally taking 1–2 business days for most metropolitan areas after dispatch. Regional and remote deliveries may take longer, and delays can occur during peak sale periods. Please refer to our <a href=\"https://checkout.shopify.com/75864670467/policies/37248729347.html?locale=en\">Shipping policy</a> for full details.</p>",
+            "answer": "<p>Our published shipping policy lists Australia Post and DHL delivery, with delivery generally taking 3-7 business days (standard) and 1–2 business days (express) for most metropolitan areas after dispatch. Regional and remote deliveries may take longer, and delays can occur during peak sale periods. Please refer to our <a href=\"https://checkout.shopify.com/75864670467/policies/37248729347.html?locale=en\">Shipping policy</a> for full details.</p>",
             "open": false
           }
         },
@@ -295,7 +295,7 @@
       "name": "FAQs",
       "settings": {
         "container": "container",
-        "color_scheme": "footer",
+        "color_scheme": "scheme-cee058e4-58e3-46aa-9af9-219dadc79066",
         "content_width": 880,
         "subheading": "",
         "subheading_size": 16,
