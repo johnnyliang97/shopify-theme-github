@@ -42,9 +42,7 @@
             <details
               id="m-faq-item-{{ block.id }}"
               class="m-faq__item"
-              {% if section.settings.single_open %}
-                name="m-faq-group-{{ section.id }}"
-              {% endif %}
+              name="m-faq-group-{{ section.id }}"
               {% if block.settings.open %}
                 open
               {% endif %}
@@ -154,12 +152,6 @@
     {
       "type": "header",
       "content": "Questions and answers"
-    },
-    {
-      "type": "checkbox",
-      "id": "single_open",
-      "label": "Open only one question at a time",
-      "default": false
     },
     {
       "type": "range",
