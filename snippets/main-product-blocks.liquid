@@ -685,6 +685,7 @@
             <div class="m-product-form-message"></div>
           {%- endform -%}
         </product-form>
+        {% unless block.settings.show_pickup_delivery == false %}
         <link
           rel="stylesheet"
           href="{{ 'pickup-availability.css' | asset_url }}"
@@ -725,6 +726,7 @@
           </template>
         </pickup-availability>
         <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+        {% endunless %}
 
       {%- when 'collapsible_tab' -%}
         {% if block.settings.heading != blank %}
