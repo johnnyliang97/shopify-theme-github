@@ -118,8 +118,8 @@
                 endif
               endfor
             endif
-            if promotion_count > 0
-              assign promotion_index = paginate.current_page | minus: 1 | modulo: promotion_count
+            assign promotion_index = paginate.current_page | minus: 1
+            if promotion_index < promotion_count
               if responsive_grid and section.settings.paginate_type != 'paginate' and paginate.current_page < paginate.pages
                 assign trailing_slots = visible_product_limit | plus: 2 | modulo: 4
                 assign visible_product_limit = visible_product_limit | minus: trailing_slots
@@ -139,7 +139,7 @@
               data-product-container
               style="--collection-grid-columns: {{ initial_column }};"
             >
-              {%- if promotions_in_grid -%}
+              {%- if promotions_in_grid and promotion_index < promotion_count -%}
                 {%- assign eligible_promotion_index = 0 -%}
                 {%- for block in section.blocks -%}
                   {%- if block.type == 'banner_promotion' -%}
