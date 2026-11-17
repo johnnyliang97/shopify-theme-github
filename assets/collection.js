@@ -262,7 +262,8 @@ class Collection {
       let slots = 0;
       items.forEach((item, index) => {
         const column = slots % columns;
-        if (index > lastPromotionIndex && item.matches(".m-product-item") && (column === 0 || column === columns - span)) {
+        const sameBatch = !promotion.dataset.gridBatch || item.dataset.gridBatch === promotion.dataset.gridBatch;
+        if (sameBatch && index > lastPromotionIndex && item.matches(".m-product-item") && (column === 0 || column === columns - span)) {
           candidates.push(index);
         }
         const itemSpan = item.matches("[data-grid-promotion]") ? span : 1;
@@ -330,7 +331,8 @@ class Collection {
     fetchSection(this.sectionId, { fromCache: true, params: { page: nextPage } })
       .then((productGridHTML) => {
         const productNodes = [...this.pendingProducts, ...productGridHTML.querySelectorAll("[data-product-container] .m-product-item")];
-        const promotionCount = productContainer.querySelectorAll("[data-grid-promotion]").length;
+        const promotion = productGridHTML.querySelector("[data-product-container] [data-grid-promotion]");
+        const promotionCount = productContainer.querySelectorAll("[data-grid-promotion]").length + (promotion ? 1 : 0);
         const slots = productContainer.querySelectorAll(".m-product-item").length + productNodes.length + promotionCount * 2;
         // Keep complete rows between batches, then reveal every remaining product on the final page.
         const reserve = this.responsiveGrid && promotionCount && nextPage < this.totalPages ? slots % 4 : 0;
@@ -338,9 +340,15 @@ class Collection {
         this.pendingProducts = productNodes.slice(visibleCount);
         productNodes.slice(0, visibleCount).forEach((prodNode) => {
           prodNode.removeAttribute("data-grid-buffered");
+          prodNode.dataset.gridBatch = nextPage;
           productContainer.appendChild(prodNode);
         });
+        if (promotion) {
+          promotion.dataset.gridBatch = nextPage;
+          productContainer.appendChild(promotion);
+        }
         this.currentPage = nextPage;
+        this.positionGridPromotions();
         this.initProducts();
         MinimogEvents.emit("ON_PRODUCT_LIST_UPDATED");
         if (nextPage >= this.totalPages) {
