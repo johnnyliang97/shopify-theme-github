@@ -1,0 +1,277 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #m-faq-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --faq-content-width: {{ section.settings.content_width }}px;
+    --faq-subheading-size: {{ section.settings.subheading_size }}px;
+    --faq-question-size: {{ section.settings.question_size }}px;
+    --faq-answer-size: {{ section.settings.answer_size }}px;
+  }
+{%- endstyle -%}
+
+<section
+  id="m-faq-{{ section.id }}"
+  class="m-section m-faq m-gradient m-color-{{ section.settings.color_scheme }} {{ section.settings.custom_class | escape }}"
+  {% if section.settings.heading != blank %}
+    aria-labelledby="m-faq-heading-{{ section.id }}"
+  {% endif %}
+>
+  <div class="{{ section.settings.container }} m-section-my m-section-py">
+    <div class="m-faq__content">
+      {% if section.settings.subheading != blank or section.settings.heading != blank or section.settings.description != blank %}
+        <div class="m-faq__header m:text-{{ section.settings.header_alignment }}">
+          {% if section.settings.subheading != blank %}
+            <p class="m-faq__subheading">{{ section.settings.subheading | escape }}</p>
+          {% endif %}
+          {% if section.settings.heading != blank %}
+            <h2 id="m-faq-heading-{{ section.id }}" class="m-faq__heading {{ section.settings.heading_size }}">
+              {{ section.settings.heading | escape }}
+            </h2>
+          {% endif %}
+          {% if section.settings.description != blank %}
+            <div class="m-faq__description rte">{{ section.settings.description }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="m-faq__items">
+        {% for block in section.blocks %}
+          {% if block.settings.question != blank %}
+            <details
+              id="m-faq-item-{{ block.id }}"
+              class="m-faq__item"
+              {% if section.settings.single_open %}
+                name="m-faq-group-{{ section.id }}"
+              {% endif %}
+              {% if block.settings.open %}
+                open
+              {% endif %}
+              {{ block.shopify_attributes }}
+            >
+              <summary class="m-faq__question">
+                <span>{{ block.settings.question | escape }}</span>
+                <svg class="m-faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M4 10H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path class="m-faq__icon-vertical" d="M10 4V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </summary>
+              <div class="m-faq__answer rte">{{ block.settings.answer }}</div>
+            </details>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "default": "container",
+      "options": [
+        { "value": "container-fluid", "label": "Default" },
+        { "value": "container-full", "label": "Full width" },
+        { "value": "container", "label": "Use container box" }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content width",
+      "min": 480,
+      "max": 1200,
+      "step": 40,
+      "unit": "px",
+      "default": 880
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "label": "Subheading size",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Frequently asked questions"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": "h2",
+      "options": [
+        { "value": "h3", "label": "Small" },
+        { "value": "h2", "label": "Medium" },
+        { "value": "h1", "label": "Large" }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "select",
+      "id": "header_alignment",
+      "label": "Heading alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Questions and answers"
+    },
+    {
+      "type": "checkbox",
+      "id": "single_open",
+      "label": "Open only one question at a time",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "question_size",
+      "label": "Question size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "answer_size",
+      "label": "Answer size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 52
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom classes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Frequently asked question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Add your answer here. You can include helpful details and links.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "label": "Open by default",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "question",
+          "settings": {
+            "question": "How do I choose the right size?",
+            "answer": "<p>Add your size guide and fit advice here.</p>",
+            "open": true
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "What are the shipping options?",
+            "answer": "<p>Add your shipping destinations, delivery times, and costs here.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>Add your return conditions and instructions here.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "How can I contact you?",
+            "answer": "<p>Add your contact details and customer service hours here.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
