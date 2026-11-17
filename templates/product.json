@@ -295,7 +295,7 @@
       "name": "FAQs",
       "settings": {
         "container": "container",
-        "color_scheme": "",
+        "color_scheme": "footer",
         "content_width": 880,
         "subheading": "",
         "subheading_size": 16,
