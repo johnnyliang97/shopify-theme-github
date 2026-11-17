@@ -409,45 +409,46 @@
         "animations": "inherit"
       }
     },
-    "icon_box_VnzpGn": {
+    "icon_box_Bf7XKa": {
       "type": "icon-box",
       "blocks": {
-        "iconbox_kqDNFN": {
+        "iconbox_e6bbMh": {
           "type": "iconbox",
           "settings": {
             "card_color_scheme": "",
             "image_by_url": "https://www.svgrepo.com/show/352446/shipping-fast.svg",
-            "title": "Express Shipping",
-            "description": "<p>Australia wide and international shipping available</p>",
-            "link": "",
+            "title": "Free Express Shipping*",
+            "description": "<p>Australia-wide and international shipping available on eligible orders*</p>",
+            "link": "shopify://blogs/lestyle-spotlight/make-it-free-shipping",
             "button_label": "",
             "button_link": "",
             "button_style": "sf__btn-link",
             "button_size": ""
           }
         },
-        "iconbox_63m4QT": {
+        "iconbox_LLxdU9": {
           "type": "iconbox",
           "settings": {
             "card_color_scheme": "",
-            "image": "shopify://shop_images/uber.svg",
+            "image": "shopify://shop_images/circle-check-solid-full.svg",
             "image_by_url": "",
-            "title": "Same Day Delivery",
-            "description": "<p>Uber same day delivery available across Metropolitan Melbourne</p>",
-            "link": "",
+            "title": "100% Authentic",
+            "description": "<p>Guarantees authenticity on luxury items, sourced from authorised European distributors</p>",
+            "link": "shopify://blogs/lestyle-spotlight/behind-the-buy-milan-2025",
             "button_label": "",
             "button_link": "",
             "button_style": "sf__btn-link",
             "button_size": ""
           }
         },
-        "iconbox_EWwWYp": {
+        "iconbox_KFtcBg": {
           "type": "iconbox",
           "settings": {
             "card_color_scheme": "",
-            "image_by_url": "https://www.svgrepo.com/show/448108/question.svg",
+            "image": "shopify://shop_images/question.svg",
+            "image_by_url": "",
             "title": "Online Support",
-            "description": "<p>Message us on <a href=\"http://ig.me/m/lestyleoutique\" target=\"_blank\" title=\"Lestyle Instagram DM Contact\">Instagram</a> or <a href=\"http://wa.me/+61423185118\" target=\"_blank\" title=\"Lestyle WhatsApp Contact\">WhatsApp</a></p>",
+            "description": "<p>Message us on <a href=\"http://ig.me/m/lestyleoutique\" target=\"_blank\" title=\"Lestyle Instagram DM Contact\">Instagram</a> or <a href=\"https://wa.me/+61492266452\" target=\"_blank\" title=\"https://wa.me/+61492266452\">WhatsApp</a></p>",
             "link": "shopify://pages/contact",
             "button_label": "",
             "button_link": "",
@@ -455,7 +456,7 @@
             "button_size": ""
           }
         },
-        "iconbox_WR7AN8": {
+        "iconbox_PXURnE": {
           "type": "iconbox",
           "settings": {
             "card_color_scheme": "",
@@ -471,15 +472,16 @@
         }
       },
       "block_order": [
-        "iconbox_kqDNFN",
-        "iconbox_63m4QT",
-        "iconbox_EWwWYp",
-        "iconbox_WR7AN8"
+        "iconbox_e6bbMh",
+        "iconbox_LLxdU9",
+        "iconbox_KFtcBg",
+        "iconbox_PXURnE"
       ],
       "custom_css": [
         ".m-icon-box__icon {margin-right: 12px; width: 26px !important;}",
         ".m-icon-box--small {border-top-width: 0;}"
       ],
+      "name": "Info Footer",
       "settings": {
         "container": "container-fluid",
         "color_scheme": "default",
@@ -520,6 +522,6 @@
     "faq_3zcNWw",
     "product-recommendations",
     "recent-viewed-products",
-    "icon_box_VnzpGn"
+    "icon_box_Bf7XKa"
   ]
 }
