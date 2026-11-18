@@ -27,6 +27,16 @@
   assign show_sale_toggle = false
   assign sale_value = blank
   assign quick_tag_values = blank
+  assign quick_gender_values = blank
+  assign show_gender_quick_filters = responsive_grid
+  assign collection_path = request.path | downcase
+  assign gender_specific_paths = 'mens,womens,kids,girls,boys,teens,home-collection,baby,junior' | split: ','
+  for path_term in gender_specific_paths
+    if collection_path contains path_term
+      assign show_gender_quick_filters = false
+      break
+    endif
+  endfor
   if template.name == 'collection' and st.filters_type == 'storefront_filters' and st.show_sorting
     assign show_sale_toggle = true
     for filter in results.filters
@@ -38,7 +48,12 @@
         if sale_value == blank
           assign sale_value = filter.active_values | where: 'value', 'Sale' | first
         endif
-        break
+      endif
+      if show_gender_quick_filters
+        assign normalized_filter_label = filter.label | strip | downcase
+        if filter.param_name == 'filter.p.m.shopify.target-gender' or normalized_filter_label == 'target gender'
+          assign quick_gender_values = filter.values
+        endif
       endif
     endfor
   endif
@@ -79,6 +94,23 @@
     </button>
   {%- endcapture -%}
 {%- endif -%}
+{%- capture quick_gender_buttons -%}
+  {%- for value in quick_gender_values -%}
+    {%- if value.count == 0 and value.active == false -%}
+      {%- continue -%}
+    {%- endif -%}
+    <button
+      type="button"
+      class="m-collection-sale-toggle m-collection-tag-toggle m-collection-gender-toggle"
+      data-tag-filter-toggle
+      data-filter-param="{{ value.param_name | escape }}"
+      data-filter-value="{{ value.value | escape }}"
+      aria-pressed="{% if value.active %}true{% else %}false{% endif %}"
+    >
+      {{- value.label | escape -}}
+    </button>
+  {%- endfor -%}
+{%- endcapture -%}
 {%- capture quick_tag_buttons -%}
   {%- assign quick_tag_count = 0 -%}
   {%- for value in quick_tag_values -%}
@@ -127,8 +159,8 @@
           </svg>
         </button>
       {% endif %}
-      {% if show_sale_toggle or quick_tag_buttons != blank %}
-        <div class="{% if responsive_grid %}m-toolbar--quick-filters{% else %}md:m:hidden{% endif %}">{{ sale_button }}{{ quick_tag_buttons }}</div>
+      {% if show_sale_toggle or quick_gender_buttons != blank or quick_tag_buttons != blank %}
+        <div class="{% if responsive_grid %}m-toolbar--quick-filters{% else %}md:m:hidden{% endif %}">{{ sale_button }}{{ quick_gender_buttons }}{{ quick_tag_buttons }}</div>
       {% endif %}
     </div>
     {%- if st.show_sorting or show_columns_switcher -%}

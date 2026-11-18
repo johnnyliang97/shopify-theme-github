@@ -120,6 +120,11 @@
   color: rgb(var(--color-foreground));
 }
 
+.m-collection-gender-toggle[aria-pressed="true"] {
+  font-weight: 700;
+  border-width: 2px;
+}
+
 @media screen and (max-width: 767px) {
   .facest-filters-section[data-view="collection"] #CollectionProductGrid > .m-active-facets {
     display: none;
