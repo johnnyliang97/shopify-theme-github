@@ -11,6 +11,7 @@
   endif
 
   assign background_in_container = section.settings.background_in_container
+  assign countdown_colors = section.settings.color_scheme.settings
   assign has_mobile_media = false
   if section.settings.background_image_mobile != blank or section.settings.background_video_mobile != blank
     assign has_mobile_media = true
@@ -38,6 +39,24 @@
     --row-gap-mobile: 24px;
     --countdown-overlay-color: {{ section.settings.overlay_color }};
     --countdown-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    {% if countdown_colors != blank %}
+      --color-foreground: {{ countdown_colors.text.red }}, {{ countdown_colors.text.green }}, {{ countdown_colors.text.blue }};
+      --color-foreground-secondary: {{ countdown_colors.subtext.red }}, {{ countdown_colors.subtext.green }}, {{ countdown_colors.subtext.blue }};
+      --color-heading: {{ countdown_colors.heading_text.red }}, {{ countdown_colors.heading_text.green }}, {{ countdown_colors.heading_text.blue }};
+    {% endif %}
+  }
+  #m-section-{{ section.id }} .m-promotion-countdown-timer__wrapper,
+  #m-section-{{ section.id }} .m-richtext__description,
+  #m-section-{{ section.id }} .m-countdown-timer__digit,
+  #m-section-{{ section.id }} .m-countdown-timer__text {
+    color: rgb(var(--color-foreground));
+  }
+  #m-section-{{ section.id }} .m-richtext__title {
+    color: rgb(var(--color-heading));
+  }
+  #m-section-{{ section.id }} .m-richtext__subtitle,
+  #m-section-{{ section.id }} .m-countdown-timer__separator {
+    color: rgb(var(--color-foreground-secondary));
   }
   {% for block in section.blocks %}
     {% if block.type == 'text' %}
