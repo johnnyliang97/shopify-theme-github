@@ -215,21 +215,12 @@
         "animations": "inherit"
       }
     },
-    "custom_liquid_CHJgEC": {
-      "type": "custom-liquid",
-      "custom_css": [],
-      "name": "Custom liquid",
-      "settings": {
-        "custom_liquid": "{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 14px; color: #555; margin: 28px 0; text-align: center; padding: 0 15px;\">\n    Item Code: {{ product.first_available_variant.barcode }}\n  </p>\n{% endif %}",
-        "custom_class": ""
-      }
-    },
     "custom_liquid_zrgkke": {
       "type": "custom-liquid",
       "custom_css": [],
       "name": "Custom liquid",
       "settings": {
-        "custom_liquid": "{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 14px; color: #555; margin: 28px 0; text-align: center; padding: 0 15px;\">\n    Item SKU: {{ product.first_available_variant.sku }}\n  </p>\n{% endif %}",
+        "custom_liquid": "{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 12px; color: #555; margin: 28px 0; text-align: center; padding: 0 15px;\">\n    Item Code: {{ product.first_available_variant.barcode }}\n  </p>\n{% endif %}\n{% if product.selected_or_first_available_variant.sku != blank %}\n  <p style=\"font-size: 12px; color: #555; margin: 28px 0; text-align: center; padding: 0 15px;\">\n    Item SKU: {{ product.first_available_variant.sku }}\n  </p>\n{% endif %}",
         "custom_class": ""
       }
     },
@@ -515,7 +506,6 @@
     "custom_liquid_CGcdp7",
     "main",
     "product-details-tabs",
-    "custom_liquid_CHJgEC",
     "custom_liquid_zrgkke",
     "faq_3zcNWw",
     "small_banner_TE9wDT",
