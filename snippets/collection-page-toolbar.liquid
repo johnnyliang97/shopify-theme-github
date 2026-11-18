@@ -51,7 +51,7 @@
       endif
       if show_gender_quick_filters
         assign normalized_filter_label = filter.label | strip | downcase
-        if filter.param_name == 'filter.p.m.shopify.target-gender' or normalized_filter_label == 'target gender'
+        if filter.param_name == 'filter.v.t.shopify.target-gender' or filter.param_name == 'filter.p.m.shopify.target-gender' or normalized_filter_label == 'target gender' or normalized_filter_label == 'shop by'
           assign quick_gender_values = filter.values
         endif
       endif
